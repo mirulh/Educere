@@ -1,0 +1,49 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  /* background-color: #242424; */
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  /* display: flex; */
+  /* place-items: center;
+  min-width: 320px;
+  min-height: 100vh; */
+}
+
+.site-container {
+  /* [2] */
+  min-height: 100vh;
+}
+
+main {
+  /* [1] */
+  flex: 1;
+}
+
+.small-container {
+  max-width: 600px;
+}
+
+/* References 
+
+
+[1] flex: 1
+
+When applied to an item, it tells the item to grow and take up available space within the flex container. In other words, it allows the item to expand and fill up the space equally along the main axis of the flex container.
+
+[2] min-height: 100vh
+
+When you set an element's height using vh, you're specifying a percentage of the viewport's height. For example, height: 50vh; would make the element take up 50% of the viewport's height. One significant advantage of using vh units is that they adapt dynamically to changes in viewport size.
+
+*/
