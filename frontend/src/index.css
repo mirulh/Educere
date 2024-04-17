@@ -29,6 +29,7 @@ body {
 main {
   /* [1] */
   flex: 1;
+  padding: 1rem;
 }
 
 .small-container {

@@ -1,21 +1,49 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import axios from 'axios';
 import { Store } from '../Store';
+import { getError } from '../../utils_frontend';
+import { toast } from 'react-toastify';
 
 export default function SigninScreen() {
+  const navigate = useNavigate();
+  const { search } = useLocation();
+  const redirectInUrl = new URLSearchParams(search).get('redirect');
+
+  const redirect = redirectInUrl ? redirectInUrl : '/';
+
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  const userInfo = null; // retrieve userInfo from Store,js
+  const { state, dispatch: contextDispatch } = useContext(Store);
+  const { userInfo } = state;
 
   const submitHandler = async (e) => {
     e.preventDefault();
+    try {
+      const { data } = await axios.post('/api/users/signin', {
+        email,
+        password,
+      });
+      console.log('Signed In', JSON.stringify(data, null, 2));
+      contextDispatch({ type: 'USER_SIGNIN', payload: data });
+      localStorage.setItem('userInfo', JSON.stringify(data));
+      navigate('/');
+    } catch (err) {
+      toast.error(getError(err));
+    }
   };
+
+  useEffect(() => {
+    if (userInfo) {
+      navigate(redirect);
+    }
+  }, [navigate, redirect, userInfo]);
+
   return (
     <div>
       <Helmet>
@@ -47,7 +75,9 @@ export default function SigninScreen() {
             </div>
             <div className="mb-3">
               New customer?&nbsp;
-              <Link to="/signup">Create your account</Link>
+              <Link to={`/signup?redirect=${redirect}`}>
+                Create your account
+              </Link>
             </div>
           </Form>
         </Container>

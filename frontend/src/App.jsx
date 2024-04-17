@@ -1,15 +1,27 @@
-import { Link, Outlet } from 'react-router-dom';
+import { Link, Outlet, useNavigate } from 'react-router-dom';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import Container from 'react-bootstrap/Container';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import { LinkContainer } from 'react-router-bootstrap';
+import { useContext } from 'react';
+import { Store } from './Store';
 
 function App() {
-  const userInfo = false;
-  const adminInfo = false;
+  const navigate = useNavigate();
+  const { state, dispatch: contextDispatch } = useContext(Store);
+  const { userInfo } = state;
+
+  const signoutHandler = () => {
+    contextDispatch({ type: 'USER_SIGNOUT' });
+    localStorage.removeItem('userInfo');
+    navigate('/signin');
+  };
   return (
     <div className="d-flex flex-column site-container">
+      <ToastContainer position="bottom-center" limit={1} />
       <header>
         <Navbar bg="dark" variant="dark" expand="lg">
           <Container>
@@ -23,7 +35,7 @@ function App() {
                   Saved
                 </Link>
                 {userInfo ? (
-                  <NavDropdown title="User" id="basic-nav-dropdown">
+                  <NavDropdown title={userInfo.name} id="basic-nav-dropdown">
                     <LinkContainer to="/profile">
                       <NavDropdown.Item>User Profile</NavDropdown.Item>
                     </LinkContainer>
@@ -31,7 +43,11 @@ function App() {
                       <NavDropdown.Item>Submission</NavDropdown.Item>
                     </LinkContainer>
                     <NavDropdown.Divider />
-                    <Link to="#signout" className="dropdown-item" onClick>
+                    <Link
+                      to="#signout"
+                      className="dropdown-item"
+                      onClick={signoutHandler}
+                    >
                       Sign Out
                     </Link>
                   </NavDropdown>
@@ -40,15 +56,15 @@ function App() {
                     Sign In
                   </Link>
                 )}
-                {userInfo && adminInfo && (
+                {userInfo && userInfo.isAdmin && (
                   <NavDropdown title="Admin" id="admin-nav-dropdown">
-                    <LinkContainer to="">
-                      <NavDropdown.Item href="">Dashboard</NavDropdown.Item>
+                    <LinkContainer to="/admin/dashboard">
+                      <NavDropdown.Item>Dashboard</NavDropdown.Item>
                     </LinkContainer>
-                    <LinkContainer to="">
+                    <LinkContainer to="/admin/contents">
                       <NavDropdown.Item>Contents</NavDropdown.Item>
                     </LinkContainer>
-                    <LinkContainer to="">
+                    <LinkContainer to="/admin/users">
                       <NavDropdown.Item>Users</NavDropdown.Item>
                     </LinkContainer>
                   </NavDropdown>
@@ -71,3 +87,9 @@ function App() {
 }
 
 export default App;
+
+/* 
+
+TODO: Implement a sidebar if necessary
+
+*/

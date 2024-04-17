@@ -15,7 +15,10 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
 import ProfileScreen from './screens/ProfileScreen.jsx';
 import HomeScreen from './screens/HomeScreen.jsx';
-import StoreProvider from './Store.jsx';
+import { StoreProvider } from './Store.jsx'; //[1]
+import UserListScreen from './screens/UserListScreen.jsx';
+import ProtectedRoute from './components/ProtectedRoute.jsx';
+import AdminRoute from './components/AdminRoute.jsx';
 
 // axios.defaults.baseURL = 'http://localhost:5000';
 
@@ -26,7 +29,16 @@ const router = createBrowserRouter(
       <Route path="test" element={<TestData />} />
       <Route path="/signin" element={<SigninScreen />}></Route>
       <Route path="/signup" element={<SignupScreen />}></Route>
-      <Route path="/profile" element={<ProfileScreen />}></Route>
+
+      {/* Protected Route */}
+      <Route path="" element={<ProtectedRoute />}>
+        <Route path="/profile" element={<ProfileScreen />}></Route>
+      </Route>
+
+      {/* Admin Route */}
+      <Route path="" element={<AdminRoute />}>
+        <Route path="/admin/users" element={<UserListScreen />}></Route>
+      </Route>
     </Route>
   )
 );
@@ -40,3 +52,25 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     </HelmetProvider>
   </React.StrictMode>
 );
+
+/* 
+
+references
+
+[1] export function vs export default function
+
+if you have multiple export in a file use export function. If single export, then use export default
+
+export function are named export: 
+
+import { StoreProvider } from './Store.jsx';
+
+ ^- needs to differentiate since multiple export in a single module
+
+export default are default export 
+
+import StoreProvider from './Store.jsx';
+
+^- does not require braces since only one export from module
+
+*/
