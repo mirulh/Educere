@@ -29,7 +29,8 @@ body {
 main {
   /* [1] */
   flex: 1;
-  padding: 1rem;
+  background-color: #171321;
+  /* padding: 1rem; */
 }
 
 .small-container {
@@ -48,3 +49,146 @@ When applied to an item, it tells the item to grow and take up available space w
 When you set an element's height using vh, you're specifying a percentage of the viewport's height. For example, height: 50vh; would make the element take up 50% of the viewport's height. One significant advantage of using vh units is that they adapt dynamically to changes in viewport size.
 
 */
+
+/* HomeScreen */
+
+/* 575px and below */
+body::before {
+  content: 'XS';
+  color: red;
+  font-size: 2rem;
+  font-weight: bold;
+  position: fixed;
+  right: 0;
+  top: 50px;
+}
+
+@media (min-width: 576px) {
+  body::before {
+    content: 'SM';
+  }
+}
+
+@media (min-width: 768px) {
+  body::before {
+    content: 'MD';
+  }
+}
+
+@media (min-width: 992px) {
+  body::before {
+    content: 'LG';
+  }
+}
+
+@media (min-width: 1200px) {
+  body::before {
+    content: 'XL';
+  }
+}
+
+@media (min-width: 1400px) {
+  body::before {
+    content: 'XXL';
+  }
+}
+
+/* SearchScreen */
+
+.box-content {
+  background-color: lightblue;
+  min-height: 100vh;
+  font-size: 1rem;
+  border: 1px solid white;
+  padding: 2rem;
+}
+
+.box-sidebar {
+  background-color: lightblue;
+  max-height: 70vh;
+  font-size: 1rem;
+  border: 1px solid white;
+  padding: 2rem;
+}
+
+.box-header {
+  background-color: lightblue;
+  min-height: 50px;
+  font-size: 1rem;
+  border: 1px solid white;
+}
+
+.box-cover {
+  background-color: lightblue;
+  min-height: 200px;
+  font-size: 1rem;
+  border: 1px solid white;
+}
+
+.box-pagination {
+  background-color: lightblue;
+  min-height: 50px;
+  font-size: 1rem;
+  border: 1px solid white;
+}
+
+.box-allContents {
+  background-color: lightblue;
+  min-height: 90vh;
+  font-size: 1rem;
+  border: 1px solid white;
+  margin-bottom: 1rem;
+}
+
+/* HomeScreen */
+
+.box-trending {
+  background-color: lightblue;
+  min-height: 35vh;
+  font-size: 1rem;
+  border: 1px solid white;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.box-header {
+  background-color: lightblue;
+  min-height: 50px;
+  font-size: 1rem;
+  border: 1px solid white;
+}
+
+.box-carousel {
+  background-color: lightblue;
+  min-height: 35vh;
+  font-size: 1rem;
+  border: 1px solid white;
+}
+
+/*  */
+
+.box-recommend {
+  background-color: lightblue;
+  min-height: 30vh;
+  font-size: 1rem;
+  border: 1px solid white;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.box-header {
+  background-color: lightblue;
+  min-height: 50px;
+  font-size: 1rem;
+  border: 1px solid white;
+}
+
+.box-category {
+  background-color: lightblue;
+  min-height: 25vh;
+  font-size: 1rem;
+  border: 1px solid white;
+  padding: 1rem;
+}
+
+/*  */

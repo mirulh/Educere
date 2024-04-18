@@ -19,6 +19,7 @@ import { StoreProvider } from './Store.jsx'; //[1]
 import UserListScreen from './screens/UserListScreen.jsx';
 import ProtectedRoute from './components/ProtectedRoute.jsx';
 import AdminRoute from './components/AdminRoute.jsx';
+import SearchScreen from './screens/SearchScreen.jsx';
 
 // axios.defaults.baseURL = 'http://localhost:5000';
 
@@ -29,6 +30,7 @@ const router = createBrowserRouter(
       <Route path="test" element={<TestData />} />
       <Route path="/signin" element={<SigninScreen />}></Route>
       <Route path="/signup" element={<SignupScreen />}></Route>
+      <Route path="/search" element={<SearchScreen />}></Route>
 
       {/* Protected Route */}
       <Route path="" element={<ProtectedRoute />}>

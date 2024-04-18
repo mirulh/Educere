@@ -8,6 +8,7 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import { LinkContainer } from 'react-router-bootstrap';
 import { useContext } from 'react';
 import { Store } from './Store';
+import SearchBox from './components/SearchBox';
 
 function App() {
   const navigate = useNavigate();
@@ -30,6 +31,7 @@ function App() {
             </LinkContainer>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
+              <SearchBox />
               <Nav className="me-auto w-100 justify-content-end">
                 <Link to="/favorites" className="nav-link">
                   Saved
@@ -75,12 +77,18 @@ function App() {
         </Navbar>
       </header>
       <main>
-        <Container className="mt-3">
-          <Outlet />
-        </Container>
+        <div>
+          <div className="box-cover">Banner here</div>
+          <Container className="mt-3">
+            <Outlet />
+          </Container>
+          <div className="box-cover mb-5">submission</div>
+        </div>
       </main>
       <footer>
-        <div className="text-center">All rights reserved</div>
+        <div className="text-center box-cover">
+          <div>All rights reserved</div>
+        </div>
       </footer>
     </div>
   );
