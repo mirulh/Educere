@@ -24,7 +24,7 @@ function App() {
     <div className="d-flex flex-column site-container">
       <ToastContainer position="bottom-center" limit={1} />
       <header>
-        <Navbar bg="dark" variant="dark" expand="lg">
+        <Navbar className="nav" variant="dark" expand="lg">
           <Container>
             <LinkContainer to="/">
               <Navbar.Brand>Educere</Navbar.Brand>
@@ -78,15 +78,15 @@ function App() {
       </header>
       <main>
         <div>
-          <div className="box-cover">Banner here</div>
-          <Container className="mt-3">
+          {/* <div className="box-cover">Banner here</div> */}
+          <Container fluid className="topContainer mt-0">
             <Outlet />
           </Container>
-          <div className="box-cover mb-5">submission</div>
+          {/* <div className="box-cover mb-5">submission</div> */}
         </div>
       </main>
       <footer>
-        <div className="text-center box-cover">
+        <div className="text-center box-footer">
           <div>All rights reserved</div>
         </div>
       </footer>

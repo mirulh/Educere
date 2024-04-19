@@ -20,6 +20,7 @@ import UserListScreen from './screens/UserListScreen.jsx';
 import ProtectedRoute from './components/ProtectedRoute.jsx';
 import AdminRoute from './components/AdminRoute.jsx';
 import SearchScreen from './screens/SearchScreen.jsx';
+import UserEditScreen from './screens/UserEditScreen.jsx';
 
 // axios.defaults.baseURL = 'http://localhost:5000';
 
@@ -40,6 +41,7 @@ const router = createBrowserRouter(
       {/* Admin Route */}
       <Route path="" element={<AdminRoute />}>
         <Route path="/admin/users" element={<UserListScreen />}></Route>
+        <Route path="/admin/user/:id" element={<UserEditScreen />}></Route>
       </Route>
     </Route>
   )

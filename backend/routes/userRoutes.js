@@ -16,6 +16,19 @@ userRouter.get(
   })
 );
 
+userRouter.get(
+  '/:id',
+  isAuth,
+  expressAsyncHandler(async (req, res) => {
+    const user = await User.findById(req.params.id);
+    if (user) {
+      res.send(user);
+    } else {
+      res.status(404).send({ message: 'User Not Found' });
+    }
+  })
+);
+
 userRouter.delete(
   '/:id', // this is req.params.id
   isAuth,
@@ -35,26 +48,7 @@ userRouter.delete(
   })
 );
 
-userRouter.post(
-  '/signin',
-  expressAsyncHandler(async (req, res) => {
-    const user = await User.findOne({ email: req.body.email });
-    if (user) {
-      if (bcrypt.compareSync(req.body.password, user.password)) {
-        res.send({
-          _id: user._id,
-          name: user.name,
-          email: user.email,
-          isAdmin: user.isAdmin,
-          token: generateToken(user),
-        });
-        return;
-      }
-    }
-    res.status(401).send({ message: 'Invalid email or password' });
-  })
-);
-
+// working
 userRouter.put(
   '/profile',
   isAuth, //authenticate user by Id
@@ -78,6 +72,42 @@ userRouter.put(
     } else {
       res.status(404).send({ message: 'User not found' });
     }
+  })
+);
+
+userRouter.put(
+  '/:id',
+  isAuth,
+  expressAsyncHandler(async (req, res) => {
+    const user = await User.findById(req.params.id);
+    if (user) {
+      // res.status(200).send({ message: 'User found' });
+      user.name = req.body.name || user.name;
+      user.email = req.body.email || user.email;
+      user.isAdmin = req.body.isAdmin || user.isAdmin;
+      const updatedUser = await user.save();
+      res.send({ message: 'User Updated', user: updatedUser });
+    } else res.status({ message: 'User Not Found' });
+  })
+);
+
+userRouter.post(
+  '/signin',
+  expressAsyncHandler(async (req, res) => {
+    const user = await User.findOne({ email: req.body.email });
+    if (user) {
+      if (bcrypt.compareSync(req.body.password, user.password)) {
+        res.send({
+          _id: user._id,
+          name: user.name,
+          email: user.email,
+          isAdmin: user.isAdmin,
+          token: generateToken(user),
+        });
+        return;
+      }
+    }
+    res.status(401).send({ message: 'Invalid email or password' });
   })
 );
 

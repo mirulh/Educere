@@ -13,6 +13,11 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.nav {
+  background-color: #191b1c;
+  /* color: white; */
+}
+
 body {
   margin: 0;
   /* display: flex; */
@@ -29,13 +34,28 @@ body {
 main {
   /* [1] */
   flex: 1;
-  background-color: #171321;
+  /* background-color: #0c0c0e; */
   /* padding: 1rem; */
 }
 
 .small-container {
   max-width: 600px;
 }
+
+.topContainer {
+  padding: 0;
+}
+
+footer {
+  background-color: #191b1c;
+  color: white;
+}
+
+/* .searchContainer {
+  max-width: 100rem;
+  margin-left: auto;
+  margin-right: auto;
+} */
 
 /* References 
 
@@ -118,11 +138,11 @@ body::before {
   border: 1px solid white;
 }
 
-.box-cover {
-  background-color: lightblue;
+.box-banner {
+  background-color: #2e3045;
   min-height: 200px;
   font-size: 1rem;
-  border: 1px solid white;
+  margin-bottom: 1rem;
 }
 
 .box-pagination {
@@ -192,3 +212,8 @@ body::before {
 }
 
 /*  */
+
+.box-footer {
+  min-height: 25vh;
+  font-size: 1rem;
+}
