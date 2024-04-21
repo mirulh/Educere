@@ -13,6 +13,11 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+  transition: background-color 0s 600000s, color 0s 600000s !important;
+}
+
 .nav {
   background-color: #191b1c;
   /* color: white; */
@@ -51,11 +56,85 @@ footer {
   color: white;
 }
 
-/* .searchContainer {
-  max-width: 100rem;
+.searchContainer {
+  max-width: 85rem;
   margin-left: auto;
   margin-right: auto;
-} */
+}
+
+/* Content | Card */
+
+/* -- Card Image */
+
+.imageFit {
+  object-fit: cover;
+  height: 11rem;
+  border: 1px black solid;
+}
+
+/* -- Card Body  */
+
+.cardBody {
+  height: 10rem;
+}
+
+.nameCostRating {
+  margin-bottom: 20px;
+  padding-bottom: 1rem;
+  border-bottom: 1px #f8f8f8 solid;
+}
+
+.nameCost {
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+}
+
+.card-title {
+  font-size: 16px;
+  white-space: nowrap; /* Prevent wrapping of text */
+  overflow: hidden; /* Hide overflowing text */
+  text-overflow: ellipsis;
+}
+
+.badge {
+  max-height: 23px;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-radius: 0;
+}
+
+.colContents {
+  padding-left: 6px;
+  padding-right: 6px;
+}
+
+.categoryType {
+  height: 100px;
+}
+
+.cardCategory,
+.cardType {
+  /* display: flex; */
+  font-size: 14px;
+  /* flex-wrap: wrap; */
+}
+
+/* Card Footer */
+
+.card-footer {
+}
+
+.footerActions {
+  display: flex;
+  justify-content: center;
+}
+
+.vertical-divider {
+  border-right: 1px solid black;
+  height: 100%;
+  margin: 0 20px;
+}
 
 /* References 
 
@@ -154,7 +233,7 @@ body::before {
 
 .box-allContents {
   background-color: lightblue;
-  min-height: 90vh;
+  min-height: 45vh;
   font-size: 1rem;
   border: 1px solid white;
   margin-bottom: 1rem;

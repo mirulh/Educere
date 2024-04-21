@@ -4,6 +4,7 @@ import dotenv from 'dotenv';
 import mongoose from 'mongoose';
 import seedRouter from '../routes/seedRoutes.js';
 import userRouter from '../routes/userRoutes.js';
+import contentRouter from '../routes/contentRoutes.js';
 
 // !IMPORTANT for structuring JSON on POST API calls. DON'T leave it out!!
 const app = express();
@@ -32,6 +33,7 @@ mongoose
 // middlewares
 
 app.use('/api/users', userRouter);
+app.use('/api/contents', contentRouter);
 
 // define port
 const port = process.env.PORT || 8000;
