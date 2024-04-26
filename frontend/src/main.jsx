@@ -48,13 +48,13 @@ const router = createBrowserRouter(
 );
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <HelmetProvider>
-      <StoreProvider>
-        <RouterProvider router={router} />
-      </StoreProvider>
-    </HelmetProvider>
-  </React.StrictMode>
+  // <React.StrictMode>
+  <HelmetProvider>
+    <StoreProvider>
+      <RouterProvider router={router} />
+    </StoreProvider>
+  </HelmetProvider>
+  // </React.StrictMode>
 );
 
 /* 

@@ -6,10 +6,11 @@ import { useNavigate } from 'react-router-dom';
 
 export default function SearchBox() {
   const navigate = useNavigate();
-  const [query, setQuery] = useState('');
+  const [searchTerm, setSearchTerm] = useState('');
+
   const submitHandler = (e) => {
     e.preventDefault();
-    navigate(query ? `/search/?query=${query}` : '/search');
+    navigate(searchTerm ? `/search/?searchTerm=${searchTerm}` : '/search');
   };
 
   return (
@@ -19,7 +20,7 @@ export default function SearchBox() {
           type="text"
           name="q"
           id="q"
-          onChange={(e) => setQuery(e.target.value)}
+          onChange={(e) => setSearchTerm(e.target.value)}
           placeholder="search contents..."
           aria-label="Search Contents"
           aria-describedby="button-search"
