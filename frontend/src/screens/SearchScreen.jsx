@@ -12,7 +12,6 @@ import { toast } from 'react-toastify';
 import LoadingBox from '../components/LoadingBox';
 import MessageBox from '../components/MessageBox';
 import Rating from '../components/Rating';
-import Form from 'react-bootstrap/Form';
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -59,8 +58,11 @@ export default function SearchScreen() {
   const searchParams = new URLSearchParams(search);
   // eg. search: ?category=network
 
-  console.log('search', search);
+  /*   console.log('search', search);
   console.log('search Params', searchParams);
+ */
+
+  // IMPORTANT! all initial values except for searchTerm does not exist in query.
 
   const searchTerm = searchParams.get('searchTerm') || 'all';
   const category = searchParams.get('category') || 'all';
@@ -69,6 +71,13 @@ export default function SearchScreen() {
   const rating = searchParams.get('rating') || 'all';
   const order = searchParams.get('order') || 'newest';
   const page = searchParams.get('page') || 1;
+
+  console.log(
+    'searchParams: searchTerm | category | cost | type | rating | order | page |'
+  );
+  console.log(
+    `Output: ${searchTerm} | ${category} |${cost} |${type} |${rating} | ${order} | ${page} |`
+  );
 
   const [{ loading, error, contents, pages, countContents }, dispatch] =
     useReducer(reducer, {
@@ -83,6 +92,7 @@ export default function SearchScreen() {
           `/api/contents/search?searchTerm=${searchTerm}&category=${category}&cost=${cost}&type=${type}&rating=${rating}&order=${order}&page=${page}`
         );
         dispatch({ type: 'FETCH_SUCCESS', payload: data });
+        console.log('skipVal: ', data.skipValue);
       } catch (err) {
         dispatch({
           type: 'FETCH_FAIL',
@@ -297,7 +307,9 @@ export default function SearchScreen() {
                         }}
                       >
                         <Button
-                          className={Number(page) === x + 1 ? 'text-bold' : ''}
+                          className={
+                            Number(page) === x + 1 ? '' : 'text-black-50'
+                          }
                           variant="light"
                         >
                           {x + 1}

@@ -1,18 +1,35 @@
 import express from 'express';
 import User from '../models/userModel.js';
-import { generateToken, isAuth } from '../utils_backend.js';
+import { generateToken, isAdmin, isAuth } from '../utils_backend.js';
 import expressAsyncHandler from 'express-async-handler';
 import bcrypt from 'bcryptjs';
 
 const userRouter = express.Router();
 
+const PAGE_SIZE_USER = 2;
+
 userRouter.get(
-  '/',
+  '/admin',
   isAuth,
+  isAdmin,
   expressAsyncHandler(async (req, res) => {
-    // res.send({ message: 'read' });
-    const users = await User.find({});
-    res.send(users);
+    const { query } = req;
+    const page = query.page || 1;
+    const pageSize = PAGE_SIZE_USER;
+
+    // works the same with only .find()
+    const users = await User.find({})
+      .skip(pageSize * (page - 1))
+      .limit(pageSize);
+
+    const countUsers = await User.countDocuments();
+
+    res.send({
+      users,
+      countUsers,
+      page,
+      pages: Math.ceil(countUsers / pageSize),
+    });
   })
 );
 

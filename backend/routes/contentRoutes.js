@@ -1,6 +1,7 @@
 import express from 'express';
 import Content from '../models/contentModel.js';
 import expressAsyncHandler from 'express-async-handler';
+import { isAdmin, isAuth } from '../utils_backend.js';
 
 const contentRouter = express.Router();
 
@@ -12,7 +13,7 @@ contentRouter.get(
   })
 );
 
-const PAGE_SIZE = 6;
+const PAGE_SIZE = 3;
 
 contentRouter.get(
   '/search',
@@ -79,7 +80,10 @@ contentRouter.get(
     })
       .sort(sortOrder)
       .skip(pageSize * (page - 1))
-      .limit(pageSize);
+      .limit(pageSize); // [5]
+
+    // learn more: mongodb skip and limit
+    // https://www.scaler.com/topics/mongodb-pagination/
 
     const countContents = await Content.countDocuments({
       ...searchTermFilter,
@@ -94,6 +98,7 @@ contentRouter.get(
       countContents,
       page,
       pages: Math.ceil(countContents / pageSize),
+      // skipValue: pageSize * (page - 1),
     });
     // res.send(contents); // [4]
   })
@@ -108,6 +113,54 @@ contentRouter.get(
     res.send({ categories, costs, types });
   })
 );
+
+const PAGE_SIZE_CONTENT = 5;
+
+contentRouter.get(
+  '/admin',
+  isAuth,
+  isAdmin,
+  expressAsyncHandler(async (req, res) => {
+    const { query } = req;
+    const page = query.page || 1;
+    const pageSize = PAGE_SIZE_CONTENT;
+
+    const contents = await Content.find()
+      .skip(pageSize * (page - 1))
+      .limit(pageSize);
+
+    const countContents = await Content.countDocuments();
+
+    res.send({
+      contents,
+      countContents,
+      page,
+      pages: Math.ceil(countContents / pageSize),
+      // if 1.2 then 2
+    });
+  })
+);
+
+contentRouter.delete(
+  '/:id',
+  isAuth,
+  isAdmin,
+  expressAsyncHandler(async (req, res) => {
+    const content = await Content.findById(req.params.id);
+    if (content) {
+      await content.deleteOne();
+      res.status(200).send({ message: `deleted content id ${content._id}` });
+    } else {
+      res.status(404).send({ message: 'Content Not Found' });
+    }
+  })
+);
+
+// contentRouter.post(
+//   '/'.isAdmin,
+//   isAuth,
+//   expressAsyncHandler(async (req, res) => {})
+// );
 
 export default contentRouter;
 
@@ -160,5 +213,33 @@ the first one to send one data, the second can send multiple data
     contents: action.payload.contents 
 
     (because destructuring)
+
+
+[5] MongoDB pagination: skip and limit
+
+- limit, eg: 
+
+db.books.find().limit(10)
+
+explanation: This will return the first 10 books in the books collection, according to the natural order of the documents in the collection.
+
+- skip, eg:
+
+db.collection.find().skip(n)
+
+Parameters n: Specifies the number of documents to skip. If n is not provided or is equal to 0, the query will not skip any documents.
+
+explanation:  Suppose you have a collection named books that contains information about books. You can use the skip() method to skip the first 10 books in the collection and return the remaining books as follows: 
+
+db.books.find().skip(10)
+
+!IMPORTANT
+
+Usage in the code:
+
+      .skip(pageSize * (page - 1))
+
+When page equals to 1 (when user is on the first page) the value calculated of .skip will be 0. This means there is no document will be skipped on first page. When user navigate to second page, page 2, the skip value will be 5, .skip(5) meaning on the second page, 5 documents will be skipped therefore, imitating the pagination effects
+
 
 */
