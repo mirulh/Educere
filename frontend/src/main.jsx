@@ -22,6 +22,7 @@ import AdminRoute from './components/AdminRoute.jsx';
 import SearchScreen from './screens/SearchScreen.jsx';
 import UserEditScreen from './screens/UserEditScreen.jsx';
 import ContentListScreen from './screens/ContentListScreen.jsx';
+import ContentEditScreen from './screens/ContentEditScreen.jsx';
 
 // axios.defaults.baseURL = 'http://localhost:5000';
 
@@ -44,6 +45,10 @@ const router = createBrowserRouter(
         <Route path="/admin/users" element={<UserListScreen />}></Route>
         <Route path="/admin/user/:id" element={<UserEditScreen />}></Route>
         <Route path="/admin/contents" element={<ContentListScreen />}></Route>
+        <Route
+          path="/admin/content/:id"
+          element={<ContentEditScreen />}
+        ></Route>
       </Route>
     </Route>
   )

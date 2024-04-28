@@ -257,6 +257,12 @@ select {
   margin-bottom: 1rem;
 }
 
+/* ContentEditScreen */
+
+.img-thumbnail {
+  height: 75px;
+}
+
 /* HomeScreen */
 
 .box-trending {

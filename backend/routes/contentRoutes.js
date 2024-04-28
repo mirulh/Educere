@@ -156,6 +156,44 @@ contentRouter.delete(
   })
 );
 
+contentRouter.get(
+  '/:id',
+  isAuth,
+  isAdmin,
+  expressAsyncHandler(async (req, res) => {
+    const content = await Content.findById(req.params.id);
+
+    if (content) {
+      res.send(content);
+    } else {
+      res.status(404).send({ message: 'Content Not Found' });
+    }
+  })
+);
+
+contentRouter.put(
+  '/:id',
+  isAuth,
+  isAdmin,
+  expressAsyncHandler(async (req, res) => {
+    const contentId = req.params.id;
+    const content = await Content.findById(contentId);
+
+    if (content) {
+      // res.send({ message: 'content found' });
+      content.name = req.body.name;
+      content.slug = req.body.slug;
+      content.image = req.body.image;
+      content.cost = req.body.cost;
+      content.hasCert = req.body.hasCert;
+      content.description = req.body.description;
+      content.url = req.body.url;
+      await content.save();
+      res.send({ message: 'Content Updated', updated: content });
+    }
+  })
+);
+
 // contentRouter.post(
 //   '/'.isAdmin,
 //   isAuth,
