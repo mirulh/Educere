@@ -5,6 +5,8 @@ import mongoose from 'mongoose';
 import seedRouter from '../routes/seedRoutes.js';
 import userRouter from '../routes/userRoutes.js';
 import contentRouter from '../routes/contentRoutes.js';
+import uploadRouter from '../routes/uploadRoutes.js';
+import submissionRouter from '../routes/submissionRoutes.js';
 
 // !IMPORTANT for structuring JSON on POST API calls. DON'T leave it out!!
 const app = express();
@@ -34,6 +36,8 @@ mongoose
 
 app.use('/api/users', userRouter);
 app.use('/api/contents', contentRouter);
+app.use('/api/upload', uploadRouter);
+app.use('/api/submissions', submissionRouter);
 
 // define port
 const port = process.env.PORT || 8000;

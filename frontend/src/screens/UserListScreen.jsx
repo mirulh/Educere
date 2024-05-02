@@ -21,6 +21,7 @@ const reducer = (state, action) => {
         page: action.payload.page,
         pages: action.payload.pages,
         loading: false,
+        count: action.payload.count,
       };
     case 'FETCH_FAIL':
       return { ...state, loading: false, error: action.payload };
@@ -41,7 +42,7 @@ const reducer = (state, action) => {
 export default function UserListScreen() {
   const navigate = useNavigate();
   const [
-    { loading, users, pages, error, loadingDelete, successDelete },
+    { loading, users, pages, error, loadingDelete, successDelete, count },
     dispatch,
   ] = useReducer(reducer, {
     loading: true,
@@ -119,6 +120,7 @@ export default function UserListScreen() {
             <table className="table table-bordered">
               <thead>
                 <tr>
+                  <th>No.</th>
                   <th>ID</th>
                   <th>NAME</th>
                   <th>EMAIL</th>
@@ -127,16 +129,17 @@ export default function UserListScreen() {
                 </tr>
               </thead>
               <tbody>
-                {users.map((user) => (
+                {users.map((user, index) => (
                   <tr key={user._id}>
+                    <td>{index + 1 + count}</td>
                     <td>{user._id}</td>
                     <td>{user.name}</td>
                     <td>{user.email}</td>
                     <td>{user.isAdmin ? 'YES' : 'NO'}</td>
-                    <td>
+                    <td className="text-nowrap">
                       <Button
                         type="button"
-                        variant="light"
+                        // variant="light"
                         onClick={() => navigate(`/admin/user/${user._id}`)}
                       >
                         Edit
@@ -144,7 +147,7 @@ export default function UserListScreen() {
                       &nbsp;&nbsp;
                       <Button
                         type="button"
-                        variant="light"
+                        variant="danger"
                         onClick={() => deleteHandler(user)}
                       >
                         Delete

@@ -23,6 +23,7 @@ const reducer = (state, action) => {
         page: action.payload.page,
         pages: action.payload.pages,
         loading: false,
+        count: action.payload.count,
       };
     case 'FETCH_FAIL':
       return {
@@ -44,15 +45,15 @@ const reducer = (state, action) => {
       };
 
     case 'DELETE_FAIL':
-      return { ...state, loadingDelete: false };
+      return { ...state, loadingDelete: false, successDelete: false };
     case 'DELETE_RESET':
       return { ...state, loadingDelete: false, successDelete: false };
     case 'CREATE_REQUEST':
-      return {};
+      return { ...state, loadingCreate: true };
     case 'CREATE_SUCCESS':
-      return {};
+      return { ...state, loadingCreate: false };
     case 'CREATE_FAIL':
-      return {};
+      return { ...state, loadingCreate: false };
     default:
       return state;
   }
@@ -69,6 +70,7 @@ export default function ContentListScreen() {
       loadingDelete,
       successDelete,
       loadingCreate,
+      count,
     },
     dispatch,
   ] = useReducer(reducer, {
@@ -134,15 +136,17 @@ export default function ContentListScreen() {
             headers: { Authorization: `Bearer ${userInfo.token}` },
           }
         );
-        toast.success('content created successfully');
+        toast.success('new content created successfully');
         dispatch({ type: 'CREATE_SUCCESS' });
-        navigate(`/admin/product/${data.product._id}`);
+        navigate(`/admin/content/${data.content._id}`);
       } catch (err) {
         toast.error(getError(err));
         dispatch({ type: 'CREATE_FAIL' });
       }
     }
   };
+
+  console.log('contents', contents);
 
   return (
     <div>
@@ -155,8 +159,16 @@ export default function ContentListScreen() {
             <h1>Contents List</h1>
           </Col>
           <Col className="col text-end">
-            <div>
-              <Button type="button" onClick={createHandler} disabled={error}>
+            <div className="positionContainer2">
+              <div className="toBePosition2">
+                {loadingCreate && <LoadingBox></LoadingBox>}
+              </div>
+              <Button
+                variant="warning"
+                type="button"
+                onClick={createHandler}
+                disabled={error}
+              >
                 Create Content
               </Button>
             </div>
@@ -172,7 +184,8 @@ export default function ContentListScreen() {
             <table className="table table-bordered">
               <thead>
                 <tr>
-                  <th>ID</th>
+                  <th>No.</th>
+                  <th>CONTENT ID</th>
                   <th>NAME</th>
                   <th>CATEGORY</th>
                   <th>COST</th>
@@ -182,8 +195,9 @@ export default function ContentListScreen() {
               </thead>
 
               <tbody>
-                {contents.map((content) => (
+                {contents.map((content, index) => (
                   <tr key={content._id}>
+                    <td>{index + 1 + count}</td>
                     <td>{content._id}</td>
                     <td>{content.name}</td>
                     <td>{content.category}</td>
@@ -196,20 +210,20 @@ export default function ContentListScreen() {
                         >{`${ct} `}</li>
                       ))}
                     </td>
-                    <td>
+                    <td className="text-nowrap">
                       <Button
+                        className="me-2"
                         type="button"
-                        variant="light"
+                        // variant="light"
                         onClick={() =>
                           navigate(`/admin/content/${content._id}`)
                         }
                       >
                         Edit
                       </Button>
-                      &nbsp;&nbsp;
                       <Button
                         type="button"
-                        variant="light"
+                        variant="danger"
                         onClick={() => deleteHandler(content)}
                       >
                         Delete

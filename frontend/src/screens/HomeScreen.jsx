@@ -1,6 +1,9 @@
 import React from 'react';
 import Container from 'react-bootstrap/Container';
 import { Helmet } from 'react-helmet-async';
+import Button from 'react-bootstrap/Button';
+import Badge from 'react-bootstrap/Badge';
+import { Link } from 'react-router-dom';
 
 export default function HomeScreen() {
   return (
@@ -24,7 +27,13 @@ export default function HomeScreen() {
           <div className="box-carousel">carousel</div>
         </div>
       </Container>
-      <div className="box-banner mb-5">submission</div>
+      <div className="box-banner mb-5 submission-align">
+        <Link to="/submit-content">
+          <Button pill className="submission-button">
+            Submit New Content
+          </Button>
+        </Link>
+      </div>
     </div>
   );
 }

@@ -13,7 +13,7 @@ contentRouter.get(
   })
 );
 
-const PAGE_SIZE = 3;
+const PAGE_SIZE = 10;
 
 contentRouter.get(
   '/search',
@@ -124,8 +124,10 @@ contentRouter.get(
     const { query } = req;
     const page = query.page || 1;
     const pageSize = PAGE_SIZE_CONTENT;
+    const count = (page - 1) * pageSize;
 
     const contents = await Content.find()
+      .sort({ createdAt: -1 })
       .skip(pageSize * (page - 1))
       .limit(pageSize);
 
@@ -137,6 +139,7 @@ contentRouter.get(
       page,
       pages: Math.ceil(countContents / pageSize),
       // if 1.2 then 2
+      count,
     });
   })
 );
@@ -151,7 +154,7 @@ contentRouter.delete(
       await content.deleteOne();
       res.status(200).send({ message: `deleted content id ${content._id}` });
     } else {
-      res.status(404).send({ message: 'Content Not Found' });
+      res.status(404).send({ message: 'content not found' });
     }
   })
 );
@@ -194,11 +197,26 @@ contentRouter.put(
   })
 );
 
-// contentRouter.post(
-//   '/'.isAdmin,
-//   isAuth,
-//   expressAsyncHandler(async (req, res) => {})
-// );
+contentRouter.post(
+  '/',
+  isAuth,
+  isAdmin,
+  expressAsyncHandler(async (req, res) => {
+    const newContent = new Content({
+      name: 'sample name ' + Date.now(),
+      slug: 'sample-name-' + Date.now(),
+      image: '/images/default.png',
+      category: 'sample category',
+      cost: 'Free',
+      hasCert: false,
+      type: ['sample type'],
+      description: 'sample description',
+      url: 'http://www.example.com/',
+    });
+    const content = await newContent.save();
+    res.send({ message: 'New Content created', content });
+  })
+);
 
 export default contentRouter;
 
@@ -278,6 +296,18 @@ Usage in the code:
       .skip(pageSize * (page - 1))
 
 When page equals to 1 (when user is on the first page) the value calculated of .skip will be 0. This means there is no document will be skipped on first page. When user navigate to second page, page 2, the skip value will be 5, .skip(5) meaning on the second page, 5 documents will be skipped therefore, imitating the pagination effects
+
+For saving
+
+      name: 'sample name ' + Date.now(),
+      slug: 'sample-name-' + Date.now(),
+      image: '/images/default.png',
+      category: 'sample category',
+      cost: 'Free',
+      hasCert: false,
+      type: ['sample type'],
+      description: 'sample description',
+      url: 'http://www.example.com/',
 
 
 */

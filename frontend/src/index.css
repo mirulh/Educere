@@ -259,11 +259,61 @@ select {
 
 /* ContentEditScreen */
 
+.imgContainer {
+  height: 75px;
+}
+
 .img-thumbnail {
   height: 75px;
 }
 
+/* position loading on top of image */
+
+.positionContainer {
+  position: relative;
+  display: inline-block;
+}
+
+.toBePosition {
+  position: absolute;
+  left: 33px;
+  top: 21px;
+  z-index: 1000;
+  /* background-color: #92ad40;
+  padding: 5px; */
+}
+
+/* ContentListScreen */
+
+.positionContainer2 {
+  position: relative;
+}
+
+.toBePosition2 {
+  position: absolute;
+  right: 50px;
+  top: 3px;
+}
+
 /* HomeScreen */
+
+/* SubmissionScreen */
+
+.selectWidth {
+  width: 150px;
+}
+
+.chevronContainer {
+  position: relative;
+}
+
+.chevronPosition {
+  position: absolute;
+  left: 120px;
+  bottom: 7px;
+}
+
+/* Box Coordination CSS */
 
 .box-trending {
   background-color: lightblue;
@@ -312,6 +362,17 @@ select {
   font-size: 1rem;
   border: 1px solid white;
   padding: 1rem;
+}
+
+.submission-align {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.submission-button {
+  border-radius: 2rem;
+  padding: 10px 25px 10px 25px;
 }
 
 /*  */

@@ -41,9 +41,9 @@ function App() {
                     <LinkContainer to="/profile">
                       <NavDropdown.Item>User Profile</NavDropdown.Item>
                     </LinkContainer>
-                    <LinkContainer to="/submission">
+                    {/* <LinkContainer to="/submission">
                       <NavDropdown.Item>Submission</NavDropdown.Item>
-                    </LinkContainer>
+                    </LinkContainer> */}
                     <NavDropdown.Divider />
                     <Link
                       to="#signout"
@@ -65,6 +65,9 @@ function App() {
                     </LinkContainer>
                     <LinkContainer to="/admin/contents">
                       <NavDropdown.Item>Contents</NavDropdown.Item>
+                    </LinkContainer>
+                    <LinkContainer to="/admin/submissions">
+                      <NavDropdown.Item>Submissions</NavDropdown.Item>
                     </LinkContainer>
                     <LinkContainer to="/admin/users">
                       <NavDropdown.Item>Users</NavDropdown.Item>

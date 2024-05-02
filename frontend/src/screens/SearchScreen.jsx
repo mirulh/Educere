@@ -308,7 +308,7 @@ export default function SearchScreen() {
                       >
                         <Button
                           className={
-                            Number(page) === x + 1 ? '' : 'text-black-50'
+                            Number(page) === x + 1 ? 'text-black-50' : ''
                           }
                           variant="light"
                         >

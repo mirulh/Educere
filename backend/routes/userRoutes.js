@@ -16,6 +16,7 @@ userRouter.get(
     const { query } = req;
     const page = query.page || 1;
     const pageSize = PAGE_SIZE_USER;
+    const count = (page - 1) * pageSize;
 
     // works the same with only .find()
     const users = await User.find({})
@@ -29,6 +30,7 @@ userRouter.get(
       countUsers,
       page,
       pages: Math.ceil(countUsers / pageSize),
+      count,
     });
   })
 );

@@ -19,35 +19,52 @@ const reducer = (state, action) => {
     case 'FETCH_REQUEST':
       return { ...state, loading: true };
     case 'FETCH_SUCCESS':
-      return { ...state, loading: false };
+      return { ...state, loading: false, submission: action.payload };
     case 'FETCH_FAIL':
       return { ...state, loading: false, error: action.payload };
-    case 'UPDATE_REQUEST':
-      return { ...state, loadingUpdate: true };
-    case 'UPDATE_SUCCESS':
-      return { ...state, loadingUpdate: false };
-    case 'UPDATE_FAIL':
-      return { ...state, loadingUpdate: false };
+
     case 'UPLOAD_REQUEST':
       return { ...state, loadingUpload: true };
     case 'UPLOAD_SUCCESS':
       return { ...state, loadingUpload: false };
     case 'UPLOAD_FAIL':
       return { ...state, loadingUpload: false, errorUpload: action.payload };
+
+    case 'APPROVE_REQUEST':
+      return { ...state, loadingApprove: true };
+    case 'APPROVE_SUCCESS':
+      return { ...state, loadingApprove: false };
+    case 'APPROVE_FAIL':
+      return { ...state, loadingApprove: false };
+
+    case 'DELETE_REQUEST':
+      return { ...state, loadingDelete: true };
+    case 'DELETE_SUCCESS':
+      return { ...state, loadingDelete: false };
+    case 'DELETE_FAIL':
+      return { ...state, loadingDelete: false };
     default:
       return state;
   }
 };
 
-export default function ContentEditScreen() {
+export default function SubmissionEditScreen() {
   const navigate = useNavigate();
   const params = useParams();
-  const { id: contentId } = params;
+  const { id: submissionId } = params;
   const { state } = useContext(Store);
   const { userInfo } = state;
 
   const [
-    { loading, error, loadingUpdate, loadingUpload, errorUpload },
+    {
+      loading,
+      error,
+      loadingDelete,
+      loadingUpload,
+      loadingApprove,
+      errorUpload,
+      submission,
+    },
     dispatch,
   ] = useReducer(reducer, {
     loading: true,
@@ -68,7 +85,7 @@ export default function ContentEditScreen() {
     const fetchData = async () => {
       try {
         dispatch({ type: 'FETCH_REQUEST' });
-        const { data } = await axios.get(`/api/contents/${contentId}`, {
+        const { data } = await axios.get(`/api/submissions/${submissionId}`, {
           headers: { Authorization: `Bearer ${userInfo.token}` },
         });
         setName(data.name);
@@ -79,44 +96,16 @@ export default function ContentEditScreen() {
         setCost(data.cost);
         setHasCert(data.hasCert);
         setDescription(data.description);
-        dispatch({ type: 'FETCH_SUCCESS' });
+        dispatch({ type: 'FETCH_SUCCESS', payload: data });
+        // console.log(data);
       } catch (err) {
         dispatch({ type: 'FETCH_FAIL', payload: getError(err) });
       }
     };
     fetchData();
-  }, [contentId, userInfo]);
+  }, [submissionId, userInfo]);
 
-  const submitHandler = async (e) => {
-    e.preventDefault();
-    try {
-      dispatch({ type: 'UPDATE_REQUEST' });
-      await axios.put(
-        `/api/contents/${contentId}`,
-        {
-          _id: contentId,
-          name,
-          slug,
-          url,
-          image,
-          cost,
-          hasCert,
-          description,
-        },
-        {
-          headers: { Authorization: `Bearer ${userInfo.token}` },
-        }
-      );
-      dispatch({
-        type: 'UPDATE_SUCCESS',
-      });
-      toast.success('Content updated successfully');
-      navigate('/admin/contents');
-    } catch (err) {
-      toast.error(getError(err));
-      dispatch({ type: 'UPDATE_FAIL' });
-    }
-  };
+  console.log('current submission', submission);
 
   const uploadFileHandler = async (e) => {
     const image = e.target.files[0];
@@ -142,20 +131,72 @@ export default function ContentEditScreen() {
     }
   };
 
+  const deleteHandler = async (submission, noToast) => {
+    try {
+      dispatch({ type: 'DELETE_REQUEST' });
+      const { data } = await axios.delete(
+        `/api/submissions/${submission._id}`,
+        { headers: { Authorization: `Bearer ${userInfo.token}` } }
+      );
+      dispatch({ type: 'DELETE_SUCCESS' });
+
+      // removing toast when using approveHandler
+      if (noToast) {
+        return;
+      } else {
+        toast.success('submission deleted successfully');
+        navigate('/admin/submissions');
+      }
+    } catch (err) {
+      toast.error(getError(err));
+      dispatch({ type: 'DELETE_FAIL' });
+    }
+  };
+
+  const approveHandler = async (e) => {
+    e.preventDefault();
+    const noToast = true;
+    try {
+      const { data } = await axios.post(
+        `/api/submissions/${submissionId}`,
+        {
+          _id: submissionId,
+          name,
+          slug,
+          url,
+          image,
+          cost,
+          hasCert,
+          description,
+        },
+        {
+          headers: { Authorization: `Bearer ${userInfo.token}` },
+        }
+      );
+      //delete the submission after approve
+      deleteHandler(submission, noToast);
+      toast.success('Submission approve to the content list');
+      navigate('/admin/contents');
+    } catch (err) {
+      toast.error(getError(err));
+    }
+  };
+
   return (
     <div>
       <Helmet>
-        <title>Edit Content ID {contentId} </title>
+        <title>Edit Submission ID {submissionId} </title>
       </Helmet>
       <Container className="small-container mb-5">
-        <h3 className="mt-5 mb-5">Edit Content ID: {contentId}</h3>
+        <h3 className="mt-5 mb-5">Edit Submission ID: {submissionId}</h3>
+        {loadingDelete && <LoadingBox></LoadingBox>}
         {loading ? (
           <LoadingBox></LoadingBox>
         ) : error ? (
           <MessageBox variant="danger">{error}</MessageBox>
         ) : (
           <>
-            <Form onSubmit={submitHandler}>
+            <Form onSubmit={approveHandler}>
               <Form.Group className="mb-3">
                 <Form.Label>Name</Form.Label>
                 <Form.Control
@@ -266,9 +307,21 @@ export default function ContentEditScreen() {
               </Form.Group>
 
               <div className="mb-5 text-end">
-                {loadingUpdate && <LoadingBox></LoadingBox>}
-                <Button disabled={loadingUpdate} type="submit">
-                  Update
+                {loadingApprove && <LoadingBox></LoadingBox>}
+                <Button
+                  className="me-4"
+                  type="button"
+                  variant="danger"
+                  onClick={() => deleteHandler(submission)}
+                >
+                  Reject
+                </Button>
+                <Button
+                  variant="success"
+                  disabled={loadingApprove}
+                  type="submit"
+                >
+                  Approve
                 </Button>
               </div>
             </Form>
