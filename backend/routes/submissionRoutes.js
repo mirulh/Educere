@@ -6,8 +6,8 @@ import Content from '../models/contentModel.js';
 
 const submissionRouter = express.Router();
 
-function createSlug(str) {
-  return str.replace(/\s+/g, '-').toLowerCase();
+function loweCaseSlug(slug) {
+  return slug.toLowerCase();
 }
 
 submissionRouter.post(
@@ -16,14 +16,14 @@ submissionRouter.post(
   expressAsyncHandler(async (req, res) => {
     const newSubmission = new Submission({
       name: req.body.name || 'sample content ' + Date.now(),
-      slug: req.body.name
-        ? createSlug(req.body.name) + '-' + Date.now()
-        : 'sample-slug-' + Date.now(),
+      slug:
+        loweCaseSlug(req.body.name) + '-' + Date.now() ||
+        'sample-slug-' + Date.now(),
       image: '/images/default.png',
-      category: 'sample category',
+      category: req.body.category || [],
+      type: req.body.type || [],
       cost: req.body.cost || 'Free',
       hasCert: req.body.hasCert || false,
-      type: ['sample type'],
       description: req.body.description || 'sample description',
       url: req.body.url,
     });
@@ -102,10 +102,10 @@ submissionRouter.post(
       name: req.body.name,
       slug: req.body.slug,
       image: req.body.image || '/images/default.png',
-      category: 'sample category',
+      category: req.body.category,
+      type: req.body.type,
       cost: req.body.cost || 'Free',
       hasCert: req.body.hasCert || false,
-      type: ['sample type'],
       description: req.body.description || 'sample description',
       url: req.body.url || 'not found',
     });

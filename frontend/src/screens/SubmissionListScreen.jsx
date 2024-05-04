@@ -10,6 +10,7 @@ import Row from 'react-bootstrap/Row';
 import LoadingBox from '../components/LoadingBox';
 import MessageBox from '../components/MessageBox';
 import Button from 'react-bootstrap/Button';
+import Table from 'react-bootstrap/Table';
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -105,7 +106,7 @@ export default function SubmissionListScreen() {
   };
 
   const approveHandler = async (submission) => {
-    if (window.confirm('Are you sure to delete?')) {
+    if (window.confirm('Approve this submission?')) {
       try {
         const { data } = await axios.post(
           `/api/submissions/${submission._id}`,
@@ -113,11 +114,13 @@ export default function SubmissionListScreen() {
             _id: submission._id,
             name: submission.name,
             slug: submission.slug,
-            url: submission.url,
             image: submission.image,
+            category: submission.category,
+            type: submission.type,
             cost: submission.cost,
             hasCert: submission.hasCert,
             description: submission.description,
+            url: submission.url,
           },
           {
             headers: { Authorization: `Bearer ${userInfo.token}` },
@@ -158,16 +161,18 @@ export default function SubmissionListScreen() {
           <MessageBox variant="danger">{error}</MessageBox>
         ) : (
           <>
-            <table className="table table-bordered">
+            <Table striped bordered hover>
               <thead>
-                <tr>
+                <tr className="text-center">
                   <th>No.</th>
                   <th>URL</th>
                   <th>NAME</th>
                   <th>CATEGORY</th>
-                  <th>COST</th>
                   <th>TYPE</th>
-                  <th colSpan={2}>ACTIONS</th>
+                  <th>COST</th>
+                  <th colSpan={2} className="w-25">
+                    ACTIONS
+                  </th>
                 </tr>
               </thead>
 
@@ -185,17 +190,24 @@ export default function SubmissionListScreen() {
                       </a>
                     </td>
                     <td>{submission.name}</td>
-                    <td>{submission.category}</td>
-                    <td>{submission.cost}</td>
                     <td>
-                      {' '}
-                      {submission.type.map((ct, index) => (
-                        <li key={index} className="list-unstyled">
-                          {`${ct} `}
-                        </li>
+                      {submission.category.map((ct, index) => (
+                        <li
+                          className="list-unstyled"
+                          key={index}
+                        >{`${ct.label}`}</li>
                       ))}
                     </td>
-                    <td className="text-nowrap text-center">
+                    <td>
+                      {submission.type.map((ct, index) => (
+                        <li
+                          className="list-unstyled"
+                          key={index}
+                        >{`${ct.label}`}</li>
+                      ))}
+                    </td>
+                    <td>{submission.cost}</td>
+                    <td className="text-nowrap d-flex justify-content-evenly">
                       <Button
                         type="button"
                         className="me-2"
@@ -206,13 +218,14 @@ export default function SubmissionListScreen() {
                       </Button>
                       <Button
                         type="button"
+                        className="me-2"
                         variant="danger"
                         onClick={() => deleteHandler(submission)}
                       >
                         Reject
                       </Button>
                     </td>
-                    <td className="text-nowrap">
+                    <td>
                       <Button
                         type="button"
                         // variant="light"
@@ -226,7 +239,7 @@ export default function SubmissionListScreen() {
                   </tr>
                 ))}
               </tbody>
-            </table>
+            </Table>
             <div className="mb-5">
               {[...Array(pages).keys()].map((x) => (
                 <Link

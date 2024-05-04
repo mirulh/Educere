@@ -13,6 +13,9 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 import { getError } from '../../utils_frontend';
+import CreatableSelect from 'react-select/creatable';
+import makeAnimated from 'react-select/animated';
+import { allTypes, allCategories } from '../../utils_frontend';
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -75,8 +78,8 @@ export default function SubmissionEditScreen() {
   const [slug, setSlug] = useState('');
   const [image, setImage] = useState('');
   const [url, setUrl] = useState('');
-  const [category, setCategory] = useState('');
-  const [type, setType] = useState('');
+  const [category, setCategory] = useState([]);
+  const [type, setType] = useState([]);
   const [cost, setCost] = useState('');
   const [hasCert, setHasCert] = useState('');
   const [description, setDescription] = useState('');
@@ -91,8 +94,9 @@ export default function SubmissionEditScreen() {
         setName(data.name);
         setSlug(data.slug);
         setUrl(data.url);
-        setImage(data.image);
         setCategory(data.category);
+        setType(data.type);
+        setImage(data.image);
         setCost(data.cost);
         setHasCert(data.hasCert);
         setDescription(data.description);
@@ -163,11 +167,13 @@ export default function SubmissionEditScreen() {
           _id: submissionId,
           name,
           slug,
-          url,
           image,
+          category,
+          type,
           cost,
           hasCert,
           description,
+          url,
         },
         {
           headers: { Authorization: `Bearer ${userInfo.token}` },
@@ -181,6 +187,9 @@ export default function SubmissionEditScreen() {
       toast.error(getError(err));
     }
   };
+
+  // For react-select categories and types
+  const animatedComponents = makeAnimated();
 
   return (
     <div>
@@ -226,6 +235,30 @@ export default function SubmissionEditScreen() {
                   placeholder="https://www.example.com/"
                 />
               </InputGroup>
+
+              <Form.Label>Categories</Form.Label>
+              <CreatableSelect
+                className="mb-4 basic-multi-select"
+                defaultValue={category}
+                name="select"
+                options={allCategories}
+                isMulti
+                closeMenuOnSelect={false}
+                components={animatedComponents}
+                onChange={(category) => setCategory(category)}
+              />
+
+              <Form.Label>Types of the material</Form.Label>
+              <CreatableSelect
+                className="mb-5 basic-multi-select"
+                defaultValue={type}
+                name="select"
+                options={allTypes}
+                isMulti
+                closeMenuOnSelect={false}
+                components={animatedComponents}
+                onChange={(type) => setType(type)}
+              />
 
               <Row className="mb-4">
                 <Col md={10} className="mb-3">

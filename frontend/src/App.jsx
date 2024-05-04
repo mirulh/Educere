@@ -33,11 +33,15 @@ function App() {
             <Navbar.Collapse id="basic-navbar-nav">
               <SearchBox />
               <Nav className="me-auto w-100 justify-content-end">
-                <Link to="/favorites" className="nav-link">
-                  Saved
+                <Link to="/favorites" className="nav-link me-3">
+                  Saved <i className="fa-regular fa-bookmark"></i>
                 </Link>
                 {userInfo ? (
-                  <NavDropdown title={userInfo.name} id="basic-nav-dropdown">
+                  <NavDropdown
+                    className="me-2"
+                    title={<i className="fa-regular fa-user"></i>}
+                    id="basic-nav-dropdown"
+                  >
                     <LinkContainer to="/profile">
                       <NavDropdown.Item>User Profile</NavDropdown.Item>
                     </LinkContainer>
@@ -59,7 +63,10 @@ function App() {
                   </Link>
                 )}
                 {userInfo && userInfo.isAdmin && (
-                  <NavDropdown title="Admin" id="admin-nav-dropdown">
+                  <NavDropdown
+                    title={<i className="fa-solid fa-user-tie"></i>}
+                    id="admin-nav-dropdown"
+                  >
                     <LinkContainer to="/admin/dashboard">
                       <NavDropdown.Item>Dashboard</NavDropdown.Item>
                     </LinkContainer>

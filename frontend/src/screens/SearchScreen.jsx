@@ -12,6 +12,9 @@ import { toast } from 'react-toastify';
 import LoadingBox from '../components/LoadingBox';
 import MessageBox from '../components/MessageBox';
 import Rating from '../components/Rating';
+import Form from 'react-bootstrap/Form';
+import Dropdown from '../components/Dropdown';
+import DropdownFilter from '../components/DropdownFilter';
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -136,6 +139,16 @@ export default function SearchScreen() {
     return `/search?searchTerm=${filterSearchTerm}&category=${filterCategory}&cost=${filterCost}&type=${filterType}&rating=${filterRating}&order=${filterOrder}&page=${filterPage}`;
   };
 
+  console.log('category', categories);
+
+  const [selectedFilters, setSelectedFilters] = useState([]);
+
+  const handleFilterChange = (selectedOptions) => {
+    setSelectedFilters(selectedOptions);
+  };
+
+  const options = ['Option 1', 'Option 2', 'Option 3', 'Option 4'];
+
   return (
     <div>
       <Helmet>
@@ -151,7 +164,7 @@ export default function SearchScreen() {
               filtration
               <h3>Categories</h3>
               <div>
-                <ul>
+                <ul className="list-unstyled">
                   <li>
                     <Link
                       className={category === 'all' ? 'text-bold' : ''}
@@ -160,13 +173,13 @@ export default function SearchScreen() {
                       All
                     </Link>
                   </li>
-                  {categories.map((c) => (
-                    <li key={c}>
+                  {categories.map((c, index) => (
+                    <li key={index}>
                       <Link
+                        to={getFilterUrl({ category: c.value })}
                         className={category === c ? 'text-bold' : ''}
-                        to={getFilterUrl({ category: c })}
                       >
-                        {c}
+                        {c.label}
                       </Link>
                     </li>
                   ))}
@@ -174,7 +187,7 @@ export default function SearchScreen() {
               </div>
               <h3>Cost</h3>
               <div>
-                <ul>
+                <ul className="list-unstyled">
                   <li>
                     <Link
                       className={cost === 'all' ? 'text-bold' : ''}
@@ -197,7 +210,7 @@ export default function SearchScreen() {
               </div>
               <h3>Types</h3>
               <div>
-                <ul>
+                <ul className="list-unstyled">
                   <li>
                     <Link
                       className={type === 'all' ? 'text-bold' : ''}
@@ -206,13 +219,13 @@ export default function SearchScreen() {
                       All
                     </Link>
                   </li>
-                  {types.map((t) => (
-                    <li key={t}>
+                  {types.map((t, index) => (
+                    <li key={index}>
                       <Link
                         className={type === t ? 'text-bold' : ''}
                         to={getFilterUrl({ type: t })}
                       >
-                        {t}
+                        {t.label}
                       </Link>
                     </li>
                   ))}
@@ -220,7 +233,7 @@ export default function SearchScreen() {
               </div>
               <h3>Avg. Reviews</h3>
               <div>
-                <ul>
+                <ul className="list-unstyled">
                   {ratings.map((r) => (
                     <li key={r.name}>
                       <Link to={getFilterUrl({ rating: r.rating })}>

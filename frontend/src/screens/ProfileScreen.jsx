@@ -71,8 +71,14 @@ export default function ProfileScreen() {
       <Helmet>
         <title>User Profile</title>
       </Helmet>
-      <Container className="small-container">
+      <Container className="small-container mb-5 pb-3">
         <h1 className="mt-5 mb-5">User Profile</h1>
+        <div className="text-center mb-3">
+          <span className="fa-stack fa-7x">
+            <i className="fa-regular fa-circle fa-stack-2x"></i>
+            <i className="fa-solid fa-user fa-stack-1x"></i>
+          </span>
+        </div>
         <Form onSubmit={submitHandler}>
           {/*  */}
           <Form.Group className="mb-3" controlId="name">

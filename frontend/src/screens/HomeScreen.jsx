@@ -29,9 +29,7 @@ export default function HomeScreen() {
       </Container>
       <div className="box-banner mb-5 submission-align">
         <Link to="/submit-content">
-          <Button pill className="submission-button">
-            Submit New Content
-          </Button>
+          <Button className="submission-button">Submit New Content</Button>
         </Link>
       </div>
     </div>

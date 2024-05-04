@@ -9,6 +9,7 @@ import axios from 'axios';
 import { getError } from '../../utils_frontend';
 import { toast } from 'react-toastify';
 import Container from 'react-bootstrap/Container';
+import Table from 'react-bootstrap/Table';
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -117,7 +118,7 @@ export default function UserListScreen() {
           <MessageBox variant="danger">{error}</MessageBox>
         ) : (
           <>
-            <table className="table table-bordered">
+            <Table striped bordered hover>
               <thead>
                 <tr>
                   <th>No.</th>
@@ -156,7 +157,7 @@ export default function UserListScreen() {
                   </tr>
                 ))}
               </tbody>
-            </table>
+            </Table>
             <div className="mb-5">
               {[...Array(pages).keys()].map((x) => (
                 <Link

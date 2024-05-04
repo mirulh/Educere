@@ -11,6 +11,7 @@ import { Store } from '../Store';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import { getError } from '../../utils_frontend';
+import Table from 'react-bootstrap/Table';
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -181,15 +182,15 @@ export default function ContentListScreen() {
           <MessageBox variant="danger">{error}</MessageBox>
         ) : (
           <>
-            <table className="table table-bordered">
+            <Table striped bordered hover>
               <thead>
                 <tr>
                   <th>No.</th>
                   <th>CONTENT ID</th>
                   <th>NAME</th>
                   <th>CATEGORY</th>
-                  <th>COST</th>
                   <th>TYPE</th>
+                  <th>COST</th>
                   <th>ACTIONS</th>
                 </tr>
               </thead>
@@ -200,16 +201,21 @@ export default function ContentListScreen() {
                     <td>{index + 1 + count}</td>
                     <td>{content._id}</td>
                     <td>{content.name}</td>
-                    <td>{content.category}</td>
-                    <td>{content.cost}</td>
                     <td>
-                      {content.type.map((ct, index) => (
-                        <li
-                          className="list-unstyled"
-                          key={index}
-                        >{`${ct} `}</li>
+                      {content.category.map((ct, index) => (
+                        <li className="list-unstyled" key={index}>
+                          {ct.label}
+                        </li>
                       ))}
                     </td>
+                    <td>
+                      {content.type.map((ct, index) => (
+                        <li className="list-unstyled" key={index}>
+                          {ct.label}
+                        </li>
+                      ))}
+                    </td>
+                    <td>{content.cost}</td>
                     <td className="text-nowrap">
                       <Button
                         className="me-2"
@@ -232,7 +238,7 @@ export default function ContentListScreen() {
                   </tr>
                 ))}
               </tbody>
-            </table>
+            </Table>
             <div className="mb-5">
               {[...Array(pages).keys()].map((x) => (
                 <Link

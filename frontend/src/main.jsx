@@ -27,6 +27,8 @@ import SubmissionScreen from './screens/SubmissionScreen.jsx';
 import UserRoute from './components/UserRoute.jsx';
 import SubmissionListScreen from './screens/SubmissionListScreen.jsx';
 import SubmissionEditScreen from './screens/SubmissionEditScreen.jsx';
+import TestApp from './components/TestApp.jsx';
+import Dropdown from './components/Dropdown.jsx';
 
 // axios.defaults.baseURL = 'http://localhost:5000';
 
@@ -35,6 +37,8 @@ const router = createBrowserRouter(
     <Route path="/" element={<App />}>
       <Route index={true} element={<HomeScreen />} />
       <Route path="test" element={<TestData />} />
+      <Route path="testapp2" element={<Dropdown />}></Route>
+      <Route path="/testapp" element={<TestApp />}></Route>
       <Route path="/signin" element={<SigninScreen />}></Route>
       <Route path="/signup" element={<SignupScreen />}></Route>
       <Route path="/search" element={<SearchScreen />}></Route>

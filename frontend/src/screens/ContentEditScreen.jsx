@@ -13,6 +13,10 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 import { getError } from '../../utils_frontend';
+import CreatableSelect from 'react-select/creatable';
+import makeAnimated from 'react-select/animated';
+import { allTypes, allCategories } from '../../utils_frontend';
+// import Select from 'react-select';
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -58,11 +62,13 @@ export default function ContentEditScreen() {
   const [slug, setSlug] = useState('');
   const [image, setImage] = useState('');
   const [url, setUrl] = useState('');
-  const [category, setCategory] = useState('');
-  const [type, setType] = useState('');
+  const [category, setCategory] = useState([]);
+  const [type, setType] = useState([]);
   const [cost, setCost] = useState('');
   const [hasCert, setHasCert] = useState('');
   const [description, setDescription] = useState('');
+
+  const [value, setValue] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -76,10 +82,12 @@ export default function ContentEditScreen() {
         setUrl(data.url);
         setImage(data.image);
         setCategory(data.category);
+        setType(data.type);
         setCost(data.cost);
         setHasCert(data.hasCert);
         setDescription(data.description);
         dispatch({ type: 'FETCH_SUCCESS' });
+        console.log(data);
       } catch (err) {
         dispatch({ type: 'FETCH_FAIL', payload: getError(err) });
       }
@@ -97,11 +105,13 @@ export default function ContentEditScreen() {
           _id: contentId,
           name,
           slug,
-          url,
           image,
+          category,
+          type,
           cost,
           hasCert,
           description,
+          url,
         },
         {
           headers: { Authorization: `Bearer ${userInfo.token}` },
@@ -141,6 +151,9 @@ export default function ContentEditScreen() {
       dispatch({ type: 'UPLOAD_FAIL', payload: getError(err) });
     }
   };
+
+  // For react-select categories and types
+  const animatedComponents = makeAnimated();
 
   return (
     <div>
@@ -185,6 +198,30 @@ export default function ContentEditScreen() {
                   placeholder="https://www.example.com/"
                 />
               </InputGroup>
+
+              <Form.Label>Categories</Form.Label>
+              <CreatableSelect
+                className="mb-4 basic-multi-select"
+                defaultValue={category}
+                name="select"
+                options={allCategories}
+                isMulti
+                closeMenuOnSelect={false}
+                components={animatedComponents}
+                onChange={(category) => setCategory(category)}
+              />
+
+              <Form.Label>Types of the material</Form.Label>
+              <CreatableSelect
+                className="mb-5 basic-multi-select"
+                defaultValue={type}
+                name="select"
+                options={allTypes}
+                isMulti
+                closeMenuOnSelect={false}
+                components={animatedComponents}
+                onChange={(type) => setType(type)}
+              />
 
               <Row className="mb-4">
                 <Col md={10} className="mb-3">

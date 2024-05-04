@@ -187,6 +187,8 @@ contentRouter.put(
       content.name = req.body.name;
       content.slug = req.body.slug;
       content.image = req.body.image;
+      content.category = req.body.category;
+      content.type = req.body.type;
       content.cost = req.body.cost;
       content.hasCert = req.body.hasCert;
       content.description = req.body.description;
@@ -206,10 +208,10 @@ contentRouter.post(
       name: 'sample name ' + Date.now(),
       slug: 'sample-name-' + Date.now(),
       image: '/images/default.png',
-      category: 'sample category',
+      category: [],
+      type: [],
       cost: 'Free',
       hasCert: false,
-      type: ['sample type'],
       description: 'sample description',
       url: 'http://www.example.com/',
     });

@@ -34,15 +34,17 @@ export default function Content(prop) {
           <div className="categoryType">
             <div className="cardCategory">
               {/*  */}
-              <Badge pill bg="success">
-                {content.category}
-              </Badge>
+              {content.category.map((type, index) => (
+                <Badge pill bg="success" key={`${content._id}-${index}`}>
+                  {type.label}
+                </Badge>
+              ))}
             </div>
             {/*  */}
             <div className="cardType">
-              {content.type.map((type, index) => (
+              {content.type.map((category, index) => (
                 <Badge pill key={`${content._id}-${index}`}>
-                  {type}
+                  {category.label}
                 </Badge>
               ))}
             </div>

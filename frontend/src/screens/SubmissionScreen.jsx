@@ -10,6 +10,10 @@ import axios from 'axios';
 import { Store } from '../Store';
 import InputGroup from 'react-bootstrap/InputGroup';
 import { toast } from 'react-toastify';
+import CreatableSelect from 'react-select/creatable';
+import makeAnimated from 'react-select/animated';
+import { useNavigate } from 'react-router-dom';
+import { allCategories, allTypes } from '../../utils_frontend';
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -27,6 +31,7 @@ const reducer = (state, action) => {
 };
 
 export default function SubmissionScreen() {
+  const navigate = useNavigate();
   const [{ loadingCreate, successCreate, error }, dispatch] = useReducer(
     reducer,
     {
@@ -39,6 +44,8 @@ export default function SubmissionScreen() {
   const { userInfo } = state;
 
   const [name, setName] = useState('');
+  const [category, setCategory] = useState([]);
+  const [type, setType] = useState([]);
   const [cost, setCost] = useState('');
   const [hasCert, setHasCert] = useState('');
   const [description, setDescription] = useState('');
@@ -46,6 +53,8 @@ export default function SubmissionScreen() {
 
   useEffect(() => {
     setName('');
+    setCategory([]);
+    setType([]);
     setCost('');
     setHasCert('');
     setDescription('');
@@ -66,6 +75,8 @@ export default function SubmissionScreen() {
         `/api/submissions/create`,
         {
           name,
+          category,
+          type,
           cost,
           hasCert,
           description,
@@ -75,11 +86,35 @@ export default function SubmissionScreen() {
       );
       dispatch({ type: 'CREATE_SUCCESS' });
       toast.success('Submission successfully created');
+      navigate('/');
     } catch (err) {
       toast.error(getError(err));
       dispatch({ type: 'CREATE_FAIL', payload: getError(err) });
     }
   };
+
+  useEffect(() => {
+    const contentName = extractSDL(url);
+    setName(contentName);
+  }, [url]);
+
+  // extract SDL and capitalized it
+  const extractSDL = (url) => {
+    // Remove protocol (http/https) and www (if present)
+    let domain = url.replace(/^https?:\/\//, '').replace(/^www\./, '');
+    // Extract only the domain name (excluding path)
+    domain = domain.split('/')[0];
+    // Split domain by dots and take the first part
+    const parts = domain.split('.');
+    const websiteName = parts[0];
+    const capitalized =
+      websiteName.charAt(0).toUpperCase() + websiteName.slice(1);
+    return capitalized;
+  };
+
+  // For react-select categories and types
+  const animatedComponents = makeAnimated();
+
   return (
     <div>
       <Helmet>Submit a new content</Helmet>
@@ -88,7 +123,7 @@ export default function SubmissionScreen() {
         <p className="mb-4">
           <i>
             You are expected to provide, at minimum, the link to the website.
-            You can opt to not fill out the rest if you wish.
+            You can opt to not fill out the rest if you wish to do so.
           </i>
         </p>
         {loadingCreate ? (
@@ -98,7 +133,7 @@ export default function SubmissionScreen() {
         ) : (
           <>
             <Form onSubmit={submitHandler}>
-              <Form.Label>Website URL *</Form.Label>
+              <Form.Label>Content / website URL *</Form.Label>
               <InputGroup className="mb-4">
                 <InputGroup.Text>URL</InputGroup.Text>
                 <Form.Control
@@ -110,13 +145,36 @@ export default function SubmissionScreen() {
               </InputGroup>
 
               <Form.Group className="mb-4">
-                <Form.Label>Website Name</Form.Label>
+                <Form.Label>Content / website Name</Form.Label>
                 <Form.Control
                   value={name}
                   onChange={(e) => setName(e.target.value)}
                   placeholder="content name"
+                  readOnly
                 />
               </Form.Group>
+
+              <Form.Label>Describe content subject area</Form.Label>
+              <CreatableSelect
+                className="mb-4 basic-multi-select"
+                name="select"
+                options={allCategories}
+                isMulti
+                closeMenuOnSelect={false}
+                components={animatedComponents}
+                onChange={(category) => setCategory(category)}
+              />
+
+              <Form.Label>Describe content type</Form.Label>
+              <CreatableSelect
+                className="mb-5 basic-multi-select"
+                name="select"
+                options={allTypes}
+                isMulti
+                closeMenuOnSelect={false}
+                components={animatedComponents}
+                onChange={(type) => setType(type)}
+              />
 
               <Form.Group className="mb-4">
                 <Form.Label>
@@ -134,7 +192,7 @@ export default function SubmissionScreen() {
                   <option value="Free/Paid">Free/Paid</option>
                 </Form.Control>
                 <div className="chevronContainer">
-                  <i className="fa-solid fa-chevron-down chevronPosition "></i>
+                  <i className="fa-solid fa-caret-down chevronPosition"></i>
                 </div>
               </Form.Group>
 
@@ -154,7 +212,7 @@ export default function SubmissionScreen() {
                   <option value="false">I don&apos;t know</option>
                 </Form.Control>
                 <div className="chevronContainer">
-                  <i className="fa-solid fa-chevron-down chevronPosition "></i>
+                  <i className="fa-solid fa-caret-down chevronPosition"></i>
                 </div>
               </Form.Group>
 
