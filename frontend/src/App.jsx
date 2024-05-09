@@ -9,17 +9,20 @@ import { LinkContainer } from 'react-router-bootstrap';
 import { useContext } from 'react';
 import { Store } from './Store';
 import SearchBox from './components/SearchBox';
+import Badge from 'react-bootstrap/Badge';
 
 function App() {
   const navigate = useNavigate();
   const { state, dispatch: contextDispatch } = useContext(Store);
-  const { userInfo } = state;
+  const { userInfo, userSaves } = state;
 
   const signoutHandler = () => {
     contextDispatch({ type: 'USER_SIGNOUT' });
     localStorage.removeItem('userInfo');
+    localStorage.removeItem('userSaves');
     navigate('/signin');
   };
+
   return (
     <div className="d-flex flex-column site-container">
       <ToastContainer position="bottom-center" limit={1} />
@@ -33,9 +36,16 @@ function App() {
             <Navbar.Collapse id="basic-navbar-nav">
               <SearchBox />
               <Nav className="me-auto w-100 justify-content-end">
-                <Link to="/favorites" className="nav-link me-3">
-                  Saved <i className="fa-regular fa-bookmark"></i>
-                </Link>
+                {userInfo && (
+                  <Link to="/saved" className="nav-link me-3">
+                    Saved <i className="fa-regular fa-bookmark"></i>
+                    {userSaves.numSaves > 0 && (
+                      <Badge pill bg="danger" className="badgePillRound">
+                        {userSaves.numSaves}
+                      </Badge>
+                    )}
+                  </Link>
+                )}
                 {userInfo ? (
                   <NavDropdown
                     className="me-2"
@@ -87,6 +97,7 @@ function App() {
         </Navbar>
       </header>
       <main>
+        {/* empty class for now className="mainElement"*/}
         <div>
           {/* <div className="box-cover">Banner here</div> */}
           <Container fluid className="topContainer mt-0">

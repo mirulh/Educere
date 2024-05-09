@@ -13,7 +13,7 @@ contentRouter.get(
   })
 );
 
-const PAGE_SIZE = 10;
+const PAGE_SIZE = 6;
 
 contentRouter.get(
   '/search',
@@ -41,13 +41,21 @@ contentRouter.get(
         : {};
 
     // category
-    const categoryFilter = category && category !== 'all' ? { category } : {};
+    const categoryFilter =
+      category && category !== 'all'
+        ? { category: { $elemMatch: { value: category } } }
+        : {};
+
+    // type
+    const typeFilter =
+      type && type !== 'all'
+        ? {
+            type: { $elemMatch: { value: type } },
+          }
+        : {};
 
     // cost
     const costFilter = cost && cost !== 'all' ? { cost } : {};
-
-    // type
-    const typeFilter = type && type !== 'all' ? { type } : {};
 
     // rating
     const ratingFilter =
@@ -107,10 +115,31 @@ contentRouter.get(
 contentRouter.get(
   '/filters',
   expressAsyncHandler(async (req, res) => {
-    const categories = await Content.distinct('category');
+    // const categories = await Content.distinct(
+    //   'category.label' && 'category.value'
+    // );
+    const categories = await Content.aggregate([
+      { $unwind: '$category' },
+      {
+        $group: {
+          _id: '$category.value',
+          label: { $first: '$category.label' },
+        },
+      },
+      { $project: { _id: 0, label: 1, value: '$_id' } },
+    ]);
+    const types = await Content.aggregate([
+      { $unwind: '$type' },
+      {
+        $group: {
+          _id: '$type.value',
+          label: { $first: '$type.label' },
+        },
+      },
+      { $project: { _id: 0, label: 1, value: '$_id' } },
+    ]);
     const costs = await Content.distinct('cost');
-    const types = await Content.distinct('type');
-    res.send({ categories, costs, types });
+    res.send({ categories, types, costs });
   })
 );
 
@@ -127,9 +156,9 @@ contentRouter.get(
     const count = (page - 1) * pageSize;
 
     const contents = await Content.find()
-      .sort({ createdAt: -1 })
       .skip(pageSize * (page - 1))
       .limit(pageSize);
+    // .sort({ createdAt: -1 });
 
     const countContents = await Content.countDocuments();
 
@@ -217,6 +246,60 @@ contentRouter.post(
     });
     const content = await newContent.save();
     res.send({ message: 'New Content created', content });
+  })
+);
+
+contentRouter.get(
+  '/slug/:slug',
+  expressAsyncHandler(async (req, res) => {
+    const content = await Content.findOne({ slug: req.params.slug });
+
+    if (content) {
+      res.send(content);
+    } else {
+      res.status(404).send({ message: 'Content Not Found' });
+    }
+  })
+);
+
+contentRouter.post(
+  '/:id/reviews',
+  isAuth,
+  expressAsyncHandler(async (req, res) => {
+    const contentId = req.params.id;
+    const content = await Content.findById(contentId);
+    if (content) {
+      if (content.reviews.find((x) => x.name === req.user.name)) {
+        return res
+          .status(404)
+          .send({ message: 'You already submitted a review' });
+      }
+      const review = {
+        name: req.user.name,
+        rating: Number(req.body.rating),
+        comment: req.body.comment,
+      };
+      // push review into the array
+      content.reviews.push(review);
+
+      // count the number of reviews
+      content.numReviews = content.reviews.length;
+
+      // calculate the total of rating score from the reviews
+      content.rating =
+        content.reviews.reduce((a, c) => c.rating + a, 0) /
+        content.reviews.length;
+
+      const updatedContent = await content.save();
+      res.status(201).send({
+        message: 'Review Created',
+        review: updatedContent.reviews[updatedContent.reviews.length - 1],
+        numReviews: content.numReviews,
+        rating: content.rating,
+      });
+    } else {
+      res.status(404).send({ message: 'Content Not Found' });
+    }
   })
 );
 

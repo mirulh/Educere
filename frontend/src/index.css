@@ -13,6 +13,10 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  --boxing: lightblue;
+  --lines: white;
+  /* --boxing: transparent; */
 }
 
 input:-webkit-autofill,
@@ -68,7 +72,7 @@ footer {
 
 /* -- Card Image */
 
-.imageFit {
+.imageCardFit {
   object-fit: cover;
   height: 11rem;
   border: 1px black solid;
@@ -77,11 +81,11 @@ footer {
 /* -- Card Body  */
 
 .cardBody {
-  height: 10rem;
+  height: 11rem;
 }
 
 .nameCostRating {
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
   padding-bottom: 1rem;
   border-bottom: 1px #f8f8f8 solid;
 }
@@ -99,11 +103,20 @@ footer {
   text-overflow: ellipsis;
 }
 
-.badge {
+.badge.badgeCategory,
+.badge.badgeType,
+.badge.badgeCost {
   max-height: 23px;
   padding-left: 15px;
   padding-right: 15px;
   border-radius: 0;
+}
+
+.badge.badgePillRound {
+  position: relative;
+  top: 6px;
+  right: 2px;
+  font-size: 12px;
 }
 
 .colContents {
@@ -111,14 +124,10 @@ footer {
   padding-right: 6px;
 }
 
-.categoryType {
-  height: 100px;
-}
-
 .cardCategory,
 .cardType {
-  /* display: flex; */
   font-size: 14px;
+  /* display: flex; */
   /* flex-wrap: wrap; */
 }
 
@@ -129,13 +138,18 @@ footer {
 
 .footerActions {
   display: flex;
-  justify-content: center;
+  text-align: center;
+  height: 25px;
 }
 
 .vertical-divider {
   border-right: 1px solid black;
   height: 100%;
-  margin: 0 20px;
+}
+
+.vertical-divider2 {
+  border-left: 1px solid black;
+  height: 100%;
 }
 
 /* References 
@@ -197,10 +211,10 @@ body::before {
 /* SearchScreen */
 
 .box-content {
-  background-color: lightblue;
+  background-color: var(--boxing);
   min-height: 100vh;
   font-size: 1rem;
-  border: 1px solid white;
+  border: 1px solid var(--lines);
   padding: 2rem;
 }
 
@@ -215,20 +229,20 @@ select {
 }
 
 .box-sidebar {
-  background-color: lightblue;
+  background-color: var(--boxing);
   min-height: 70vh;
   font-size: 1rem;
-  border: 1px solid white;
+  border: 1px solid var(--lines);
   padding: 2rem;
 
   /* min-height: 2rem; */
 }
 
 .box-header {
-  background-color: lightblue;
+  background-color: var(--boxing);
   min-height: 50px;
   font-size: 1rem;
-  border: 1px solid white;
+  border: 1px solid var(--lines);
 }
 
 .box-banner {
@@ -239,10 +253,10 @@ select {
 }
 
 .box-pagination {
-  background-color: lightblue;
+  background-color: var(--boxing);
   min-height: 50px;
   font-size: 1rem;
-  border: 1px solid white;
+  border: 1px solid var(--lines);
 
   display: flex;
   justify-content: center;
@@ -250,10 +264,10 @@ select {
 }
 
 .box-allContents {
-  background-color: lightblue;
+  background-color: var(--boxing);
   min-height: 45vh;
   font-size: 1rem;
-  border: 1px solid white;
+  border: 1px solid var(--lines);
   margin-bottom: 1rem;
 }
 
@@ -316,51 +330,51 @@ select {
 /* Box Coordination CSS */
 
 .box-trending {
-  background-color: lightblue;
+  background-color: var(--boxing);
   min-height: 35vh;
   font-size: 1rem;
-  border: 1px solid white;
+  border: 1px solid var(--lines);
   padding: 1rem;
   margin-bottom: 1rem;
 }
 
 .box-header {
-  background-color: lightblue;
+  background-color: var(--boxing);
   min-height: 50px;
   font-size: 1rem;
-  border: 1px solid white;
+  border: 1px solid var(--lines);
 }
 
 .box-carousel {
-  background-color: lightblue;
+  background-color: var(--boxing);
   min-height: 35vh;
   font-size: 1rem;
-  border: 1px solid white;
+  border: 1px solid var(--lines);
 }
 
 /*  */
 
 .box-recommend {
-  background-color: lightblue;
+  background-color: var(--boxing);
   min-height: 30vh;
   font-size: 1rem;
-  border: 1px solid white;
+  border: 1px solid var(--lines);
   padding: 1rem;
   margin-bottom: 1rem;
 }
 
 .box-header {
-  background-color: lightblue;
+  background-color: var(--boxing);
   min-height: 50px;
   font-size: 1rem;
-  border: 1px solid white;
+  border: 1px solid var(--lines);
 }
 
 .box-category {
-  background-color: lightblue;
+  background-color: var(--boxing);
   min-height: 25vh;
   font-size: 1rem;
-  border: 1px solid white;
+  border: 1px solid var(--lines);
   padding: 1rem;
 }
 
@@ -374,6 +388,110 @@ select {
   border-radius: 2rem;
   padding: 10px 25px 10px 25px;
 }
+
+/* ContentScreen boxes */
+
+.contentContainer {
+  background-color: var(--boxing);
+  min-height: 69vh;
+  max-width: 1100px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.contentRow {
+  /* border: 1px solid var(--lines); */
+  /* min-height: 150vh; */
+}
+
+.contentCol {
+  border: 1px solid var(--lines);
+  min-height: 50vh;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.imageDescription {
+  max-width: 38rem;
+  min-height: 28rem;
+  border: 1px solid var(--lines);
+  /* padding: 12px; */
+}
+
+.imageDescFit {
+  object-fit: cover;
+  border: 1px black solid;
+  min-width: 100%;
+  max-height: 15rem;
+  border-radius: 8px;
+}
+
+.sizeDescription {
+  font-size: 13px;
+  text-align: justify;
+  max-width: 28rem;
+}
+
+.contentDetails {
+  border: 1px solid var(--lines);
+  max-width: 38rem;
+  max-height: 28rem;
+}
+
+.contentCategory {
+  /* margin-bottom: 2rem; */
+}
+
+.reviewCol {
+  min-height: 10rem;
+  border: 1px solid var(--lines);
+  padding: 12px 20px 12px 20px;
+  padding-top: 2rem;
+}
+
+.reviewContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.nameRatingDate {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nameRating {
+  display: flex;
+  justify-content: space-between;
+  width: 10rem;
+}
+
+.commentDate {
+  margin-top: 2rem;
+}
+/* 
+@media only screen and (max-width: 767px) {
+  .positionContainer3 {
+    position: relative;
+  }
+
+  .toBePosition3 {
+    position: absolute;
+    top: 30rem;
+  }
+
+  .positionContainer4 {
+    position: relative;
+  }
+
+  .toBePosition4 {
+    position: absolute;
+    bottom: 4rem;
+  }
+} */
 
 /*  */
 

@@ -6,7 +6,12 @@ const initialState = {
   userInfo: localStorage.getItem('userInfo')
     ? JSON.parse(localStorage.getItem('userInfo'))
     : null,
-  extra: {},
+
+  userSaves: localStorage.getItem('userSaves')
+    ? JSON.parse(localStorage.getItem('userSaves'))
+    : {},
+
+  // userSaves: {},
 };
 
 const reducer = (state, action) => {
@@ -14,7 +19,10 @@ const reducer = (state, action) => {
     case 'USER_SIGNIN':
       return { ...state, userInfo: action.payload };
     case 'USER_SIGNOUT':
-      return { ...state, userInfo: null };
+      return { ...state, userInfo: null, userSaves: {} };
+
+    case 'UPDATE_SAVES':
+      return { ...state, userSaves: action.payload };
     default:
       return state;
   }
@@ -56,7 +64,7 @@ TODO:
   "username": "example_user",
   "email": "user@example.com",
   "password": "hashed_password",
-  "favorites": [ObjectId("product_id1"), ObjectId("product_id2"), ...]
+  "favorites": [ObjectId("content_id1"), ObjectId("content_id2"), ...]
 }
 
 */

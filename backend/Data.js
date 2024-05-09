@@ -31,9 +31,254 @@ const data = {
       description:
         ' The Odin Project is one of those "What I wish I had when I was learning" resources. Not everyone has access to a computer science education or the funds to attend an intensive coding school and neither of those is right for everyone anyway. This project is designed to fill in the gap for people who are trying to hack it on their own but still want a high quality education. ',
       url: 'theodinproject.com/',
-      rating: 0,
-      numReviews: 0,
-      reviews: [],
+    },
+    {
+      name: 'Fullstackopen',
+      slug: 'fullstackopen-1714841205457',
+      image: '/images/default.png',
+      category: [
+        {
+          label: 'Fullstack Development',
+          value: 'fullstack-development',
+        },
+        {
+          label: 'Cybersecurity',
+          value: 'cybersecurity',
+        },
+      ],
+      type: [
+        {
+          label: 'Video Lectures',
+          value: 'video-lectures',
+        },
+        {
+          label: 'Text-Based Resources',
+          value: 'text-based-resources',
+        },
+      ],
+      cost: 'Paid',
+      hasCert: true,
+      description:
+        'Learn React, Redux, Node.js, MongoDB, GraphQL and TypeScript in one go! This course will introduce you to modern JavaScript-based web development. The main focus is on building single page applications with ReactJS that use REST APIs built with Node.js.',
+      url: 'https://fullstackopen.com/',
+    },
+    {
+      name: 'Frontendmasters',
+      slug: 'frontendmasters-1714898580964',
+      image: '/images/default.png',
+      category: [
+        {
+          label: 'Web Development',
+          value: 'web-development',
+        },
+        {
+          label: 'Fullstack Development',
+          value: 'fullstack-development',
+        },
+        {
+          label: 'Data Science',
+          value: 'data-science',
+        },
+        {
+          label: 'Data Analytics',
+          value: 'data-analytics',
+        },
+        {
+          label: 'Network Engineering',
+          value: 'network-engineering',
+        },
+      ],
+      type: [
+        {
+          label: 'Video Lectures',
+          value: 'video-lectures',
+        },
+        {
+          label: 'Podcasts',
+          value: 'podcasts',
+        },
+        {
+          label: 'Online Courses',
+          value: 'online-courses',
+        },
+      ],
+      cost: 'Free/Paid',
+      hasCert: false,
+      description:
+        'At Frontend Masters, we pride ourselves on offering courses designed and taught by leading experts actively employing their skills at renowned companies such as Netflix, Spotify, Google, and Stripe. Our curriculum is continually refreshed to align with the most recent advancements, guaranteeing that our learners are equipped with industry-standard best practices and cutting-edge techniques.',
+      url: 'https://frontendmasters.com/',
+    },
+    {
+      name: 'Frontendpractice',
+      slug: 'frontendpractice-1714912329006',
+      image: '/images/default.png',
+      category: [
+        {
+          label: 'Web Development',
+          value: 'web-development',
+        },
+        {
+          label: 'UI Development',
+          value: 'UI Development',
+        },
+      ],
+      type: [
+        {
+          label: 'Hands-On Practice',
+          value: 'Hands-On Practice',
+        },
+      ],
+      cost: 'Free',
+      hasCert: false,
+      description:
+        'Become a better frontend developer.\n\nTake your frontend skills to the next level by recreating real websites from real companies.\n\nThe perfect type of practice for developers of all skill levels. Are you up for the challenge?',
+      url: 'https://www.frontendpractice.com/',
+    },
+    {
+      name: 'Udemy',
+      slug: 'udemy-1714913108848',
+      image: '/images/default.png',
+      category: [
+        {
+          label: 'General Areas',
+          value: 'General Areas',
+        },
+      ],
+      type: [
+        {
+          label: 'Video Lectures',
+          value: 'video-lectures',
+        },
+        {
+          label: 'Text-Based Resources',
+          value: 'text-based-resources',
+        },
+      ],
+      cost: 'Free/Paid',
+      hasCert: true,
+      description:
+        '\nSkills are the key to unlocking potential\n\nWhether you want to learn a new skill, train your teams, or share what you know with the world, you’re in the right place. As a leader in online learning, we’re here to help you achieve your goals and transform your life.\n',
+      url: 'https://www.udemy.com/',
+    },
+    {
+      name: 'Codecademy',
+      slug: 'codecademy-1714913192847',
+      image: '/images/default.png',
+      category: [
+        {
+          label: 'Software Engineering',
+          value: 'software-engineering',
+        },
+        {
+          label: 'Fullstack Development',
+          value: 'fullstack-development',
+        },
+      ],
+      type: [
+        {
+          label: 'Video Lectures',
+          value: 'video-lectures',
+        },
+        {
+          label: 'Hands-On Practice',
+          value: 'Hands-On Practice',
+        },
+      ],
+      cost: 'Paid',
+      hasCert: true,
+      description:
+        'When we started Codecademy, our goal was to give anyone in the world the ability to learn the skills they’d need to succeed in the 21st century. We set out to create a new, interactive way of learning — making it engaging, flexible, and accessible for as many people as possible. Since then, we have helped millions of people worldwide unlock modern technical skills and reach their full potential through code. ✨',
+      url: 'https://www.codecademy.com/',
+    },
+    {
+      name: 'Edx',
+      slug: 'edx-1714913285819',
+      image: '/images/default.png',
+      category: [
+        {
+          label: 'General Areas',
+          value: 'General Areas',
+        },
+      ],
+      type: [
+        {
+          label: 'Video Lectures',
+          value: 'video-lectures',
+        },
+        {
+          label: 'Interactive Quizzes',
+          value: 'interactive-quizzes',
+        },
+        {
+          label: 'Text-Based Resources',
+          value: 'text-based-resources',
+        },
+      ],
+      cost: 'Free/Paid',
+      hasCert: true,
+      description:
+        'edX is the online learning platform from world-leading digital education company 2U, Inc. edX was founded by Harvard and MIT as an experiment to make the world’s best education available to everyone.\n\nToday, as part of 2U, edX connects over 86 million people worldwide with online learning that delivers real professional progress across nearly every career discipline, from artificial intelligence and robotics to sustainability and public health. Together with universities and organizations at the forefront of their fields, edX offers thousands of job-relevant programs designed to give every ambitious learner a path to achievement.',
+      url: 'https://www.edx.org/',
+    },
+    {
+      name: 'Mooc',
+      slug: 'mooc-1714914099148',
+      image: '/images/default.png',
+      category: [
+        {
+          label: 'Computer Science',
+          value: 'Computer Science',
+        },
+      ],
+      type: [
+        {
+          label: 'Video Lectures',
+          value: 'video-lectures',
+        },
+        {
+          label: 'Interactive Quizzes',
+          value: 'interactive-quizzes',
+        },
+        {
+          label: 'Text-Based Resources',
+          value: 'text-based-resources',
+        },
+      ],
+      cost: 'Free',
+      hasCert: true,
+      description:
+        'One of the strategic choices of the University of Helsinki is "Science and learning belong to everyone". As a result, the University of Helsinki wants to offer diverse opportunities for continuous learning also for non-degree students. The MOOC Centre plays a key role in this task. Each year, more than 700,000 learners from all over the world study on the platform.\n\nThe online learning environment is developed by an innovative developer team, which includes both experienced researchers, software designers, educational technology and open teaching professionals as well as students of computer science at the University of Helsinki. This allows us to bring diverse expertise to development and implement the best ideas. The learning environment is developed using agile software development methods.',
+      url: 'https://www.mooc.fi/en/',
+    },
+    {
+      name: 'Coursera',
+      slug: 'coursera-1714913906018',
+      image: '/images/default.png',
+      category: [
+        {
+          label: 'General Areas',
+          value: 'General Areas',
+        },
+      ],
+      type: [
+        {
+          label: 'Video Lectures',
+          value: 'video-lectures',
+        },
+        {
+          label: 'Text-Based Resources',
+          value: 'text-based-resources',
+        },
+        {
+          label: 'Interactive Quizzes',
+          value: 'interactive-quizzes',
+        },
+      ],
+      cost: 'Free/Paid',
+      hasCert: true,
+      description:
+        'Coursera partners with more than 275 leading universities and companies to bring flexible, affordable, job-relevant online learning to individuals and organizations worldwide. We offer a range of learning opportunities—from hands-on projects and courses to job-ready certificates and degree programs.',
+      url: 'https://www.coursera.org/',
     },
     /*     {
       name: 'Content Name',

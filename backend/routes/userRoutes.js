@@ -3,6 +3,7 @@ import User from '../models/userModel.js';
 import { generateToken, isAdmin, isAuth } from '../utils_backend.js';
 import expressAsyncHandler from 'express-async-handler';
 import bcrypt from 'bcryptjs';
+import { ObjectId } from 'mongodb';
 
 const userRouter = express.Router();
 
@@ -48,6 +49,7 @@ userRouter.get(
   })
 );
 
+// delete user
 userRouter.delete(
   '/:id', // this is req.params.id
   isAuth,
@@ -67,10 +69,10 @@ userRouter.delete(
   })
 );
 
-// working
+// user profile update
 userRouter.put(
   '/profile',
-  isAuth, //authenticate user by Id
+  isAuth, // return req.user (including req.user._id)
   expressAsyncHandler(async (req, res) => {
     const user = await User.findById(req.user._id);
     if (user) {
@@ -94,9 +96,11 @@ userRouter.put(
   })
 );
 
+// all users edit screen
 userRouter.put(
   '/:id',
   isAuth,
+  isAdmin,
   expressAsyncHandler(async (req, res) => {
     const user = await User.findById(req.params.id);
     if (user) {
@@ -106,7 +110,9 @@ userRouter.put(
       user.isAdmin = req.body.isAdmin || user.isAdmin;
       const updatedUser = await user.save();
       res.send({ message: 'User Updated', user: updatedUser });
-    } else res.status({ message: 'User Not Found' });
+    } else {
+      res.status({ message: 'User Not Found' });
+    }
   })
 );
 
@@ -130,6 +136,22 @@ userRouter.post(
   })
 );
 
+userRouter.get(
+  '/saves/:id',
+  isAuth,
+  expressAsyncHandler(async (req, res) => {
+    const user = await User.findById(req.params.id);
+    if (user) {
+      res.send({
+        numSaves: user.numSaves,
+        saves: user.saves,
+      });
+    } else {
+      res.status(404).send({ message: 'User Not Found' });
+    }
+  })
+);
+
 userRouter.post(
   '/signup',
   expressAsyncHandler(async (req, res) => {
@@ -145,6 +167,42 @@ userRouter.post(
       email: user.email,
       isAdmin: user.isAdmin,
       token: generateToken(user),
+    });
+  })
+);
+
+userRouter.post(
+  '/save',
+  isAuth,
+  expressAsyncHandler(async (req, res) => {
+    const user = await User.findById(req.user._id);
+    if (!user) {
+      // res.send({ message: 'user found' });
+      return;
+    }
+
+    const isSaved = user.saves.find((save) => save._id === req.body.contentId);
+
+    if (isSaved) {
+      user.saves.pull(req.body.contentId);
+    } else {
+      // res.send({ message: 'not saved yet' });
+      const newSave = {
+        _id: req.body.contentId,
+        name: req.body.contentName,
+        slug: req.body.contentSlug,
+        url: req.body.contentUrl,
+      };
+      user.saves.push(newSave);
+    }
+
+    user.numSaves = user.saves.length;
+
+    await user.save();
+
+    res.status(201).send({
+      numSaves: user.numSaves,
+      saves: user.saves,
     });
   })
 );

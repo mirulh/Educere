@@ -32,6 +32,11 @@ mongoose
     console.log(err.message);
   });
 
+// express async handler error handling middleware
+app.use((err, req, res, next) => {
+  res.status(500).send({ message: err.message });
+});
+
 // middlewares
 
 app.use('/api/users', userRouter);

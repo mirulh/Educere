@@ -1,4 +1,4 @@
-import React, { useEffect, useReducer, useState } from 'react';
+import React, { useContext, useEffect, useReducer, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -15,6 +15,7 @@ import Rating from '../components/Rating';
 import Form from 'react-bootstrap/Form';
 import Dropdown from '../components/Dropdown';
 import DropdownFilter from '../components/DropdownFilter';
+import { Store } from '../Store';
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -59,11 +60,6 @@ export default function SearchScreen() {
   const navigate = useNavigate();
   const { search } = useLocation();
   const searchParams = new URLSearchParams(search);
-  // eg. search: ?category=network
-
-  /*   console.log('search', search);
-  console.log('search Params', searchParams);
- */
 
   // IMPORTANT! all initial values except for searchTerm does not exist in query.
 
@@ -75,18 +71,14 @@ export default function SearchScreen() {
   const order = searchParams.get('order') || 'newest';
   const page = searchParams.get('page') || 1;
 
-  console.log(
-    'searchParams: searchTerm | category | cost | type | rating | order | page |'
-  );
-  console.log(
-    `Output: ${searchTerm} | ${category} |${cost} |${type} |${rating} | ${order} | ${page} |`
-  );
-
   const [{ loading, error, contents, pages, countContents }, dispatch] =
     useReducer(reducer, {
       loading: true,
       error: '',
     });
+
+  const { state } = useContext(Store);
+  const { userSaves, userInfo } = state;
 
   useEffect(() => {
     const fetchData = async () => {
@@ -95,7 +87,7 @@ export default function SearchScreen() {
           `/api/contents/search?searchTerm=${searchTerm}&category=${category}&cost=${cost}&type=${type}&rating=${rating}&order=${order}&page=${page}`
         );
         dispatch({ type: 'FETCH_SUCCESS', payload: data });
-        console.log('skipVal: ', data.skipValue);
+        // console.log('skipVal: ', data.skipValue);
       } catch (err) {
         dispatch({
           type: 'FETCH_FAIL',
@@ -106,9 +98,9 @@ export default function SearchScreen() {
     fetchData();
   }, [category, cost, order, page, searchTerm, rating, type]);
 
-  console.log('Contents', contents);
-  console.log('Page | Pages | countContents');
-  console.log(`${page}    |     ${pages} |    ${countContents}`);
+  // console.log('Contents', contents);
+  // console.log('Page | Pages | countContents');
+  // console.log(`${page}    |     ${pages} |    ${countContents}`);
   const [categories, setCategories] = useState([]);
   const [costs, setCosts] = useState([]);
   const [types, setTypes] = useState([]);
@@ -139,15 +131,15 @@ export default function SearchScreen() {
     return `/search?searchTerm=${filterSearchTerm}&category=${filterCategory}&cost=${filterCost}&type=${filterType}&rating=${filterRating}&order=${filterOrder}&page=${filterPage}`;
   };
 
-  console.log('category', categories);
+  // const [selectedFilters, setSelectedFilters] = useState([]);
 
-  const [selectedFilters, setSelectedFilters] = useState([]);
+  // const handleFilterChange = (selectedOptions) => {
+  //   setSelectedFilters(selectedOptions);
+  // };
 
-  const handleFilterChange = (selectedOptions) => {
-    setSelectedFilters(selectedOptions);
-  };
+  // const options = ['Option 1', 'Option 2', 'Option 3', 'Option 4'];
 
-  const options = ['Option 1', 'Option 2', 'Option 3', 'Option 4'];
+  console.log('params rating: ', rating);
 
   return (
     <div>
@@ -160,14 +152,18 @@ export default function SearchScreen() {
         <Row className="box-header">header</Row>
         <div className="mb-3">
           <Row>
-            <Col md={3} className="box-sidebar">
+            <Col md={2} className="box-sidebar">
               filtration
               <h3>Categories</h3>
               <div>
                 <ul className="list-unstyled">
                   <li>
                     <Link
-                      className={category === 'all' ? 'text-bold' : ''}
+                      className={
+                        category === 'all'
+                          ? 'text-danger text-decoration-none'
+                          : 'text-decoration-none'
+                      }
                       to={getFilterUrl({ category: 'all' })}
                     >
                       All
@@ -177,32 +173,13 @@ export default function SearchScreen() {
                     <li key={index}>
                       <Link
                         to={getFilterUrl({ category: c.value })}
-                        className={category === c ? 'text-bold' : ''}
+                        className={
+                          category === c.value
+                            ? 'text-danger text-decoration-none'
+                            : 'text-decoration-none'
+                        }
                       >
                         {c.label}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <h3>Cost</h3>
-              <div>
-                <ul className="list-unstyled">
-                  <li>
-                    <Link
-                      className={cost === 'all' ? 'text-bold' : ''}
-                      to={getFilterUrl({ cost: 'all' })}
-                    >
-                      All
-                    </Link>
-                  </li>
-                  {costs.map((c) => (
-                    <li key={c}>
-                      <Link
-                        className={cost === c ? 'text-bold' : ''}
-                        to={getFilterUrl({ cost: c })}
-                      >
-                        {c}
                       </Link>
                     </li>
                   ))}
@@ -213,7 +190,11 @@ export default function SearchScreen() {
                 <ul className="list-unstyled">
                   <li>
                     <Link
-                      className={type === 'all' ? 'text-bold' : ''}
+                      className={
+                        type === 'all'
+                          ? 'text-danger text-decoration-none'
+                          : 'text-decoration-none'
+                      }
                       to={getFilterUrl({ type: 'all' })}
                     >
                       All
@@ -222,10 +203,45 @@ export default function SearchScreen() {
                   {types.map((t, index) => (
                     <li key={index}>
                       <Link
-                        className={type === t ? 'text-bold' : ''}
-                        to={getFilterUrl({ type: t })}
+                        to={getFilterUrl({ type: t.value })}
+                        className={
+                          type === t.value
+                            ? 'text-danger text-decoration-none'
+                            : 'text-decoration-none'
+                        }
                       >
                         {t.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <h3>Cost</h3>
+              <div>
+                <ul className="list-unstyled">
+                  <li>
+                    <Link
+                      className={
+                        cost === 'all'
+                          ? 'text-danger text-decoration-none'
+                          : 'text-decoration-none'
+                      }
+                      to={getFilterUrl({ cost: 'all' })}
+                    >
+                      All
+                    </Link>
+                  </li>
+                  {costs.map((c) => (
+                    <li key={c}>
+                      <Link
+                        className={
+                          cost === c
+                            ? 'text-danger text-decoration-none'
+                            : 'text-decoration-none'
+                        }
+                        to={getFilterUrl({ cost: c })}
+                      >
+                        {c}
                       </Link>
                     </li>
                   ))}
@@ -236,7 +252,14 @@ export default function SearchScreen() {
                 <ul className="list-unstyled">
                   {ratings.map((r) => (
                     <li key={r.name}>
-                      <Link to={getFilterUrl({ rating: r.rating })}>
+                      <Link
+                        to={getFilterUrl({ rating: r.rating })}
+                        className={
+                          Number(rating) === r.rating
+                            ? 'text-danger text-decoration-none'
+                            : 'text-decoration-none'
+                        }
+                      >
                         <Rating caption={' & up'} rating={r.rating}></Rating>
                       </Link>
                     </li>
@@ -244,7 +267,7 @@ export default function SearchScreen() {
                 </ul>
               </div>
             </Col>
-            <Col md={9} className="box-content">
+            <Col md={10} className="box-content">
               {loading ? (
                 <LoadingBox></LoadingBox>
               ) : error ? (

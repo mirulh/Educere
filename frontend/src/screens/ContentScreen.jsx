@@ -1,0 +1,255 @@
+import React, { useContext, useEffect, useReducer, useState } from 'react';
+import { Link, useNavigate, useParams } from 'react-router-dom';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import axios from 'axios';
+import { getError } from '../../utils_frontend';
+import LoadingBox from '../components/LoadingBox';
+import MessageBox from '../components/MessageBox';
+import { Helmet } from 'react-helmet-async';
+import Rating from '../components/Rating';
+import Badge from 'react-bootstrap/Badge';
+import { Store } from '../Store';
+import Form from 'react-bootstrap/Form';
+import Button from 'react-bootstrap/Button';
+import FloatingLabel from 'react-bootstrap/FloatingLabel';
+import { toast } from 'react-toastify';
+import ListGroup from 'react-bootstrap/ListGroup';
+
+const reducer = (state, action) => {
+  switch (action.type) {
+    case 'FETCH_REQUEST':
+      return { ...state, loading: true };
+    case 'FETCH_SUCCESS':
+      return { ...state, content: action.payload, loading: false };
+    case 'FETCH_FAIL':
+      return { ...state, loading: false, error: action.payload };
+
+    case 'CREATE_REQUEST':
+      return { ...state, loadingCreateReview: true };
+    case 'CREATE_SUCCESS':
+      return { ...state, loadingCreateReview: false };
+    case 'CREATE_FAIL':
+      return { ...state, loadingCreateReview: false };
+
+    case 'REFRESH_CONTENT':
+      return { ...state, content: action.payload };
+    default:
+      return state;
+  }
+};
+
+export default function ContentScreen() {
+  const navigate = useNavigate();
+
+  const [rating, setRating] = useState(0);
+  const [comment, setComment] = useState('');
+
+  const params = useParams();
+  const { slug } = params;
+
+  const { state } = useContext(Store);
+  const { userInfo } = state;
+
+  const [{ loading, error, content, loadingCreateReview }, dispatch] =
+    useReducer(reducer, {
+      content: [],
+      loading: true,
+      error: '',
+    });
+
+  useEffect(() => {
+    const fetchData = async () => {
+      dispatch({ type: 'FETCH_REQUEST' });
+      try {
+        const { data } = await axios.get(`/api/contents/slug/${slug}`);
+        dispatch({ type: 'FETCH_SUCCESS', payload: data });
+        // console.log(data);
+      } catch (err) {
+        dispatch({ type: 'FETCH_FAIL', payload: getError(err) });
+      }
+    };
+    fetchData();
+  }, [slug]);
+
+  const submitHandler = async (e) => {
+    e.preventDefault();
+    if (!comment || !rating) {
+      toast.error('Please enter comment and rating');
+      return;
+    }
+    try {
+      dispatch({ type: 'CREATE_REQUEST' });
+      const { data } = await axios.post(
+        `/api/contents/${content._id}/reviews`,
+        { rating, comment, name: userInfo.name },
+        {
+          headers: { Authorization: `Bearer ${userInfo.token}` },
+        }
+      );
+      dispatch({ type: 'CREATE_SUCCESS' });
+      toast.success('Review submitted successfully');
+      content.reviews.unshift(data.review);
+      content.numReviews = data.numReview;
+      content.rating = data.rating;
+      dispatch({ type: 'REFRESH_CONTENT', payload: content });
+      console.log(content);
+      // content.reviews.unshift(data.review);
+    } catch (err) {
+      toast.error(getError(err));
+      dispatch({ type: 'CREATE_FAIL' });
+    }
+  };
+
+  return (
+    <div>
+      <Helmet>
+        <title>{content.name}</title>
+      </Helmet>
+      <Container className="contentContainer">
+        {loading ? (
+          <LoadingBox></LoadingBox>
+        ) : error ? (
+          <MessageBox variant="danger">{error}</MessageBox>
+        ) : (
+          <Row className="contentRow">
+            <Col md={6} className="contentCol">
+              <div className="imageDescription">
+                <img
+                  src={content.image}
+                  className="img-fluid mx-auto d-block imageDescFit"
+                />
+                <div className="mt-3 mb-3 fontsize positionContainer3">
+                  <div className="toBePosition3">
+                    <h4 className="mb-3">Description</h4>
+                    <p className="sizeDescription">{content.description}</p>
+                  </div>
+                </div>
+              </div>
+            </Col>
+            <Col md={6} className="contentCol">
+              <div className="contentDetails">
+                <div className="positionContainer4">
+                  <div className="toBePosition4">
+                    <h2 className="mt-3 mb-3">{content.name}</h2>
+                    <Rating
+                      rating={content.rating}
+                      numReviews={content.numReviews}
+                    ></Rating>
+                    <div className="contentCategory mt-3 mb-5">
+                      {content.category.map((c, index) => (
+                        <Badge pill key={index} className="me-2">
+                          {c.label}
+                        </Badge>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+                <hr className="blurry"></hr>
+                <Row>
+                  <Col md={8}>
+                    <div className="mb-3">Content Type:</div>
+                    <div className="mb-5">
+                      {content.type.map((t, index) => (
+                        <Badge bg="success" pill key={index} className="me-2">
+                          {t.label}
+                        </Badge>
+                      ))}
+                    </div>
+                    <div>{}</div>
+                  </Col>
+                  <Col md={4}>
+                    <div className="mb-3">
+                      <span>
+                        Certification: &nbsp;
+                        <Badge bg="dark">
+                          {content.hasCert == true ? 'Yes' : 'No'}
+                        </Badge>{' '}
+                      </span>
+                    </div>
+                    <div>
+                      <span>
+                        Cost: &nbsp;
+                        <Badge bg="dark">{content.cost}</Badge>{' '}
+                      </span>
+                    </div>
+                  </Col>
+                </Row>
+              </div>
+            </Col>
+            <Col md={9} className="reviewCol">
+              {userInfo ? (
+                <Form onSubmit={submitHandler}>
+                  <h4>Write a Review</h4>
+                  <Form.Group className="mb-3">
+                    <Form.Label>Rating</Form.Label>
+                    <Form.Select
+                      value={rating}
+                      onChange={(e) => setRating(e.target.value)}
+                    >
+                      <option value="">Select...</option>
+                      <option value="1">1- Poor</option>
+                      <option value="2">2- Fair</option>
+                      <option value="3">3- Good</option>
+                      <option value="4">4- Very Good</option>
+                      <option value="5">5- Excellent</option>
+                    </Form.Select>
+                  </Form.Group>
+
+                  <Form.Group className="mb-3">
+                    <Form.Control
+                      as="textarea"
+                      rows={5}
+                      placeholder="Leave a comment here"
+                      value={comment}
+                      onChange={(e) => setComment(e.target.value)}
+                    />
+                  </Form.Group>
+                  <div className="mb-3">
+                    <Button disabled="" type="submit">
+                      Post review
+                    </Button>
+                  </div>
+                </Form>
+              ) : (
+                <MessageBox variant="primary">
+                  Please <Link to={`/signin`}>Sign In</Link>&nbsp;to write a
+                  review
+                </MessageBox>
+              )}
+              <div>
+                {content.reviews.length === 0 && (
+                  <MessageBox>There is no review</MessageBox>
+                )}
+              </div>
+              <ListGroup>
+                {content.reviews.map((review) => (
+                  <ListGroup.Item
+                    key={review._id}
+                    className="reviewContainer mb-3"
+                  >
+                    <div className="nameRatingDate">
+                      <div className="nameRating">
+                        <strong>
+                          <i>{review.name}</i>
+                        </strong>
+                        <Rating rating={review.rating} caption=" "></Rating>
+                      </div>
+                      <p>
+                        <i>{review.createdAt}</i>
+                      </p>
+                    </div>
+                    <div className="commentDate">
+                      <p>{review.comment}</p>
+                    </div>
+                  </ListGroup.Item>
+                ))}
+              </ListGroup>
+            </Col>
+          </Row>
+        )}
+      </Container>
+    </div>
+  );
+}

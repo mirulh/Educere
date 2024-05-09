@@ -1,11 +1,49 @@
-import React from 'react';
+import React, { useContext, useEffect, useReducer } from 'react';
 import Container from 'react-bootstrap/Container';
 import { Helmet } from 'react-helmet-async';
 import Button from 'react-bootstrap/Button';
 import Badge from 'react-bootstrap/Badge';
 import { Link } from 'react-router-dom';
+import { toast } from 'react-toastify';
+import axios from 'axios';
+import { Store } from '../Store';
+
+// const reducer = (state, action) => {
+//   switch (action.type) {
+//     case 'REQUEST':
+//       return { ...state, loading: true };
+//     default:
+//       return state;
+//   }
+// };
 
 export default function HomeScreen() {
+  // const [{ loading, error, saves }, dispatch] = useReducer(reducer, {
+  //   loading: true,
+  //   error: '',
+  // });
+
+  const { state, dispatch: contextDispatch } = useContext(Store);
+  const { userInfo } = state;
+
+  useEffect(() => {
+    const fetchSaves = async () => {
+      try {
+        const { data } = await axios.get(`/api/users/saves/${userInfo._id}`, {
+          headers: { Authorization: `Bearer ${userInfo.token}` },
+        });
+        contextDispatch({
+          type: 'UPDATE_SAVES',
+          payload: data,
+        });
+        localStorage.setItem('userSaves', JSON.stringify(data));
+      } catch (err) {
+        toast.error(err);
+      }
+    };
+    fetchSaves();
+  }, [contextDispatch, userInfo]);
+
   return (
     <div>
       <Helmet>

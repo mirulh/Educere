@@ -5,7 +5,7 @@ import LoadingBox from '../components/LoadingBox';
 import MessageBox from '../components/MessageBox';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
-import { getError } from '../../utils_frontend';
+import { createSlug, getError } from '../../utils_frontend';
 import axios from 'axios';
 import { Store } from '../Store';
 import InputGroup from 'react-bootstrap/InputGroup';
@@ -93,6 +93,21 @@ export default function SubmissionScreen() {
     }
   };
 
+  // useEffect(() => {
+  //   console.log('selected category', category);
+  //   const categorySlug = createSlug(category);
+  //   console.log('category slug', categorySlug);
+  //   // setCategory(categorySlug);
+  // }, []);
+
+  // const createSlug = (category) => {
+  //   const categorySlug = category.map((c) =>
+  //     c.value.replace(/\s+/g, '-').toLowerCase()
+  //   );
+
+  //   setCategory(categorySlug);
+  // };
+
   useEffect(() => {
     const contentName = extractSDL(url);
     setName(contentName);
@@ -163,6 +178,7 @@ export default function SubmissionScreen() {
                 closeMenuOnSelect={false}
                 components={animatedComponents}
                 onChange={(category) => setCategory(category)}
+                // onChange={(category) => setCategory(createSlug(category))}
               />
 
               <Form.Label>Describe content type</Form.Label>
