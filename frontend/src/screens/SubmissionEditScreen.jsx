@@ -77,12 +77,13 @@ export default function SubmissionEditScreen() {
   const [name, setName] = useState('');
   const [slug, setSlug] = useState('');
   const [image, setImage] = useState('');
-  const [url, setUrl] = useState('');
   const [category, setCategory] = useState([]);
   const [type, setType] = useState([]);
   const [cost, setCost] = useState('');
   const [hasCert, setHasCert] = useState('');
   const [description, setDescription] = useState('');
+  const [rating, setRating] = useState(null);
+  const [url, setUrl] = useState('');
 
   useEffect(() => {
     const fetchData = async () => {
@@ -93,13 +94,14 @@ export default function SubmissionEditScreen() {
         });
         setName(data.name);
         setSlug(data.slug);
-        setUrl(data.url);
         setCategory(data.category);
         setType(data.type);
         setImage(data.image);
         setCost(data.cost);
         setHasCert(data.hasCert);
         setDescription(data.description);
+        setRating(data.rating);
+        setUrl(data.url);
         dispatch({ type: 'FETCH_SUCCESS', payload: data });
         // console.log(data);
       } catch (err) {
@@ -173,6 +175,7 @@ export default function SubmissionEditScreen() {
           cost,
           hasCert,
           description,
+          rating,
           url,
         },
         {

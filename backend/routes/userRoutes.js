@@ -3,7 +3,6 @@ import User from '../models/userModel.js';
 import { generateToken, isAdmin, isAuth } from '../utils_backend.js';
 import expressAsyncHandler from 'express-async-handler';
 import bcrypt from 'bcryptjs';
-import { ObjectId } from 'mongodb';
 
 const userRouter = express.Router();
 

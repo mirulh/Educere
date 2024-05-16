@@ -286,9 +286,10 @@ contentRouter.post(
       content.numReviews = content.reviews.length;
 
       // calculate the total of rating score from the reviews
-      content.rating =
+      content.rating = (
         content.reviews.reduce((a, c) => c.rating + a, 0) /
-        content.reviews.length;
+        content.reviews.length
+      ).toFixed(2);
 
       const updatedContent = await content.save();
       res.status(201).send({

@@ -5,7 +5,6 @@ import LoadingBox from '../components/LoadingBox';
 import MessageBox from '../components/MessageBox';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
-import { createSlug, getError } from '../../utils_frontend';
 import axios from 'axios';
 import { Store } from '../Store';
 import InputGroup from 'react-bootstrap/InputGroup';
@@ -13,7 +12,13 @@ import { toast } from 'react-toastify';
 import CreatableSelect from 'react-select/creatable';
 import makeAnimated from 'react-select/animated';
 import { useNavigate } from 'react-router-dom';
-import { allCategories, allTypes } from '../../utils_frontend';
+import {
+  allCategories,
+  allTypes,
+  convertArraySlug,
+  extractSDL,
+  getError,
+} from '../../utils_frontend';
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -49,7 +54,11 @@ export default function SubmissionScreen() {
   const [cost, setCost] = useState('');
   const [hasCert, setHasCert] = useState('');
   const [description, setDescription] = useState('');
+  const [rating, setRating] = useState(null);
   const [url, setUrl] = useState('');
+
+  // for rating
+  const [hover, setHover] = useState(null);
 
   useEffect(() => {
     setName('');
@@ -58,6 +67,7 @@ export default function SubmissionScreen() {
     setCost('');
     setHasCert('');
     setDescription('');
+    setRating(null);
     setUrl('');
 
     if (successCreate) {
@@ -69,6 +79,10 @@ export default function SubmissionScreen() {
 
   const submitHandler = async (e) => {
     e.preventDefault();
+    if (rating === null) {
+      toast.error('Please enter a rating!');
+      return;
+    }
     try {
       dispatch({ type: 'CREATE_REQUEST' });
       const { data } = await axios.post(
@@ -80,6 +94,7 @@ export default function SubmissionScreen() {
           cost,
           hasCert,
           description,
+          rating,
           url,
         },
         { headers: { Authorization: `Bearer ${userInfo.token}` } }
@@ -93,43 +108,16 @@ export default function SubmissionScreen() {
     }
   };
 
-  // useEffect(() => {
-  //   console.log('selected category', category);
-  //   const categorySlug = createSlug(category);
-  //   console.log('category slug', categorySlug);
-  //   // setCategory(categorySlug);
-  // }, []);
-
-  // const createSlug = (category) => {
-  //   const categorySlug = category.map((c) =>
-  //     c.value.replace(/\s+/g, '-').toLowerCase()
-  //   );
-
-  //   setCategory(categorySlug);
-  // };
-
   useEffect(() => {
     const contentName = extractSDL(url);
     setName(contentName);
   }, [url]);
 
-  // extract SDL and capitalized it
-  const extractSDL = (url) => {
-    // Remove protocol (http/https) and www (if present)
-    let domain = url.replace(/^https?:\/\//, '').replace(/^www\./, '');
-    // Extract only the domain name (excluding path)
-    domain = domain.split('/')[0];
-    // Split domain by dots and take the first part
-    const parts = domain.split('.');
-    const websiteName = parts[0];
-    const capitalized =
-      websiteName.charAt(0).toUpperCase() + websiteName.slice(1);
-    return capitalized;
-  };
-
   // For react-select categories and types
   const animatedComponents = makeAnimated();
 
+  console.log('category here', category);
+  console.log('rating', rating);
   return (
     <div>
       <Helmet>Submit a new content</Helmet>
@@ -137,8 +125,10 @@ export default function SubmissionScreen() {
         <h3 className="mt-5 mb-4">Submit a new content</h3>
         <p className="mb-4">
           <i>
-            You are expected to provide, at minimum, the link to the website.
-            You can opt to not fill out the rest if you wish to do so.
+            You are expected to provide, at minimum,{' '}
+            <b>the link to the website</b> AND{' '}
+            <b>your personal rating of the content materials</b>. You can opt to
+            not fill out the rest if you wish to do so.
           </i>
         </p>
         {loadingCreate ? (
@@ -158,7 +148,6 @@ export default function SubmissionScreen() {
                   placeholder="https://www.example.com/"
                 />
               </InputGroup>
-
               <Form.Group className="mb-4">
                 <Form.Label>Content / website Name</Form.Label>
                 <Form.Control
@@ -169,6 +158,35 @@ export default function SubmissionScreen() {
                 />
               </Form.Group>
 
+              <Form.Label>
+                Rate your experience using this material *
+              </Form.Label>
+              <Form.Group className="mb-4">
+                {[...Array(5)].map((star, index) => {
+                  const currentRating = index + 1;
+                  return (
+                    <Form.Label key={index}>
+                      <Form.Check
+                        type="radio"
+                        name="option"
+                        value={currentRating}
+                        onChange={() => setRating(currentRating)}
+                      ></Form.Check>
+                      <span
+                        className={
+                          currentRating <= (hover || rating)
+                            ? 'fa-solid fa-star fa-xl'
+                            : 'fa-regular fa-star fa-xl'
+                        }
+                        style={{ color: '#ffc107' }}
+                        onMouseEnter={() => setHover(currentRating)}
+                        onMouseLeave={() => setHover(null)}
+                      ></span>
+                    </Form.Label>
+                  );
+                })}
+              </Form.Group>
+
               <Form.Label>Describe content subject area</Form.Label>
               <CreatableSelect
                 className="mb-4 basic-multi-select"
@@ -177,10 +195,8 @@ export default function SubmissionScreen() {
                 isMulti
                 closeMenuOnSelect={false}
                 components={animatedComponents}
-                onChange={(category) => setCategory(category)}
-                // onChange={(category) => setCategory(createSlug(category))}
+                onChange={(category) => setCategory(convertArraySlug(category))}
               />
-
               <Form.Label>Describe content type</Form.Label>
               <CreatableSelect
                 className="mb-5 basic-multi-select"
@@ -189,9 +205,8 @@ export default function SubmissionScreen() {
                 isMulti
                 closeMenuOnSelect={false}
                 components={animatedComponents}
-                onChange={(type) => setType(type)}
+                onChange={(type) => setType(convertArraySlug(type))}
               />
-
               <Form.Group className="mb-4">
                 <Form.Label>
                   Are the materials provided free, paid, or a mixed of both?
@@ -211,7 +226,6 @@ export default function SubmissionScreen() {
                   <i className="fa-solid fa-caret-down chevronPosition"></i>
                 </div>
               </Form.Group>
-
               <Form.Group className="mb-4">
                 <Form.Label>
                   Does the website provide certification on its
@@ -231,7 +245,6 @@ export default function SubmissionScreen() {
                   <i className="fa-solid fa-caret-down chevronPosition"></i>
                 </div>
               </Form.Group>
-
               <Form.Group className="mb-3">
                 <Form.Label>Describe the content, what it is about?</Form.Label>
                 <Form.Control
@@ -242,7 +255,6 @@ export default function SubmissionScreen() {
                   placeholder="otherwise, leave blank"
                 />
               </Form.Group>
-
               <div className="mb-5 text-end">
                 <Button type="submit">Submit</Button>
               </div>

@@ -106,7 +106,7 @@ function App() {
           {/* <div className="box-cover mb-5">submission</div> */}
         </div>
       </main>
-      <footer>
+      <footer className="mt-5">
         <div className="text-center box-footer">
           <div>All rights reserved</div>
         </div>

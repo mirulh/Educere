@@ -46,6 +46,9 @@ export default function ContentScreen() {
   const [rating, setRating] = useState(0);
   const [comment, setComment] = useState('');
 
+  // for rating
+  const [hover, setHover] = useState(null);
+
   const params = useParams();
   const { slug } = params;
 
@@ -103,7 +106,7 @@ export default function ContentScreen() {
   };
 
   return (
-    <div>
+    <div style={{ backgroundColor: '#0c0c0e' }}>
       <Helmet>
         <title>{content.name}</title>
       </Helmet>
@@ -139,9 +142,11 @@ export default function ContentScreen() {
                     ></Rating>
                     <div className="contentCategory mt-3 mb-5">
                       {content.category.map((c, index) => (
-                        <Badge pill key={index} className="me-2">
-                          {c.label}
-                        </Badge>
+                        <Link key={index} to={`/search?category=${c.value}`}>
+                          <Badge pill className="me-2">
+                            {c.label}
+                          </Badge>
+                        </Link>
                       ))}
                     </div>
                   </div>
@@ -149,12 +154,14 @@ export default function ContentScreen() {
                 <hr className="blurry"></hr>
                 <Row>
                   <Col md={8}>
-                    <div className="mb-3">Content Type:</div>
+                    <div className="mb-3">Content Format:</div>
                     <div className="mb-5">
                       {content.type.map((t, index) => (
-                        <Badge bg="success" pill key={index} className="me-2">
-                          {t.label}
-                        </Badge>
+                        <Link key={index} to={`/search?type=${t.value}`}>
+                          <Badge bg="success" pill className="me-2">
+                            {t.label}
+                          </Badge>
+                        </Link>
                       ))}
                     </div>
                     <div>{}</div>
@@ -171,7 +178,9 @@ export default function ContentScreen() {
                     <div>
                       <span>
                         Cost: &nbsp;
-                        <Badge bg="dark">{content.cost}</Badge>{' '}
+                        <Link to={`/search?cost=${content.cost}`}>
+                          <Badge bg="dark">{content.cost}</Badge>
+                        </Link>{' '}
                       </span>
                     </div>
                   </Col>
@@ -182,19 +191,32 @@ export default function ContentScreen() {
               {userInfo ? (
                 <Form onSubmit={submitHandler}>
                   <h4>Write a Review</h4>
-                  <Form.Group className="mb-3">
-                    <Form.Label>Rating</Form.Label>
-                    <Form.Select
-                      value={rating}
-                      onChange={(e) => setRating(e.target.value)}
-                    >
-                      <option value="">Select...</option>
-                      <option value="1">1- Poor</option>
-                      <option value="2">2- Fair</option>
-                      <option value="3">3- Good</option>
-                      <option value="4">4- Very Good</option>
-                      <option value="5">5- Excellent</option>
-                    </Form.Select>
+
+                  <Form.Label className="mt-4">General Rating</Form.Label>
+                  <Form.Group className="mb-4">
+                    {[...Array(5)].map((star, index) => {
+                      const currentRating = index + 1;
+                      return (
+                        <Form.Label key={index}>
+                          <Form.Check
+                            type="radio"
+                            name="option"
+                            value={currentRating}
+                            onChange={() => setRating(currentRating)}
+                          ></Form.Check>
+                          <span
+                            className={
+                              currentRating <= (hover || rating)
+                                ? 'fa-solid fa-star fa-xl'
+                                : 'fa-regular fa-star fa-xl'
+                            }
+                            style={{ color: '#ffc107' }}
+                            onMouseEnter={() => setHover(currentRating)}
+                            onMouseLeave={() => setHover(null)}
+                          ></span>
+                        </Form.Label>
+                      );
+                    })}
                   </Form.Group>
 
                   <Form.Group className="mb-3">
@@ -237,7 +259,7 @@ export default function ContentScreen() {
                         <Rating rating={review.rating} caption=" "></Rating>
                       </div>
                       <p>
-                        <i>{review.createdAt}</i>
+                        <i>{review.createdAt.substring(0, 10)}</i>
                       </p>
                     </div>
                     <div className="commentDate">
@@ -253,3 +275,24 @@ export default function ContentScreen() {
     </div>
   );
 }
+
+/* 
+
+rating saved
+
+<Form.Group className="mb-3">
+  <Form.Label>Rating</Form.Label>
+  <Form.Select
+    value={rating}
+    onChange={(e) => setRating(e.target.value)}
+  >
+    <option value="">Select...</option>
+    <option value="1">1- Poor</option>
+    <option value="2">2- Fair</option>
+    <option value="3">3- Good</option>
+    <option value="4">4- Very Good</option>
+    <option value="5">5- Excellent</option>
+  </Form.Select>
+</Form.Group>
+
+*/

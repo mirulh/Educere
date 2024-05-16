@@ -27,10 +27,9 @@ import SubmissionScreen from './screens/SubmissionScreen.jsx';
 import UserRoute from './components/UserRoute.jsx';
 import SubmissionListScreen from './screens/SubmissionListScreen.jsx';
 import SubmissionEditScreen from './screens/SubmissionEditScreen.jsx';
-import TestApp from './components/TestApp.jsx';
-import Dropdown from './components/Dropdown.jsx';
 import ContentScreen from './screens/ContentScreen.jsx';
 import SavedScreen from './screens/SavedScreen.jsx';
+import DashboardScreen from './screens/DashboardScreen.jsx';
 
 // axios.defaults.baseURL = 'http://localhost:5000';
 
@@ -39,8 +38,6 @@ const router = createBrowserRouter(
     <Route path="/" element={<App />}>
       <Route index={true} element={<HomeScreen />} />
       <Route path="test" element={<TestData />} />
-      <Route path="testapp2" element={<Dropdown />} />
-      <Route path="/testapp" element={<TestApp />} />
       <Route path="/signin" element={<SigninScreen />} />
       <Route path="/signup" element={<SignupScreen />} />
       <Route path="/search" element={<SearchScreen />} />
@@ -59,6 +56,7 @@ const router = createBrowserRouter(
 
       {/* Admin Route */}
       <Route path="" element={<AdminRoute />}>
+        <Route path="/admin/dashboard" element={<DashboardScreen />}></Route>
         <Route path="/admin/users" element={<UserListScreen />}></Route>
         <Route path="/admin/user/:id" element={<UserEditScreen />}></Route>
         <Route path="/admin/contents" element={<ContentListScreen />}></Route>

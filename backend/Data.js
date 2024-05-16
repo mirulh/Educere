@@ -5,7 +5,8 @@ const data = {
     {
       name: 'Theodinproject',
       slug: 'theodinproject-1714840412724',
-      image: '/images/default.png',
+      image:
+        'https://res.cloudinary.com/amazonmern/image/upload/v1715101087/ttzpagwstqd9kb4nkuk6.png',
       category: [
         {
           label: 'Web Development',
@@ -30,12 +31,14 @@ const data = {
       hasCert: false,
       description:
         ' The Odin Project is one of those "What I wish I had when I was learning" resources. Not everyone has access to a computer science education or the funds to attend an intensive coding school and neither of those is right for everyone anyway. This project is designed to fill in the gap for people who are trying to hack it on their own but still want a high quality education. ',
+      rating: 1.5,
       url: 'theodinproject.com/',
     },
     {
       name: 'Fullstackopen',
       slug: 'fullstackopen-1714841205457',
-      image: '/images/default.png',
+      image:
+        'https://res.cloudinary.com/amazonmern/image/upload/v1715101780/aivuy9ann2gycgjzwi8g.png',
       category: [
         {
           label: 'Fullstack Development',
@@ -65,7 +68,8 @@ const data = {
     {
       name: 'Frontendmasters',
       slug: 'frontendmasters-1714898580964',
-      image: '/images/default.png',
+      image:
+        'https://res.cloudinary.com/amazonmern/image/upload/v1715101455/zzjn7bfxol2b4hgzuxot.png',
       category: [
         {
           label: 'Web Development',
@@ -111,7 +115,8 @@ const data = {
     {
       name: 'Frontendpractice',
       slug: 'frontendpractice-1714912329006',
-      image: '/images/default.png',
+      image:
+        'https://res.cloudinary.com/amazonmern/image/upload/v1715100717/rabtzvvfhpz5c26tenmy.png',
       category: [
         {
           label: 'Web Development',
@@ -119,13 +124,13 @@ const data = {
         },
         {
           label: 'UI Development',
-          value: 'UI Development',
+          value: 'ui-development',
         },
       ],
       type: [
         {
           label: 'Hands-On Practice',
-          value: 'Hands-On Practice',
+          value: 'hands-on-practice',
         },
       ],
       cost: 'Free',
@@ -137,11 +142,12 @@ const data = {
     {
       name: 'Udemy',
       slug: 'udemy-1714913108848',
-      image: '/images/default.png',
+      image:
+        'https://res.cloudinary.com/amazonmern/image/upload/v1715100741/un9ifatviboapfojlfdh.png',
       category: [
         {
           label: 'General Areas',
-          value: 'General Areas',
+          value: 'general-areas',
         },
       ],
       type: [
@@ -163,7 +169,8 @@ const data = {
     {
       name: 'Codecademy',
       slug: 'codecademy-1714913192847',
-      image: '/images/default.png',
+      image:
+        'https://res.cloudinary.com/amazonmern/image/upload/v1715100902/jjbfdoggzyd6lvock9lk.png',
       category: [
         {
           label: 'Software Engineering',
@@ -181,7 +188,7 @@ const data = {
         },
         {
           label: 'Hands-On Practice',
-          value: 'Hands-On Practice',
+          value: 'hands-on-practice',
         },
       ],
       cost: 'Paid',
@@ -193,11 +200,12 @@ const data = {
     {
       name: 'Edx',
       slug: 'edx-1714913285819',
-      image: '/images/default.png',
+      image:
+        'https://res.cloudinary.com/amazonmern/image/upload/v1715100759/gxdhoatciiqkecbqzx0y.jpg',
       category: [
         {
           label: 'General Areas',
-          value: 'General Areas',
+          value: 'general-areas',
         },
       ],
       type: [
@@ -223,11 +231,12 @@ const data = {
     {
       name: 'Mooc',
       slug: 'mooc-1714914099148',
-      image: '/images/default.png',
+      image:
+        'https://res.cloudinary.com/amazonmern/image/upload/v1715100693/xcrmibgyesr8lah0yiaw.png',
       category: [
         {
           label: 'Computer Science',
-          value: 'Computer Science',
+          value: 'computer-science',
         },
       ],
       type: [
@@ -253,11 +262,12 @@ const data = {
     {
       name: 'Coursera',
       slug: 'coursera-1714913906018',
-      image: '/images/default.png',
+      image:
+        'https://res.cloudinary.com/amazonmern/image/upload/v1715100669/hzplgnnxo6f8h4jwtbod.png',
       category: [
         {
           label: 'General Areas',
-          value: 'General Areas',
+          value: 'general-areas',
         },
       ],
       type: [

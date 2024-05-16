@@ -63,7 +63,8 @@ footer {
 }
 
 .searchContainer {
-  max-width: 85rem;
+  /* max-width: 86rem; */
+  max-width: 90rem;
   margin-left: auto;
   margin-right: auto;
 }
@@ -215,7 +216,8 @@ body::before {
   min-height: 100vh;
   font-size: 1rem;
   border: 1px solid var(--lines);
-  padding: 2rem;
+  padding: 2rem 4rem;
+  /* padding: 2rem; */
 }
 
 select {
@@ -230,10 +232,10 @@ select {
 
 .box-sidebar {
   background-color: var(--boxing);
-  min-height: 70vh;
+  min-height: 35vh;
   font-size: 1rem;
   border: 1px solid var(--lines);
-  padding: 2rem;
+  padding: 2rem 1rem;
 
   /* min-height: 2rem; */
 }
@@ -269,6 +271,33 @@ select {
   font-size: 1rem;
   border: 1px solid var(--lines);
   margin-bottom: 1rem;
+}
+
+.dropdownFilter {
+  font-size: 14px;
+  background-color: #212529;
+  /* padding: 12px; */
+  color: white;
+}
+
+.filterBtn {
+  border-radius: 0;
+  width: 100%;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+}
+
+.filterOptions {
+  padding: 12px;
+}
+
+.filterOptions > li {
+  list-style-type: none;
+  margin-top: 0.8rem;
+  margin-bottom: 0.8rem;
 }
 
 /* ContentEditScreen */
@@ -325,6 +354,10 @@ select {
   position: absolute;
   left: 120px;
   bottom: 7px;
+}
+
+input[type='radio'] {
+  display: none;
 }
 
 /* Box Coordination CSS */

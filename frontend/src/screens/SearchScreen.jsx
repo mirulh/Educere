@@ -11,11 +11,13 @@ import { getError } from '../../utils_frontend';
 import { toast } from 'react-toastify';
 import LoadingBox from '../components/LoadingBox';
 import MessageBox from '../components/MessageBox';
-import Rating from '../components/Rating';
-import Form from 'react-bootstrap/Form';
-import Dropdown from '../components/Dropdown';
-import DropdownFilter from '../components/DropdownFilter';
 import { Store } from '../Store';
+import CollapsibleCategory from '../components/CollapsibleCategory';
+import CollapsibleType from '../components/CollapsibleType';
+import {
+  CollapsibleCost,
+  CollapsibleRating,
+} from '../components/CollapsibleFilters';
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -32,6 +34,8 @@ const reducer = (state, action) => {
       };
     case 'FETCH_FAIL':
       return { ...state, loading: false, error: action.payload };
+    case 'FETCH_RESET':
+      return { ...state, loading: false };
     default:
       return state;
   }
@@ -112,12 +116,13 @@ export default function SearchScreen() {
         setCategories(data.categories);
         setCosts(data.costs);
         setTypes(data.types);
+        console.log('filters: ', data.categories);
       } catch (err) {
         toast.error(getError(err));
       }
     };
     fetchCategories();
-  }, [dispatch]);
+  }, []);
 
   const getFilterUrl = (filter) => {
     const filterSearchTerm = filter.searchTerm || searchTerm;
@@ -131,18 +136,66 @@ export default function SearchScreen() {
     return `/search?searchTerm=${filterSearchTerm}&category=${filterCategory}&cost=${filterCost}&type=${filterType}&rating=${filterRating}&order=${filterOrder}&page=${filterPage}`;
   };
 
-  // const [selectedFilters, setSelectedFilters] = useState([]);
+  const resetSearch = () => {
+    navigate('/search');
+    dispatch({ type: 'FETCH_RESET' });
+    // navigate(getFilterUrl({ category: 'all' }));
+  };
 
-  // const handleFilterChange = (selectedOptions) => {
-  //   setSelectedFilters(selectedOptions);
-  // };
+  // category filter--------------------------------------------
 
-  // const options = ['Option 1', 'Option 2', 'Option 3', 'Option 4'];
+  const [collapsedCategory, setCollapsedCategory] = useState(true);
+  const toggleCategory = () => {
+    setCollapsedCategory(!collapsedCategory);
+  };
+  const handleCategoryChange = (selectedValue) => {
+    console.log('Received category:', selectedValue);
+    navigate(getFilterUrl({ category: selectedValue }));
+  };
 
-  console.log('params rating: ', rating);
+  // type filter--------------------------------------------
 
+  const [collapsedType, setCollapsedType] = useState(true);
+  const toggleType = () => {
+    setCollapsedType(!collapsedType);
+  };
+  const handleTypeChange = (selectedValue) => {
+    console.log('Received type:', selectedValue);
+    navigate(getFilterUrl({ type: selectedValue }));
+  };
+
+  // cost filter--------------------------------------------
+
+  const [collapsedCost, setCollapsedCost] = useState(true);
+  const toggleCost = () => {
+    setCollapsedCost(!collapsedCost);
+  };
+  const handleCostChange = (selectedValue) => {
+    console.log('Received cost:', selectedValue);
+    navigate(getFilterUrl({ cost: selectedValue }));
+  };
+
+  // rating filter--------------------------------------------
+
+  const [collapsedRating, setCollapsedRating] = useState(true);
+  const toggleRating = () => {
+    setCollapsedRating(!collapsedRating);
+  };
+  const handleRatingChange = (selectedValue) => {
+    console.log('Received rating:', selectedValue);
+    navigate(getFilterUrl({ rating: selectedValue }));
+  };
+
+  // toggle all button--------------------------------------------
+
+  const toggleAllFilters = () => {
+    toggleCategory();
+    toggleType();
+    toggleCost();
+    toggleRating();
+  };
   return (
-    <div>
+    <div style={{ backgroundColor: '#0c0c0e' }}>
       <Helmet>
         <title>Search Content</title>
       </Helmet>
@@ -153,119 +206,47 @@ export default function SearchScreen() {
         <div className="mb-3">
           <Row>
             <Col md={2} className="box-sidebar">
-              filtration
-              <h3>Categories</h3>
               <div>
-                <ul className="list-unstyled">
-                  <li>
-                    <Link
-                      className={
-                        category === 'all'
-                          ? 'text-danger text-decoration-none'
-                          : 'text-decoration-none'
-                      }
-                      to={getFilterUrl({ category: 'all' })}
-                    >
-                      All
-                    </Link>
-                  </li>
-                  {categories.map((c, index) => (
-                    <li key={index}>
-                      <Link
-                        to={getFilterUrl({ category: c.value })}
-                        className={
-                          category === c.value
-                            ? 'text-danger text-decoration-none'
-                            : 'text-decoration-none'
-                        }
-                      >
-                        {c.label}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
+                <Button
+                  type="button"
+                  variant="dark"
+                  className="mb-3 w-100"
+                  onClick={toggleAllFilters}
+                >
+                  <i className="fa-solid fa-filter me-2"></i>
+                  Expand All
+                </Button>
               </div>
-              <h3>Types</h3>
-              <div>
-                <ul className="list-unstyled">
-                  <li>
-                    <Link
-                      className={
-                        type === 'all'
-                          ? 'text-danger text-decoration-none'
-                          : 'text-decoration-none'
-                      }
-                      to={getFilterUrl({ type: 'all' })}
-                    >
-                      All
-                    </Link>
-                  </li>
-                  {types.map((t, index) => (
-                    <li key={index}>
-                      <Link
-                        to={getFilterUrl({ type: t.value })}
-                        className={
-                          type === t.value
-                            ? 'text-danger text-decoration-none'
-                            : 'text-decoration-none'
-                        }
-                      >
-                        {t.label}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <h3>Cost</h3>
-              <div>
-                <ul className="list-unstyled">
-                  <li>
-                    <Link
-                      className={
-                        cost === 'all'
-                          ? 'text-danger text-decoration-none'
-                          : 'text-decoration-none'
-                      }
-                      to={getFilterUrl({ cost: 'all' })}
-                    >
-                      All
-                    </Link>
-                  </li>
-                  {costs.map((c) => (
-                    <li key={c}>
-                      <Link
-                        className={
-                          cost === c
-                            ? 'text-danger text-decoration-none'
-                            : 'text-decoration-none'
-                        }
-                        to={getFilterUrl({ cost: c })}
-                      >
-                        {c}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <h3>Avg. Reviews</h3>
-              <div>
-                <ul className="list-unstyled">
-                  {ratings.map((r) => (
-                    <li key={r.name}>
-                      <Link
-                        to={getFilterUrl({ rating: r.rating })}
-                        className={
-                          Number(rating) === r.rating
-                            ? 'text-danger text-decoration-none'
-                            : 'text-decoration-none'
-                        }
-                      >
-                        <Rating caption={' & up'} rating={r.rating}></Rating>
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+              <CollapsibleCategory
+                categories={categories}
+                category={category}
+                onCategoryChange={handleCategoryChange}
+                collapsedCategory={collapsedCategory}
+                toggleCategory={toggleCategory}
+              />
+
+              <CollapsibleType
+                types={types}
+                type={type}
+                onTypeChange={handleTypeChange}
+                collapsedType={collapsedType}
+                toggleType={toggleType}
+              />
+
+              <CollapsibleCost
+                costs={costs}
+                cost={cost}
+                onCostChange={handleCostChange}
+                collapsedCost={collapsedCost}
+                toggleCost={toggleCost}
+              />
+              <CollapsibleRating
+                ratings={ratings}
+                rating={rating}
+                onRatingChange={handleRatingChange}
+                collapsedRating={collapsedRating}
+                toggleRating={toggleRating}
+              />
             </Col>
             <Col md={10} className="box-content">
               {loading ? (
@@ -294,7 +275,7 @@ export default function SearchScreen() {
                             className="bg-transparent border-0"
                             variant="light"
                             // size="sm"
-                            onClick={() => navigate('/search')}
+                            onClick={() => resetSearch()}
                           >
                             <i className="fas fa-times-circle" />
                           </Button>

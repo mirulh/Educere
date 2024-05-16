@@ -25,6 +25,7 @@ submissionRouter.post(
       cost: req.body.cost || 'Free',
       hasCert: req.body.hasCert || false,
       description: req.body.description || 'sample description',
+      rating: req.body.rating || 0,
       url: req.body.url,
     });
     const submission = await newSubmission.save();
@@ -107,6 +108,7 @@ submissionRouter.post(
       cost: req.body.cost || 'Free',
       hasCert: req.body.hasCert || false,
       description: req.body.description || 'sample description',
+      rating: req.body.rating,
       url: req.body.url || 'not found',
     });
     const content = await newContent.save();

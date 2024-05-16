@@ -120,6 +120,7 @@ export default function SubmissionListScreen() {
             cost: submission.cost,
             hasCert: submission.hasCert,
             description: submission.description,
+            rating: submission.rating,
             url: submission.url,
           },
           {

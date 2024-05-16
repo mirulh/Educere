@@ -7,6 +7,7 @@ import userRouter from '../routes/userRoutes.js';
 import contentRouter from '../routes/contentRoutes.js';
 import uploadRouter from '../routes/uploadRoutes.js';
 import submissionRouter from '../routes/submissionRoutes.js';
+import dashboardRouter from '../routes/dashboardRoutes.js';
 
 // !IMPORTANT for structuring JSON on POST API calls. DON'T leave it out!!
 const app = express();
@@ -43,6 +44,7 @@ app.use('/api/users', userRouter);
 app.use('/api/contents', contentRouter);
 app.use('/api/upload', uploadRouter);
 app.use('/api/submissions', submissionRouter);
+app.use('/api/dashboard', dashboardRouter);
 
 // define port
 const port = process.env.PORT || 8000;
