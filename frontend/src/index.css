@@ -310,6 +310,9 @@ select {
 
 .filterOptions {
   padding: 12px;
+  max-height: 30rem;
+  flex-direction: column;
+  overflow: scroll;
 }
 
 .filterOptions > li {

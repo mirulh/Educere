@@ -1,12 +1,5 @@
 # Educere
 
-MERN Project
+Educere web application system is a repository of 100+ educational resources of CS and IT-based to help users in finding the perfect materials that suits their needs as easy as possible.
 
-Commit_1: Everything you need to set up the environment for frontend and backend
-
-# Dont forget to implement:
-
-toastify alert
-userReducer process status
-
-UI reference => https://projectlearn.io/
+### note to my self: UI reference => https://projectlearn.io/
