@@ -1,5 +1,6 @@
 import express from 'express';
 import data from '../Data.js';
+import data2 from '../Data2.js';
 import User from '../models/userModel.js';
 import Content from '../models/contentModel.js';
 import Submission from '../models/submissionModel.js';
@@ -12,7 +13,7 @@ seedRouter.get('/', async (req, res) => {
   await Content.deleteMany({});
   const seededContents = await Content.insertMany(data.contents);
   await Submission.deleteMany({});
-  const seededSubmissions = await Submission.insertMany(data.submissions);
+  const seededSubmissions = await Submission.insertMany(data2.submissions);
   res.send({ seededUsers, seededContents, seededSubmissions });
 });
 

@@ -14,6 +14,7 @@ import MessageBox from '../components/MessageBox';
 import { Store } from '../Store';
 import CollapsibleCategory from '../components/CollapsibleCategory';
 import CollapsibleType from '../components/CollapsibleType';
+import CollapsibleTechStack from '../components/CollapsibleTechStack';
 import {
   CollapsibleCost,
   CollapsibleRating,
@@ -69,6 +70,7 @@ export default function SearchScreen() {
 
   const searchTerm = searchParams.get('searchTerm') || 'all';
   const category = searchParams.get('category') || 'all';
+  const techStack = searchParams.get('techStack') || 'all';
   const cost = searchParams.get('cost') || 'all';
   const type = searchParams.get('type') || 'all';
   const rating = searchParams.get('rating') || 'all';
@@ -88,7 +90,7 @@ export default function SearchScreen() {
     const fetchData = async () => {
       try {
         const { data } = await axios.get(
-          `/api/contents/search?searchTerm=${searchTerm}&category=${category}&cost=${cost}&type=${type}&rating=${rating}&order=${order}&page=${page}`
+          `/api/contents/search?searchTerm=${searchTerm}&category=${category}&techStack=${techStack}&cost=${cost}&type=${type}&rating=${rating}&order=${order}&page=${page}`
         );
         dispatch({ type: 'FETCH_SUCCESS', payload: data });
         // console.log('skipVal: ', data.skipValue);
@@ -100,7 +102,7 @@ export default function SearchScreen() {
       }
     };
     fetchData();
-  }, [category, cost, order, page, searchTerm, rating, type]);
+  }, [category, cost, order, page, searchTerm, rating, type, techStack]);
 
   // console.log('Contents', contents);
   // console.log('Page | Pages | countContents');
@@ -108,6 +110,7 @@ export default function SearchScreen() {
   const [categories, setCategories] = useState([]);
   const [costs, setCosts] = useState([]);
   const [types, setTypes] = useState([]);
+  const [techStacks, setTechStacks] = useState([]);
 
   useEffect(() => {
     const fetchCategories = async () => {
@@ -116,7 +119,8 @@ export default function SearchScreen() {
         setCategories(data.categories);
         setCosts(data.costs);
         setTypes(data.types);
-        console.log('filters: ', data.categories);
+        setTechStacks(data.techStacks);
+        console.log('filters: ', data.techStacks);
       } catch (err) {
         toast.error(getError(err));
       }
@@ -127,13 +131,14 @@ export default function SearchScreen() {
   const getFilterUrl = (filter) => {
     const filterSearchTerm = filter.searchTerm || searchTerm;
     const filterCategory = filter.category || category;
+    const filterTechStack = filter.techStack || techStack;
     const filterCost = filter.cost || cost;
     const filterType = filter.type || type;
     const filterRating = filter.rating || rating;
     const filterOrder = filter.order || order;
     const filterPage = filter.page || page;
 
-    return `/search?searchTerm=${filterSearchTerm}&category=${filterCategory}&cost=${filterCost}&type=${filterType}&rating=${filterRating}&order=${filterOrder}&page=${filterPage}`;
+    return `/search?searchTerm=${filterSearchTerm}&category=${filterCategory}&techStack=${filterTechStack}&cost=${filterCost}&type=${filterType}&rating=${filterRating}&order=${filterOrder}&page=${filterPage}`;
   };
 
   const resetSearch = () => {
@@ -151,6 +156,17 @@ export default function SearchScreen() {
   const handleCategoryChange = (selectedValue) => {
     console.log('Received category:', selectedValue);
     navigate(getFilterUrl({ category: selectedValue }));
+  };
+
+  // techStack filter--------------------------------------------
+
+  const [collapsedTechStack, setCollapsedTechStack] = useState(true);
+  const toggleTechStack = () => {
+    setCollapsedTechStack(!collapsedTechStack);
+  };
+  const handleTechStackChange = (selectedValue) => {
+    console.log('Received TechStack:', selectedValue);
+    navigate(getFilterUrl({ techStack: selectedValue }));
   };
 
   // type filter--------------------------------------------
@@ -190,6 +206,7 @@ export default function SearchScreen() {
 
   const toggleAllFilters = () => {
     toggleCategory();
+    toggleTechStack();
     toggleType();
     toggleCost();
     toggleRating();
@@ -199,10 +216,24 @@ export default function SearchScreen() {
       <Helmet>
         <title>Search Content</title>
       </Helmet>
-      <div className="box-banner">Banner here</div>
+      <div className="box-banner hub-banner">
+        <div className="banner">
+          <img src="/images/logo.png" />
+          <div className="topBottom">
+            <div className="banner-top-text">
+              <h1>Want to Share What You Found for Others to See?</h1>
+            </div>
+            <div className="banner-bottom-text">
+              <Link to="/submit-content">
+                <Button className="discover-button">Submit New Content</Button>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
 
       <Container className="searchContainer">
-        <Row className="box-header">header</Row>
+        <Row className="box-header"></Row>
         <div className="mb-3">
           <Row>
             <Col md={2} className="box-sidebar">
@@ -223,6 +254,14 @@ export default function SearchScreen() {
                 onCategoryChange={handleCategoryChange}
                 collapsedCategory={collapsedCategory}
                 toggleCategory={toggleCategory}
+              />
+
+              <CollapsibleTechStack
+                techStacks={techStacks}
+                techStack={techStack}
+                onTechStackChange={handleTechStackChange}
+                collapsedTechStack={collapsedTechStack}
+                toggleTechStack={toggleTechStack}
               />
 
               <CollapsibleType
@@ -262,12 +301,14 @@ export default function SearchScreen() {
                         {countContents === 0 ? 'No' : countContents} Results
                         {searchTerm !== 'all' && ' | ' + searchTerm}
                         {category !== 'all' && ' | ' + category}
+                        {techStack !== 'all' && ' | ' + techStack}
                         {cost !== 'all' && ' | ' + cost}
                         {type !== 'all' && ' | ' + type}
                         {rating !== 'all' && ' | Rating ' + rating + ' & up'}
                         {/* Button Condition */}
                         {searchTerm !== 'all' ||
                         category !== 'all' ||
+                        techStack !== 'all' ||
                         cost !== 'all' ||
                         type !== 'all' ||
                         rating !== 'all' ? (
@@ -277,7 +318,10 @@ export default function SearchScreen() {
                             // size="sm"
                             onClick={() => resetSearch()}
                           >
-                            <i className="fas fa-times-circle" />
+                            <i
+                              className="fas fa-times-circle"
+                              style={{ color: 'white' }}
+                            />
                           </Button>
                         ) : null}
                       </div>
@@ -299,8 +343,8 @@ export default function SearchScreen() {
                     </Col>
                   </Row>
                   {/* col-content */}
-                  <Row className="box-allContents">
-                    <div>row all contents</div>
+                  <Row>
+                    {/* <div>row all contents</div> */}
                     {contents.map((content) => (
                       <Col
                         sm={6}
@@ -340,7 +384,12 @@ export default function SearchScreen() {
           </Row>
         </div>
       </Container>
-      <div className="box-banner mb-5">submission</div>
+      <div className="box-banner submission-align">
+        <Link to="/submit-content">
+          <Button className="submission-button">Submit New Content</Button>
+        </Link>
+      </div>
+      <div className="empty-box"></div>
     </div>
   );
 }

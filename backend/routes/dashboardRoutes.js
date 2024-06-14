@@ -55,6 +55,17 @@ dashboardRouter.get(
       { $project: { _id: 1, count: 1 } },
     ]);
 
+    const contentTechStacks = await Content.aggregate([
+      { $unwind: '$techStack' },
+      {
+        $group: {
+          _id: '$techStack.label',
+          count: { $sum: 1 },
+        },
+      },
+      { $project: { _id: 1, count: 1 } },
+    ]);
+
     const contentTypes = await Content.aggregate([
       { $unwind: '$type' },
       {
@@ -71,8 +82,10 @@ dashboardRouter.get(
       admins,
       contents,
       contentCategories,
+      contentTechStacks,
       contentTypes,
       numCategory: contentCategories.length,
+      numTechStack: contentTechStacks.length,
       numType: contentTypes.length,
     });
   })

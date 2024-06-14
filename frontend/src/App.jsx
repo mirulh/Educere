@@ -34,7 +34,9 @@ function App() {
             </LinkContainer>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
-              <SearchBox />
+              <div className="mt-2">
+                <SearchBox />
+              </div>
               <Nav className="me-auto w-100 justify-content-end">
                 {userInfo && (
                   <Link to="/saved" className="nav-link me-3">
@@ -106,8 +108,8 @@ function App() {
           {/* <div className="box-cover mb-5">submission</div> */}
         </div>
       </main>
-      <footer className="mt-5">
-        <div className="text-center box-footer">
+      <footer>
+        <div className="box-footer">
           <div>All rights reserved</div>
         </div>
       </footer>

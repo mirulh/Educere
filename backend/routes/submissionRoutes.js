@@ -14,13 +14,15 @@ submissionRouter.post(
   '/create',
   isAuth,
   expressAsyncHandler(async (req, res) => {
+    const letter = req.body.name[0].toUpperCase();
     const newSubmission = new Submission({
       name: req.body.name || 'sample content ' + Date.now(),
       slug:
         loweCaseSlug(req.body.name) + '-' + Date.now() ||
         'sample-slug-' + Date.now(),
-      image: '/images/default.png',
+      image: `/images/letters_placeholder/default_${letter}.png`,
       category: req.body.category || [],
+      techStack: req.body.techStack || [],
       type: req.body.type || [],
       cost: req.body.cost || 'Free',
       hasCert: req.body.hasCert || false,
@@ -33,7 +35,7 @@ submissionRouter.post(
   })
 );
 
-const PAGE_SIZE_SUBMISSION = 5;
+const PAGE_SIZE_SUBMISSION = 100;
 
 submissionRouter.get(
   '/admin',
@@ -99,11 +101,14 @@ submissionRouter.post(
   isAuth,
   isAdmin,
   expressAsyncHandler(async (req, res) => {
+    const letter = req.body.name[0].toUpperCase();
     const newContent = new Content({
       name: req.body.name,
       slug: req.body.slug,
-      image: req.body.image || '/images/default.png',
+      image:
+        req.body.image || `/images/letters_placeholder/default_${letter}.png`,
       category: req.body.category,
+      techStack: req.body.techStack,
       type: req.body.type,
       cost: req.body.cost || 'Free',
       hasCert: req.body.hasCert || false,

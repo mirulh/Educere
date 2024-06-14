@@ -49,7 +49,7 @@ export default function SavedScreen() {
   };
 
   return (
-    <div>
+    <div style={{ color: 'white' }}>
       <Helmet>
         <title>Saved Page</title>
       </Helmet>

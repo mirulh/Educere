@@ -13,7 +13,7 @@ contentRouter.get(
   })
 );
 
-const PAGE_SIZE = 6;
+const PAGE_SIZE = 20;
 
 contentRouter.get(
   '/search',
@@ -22,6 +22,7 @@ contentRouter.get(
     // res.send(query); // [2]
     const searchTerm = query.searchTerm || '';
     const category = query.category || '';
+    const techStack = query.techStack || '';
     const cost = query.cost || '';
     const type = query.type || '';
     const rating = query.rating || '';
@@ -44,6 +45,12 @@ contentRouter.get(
     const categoryFilter =
       category && category !== 'all'
         ? { category: { $elemMatch: { value: category } } }
+        : {};
+
+    // techStack
+    const techStackFilter =
+      techStack && techStack !== 'all'
+        ? { techStack: { $elemMatch: { value: techStack } } }
         : {};
 
     // type
@@ -82,6 +89,7 @@ contentRouter.get(
     const contents = await Content.find({
       ...searchTermFilter,
       ...categoryFilter,
+      ...techStackFilter,
       ...costFilter,
       ...typeFilter,
       ...ratingFilter,
@@ -96,6 +104,7 @@ contentRouter.get(
     const countContents = await Content.countDocuments({
       ...searchTermFilter,
       ...categoryFilter,
+      ...techStackFilter,
       ...costFilter,
       ...typeFilter,
       ...ratingFilter,
@@ -128,6 +137,16 @@ contentRouter.get(
       },
       { $project: { _id: 0, label: 1, value: '$_id' } },
     ]);
+    const techStacks = await Content.aggregate([
+      { $unwind: '$techStack' },
+      {
+        $group: {
+          _id: '$techStack.value',
+          label: { $first: '$techStack.label' },
+        },
+      },
+      { $project: { _id: 0, label: 1, value: '$_id' } },
+    ]);
     const types = await Content.aggregate([
       { $unwind: '$type' },
       {
@@ -139,11 +158,11 @@ contentRouter.get(
       { $project: { _id: 0, label: 1, value: '$_id' } },
     ]);
     const costs = await Content.distinct('cost');
-    res.send({ categories, types, costs });
+    res.send({ categories, types, costs, techStacks });
   })
 );
 
-const PAGE_SIZE_CONTENT = 5;
+const PAGE_SIZE_CONTENT = 10;
 
 contentRouter.get(
   '/admin',

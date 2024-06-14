@@ -15,6 +15,7 @@ const contentSchema = new mongoose.Schema(
     slug: { type: String, required: true, unique: true },
     image: { type: String, required: true },
     category: [{ label: String, value: String }],
+    techStack: [{ label: String, value: String }],
     type: [{ label: String, value: String }],
     cost: { type: String, required: true },
     hasCert: { type: Boolean, default: false },

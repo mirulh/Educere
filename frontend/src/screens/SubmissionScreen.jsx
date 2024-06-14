@@ -79,10 +79,10 @@ export default function SubmissionScreen() {
 
   const submitHandler = async (e) => {
     e.preventDefault();
-    if (rating === null) {
-      toast.error('Please enter a rating!');
-      return;
-    }
+    // if (rating === null) {
+    //   toast.error('Please enter a rating!');
+    //   return;
+    // }
     try {
       dispatch({ type: 'CREATE_REQUEST' });
       const { data } = await axios.post(
@@ -126,9 +126,8 @@ export default function SubmissionScreen() {
         <p className="mb-4">
           <i>
             You are expected to provide, at minimum,{' '}
-            <b>the link to the website</b> AND{' '}
-            <b>your personal rating of the content materials</b>. You can opt to
-            not fill out the rest if you wish to do so.
+            <b>the link to the website</b>. You can opt to not fill out the rest
+            if you wish to do so.
           </i>
         </p>
         {loadingCreate ? (
@@ -157,7 +156,7 @@ export default function SubmissionScreen() {
                   readOnly
                 />
               </Form.Group>
-
+              {/* 
               <Form.Label>
                 Rate your experience using this material *
               </Form.Label>
@@ -185,7 +184,7 @@ export default function SubmissionScreen() {
                     </Form.Label>
                   );
                 })}
-              </Form.Group>
+              </Form.Group> */}
 
               <Form.Label>Describe content subject area</Form.Label>
               <CreatableSelect

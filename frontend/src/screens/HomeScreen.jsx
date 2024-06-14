@@ -72,7 +72,23 @@ export default function HomeScreen() {
       <Helmet>
         <title>Educere</title>
       </Helmet>
-      <div className="box-banner">Banner here</div>
+      <div className="box-banner hub-banner">
+        <div className="banner">
+          <img src="/images/logo.png" />
+          <div className="topBottom">
+            <div className="banner-top-text">
+              <h1>Discover The Right Learning Resources For you</h1>
+            </div>
+            <div className="banner-bottom-text">
+              <Link to="/search">
+                <Button className="discover-button">
+                  Discover New Resources
+                </Button>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
 
       <Container className="w-75">
         {loading ? (
@@ -95,6 +111,7 @@ export default function HomeScreen() {
           <Button className="submission-button">Submit New Content</Button>
         </Link>
       </div>
+      <div className="empty-box"></div>
     </div>
   );
 }

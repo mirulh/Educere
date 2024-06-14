@@ -135,7 +135,17 @@ export default function ContentScreen() {
               <div className="contentDetails">
                 <div className="positionContainer4">
                   <div className="toBePosition4">
-                    <h2 className="mt-3 mb-3">{content.name}</h2>
+                    <h2 className="mt-3 mb-3">
+                      {content.name}
+                      {'   '}
+                      <a
+                        href={content.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <i className="fa-solid fa-arrow-up-right-from-square"></i>
+                      </a>
+                    </h2>
                     <Rating
                       rating={content.rating}
                       numReviews={content.numReviews}
@@ -149,6 +159,17 @@ export default function ContentScreen() {
                         </Link>
                       ))}
                     </div>
+                    <hr className="blurry"></hr>
+                  </div>
+                  <div className="mb-3">Tech Stack Offered:</div>
+                  <div className="contentCategory mt-3 mb-5">
+                    {content.techStack.map((c, index) => (
+                      <Link key={index} to={`/search?techStack=${c.value}`}>
+                        <Badge pill bg="warning" text="dark" className="me-2">
+                          {c.label}
+                        </Badge>
+                      </Link>
+                    ))}
                   </div>
                 </div>
                 <hr className="blurry"></hr>

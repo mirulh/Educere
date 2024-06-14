@@ -116,6 +116,7 @@ export default function SubmissionListScreen() {
             slug: submission.slug,
             image: submission.image,
             category: submission.category,
+            techStack: submission.techStack,
             type: submission.type,
             cost: submission.cost,
             hasCert: submission.hasCert,
@@ -153,7 +154,7 @@ export default function SubmissionListScreen() {
       <Helmet>
         <title>Submissions</title>
       </Helmet>
-      <Container>
+      <Container className="submissionContainer">
         <h1 className="mt-5 mb-5">Submission List</h1>
         {loadingDelete && <LoadingBox></LoadingBox>}
         {loading ? (
@@ -169,6 +170,7 @@ export default function SubmissionListScreen() {
                   <th>URL</th>
                   <th>NAME</th>
                   <th>CATEGORY</th>
+                  <th>TECH</th>
                   <th>TYPE</th>
                   <th>COST</th>
                   <th colSpan={2} className="w-25">
@@ -197,6 +199,14 @@ export default function SubmissionListScreen() {
                           className="list-unstyled"
                           key={index}
                         >{`${ct.label}`}</li>
+                      ))}
+                    </td>
+                    <td>
+                      {submission.techStack.map((ts, index) => (
+                        <li
+                          className="list-unstyled"
+                          key={index}
+                        >{`${ts.label}`}</li>
                       ))}
                     </td>
                     <td>

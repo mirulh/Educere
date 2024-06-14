@@ -211,7 +211,7 @@ export default function ContentEditScreen() {
                 onChange={(category) => setCategory(category)}
               />
 
-              <Form.Label>Types of the material</Form.Label>
+              <Form.Label>Format of the material</Form.Label>
               <CreatableSelect
                 className="mb-5 basic-multi-select"
                 defaultValue={type}

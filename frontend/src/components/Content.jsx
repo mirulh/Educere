@@ -85,7 +85,6 @@ export default function Content(prop) {
           {/*  */}
           <div className="categoryType">
             <div className="cardCategory">
-              {/*  */}
               {content.category.map((type, index) => (
                 <Badge
                   pill
@@ -97,7 +96,6 @@ export default function Content(prop) {
                 </Badge>
               ))}
             </div>
-            {/*  */}
             <div className="cardType">
               {content.type.map((category, index) => (
                 <Badge
@@ -128,7 +126,7 @@ export default function Content(prop) {
                     // style={{ color: '#DAA520' }}
                   ></i>
                 ) : (
-                  <i className="fa-regular fa-bookmark"></i>
+                  <i className="fa-regular fa-bookmark iconResize"></i>
                 )}
               </Button>
             </Col>
