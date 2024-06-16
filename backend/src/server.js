@@ -1,5 +1,5 @@
 import express from 'express';
-import data from '../Data.js';
+import data from '../Data_Users.js';
 import dotenv from 'dotenv';
 import mongoose from 'mongoose';
 import seedRouter from '../routes/seedRoutes.js';

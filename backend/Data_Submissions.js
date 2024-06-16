@@ -1,6 +1,6 @@
 // UI reference => https://projectlearn.io/
 
-const data2 = {
+const data3 = {
   submissions: [
     {
       name: 'Pluralsight',
@@ -35,4 +35,4 @@ const data2 = {
   ],
 };
 
-export default data2;
+export default data3;

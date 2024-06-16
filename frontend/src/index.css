@@ -359,36 +359,36 @@ select {
   top: 3px;
 }
 
-/* HomeScreen */
-.banner {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  width: 100%;
-  height: 100%;
+.tableContent {
+  max-height: 65rem;
+  max-width: 85rem;
+  overflow: scroll;
+  color: #540909;
 }
 
-.hub-banner {
+/* HomeScreen */
+.bannerContainer {
   padding: 50px;
   margin-bottom: 80px;
   color: white;
 }
 
-.topBottom {
+.bannerContent {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.bannerTextButton {
   /* width: 2rem; */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  max-width: 33rem;
 }
 
-.banner-top-text {
-  width: 34rem;
-}
-
-.banner-bottom-text {
-}
-
-.discover-button {
+.bannerButton {
   border-radius: 2rem;
   padding: 10px 25px 10px 25px;
   background-color: #540909;
@@ -396,7 +396,7 @@ select {
   align-items: flex-start;
 }
 
-.discover-button:hover {
+.bannerButton:hover {
   background-color: #721111;
   border-color: #540909;
 }

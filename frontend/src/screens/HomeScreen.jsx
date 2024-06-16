@@ -72,20 +72,14 @@ export default function HomeScreen() {
       <Helmet>
         <title>Educere</title>
       </Helmet>
-      <div className="box-banner hub-banner">
-        <div className="banner">
+      <div className="box-banner bannerContainer">
+        <div className="bannerContent">
           <img src="/images/logo.png" />
-          <div className="topBottom">
-            <div className="banner-top-text">
-              <h1>Discover The Right Learning Resources For you</h1>
-            </div>
-            <div className="banner-bottom-text">
-              <Link to="/search">
-                <Button className="discover-button">
-                  Discover New Resources
-                </Button>
-              </Link>
-            </div>
+          <div className="bannerTextButton">
+            <h1>Discover The Right Learning Resources For you</h1>
+            <Link to="/search">
+              <Button className="bannerButton">Discover New Resources</Button>
+            </Link>
           </div>
         </div>
       </div>

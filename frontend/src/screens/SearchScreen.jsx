@@ -216,18 +216,14 @@ export default function SearchScreen() {
       <Helmet>
         <title>Search Content</title>
       </Helmet>
-      <div className="box-banner hub-banner">
-        <div className="banner">
+      <div className="box-banner bannerContainer">
+        <div className="bannerContent">
           <img src="/images/logo.png" />
-          <div className="topBottom">
-            <div className="banner-top-text">
-              <h1>Want to Share What You Found for Others to See?</h1>
-            </div>
-            <div className="banner-bottom-text">
-              <Link to="/submit-content">
-                <Button className="discover-button">Submit New Content</Button>
-              </Link>
-            </div>
+          <div className="bannerTextButton">
+            <h1>Want to Share What You Found for Others to See?</h1>
+            <Link to="/search">
+              <Button className="bannerButton">Submit New Content</Button>
+            </Link>
           </div>
         </div>
       </div>

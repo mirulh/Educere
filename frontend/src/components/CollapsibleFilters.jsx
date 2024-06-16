@@ -21,7 +21,7 @@ export function CollapsibleCost({
       <Button onClick={toggleCost} className="filterBtn" variant="dark">
         <div>
           <i className="fa-solid fa-tag me-2"></i>
-          Cost
+          Costs
         </div>
         <i
           className={
