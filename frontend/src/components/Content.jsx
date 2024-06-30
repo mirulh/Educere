@@ -51,10 +51,8 @@ export default function Content(prop) {
   };
 
   return (
-    <div>
+    <div className="homeBackground">
       <Card className="mb-4 contentCard">
-        {/*  */}
-
         <Link to={`/content/${content.slug}`}>
           <Card.Img
             variant="top"
@@ -63,7 +61,7 @@ export default function Content(prop) {
           />
         </Link>
 
-        <Card.Body className="cardBody">
+        <Card.Body className="cardBody homeBackground">
           {/*  */}
           <div className="nameCostRating">
             <div className="nameCost">
@@ -71,7 +69,7 @@ export default function Content(prop) {
                 to={`/content/${content.slug}`}
                 className="text-decoration-none link-dark"
               >
-                <Card.Title>{content.name}</Card.Title>
+                <Card.Title className="content">{content.name}</Card.Title>
               </Link>
               <Badge className="badgeCost">{content.cost}</Badge>
             </div>
@@ -126,7 +124,7 @@ export default function Content(prop) {
                     // style={{ color: '#DAA520' }}
                   ></i>
                 ) : (
-                  <i className="fa-regular fa-bookmark iconResize"></i>
+                  <i className="fa-regular fa-bookmark"></i>
                 )}
               </Button>
             </Col>

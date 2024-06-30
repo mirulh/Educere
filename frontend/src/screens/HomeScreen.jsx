@@ -68,7 +68,8 @@ export default function HomeScreen() {
   }, []);
 
   return (
-    <div style={{ backgroundColor: '#0c0c0e' }}>
+    // <div style={{ backgroundColor: '#0c0c0e' }}>
+    <div className="homeBackground">
       <Helmet>
         <title>Educere</title>
       </Helmet>
@@ -78,13 +79,15 @@ export default function HomeScreen() {
           <div className="bannerTextButton">
             <h1>Discover The Right Learning Resources For you</h1>
             <Link to="/search">
-              <Button className="bannerButton">Discover New Resources</Button>
+              <Button variant="secondary" className="bannerButton">
+                Discover New Resources
+              </Button>
             </Link>
           </div>
         </div>
       </div>
 
-      <Container className="w-75">
+      <Container className="w-75 bufferHeight">
         {loading ? (
           <LoadingBox></LoadingBox>
         ) : error ? (

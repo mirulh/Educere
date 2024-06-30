@@ -125,8 +125,8 @@ export default function SubmissionScreen() {
   return (
     <div>
       <Helmet>Submit a new content</Helmet>
-      <Container className="small-container mb-5">
-        <h3 className="mt-5 mb-4">Submit a new content</h3>
+      <Container className="small-container mb-5 editContentBackground">
+        <h3 className="mt-3 mb-4">Submit a new content</h3>
         <p className="mb-4">
           <i>
             You are expected to provide, at minimum,{' '}

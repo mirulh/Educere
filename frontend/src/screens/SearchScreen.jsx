@@ -212,7 +212,7 @@ export default function SearchScreen() {
     toggleRating();
   };
   return (
-    <div style={{ backgroundColor: '#0c0c0e' }}>
+    <div className="searchBackground">
       <Helmet>
         <title>Search Content</title>
       </Helmet>
@@ -220,16 +220,18 @@ export default function SearchScreen() {
         <div className="bannerContent">
           <img src="/images/logo.png" />
           <div className="bannerTextButton">
-            <h1>Want to Share What You Found for Others to See?</h1>
+            <h1>Help use Expand with by Contributing?</h1>
             <Link to="/submit-content">
-              <Button className="bannerButton">Submit New Content</Button>
+              <Button variant="secondary" className="bannerButton">
+                Submit New Content
+              </Button>
             </Link>
           </div>
         </div>
       </div>
 
       <Container className="searchContainer">
-        <Row className="box-header"></Row>
+        {/* <Row className="box-header"></Row> */}
         <div className="mb-3">
           <Row>
             <Col md={2} className="box-sidebar">
@@ -241,7 +243,7 @@ export default function SearchScreen() {
                   onClick={toggleAllFilters}
                 >
                   <i className="fa-solid fa-filter me-2"></i>
-                  Expand All
+                  Expand Filters
                 </Button>
               </div>
               <CollapsibleCategory
@@ -322,7 +324,7 @@ export default function SearchScreen() {
                         ) : null}
                       </div>
                     </Col>
-                    <Col className="text-end">
+                    <Col className="text-end ">
                       Sort by{' '}
                       <select
                         size="sm"

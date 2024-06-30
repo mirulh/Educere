@@ -52,8 +52,39 @@ export default function ContentScreen() {
   const params = useParams();
   const { slug } = params;
 
-  const { state } = useContext(Store);
-  const { userInfo } = state;
+  const { state, dispatch: contextDispatch } = useContext(Store);
+  const {
+    userInfo,
+    userSaves: { numSaves, saves },
+  } = state;
+
+  const addToSave = async (content) => {
+    if (!userInfo) {
+      navigate('/signin');
+      toast.info('Please sign in first');
+      return;
+    }
+    try {
+      const { data } = await axios.post(
+        `/api/users/save`,
+        {
+          contentId: content._id,
+          contentName: content.name,
+          contentSlug: content.slug,
+          contentUrl: content.url,
+        },
+        { headers: { Authorization: `Bearer ${userInfo.token}` } }
+      );
+      contextDispatch({
+        type: 'UPDATE_SAVES',
+        payload: data,
+      });
+      localStorage.setItem('userSaves', JSON.stringify(data));
+    } catch (err) {
+      console.log('save fail');
+      toast.error(getError(err));
+    }
+  };
 
   const [{ loading, error, content, loadingCreateReview }, dispatch] =
     useReducer(reducer, {
@@ -106,7 +137,7 @@ export default function ContentScreen() {
   };
 
   return (
-    <div style={{ backgroundColor: '#0c0c0e' }}>
+    <div className="contentBackground">
       <Helmet>
         <title>{content.name}</title>
       </Helmet>
@@ -135,21 +166,42 @@ export default function ContentScreen() {
               <div className="contentDetails">
                 <div className="positionContainer4">
                   <div className="toBePosition4">
-                    <h2 className="mt-3 mb-3">
-                      {content.name}
-                      {'   '}
-                      <a
-                        href={content.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
+                    <div className="nameSaveLink">
+                      <div className="nameSave">
+                        <h2 className="mt-3 mb-3">{content.name}</h2>
+                        <a
+                          href={content.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <i className="fa-solid fa-arrow-up-right-from-square fa-xl"></i>
+                        </a>
+                      </div>
+                      <Button
+                        variant={null}
+                        className="p-0 m-0"
+                        onClick={() => addToSave(content)}
                       >
-                        <i className="fa-solid fa-arrow-up-right-from-square"></i>
-                      </a>
-                    </h2>
+                        {saves && saves.find((c) => c._id === content._id) ? (
+                          <i
+                            className="fa-solid fa-bookmark fa-2xl fa"
+                            style={{ color: '#DAA520' }}
+                          ></i>
+                        ) : (
+                          <i
+                            className="fa-regular fa-bookmark fa-2xl"
+                            style={{ color: '#DAA520' }}
+                          ></i>
+                        )}
+                      </Button>{' '}
+                    </div>
                     <Rating
                       rating={content.rating}
                       numReviews={content.numReviews}
                     ></Rating>
+                    <hr className="blurry"></hr>
+
+                    <div className="mb-3 mt-3">Subject:</div>
                     <div className="contentCategory mt-3 mb-5">
                       {content.category.map((c, index) => (
                         <Link key={index} to={`/search?category=${c.value}`}>
@@ -159,8 +211,8 @@ export default function ContentScreen() {
                         </Link>
                       ))}
                     </div>
-                    <hr className="blurry"></hr>
                   </div>
+                  <hr className="blurry"></hr>
                   <div className="mb-3">Tech Stack Offered:</div>
                   <div className="contentCategory mt-3 mb-5">
                     {content.techStack.map((c, index) => (
@@ -191,7 +243,7 @@ export default function ContentScreen() {
                     <div className="mb-3">
                       <span>
                         Certification: &nbsp;
-                        <Badge bg="dark">
+                        <Badge bg="secondary">
                           {content.hasCert == true ? 'Yes' : 'No'}
                         </Badge>{' '}
                       </span>
@@ -200,7 +252,7 @@ export default function ContentScreen() {
                       <span>
                         Cost: &nbsp;
                         <Link to={`/search?cost=${content.cost}`}>
-                          <Badge bg="dark">{content.cost}</Badge>
+                          <Badge bg="secondary">{content.cost}</Badge>
                         </Link>{' '}
                       </span>
                     </div>
@@ -208,11 +260,10 @@ export default function ContentScreen() {
                 </Row>
               </div>
             </Col>
-            <Col md={9} className="reviewCol">
+            <Col md={9} className="reviewCol mt-5">
               {userInfo ? (
                 <Form onSubmit={submitHandler}>
                   <h4>Write a Review</h4>
-
                   <Form.Label className="mt-4">General Rating</Form.Label>
                   <Form.Group className="mb-4">
                     {[...Array(5)].map((star, index) => {

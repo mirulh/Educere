@@ -202,8 +202,8 @@ export default function SubmissionEditScreen() {
       <Helmet>
         <title>Edit Submission ID {submissionId} </title>
       </Helmet>
-      <Container className="small-container mb-5">
-        <h3 className="mt-5 mb-5">Edit Submission ID: {submissionId}</h3>
+      <Container className="small-container mb-5 editContentBackground">
+        <h3 className="mt-3 mb-5">Edit Submission ID: {submissionId}</h3>
         {loadingDelete && <LoadingBox></LoadingBox>}
         {loading ? (
           <LoadingBox></LoadingBox>

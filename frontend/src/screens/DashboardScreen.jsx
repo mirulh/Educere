@@ -67,7 +67,7 @@ export default function DashboardScreen() {
           <div>
             <Row>
               <Col md={4}>
-                <Card>
+                <Card className="dashboardBackground">
                   <Card.Body>
                     <Card.Title>
                       {summary.contents && summary.contents[0]
@@ -79,7 +79,7 @@ export default function DashboardScreen() {
                 </Card>
               </Col>
               <Col md={4}>
-                <Card>
+                <Card className="dashboardBackground">
                   <Card.Body>
                     <Card.Title>
                       {summary.users && summary.users[0]
@@ -91,7 +91,7 @@ export default function DashboardScreen() {
                 </Card>
               </Col>
               <Col md={4}>
-                <Card>
+                <Card className="dashboardBackground">
                   <Card.Body>
                     <Card.Title>
                       {summary.admins && summary.admins[0]
@@ -103,25 +103,31 @@ export default function DashboardScreen() {
                 </Card>
               </Col>
             </Row>
-            <div className="mt-5">
-              <h2>Categories: {summary.numCategory}</h2>
-              {summary.contentCategories.length === 0 ? (
-                <MessageBox>No Category</MessageBox>
-              ) : (
-                <Chart
-                  width="100%"
-                  height="600px"
-                  chartType="PieChart"
-                  loader={<div>Loading Chart...</div>}
-                  data={[
-                    ['Category', 'Count'],
-                    ...summary.contentCategories.map((x) => [x._id, x.count]),
-                  ]}
-                ></Chart>
-              )}
-            </div>
-            <div>
-              <h2>Techs: {summary.numTechStack}</h2>
+            <Card className="mt-5 dashboardBackground">
+              <div className="p-5">
+                <h2>Categories: {summary.numCategory}</h2>
+              </div>
+              <Card.Body>
+                {summary.contentCategories.length === 0 ? (
+                  <MessageBox>No Category</MessageBox>
+                ) : (
+                  <Chart
+                    width="100%"
+                    height="600px"
+                    chartType="PieChart"
+                    loader={<div>Loading Chart...</div>}
+                    data={[
+                      ['Category', 'Count'],
+                      ...summary.contentCategories.map((x) => [x._id, x.count]),
+                    ]}
+                  ></Chart>
+                )}
+              </Card.Body>
+            </Card>
+            <Card className="mt-5 dashboardBackground">
+              <div className="p-5">
+                <h2>Technologies: {summary.numTechStack}</h2>
+              </div>
               {summary.contentTechStacks.length === 0 ? (
                 <MessageBox>No TechStack</MessageBox>
               ) : (
@@ -136,9 +142,11 @@ export default function DashboardScreen() {
                   ]}
                 ></Chart>
               )}
-            </div>
-            <div>
-              <h2>Content Type: {summary.numType}</h2>
+            </Card>
+            <Card className="mt-5 mb-5 dashboardBackground">
+              <div className="p-5">
+                <h2>Content Types: {summary.numType}</h2>
+              </div>
               {summary.contentTypes.length === 0 ? (
                 <MessageBox>No Types</MessageBox>
               ) : (
@@ -153,7 +161,7 @@ export default function DashboardScreen() {
                   ]}
                 ></Chart>
               )}
-            </div>
+            </Card>
           </div>
         )}
       </Container>

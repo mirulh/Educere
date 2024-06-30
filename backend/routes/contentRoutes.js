@@ -236,6 +236,7 @@ contentRouter.put(
       content.slug = req.body.slug;
       content.image = req.body.image;
       content.category = req.body.category;
+      content.techStack = req.body.techStack;
       content.type = req.body.type;
       content.cost = req.body.cost;
       content.hasCert = req.body.hasCert;
@@ -257,6 +258,7 @@ contentRouter.post(
       slug: 'sample-name-' + Date.now(),
       image: '/images/default.png',
       category: [],
+      techStack: [],
       type: [],
       cost: 'Free',
       hasCert: false,

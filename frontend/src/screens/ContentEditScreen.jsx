@@ -173,8 +173,8 @@ export default function ContentEditScreen() {
       <Helmet>
         <title>Edit Content ID {contentId} </title>
       </Helmet>
-      <Container className="small-container mb-5">
-        <h3 className="mt-5 mb-5">Edit Content ID: {contentId}</h3>
+      <Container className="small-container mb-5 editContentBackground">
+        <h3 className="mt-3 mb-5">Edit Content ID: {contentId}</h3>
         {loading ? (
           <LoadingBox></LoadingBox>
         ) : error ? (

@@ -14,8 +14,8 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  --boxing: #171321;
-  --lines: lightgrey;
+  /* --boxing: #171321; */
+  /* --lines: lightgrey; */
   /* --boxing: transparent; */
 }
 
@@ -23,6 +23,71 @@ input:-webkit-autofill,
 input:-webkit-autofill:focus {
   transition: background-color 0s 600000s, color 0s 600000s !important;
 }
+
+/* background colors */
+.homeBackground {
+  background: repeating-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.05) 0%,
+    rgba(255, 255, 255, 0) 90%
+  );
+  background-color: #0c0c0e;
+}
+
+.searchBackground {
+  background: repeating-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.05) 0%,
+    rgba(255, 255, 255, 0) 90%
+  );
+  background-color: #0c0c0e;
+}
+
+.contentBackground {
+  background: repeating-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.05) 0%,
+    rgba(255, 255, 255, 0) 90%
+  );
+  background-color: #191b1c;
+}
+
+.signinBackground {
+  /* border: 1px solid black; */
+  margin-top: 5rem;
+  border-radius: 8px;
+  padding: 52px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect */
+}
+
+.signupBackground {
+  /* border: 1px solid black; */
+  margin-top: 2rem;
+  border-radius: 8px;
+  padding: 52px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect */
+}
+
+.profileBackground {
+  margin-top: 2rem;
+  border-radius: 8px;
+  padding: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect */
+}
+
+.dashboardBackground {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect */
+  border-radius: 8px;
+}
+
+.editContentBackground {
+  margin-top: 2rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect */
+  border-radius: 8px;
+  padding: 30px;
+}
+
+/* END BACKGROUNDS */
 
 .nav {
   background-color: #191b1c;
@@ -45,10 +110,7 @@ body {
 }
 
 main {
-  /* [1] */
   flex: 1;
-  /* background-color: #0c0c0e; */
-  /* padding: 1rem; */
 }
 
 .small-container {
@@ -76,6 +138,10 @@ footer {
 
 /* -- Card Image */
 
+.contentCard {
+  background-color: #d3d3d3;
+}
+
 .imageCardFit {
   object-fit: cover;
   height: 11rem;
@@ -94,6 +160,14 @@ footer {
   border-bottom: 1px #dddddd solid;
 }
 
+.rating {
+  color: #ffc107;
+}
+
+.reviewsCount {
+  color: white;
+}
+
 .nameCost {
   display: flex;
   justify-content: space-between;
@@ -102,13 +176,14 @@ footer {
   overflow: hidden;
 }
 
-.card-title {
+.card-title.content {
   font-size: 16px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   max-width: 8rem;
   margin-right: 2px;
+  color: white;
 }
 
 .badge.badgeCategory,
@@ -239,12 +314,18 @@ When you set an element's height using vh, you're specifying a percentage of the
 
 select {
   /* max-width: 10rem; */
-  background-color: #191b1c;
+  background-color: #212529;
   max-width: 26rem;
   border-radius: 8px;
   border: none;
   padding: 10px;
   font-size: small;
+}
+
+select:hover {
+  color: #fff;
+  background-color: #424649;
+  border-color: #373b3e;
 }
 
 .box-sidebar {
@@ -265,6 +346,11 @@ select {
 }
 
 .box-banner {
+  background: repeating-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.05) 0%,
+    rgba(255, 255, 255, 0) 90%
+  );
   background-color: #16232e;
   min-height: 200px;
   font-size: 1rem;
@@ -304,7 +390,7 @@ select {
   justify-content: space-between;
   align-items: center;
   padding: 12px;
-  background-color: #9bf2ea;
+  background-color: #80a1c1;
   color: black;
 }
 
@@ -313,6 +399,7 @@ select {
   max-height: 30rem;
   flex-direction: column;
   overflow: scroll;
+  /* color: #a8b2bd; */
 }
 
 .filterOptions > li {
@@ -367,9 +454,13 @@ select {
 }
 
 /* HomeScreen */
+.bufferHeight {
+  min-height: 100vh;
+}
+
 .bannerContainer {
   padding: 50px;
-  margin-bottom: 80px;
+  margin-bottom: 20px;
   color: white;
 }
 
@@ -391,14 +482,7 @@ select {
 .bannerButton {
   border-radius: 2rem;
   padding: 10px 25px 10px 25px;
-  background-color: #540909;
-  border-color: #540909;
   align-items: flex-start;
-}
-
-.bannerButton:hover {
-  background-color: #721111;
-  border-color: #540909;
 }
 
 /* SubmissionScreen */
@@ -494,16 +578,12 @@ input[type='radio'] {
 }
 
 .contentContainer {
-  /* background-color: var(--boxing); */
-  background-color: #011526;
+  background-color: #0c0c0e;
   min-height: 69vh;
-  /* max-width: 1100px; */
   max-width: 1200px;
   padding-top: 40px;
   padding-bottom: 40px;
-  /* padding-left: 5px; */
-  /* padding-right: 5px; */
-  color: white;
+  color: #d3d3d3;
 }
 
 .contentRow {
@@ -546,17 +626,29 @@ input[type='radio'] {
   /* border: 1px solid var(--lines); */
   max-width: 38rem;
   max-height: 28rem;
+  color: white;
 }
 
 .contentCategory {
   /* margin-bottom: 2rem; */
 }
 
+.nameSave {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: center;
+}
+
+.nameSaveLink {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .reviewCol {
   min-height: 26rem;
-  /* border: 1px solid var(--lines); */
   padding: 12px 20px 12px 20px;
-  padding-top: 2rem;
 }
 
 .reviewContainer {

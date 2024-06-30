@@ -99,7 +99,7 @@ export default function UserEditScreen() {
       <Helmet>
         <title>Edit User </title>
       </Helmet>
-      <Container className="small-container">
+      <Container className="small-container profileBackground">
         <h3 className="mt-5 mb-5">Edit User ID: {userId}</h3>
         {loading ? (
           <LoadingBox></LoadingBox>

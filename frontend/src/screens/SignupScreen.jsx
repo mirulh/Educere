@@ -57,7 +57,7 @@ export default function SignupScreen() {
       <Helmet>
         <title>Sign Up</title>
       </Helmet>
-      <Container className="small-container">
+      <Container className="small-container signupBackground">
         <h1 className="mt-5 mb-5">Sign Up</h1>
         <Form onSubmit={submitHandler}>
           {/*  */}

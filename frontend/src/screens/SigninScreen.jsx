@@ -50,7 +50,7 @@ export default function SigninScreen() {
         <title>Sign In</title>
       </Helmet>
       {!userInfo && (
-        <Container className="small-container">
+        <Container className="small-container signinBackground">
           <h1 className="mt-5 mb-5">Sign In</h1>
           <Form onSubmit={submitHandler}>
             {/*  */}

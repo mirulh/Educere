@@ -30,7 +30,7 @@ function App() {
         <Navbar className="nav" variant="dark" expand="lg">
           <Container>
             <LinkContainer to="/">
-              <Navbar.Brand>Educere</Navbar.Brand>
+              <Navbar.Brand>EDUCERE</Navbar.Brand>
             </LinkContainer>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
