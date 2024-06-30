@@ -163,102 +163,96 @@ export default function ContentScreen() {
               </div>
             </Col>
             <Col md={6} className="contentCol">
-              <div className="contentDetails">
-                <div className="positionContainer4">
-                  <div className="toBePosition4">
-                    <div className="nameSaveLink">
-                      <div className="nameSave">
-                        <h2 className="mt-3 mb-3">{content.name}</h2>
-                        <a
-                          href={content.url}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <i className="fa-solid fa-arrow-up-right-from-square fa-xl"></i>
-                        </a>
-                      </div>
-                      <Button
-                        variant={null}
-                        className="p-0 m-0"
-                        onClick={() => addToSave(content)}
-                      >
-                        {saves && saves.find((c) => c._id === content._id) ? (
-                          <i
-                            className="fa-solid fa-bookmark fa-2xl fa"
-                            style={{ color: '#DAA520' }}
-                          ></i>
-                        ) : (
-                          <i
-                            className="fa-regular fa-bookmark fa-2xl"
-                            style={{ color: '#DAA520' }}
-                          ></i>
-                        )}
-                      </Button>{' '}
-                    </div>
-                    <Rating
-                      rating={content.rating}
-                      numReviews={content.numReviews}
-                    ></Rating>
-                    <hr className="blurry"></hr>
+              <div className="nameLinkSave">
+                <div className="nameLink">
+                  <h2 className="mt-3 mb-3">{content.name}</h2>
+                  <a
+                    href={content.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <i className="fa-solid fa-arrow-up-right-from-square fa-xl"></i>
+                  </a>
+                </div>
+                <Button
+                  variant={null}
+                  className="p-0 m-0"
+                  onClick={() => addToSave(content)}
+                >
+                  {saves && saves.find((c) => c._id === content._id) ? (
+                    <i
+                      className="fa-solid fa-bookmark fa-2xl fa"
+                      style={{ color: '#DAA520' }}
+                    ></i>
+                  ) : (
+                    <i
+                      className="fa-regular fa-bookmark fa-2xl"
+                      style={{ color: '#DAA520' }}
+                    ></i>
+                  )}
+                </Button>{' '}
+              </div>
+              <Rating
+                rating={content.rating}
+                numReviews={content.numReviews}
+              ></Rating>
+              <hr className="blurry"></hr>
 
-                    <div className="mb-3 mt-3">Subject:</div>
-                    <div className="contentCategory mt-3 mb-5">
-                      {content.category.map((c, index) => (
-                        <Link key={index} to={`/search?category=${c.value}`}>
-                          <Badge pill className="me-2">
-                            {c.label}
-                          </Badge>
-                        </Link>
-                      ))}
-                    </div>
-                  </div>
-                  <hr className="blurry"></hr>
-                  <div className="mb-3">Tech Stack Offered:</div>
-                  <div className="contentCategory mt-3 mb-5">
-                    {content.techStack.map((c, index) => (
-                      <Link key={index} to={`/search?techStack=${c.value}`}>
-                        <Badge pill bg="warning" text="dark" className="me-2">
-                          {c.label}
+              <div className="mb-3 mt-3">Subject:</div>
+              <div className="contentCategory mt-3 mb-5">
+                {content.category.map((c, index) => (
+                  <Link key={index} to={`/search?category=${c.value}`}>
+                    <Badge pill className="me-2">
+                      {c.label}
+                    </Badge>
+                  </Link>
+                ))}
+              </div>
+              <hr className="blurry"></hr>
+              <div className="mb-3">Tech Stack Offered:</div>
+              <div className="contentCategory mt-3 mb-5">
+                {content.techStack.map((c, index) => (
+                  <Link key={index} to={`/search?techStack=${c.value}`}>
+                    <Badge pill bg="warning" text="dark" className="me-2">
+                      {c.label}
+                    </Badge>
+                  </Link>
+                ))}
+              </div>
+              <hr className="blurry"></hr>
+              <Row>
+                <Col>
+                  <div className="mb-3">Content Format:</div>
+                  <div className="mb-5">
+                    {content.type.map((t, index) => (
+                      <Link key={index} to={`/search?type=${t.value}`}>
+                        <Badge bg="success" pill className="me-2">
+                          {t.label}
                         </Badge>
                       </Link>
                     ))}
                   </div>
-                </div>
-                <hr className="blurry"></hr>
-                <Row>
-                  <Col md={8}>
-                    <div className="mb-3">Content Format:</div>
-                    <div className="mb-5">
-                      {content.type.map((t, index) => (
-                        <Link key={index} to={`/search?type=${t.value}`}>
-                          <Badge bg="success" pill className="me-2">
-                            {t.label}
-                          </Badge>
-                        </Link>
-                      ))}
-                    </div>
-                    <div>{}</div>
-                  </Col>
-                  <Col md={4}>
-                    <div className="mb-3">
-                      <span>
-                        Certification: &nbsp;
-                        <Badge bg="secondary">
-                          {content.hasCert == true ? 'Yes' : 'No'}
-                        </Badge>{' '}
-                      </span>
-                    </div>
-                    <div>
-                      <span>
-                        Cost: &nbsp;
-                        <Link to={`/search?cost=${content.cost}`}>
-                          <Badge bg="secondary">{content.cost}</Badge>
-                        </Link>{' '}
-                      </span>
-                    </div>
-                  </Col>
-                </Row>
-              </div>
+                  <div>{}</div>
+                </Col>
+                <Col>
+                  <div className="mb-3">
+                    <span>
+                      Certification: &nbsp;
+                      <Badge bg="secondary">
+                        {content.hasCert == true ? 'Yes' : 'No'}
+                      </Badge>{' '}
+                    </span>
+                  </div>
+                  <div>
+                    <span>
+                      Cost: &nbsp;
+                      <Link to={`/search?cost=${content.cost}`}>
+                        <Badge bg="secondary">{content.cost}</Badge>
+                      </Link>{' '}
+                    </span>
+                  </div>
+                </Col>
+              </Row>
             </Col>
             <Col md={9} className="reviewCol mt-5">
               {userInfo ? (

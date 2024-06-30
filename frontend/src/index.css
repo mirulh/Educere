@@ -260,7 +260,7 @@ When you set an element's height using vh, you're specifying a percentage of the
 /* HomeScreen */
 
 /* 575px and below */
-/* body::before {
+body::before {
   content: 'XS';
   color: red;
   font-size: 2rem;
@@ -298,7 +298,7 @@ When you set an element's height using vh, you're specifying a percentage of the
   body::before {
     content: 'XXL';
   }
-} */
+}
 
 /* SearchScreen */
 
@@ -586,14 +586,9 @@ input[type='radio'] {
   color: #d3d3d3;
 }
 
-.contentRow {
-  /* border: 1px solid var(--lines); */
-  /* min-height: 150vh; */
-}
-
 .contentCol {
   /* border: 1px solid var(--lines); */
-  min-height: 50vh;
+  /* min-height: 50vh; */
   padding-top: 12px;
   padding-bottom: 12px;
   padding-left: 20px;
@@ -622,25 +617,18 @@ input[type='radio'] {
   max-width: 28rem;
 }
 
-.contentDetails {
-  /* border: 1px solid var(--lines); */
-  max-width: 38rem;
-  max-height: 28rem;
-  color: white;
-}
-
 .contentCategory {
   /* margin-bottom: 2rem; */
 }
 
-.nameSave {
+.nameLink {
   display: flex;
   justify-content: space-between;
   gap: 1rem;
   align-items: center;
 }
 
-.nameSaveLink {
+.nameLinkSave {
   display: flex;
   justify-content: space-between;
   align-items: center;

@@ -220,7 +220,7 @@ export default function SearchScreen() {
         <div className="bannerContent">
           <img src="/images/logo.png" />
           <div className="bannerTextButton">
-            <h1>Help use Expand with by Contributing?</h1>
+            <h1>Help us Expand by Contributing?</h1>
             <Link to="/submit-content">
               <Button variant="secondary" className="bannerButton">
                 Submit New Content
@@ -234,7 +234,7 @@ export default function SearchScreen() {
         {/* <Row className="box-header"></Row> */}
         <div className="mb-3">
           <Row>
-            <Col md={2} className="box-sidebar">
+            <Col md={3} lg={2} className="box-sidebar">
               <div>
                 <Button
                   type="button"
@@ -285,7 +285,7 @@ export default function SearchScreen() {
                 toggleRating={toggleRating}
               />
             </Col>
-            <Col md={10} className="box-content">
+            <Col md={9} lg={10} className="box-content">
               {loading ? (
                 <LoadingBox></LoadingBox>
               ) : error ? (
@@ -346,7 +346,9 @@ export default function SearchScreen() {
                     {contents.map((content) => (
                       <Col
                         sm={6}
-                        lg={3}
+                        md={6}
+                        lg={4}
+                        xl={3}
                         key={content._id}
                         className="colContents"
                       >

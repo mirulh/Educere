@@ -95,7 +95,14 @@ export default function HomeScreen() {
         ) : (
           <Row>
             {contents.map((content) => (
-              <Col key={content._id} sm={6} md={4} lg={3} className="mb-2">
+              <Col
+                key={content._id}
+                sm={12}
+                md={6}
+                lg={4}
+                xl={3}
+                className="mb-2"
+              >
                 {' '}
                 <Content content={content}></Content>
               </Col>
