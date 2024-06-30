@@ -221,7 +221,7 @@ export default function SearchScreen() {
           <img src="/images/logo.png" />
           <div className="bannerTextButton">
             <h1>Want to Share What You Found for Others to See?</h1>
-            <Link to="/search">
+            <Link to="/submit-content">
               <Button className="bannerButton">Submit New Content</Button>
             </Link>
           </div>

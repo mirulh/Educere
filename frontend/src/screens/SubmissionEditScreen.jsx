@@ -15,7 +15,7 @@ import Button from 'react-bootstrap/Button';
 import { getError } from '../../utils_frontend';
 import CreatableSelect from 'react-select/creatable';
 import makeAnimated from 'react-select/animated';
-import { allTypes, allCategories } from '../../utils_frontend';
+import { allTypes, allCategories, allTechStacks } from '../../utils_frontend';
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -78,6 +78,7 @@ export default function SubmissionEditScreen() {
   const [slug, setSlug] = useState('');
   const [image, setImage] = useState('');
   const [category, setCategory] = useState([]);
+  const [techStack, setTechStack] = useState([]);
   const [type, setType] = useState([]);
   const [cost, setCost] = useState('');
   const [hasCert, setHasCert] = useState('');
@@ -95,6 +96,7 @@ export default function SubmissionEditScreen() {
         setName(data.name);
         setSlug(data.slug);
         setCategory(data.category);
+        setTechStack(data.techStack);
         setType(data.type);
         setImage(data.image);
         setCost(data.cost);
@@ -171,6 +173,7 @@ export default function SubmissionEditScreen() {
           slug,
           image,
           category,
+          techStack,
           type,
           cost,
           hasCert,
@@ -249,6 +252,18 @@ export default function SubmissionEditScreen() {
                 closeMenuOnSelect={false}
                 components={animatedComponents}
                 onChange={(category) => setCategory(category)}
+              />
+
+              <Form.Label>Technology Stacks</Form.Label>
+              <CreatableSelect
+                className="mb-4 basic-multi-select"
+                defaultValue={techStack}
+                name="select"
+                options={allTechStacks}
+                isMulti
+                closeMenuOnSelect={false}
+                components={animatedComponents}
+                onChange={(techStack) => setTechStack(techStack)}
               />
 
               <Form.Label>Format of the material</Form.Label>

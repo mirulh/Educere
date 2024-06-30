@@ -20,7 +20,7 @@ export default function CollapsibleTechStack({
       <Button onClick={toggleTechStack} className="filterBtn" variant="dark">
         <div>
           <i className="fa-solid fa-cubes-stacked me-2"></i>
-          Techs
+          Technologies
         </div>
         <i
           className={

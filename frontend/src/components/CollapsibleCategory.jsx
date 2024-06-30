@@ -20,7 +20,7 @@ export default function CollapsibleCategory({
       <Button onClick={toggleCategory} className="filterBtn" variant="dark">
         <div>
           <i className="fa-solid fa-list me-2"></i>
-          Categories
+          Subjects
         </div>
         <i
           className={

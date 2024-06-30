@@ -18,6 +18,7 @@ import {
   convertArraySlug,
   extractSDL,
   getError,
+  allTechStacks,
 } from '../../utils_frontend';
 
 const reducer = (state, action) => {
@@ -50,6 +51,7 @@ export default function SubmissionScreen() {
 
   const [name, setName] = useState('');
   const [category, setCategory] = useState([]);
+  const [techStack, setTechStack] = useState([]);
   const [type, setType] = useState([]);
   const [cost, setCost] = useState('');
   const [hasCert, setHasCert] = useState('');
@@ -63,6 +65,7 @@ export default function SubmissionScreen() {
   useEffect(() => {
     setName('');
     setCategory([]);
+    setTechStack([]);
     setType([]);
     setCost('');
     setHasCert('');
@@ -90,6 +93,7 @@ export default function SubmissionScreen() {
         {
           name,
           category,
+          techStack,
           type,
           cost,
           hasCert,
@@ -195,6 +199,20 @@ export default function SubmissionScreen() {
                 closeMenuOnSelect={false}
                 components={animatedComponents}
                 onChange={(category) => setCategory(convertArraySlug(category))}
+              />
+              <Form.Label>
+                Describe any technologies the content offers
+              </Form.Label>
+              <CreatableSelect
+                className="mb-4 basic-multi-select"
+                name="select"
+                options={allTechStacks}
+                isMulti
+                closeMenuOnSelect={false}
+                components={animatedComponents}
+                onChange={(techStack) =>
+                  setTechStack(convertArraySlug(techStack))
+                }
               />
               <Form.Label>Describe content type</Form.Label>
               <CreatableSelect

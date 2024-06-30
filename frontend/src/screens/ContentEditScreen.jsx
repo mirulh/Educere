@@ -12,10 +12,15 @@ import InputGroup from 'react-bootstrap/InputGroup';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
-import { getError } from '../../utils_frontend';
+import {
+  allTechStacks,
+  extractSDL,
+  getError,
+  allTypes,
+  allCategories,
+} from '../../utils_frontend';
 import CreatableSelect from 'react-select/creatable';
 import makeAnimated from 'react-select/animated';
-import { allTypes, allCategories } from '../../utils_frontend';
 // import Select from 'react-select';
 
 const reducer = (state, action) => {
@@ -63,6 +68,7 @@ export default function ContentEditScreen() {
   const [image, setImage] = useState('');
   const [url, setUrl] = useState('');
   const [category, setCategory] = useState([]);
+  const [techStack, setTechStack] = useState([]);
   const [type, setType] = useState([]);
   const [cost, setCost] = useState('');
   const [hasCert, setHasCert] = useState('');
@@ -82,6 +88,7 @@ export default function ContentEditScreen() {
         setUrl(data.url);
         setImage(data.image);
         setCategory(data.category);
+        setTechStack(data.techStack);
         setType(data.type);
         setCost(data.cost);
         setHasCert(data.hasCert);
@@ -107,6 +114,7 @@ export default function ContentEditScreen() {
           slug,
           image,
           category,
+          techStack,
           type,
           cost,
           hasCert,
@@ -151,6 +159,11 @@ export default function ContentEditScreen() {
       dispatch({ type: 'UPLOAD_FAIL', payload: getError(err) });
     }
   };
+
+  useEffect(() => {
+    const contentName = extractSDL(url);
+    setName(contentName);
+  }, [url]);
 
   // For react-select categories and types
   const animatedComponents = makeAnimated();
@@ -209,6 +222,18 @@ export default function ContentEditScreen() {
                 closeMenuOnSelect={false}
                 components={animatedComponents}
                 onChange={(category) => setCategory(category)}
+              />
+
+              <Form.Label>Technology Stacks</Form.Label>
+              <CreatableSelect
+                className="mb-4 basic-multi-select"
+                defaultValue={techStack}
+                name="select"
+                options={allTechStacks}
+                isMulti
+                closeMenuOnSelect={false}
+                components={animatedComponents}
+                onChange={(techStack) => setTechStack(techStack)}
               />
 
               <Form.Label>Format of the material</Form.Label>

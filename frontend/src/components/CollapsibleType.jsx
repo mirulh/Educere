@@ -20,7 +20,7 @@ export default function CollapsibleType({
       <Button onClick={toggleType} className="filterBtn" variant="dark">
         <div>
           <i className="fa-solid fa-layer-group me-2"></i>
-          Types
+          Content Types
         </div>
         <i
           className={

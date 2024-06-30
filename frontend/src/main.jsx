@@ -30,6 +30,8 @@ import SubmissionEditScreen from './screens/SubmissionEditScreen.jsx';
 import ContentScreen from './screens/ContentScreen.jsx';
 import SavedScreen from './screens/SavedScreen.jsx';
 import DashboardScreen from './screens/DashboardScreen.jsx';
+import ForgetPasswordScreen from './screens/ForgetPasswordScreen.jsx';
+import ResetPasswordScreen from './screens/ResetPasswordScreen.jsx';
 
 // axios.defaults.baseURL = 'http://localhost:5000';
 
@@ -40,6 +42,8 @@ const router = createBrowserRouter(
       <Route path="test" element={<TestData />} />
       <Route path="/signin" element={<SigninScreen />} />
       <Route path="/signup" element={<SignupScreen />} />
+      <Route path="/forget-password" element={<ForgetPasswordScreen />} />
+      <Route path="/reset-password/:token" element={<ResetPasswordScreen />} />
       <Route path="/search" element={<SearchScreen />} />
       <Route path="/content/:slug" element={<ContentScreen />} />
 

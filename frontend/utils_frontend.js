@@ -48,6 +48,11 @@ export const allTypes = detail.materialTypes.map((type) => ({
   value: createSlug(type.name),
 }));
 
+export const allTechStacks = detail.contentTechStacks.map((techStack) => ({
+  label: techStack.name,
+  value: createSlug(techStack.name),
+}));
+
 export const allCategories = detail.contentCategories.map((category) => ({
   label: category.name,
   value: createSlug(category.name),
