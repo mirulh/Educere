@@ -142,6 +142,10 @@ footer {
   background-color: #d3d3d3;
 }
 
+.contentCard:hover {
+  filter: brightness(0.85);
+}
+
 .imageCardFit {
   object-fit: cover;
   height: 11rem;

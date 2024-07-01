@@ -42,7 +42,7 @@ export default function ResetPasswordScreen() {
     }
   };
   return (
-    <Container className="small-container">
+    <Container className="small-container profileBackground">
       <Helmet>
         <title>Reset Password</title>
       </Helmet>

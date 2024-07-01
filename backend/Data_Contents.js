@@ -2,7 +2,7 @@ const data2 = {
   contents: [
     {
       name: 'Khanacademy',
-      slug: 'khanacademy-815f9694367211efb1e107a64ee89f73',
+      slug: 'khanacademy-173100c2373b11ef9763ddb3e3cca647',
       image: '/images/letters_placeholder/default_K.png',
       category: [
         {
@@ -26,12 +26,12 @@ const data2 = {
       hasCert: false,
       url: 'https://www.khanacademy.org',
       description:
-        "Khan Academy is a nonprofit organization that offers free online courses, lessons, and practice in various subjects such as math, art, computer programming, economics, physics, chemistry, biology, medicine, finance, and history. Their mission is to provide a world-class education to anyone, anywhere. The website may have trouble loading external resources, but users can enable JavaScript in their browser to access all features. Khan Academy is suitable for learners, teachers, and parents, and offers personalized learning where students can practice at their own pace and fill in any gaps in their understanding. The content is created by experts and covers math, science, and more. It is always free for learners and teachers, and teachers can use tools to identify gaps in their students'",
-      wordLength3: 122,
+        "Khan Academy is a nonprofit organization that offers free online courses, lessons, and practice in various subjects such as math, art, computer programming, economics, physics, chemistry, biology, medicine, finance, and history. Their mission is to provide a world-class education to anyone, anywhere. The website offers personalized learning, where students can practice at their own pace and fill in any gaps in their understanding. The content is created by experts and is always free for learners and teachers. Teachers can also use the tools provided by Khan Academy to identify gaps in their students' understanding and tailor their instruction accordingly.",
+      wordLength3: 99,
     },
     {
       name: 'Upskillcourses',
-      slug: 'upskillcourses-834563a8367211efb1e107a64ee89f73',
+      slug: 'upskillcourses-1896bb5a373b11ef9763ddb3e3cca647',
       image: '/images/letters_placeholder/default_U.png',
       category: [
         {
@@ -95,12 +95,12 @@ const data2 = {
       hasCert: false,
       url: 'https://upskillcourses.com',
       description:
-        'Upskill is a high-quality tech training platform that offers premium programming courses for beginners to advanced learners. With a conversational teaching style, the courses cover a wide range of topics including JavaScript, HTML5 & CSS3, PHP & MySQL, Node.js, React, Vue, Backbone, Ruby on Rails, and computer science fundamentals. The platform also provides project-based training videos that can be added to your portfolio to impress potential employers or clients. With over 130,000 students from 150 countries, many have successfully landed jobs or started their own companies after completing the courses.',
-      wordLength3: 90,
+        "Upskill is a top-notch tech training platform that offers premium programming courses for beginners to advanced learners. With a conversational teaching style and project-based learning, students can expect to gain a wide range of programming skills using modern technologies. The platform regularly adds new content on various topics such as JavaScript, HTML5 & CSS3, PHP & MySQL, and more. Over 130,000 students from 150 countries have benefited from Upskill's courses, with many landing jobs or starting their own companies. Students have praised the platform's engaging teaching style and the instructor, @robeendey, as the best on the web. Whether you're learning for fun or to become a professional developer, Upskill has got you covered.",
+      wordLength3: 113,
     },
     {
       name: 'Pluralsight',
-      slug: 'pluralsight-8475571a367211efb1e107a64ee89f73',
+      slug: 'pluralsight-1a4d8b54373b11ef9763ddb3e3cca647',
       image: '/images/letters_placeholder/default_P.png',
       category: [
         {
@@ -124,12 +124,12 @@ const data2 = {
       hasCert: false,
       url: 'https://www.pluralsight.com',
       description:
-        'Pluralsight is an online learning platform that offers courses, learning paths, and certifications to help organizations, teams, and individuals improve their skills and processes. They use data-driven insights to fuel skill development and offer courses in various tech fields, including AI. Pluralsight aims to empower individuals and teams to master new technologies, cut cycle times, and collaborate better. They offer solutions for both individuals and enterprises, making learning more efficient and effective.',
-      wordLength3: 72,
+        'Pluralsight is an online learning platform that offers courses, learning paths, and certifications to help organizations, teams, and individuals improve their skills and processes. They use data-driven insights to fuel skill development and offer solutions for faster onboarding, shorter cycle times, and more efficient collaboration. With a focus on AI, Pluralsight aims to empower individuals and teams to build better products and innovate smarter. They offer a variety of solutions for both individuals and enterprises, making it easier to learn and advance in the tech industry.',
+      wordLength3: 86,
     },
     {
       name: 'Freecodecamp',
-      slug: 'freecodecamp-85840caa367211efb1e107a64ee89f73',
+      slug: 'freecodecamp-1b5a408c373b11ef9763ddb3e3cca647',
       image: '/images/letters_placeholder/default_F.png',
       category: [
         {
@@ -157,7 +157,7 @@ const data2 = {
     },
     {
       name: 'Codecademy',
-      slug: 'codecademy-85840cab367211efb1e107a64ee89f73',
+      slug: 'codecademy-1b5a408d373b11ef9763ddb3e3cca647',
       image: '/images/letters_placeholder/default_C.png',
       category: [
         {
@@ -185,12 +185,12 @@ const data2 = {
       hasCert: false,
       url: 'https://www.codecademy.com/',
       description:
-        'Codecademy is a free online platform that helps people learn technical skills to advance their careers. With over 50 million users, Codecademy offers AI assistance and modern developer tools to help users build skills quickly. It also provides personalized job listings and practice interview questions to assess job readiness. With over 600 courses, paths, and case studies, users can learn Python, JavaScript, and other skills at all levels.',
-      wordLength3: 68,
+        'Codecademy is a popular online platform that offers free courses and resources for learning technical skills. With over 50 million users, it is a great option for those looking to start a new career or advance in their current one. The platform uses AI assistance and modern developer tools to help users build skills quickly and gain practical experience. Additionally, Codecademy offers personalized job listings and practice interview questions to help users assess their job readiness. With over 600 courses and paths available, users can learn a variety of skills, including Python and JavaScript, at all levels.',
+      wordLength3: 97,
     },
     {
       name: 'Learndjango',
-      slug: 'learndjango-86bc6c0c367211efb1e107a64ee89f73',
+      slug: 'learndjango-1d0913ae373b11ef9763ddb3e3cca647',
       image: '/images/letters_placeholder/default_L.png',
       category: [
         {
@@ -222,12 +222,12 @@ const data2 = {
       hasCert: false,
       url: 'https://learndjango.com',
       description:
-        '"Home is a website that offers both free tutorials and premium courses for building, testing, and deploying real-world web applications using Python. The tutorials cover topics such as Django architecture, models, views, URLs, and templates, as well as a comparison between Flask and Django. The website also offers tutorials on user authentication and implementing a custom user model. Browse all tutorials and start building modern web applications with Python today!"',
-      wordLength3: 70,
+        'This website offers both free tutorials and premium courses for building, testing, and deploying real-world web applications using Python. The tutorials cover topics such as Django architecture, models, views, URLs, and templates, as well as a comparison between Flask and Django. There are also tutorials on user authentication and creating a custom user model.',
+      wordLength3: 54,
     },
     {
       name: 'Scrimba',
-      slug: 'scrimba-87cb17ec367211efb1e107a64ee89f73',
+      slug: 'scrimba-1d0913af373b11ef9763ddb3e3cca647',
       image: '/images/letters_placeholder/default_S.png',
       category: [
         {
@@ -250,12 +250,12 @@ const data2 = {
       cost: 'Free/Paid',
       hasCert: false,
       url: 'https://v2.scrimba.com/',
-      description: 'This text is not available for summarization.',
-      wordLength3: 7,
+      description: 'Description not available.',
+      wordLength3: 3,
     },
     {
       name: 'Fullstackopen',
-      slug: 'fullstackopen-87cb17ed367211efb1e107a64ee89f73',
+      slug: 'fullstackopen-1d0913b0373b11ef9763ddb3e3cca647',
       image: '/images/letters_placeholder/default_F.png',
       category: [
         {
@@ -307,12 +307,12 @@ const data2 = {
       hasCert: false,
       url: 'https://fullstackopen.com/en/',
       description:
-        '"Full Stack Open is an online course offered by the University of Helsinki and Houston Inc. that teaches modern web development using JavaScript. The course covers topics such as React, Redux, Node.js, MongoDB, GraphQL, and TypeScript. It focuses on building single page applications with ReactJS and using REST APIs built with Node.js. The course is continuously updated and has a dedicated group for discussions. The course material is written by various developers and is available under a specific license."',
-      wordLength3: 79,
+        'This is an open online course offered by the University of Helsinki and Houston Inc. that focuses on modern web development using JavaScript. The course covers topics such as React, Redux, Node.js, MongoDB, GraphQL, and TypeScript. It is designed to teach students how to build single page applications with ReactJS and REST APIs with Node.js. The course is continuously updated and there is a dedicated group for discussions and questions. The course material is written by various authors and is available under a specific license.',
+      wordLength3: 85,
     },
     {
       name: 'Theodinproject',
-      slug: 'theodinproject-894d9fc2367211efb1e107a64ee89f73',
+      slug: 'theodinproject-1f031498373b11ef9763ddb3e3cca647',
       image: '/images/letters_placeholder/default_T.png',
       category: [
         {
@@ -368,12 +368,12 @@ const data2 = {
       hasCert: false,
       url: 'https://www.theodinproject.com',
       description:
-        'The Odin Project is a free online platform that helps aspiring web developers learn together. It offers a full stack curriculum and a passionate open source community. The website provides curated resources in a logical order, including tutorials, videos, and courses. Students can build portfolio-worthy projects and receive support from the community. The curriculum covers intermediate and advanced HTML and CSS, databases, NodeJS, JavaScript, React, and Ruby on Rails. Many students have found success with this platform.',
-      wordLength3: 77,
+        'The Odin Project is a free online platform that helps aspiring web developers learn together. Their full stack curriculum is curated by a passionate open source community and includes a variety of resources such as tutorials, videos, and courses. The website is designed to provide a logical learning path and offers support from a friendly community of both beginner and experienced developers. The curriculum covers topics such as HTML, CSS, databases, NodeJS, JavaScript, React, and Ruby on Rails, and includes opportunities to build portfolio-worthy projects. Many users have found success with this approach, as it allows them to learn by figuring things out on their own.',
+      wordLength3: 106,
     },
     {
       name: 'Frontendmasters',
-      slug: 'frontendmasters-8a4ba86a367211efb1e107a64ee89f73',
+      slug: 'frontendmasters-205c4152373b11ef9763ddb3e3cca647',
       image: '/images/letters_placeholder/default_F.png',
       category: [
         {
@@ -437,12 +437,12 @@ const data2 = {
       hasCert: false,
       url: 'https://frontendmasters.com/',
       description:
-        'Frontend Masters offers over 200 courses in JavaScript, React, and TypeScript to help you advance your web development and software engineering skills from front-end to full-stack. Their courses are designed and taught by leading experts from companies like Netflix, Spotify, Google, and Stripe, ensuring that learners are equipped with industry-standard best practices and cutting-edge techniques. With 18 learning paths and live interactive workshops, Frontend Masters is the perfect place to learn practical tech skills from trusted experts. Take their Learning Path Quiz to find the right courses for you.',
-      wordLength3: 89,
+        "Frontend Masters is a website that offers over 200 courses in JavaScript, React, and TypeScript to help you advance your web development and software engineering skills. Their courses cover everything from front-end to full-stack development, and are designed and taught by experts from companies like Netflix, Spotify, Google, and Stripe. With a constantly updated curriculum, you can be sure you're learning the most recent advancements and industry-standard best practices. Frontend Masters also offers live interactive workshops and learning paths to help you reach your goals as a developer.",
+      wordLength3: 88,
     },
     {
       name: 'Talkpython',
-      slug: 'talkpython-8b7ffd1c367211efb1e107a64ee89f73',
+      slug: 'talkpython-216f5494373b11ef9763ddb3e3cca647',
       image: '/images/letters_placeholder/default_T.png',
       category: [
         {
@@ -474,12 +474,12 @@ const data2 = {
       hasCert: false,
       url: 'https://training.talkpython.fm',
       description:
-        'Talk Python Training offers a variety of online courses and tutorials for developers looking to learn Python. These courses are created by the team behind the popular Talk Python To Me podcast and are designed to provide high-quality training through on-demand videos and additional resources. With a pay-once, own-it-forever model, learners can access the courses at any time and have lifetime access to the materials. The courses are created and presented by Michael Kennedy, a professional trainer with over 10 years of experience. The Everything Course Bundle is also available for those looking to learn a wide range of Python skills.',
-      wordLength3: 101,
+        'Talk Python Training offers a variety of online courses and tutorials for developers looking to learn Python. These courses are created by the team behind the popular Talk Python To Me podcast and are trusted by many. With a focus on high-quality training videos, these courses are available on-demand and provide lifetime access for learners. The courses cover a range of topics, from Python for absolute beginners to modern web app development with HTMX and Flask. All courses are taught by Michael Kennedy, a professional trainer with over 10 years of experience. Additionally, Talk Python Training offers an Everything Course Bundle for those looking to expand their Python skills.',
+      wordLength3: 109,
     },
     {
       name: 'Udacity',
-      slug: 'udacity-8cbff6aa367211efb1e107a64ee89f73',
+      slug: 'udacity-229c16ea373b11ef9763ddb3e3cca647',
       image: '/images/letters_placeholder/default_U.png',
       category: [
         {
@@ -523,12 +523,12 @@ const data2 = {
       hasCert: false,
       url: 'https://www.udacity.com/',
       description:
-        '"Udacity offers online courses in various tech skills such as programming, data science, artificial intelligence, and digital marketing to help individuals advance their careers. These courses include real-world projects and are recommended based on the individual\'s career goals. Some of the courses available include blockchain development, ethical AI, generative AI, and Google Cloud AI fundamentals. With flexible cancellation options, individuals can join today and gain in-demand technical skills to boost their career prospects."',
-      wordLength3: 73,
+        'Udacity offers a variety of online courses to help individuals advance their careers in the tech industry. These courses cover topics such as programming, data science, artificial intelligence, digital marketing, and more. Each course includes real-world projects to help students develop the necessary skills for their career goals. Some recommended courses include Hedera Hashgraph, Blockchain, Ethical AI, Generative AI, GitHub Copilot, Google Cloud, Large Language Models, Computer Vision, and Digital Arts. These courses range from 1 hour to 4 months and are suitable for beginners to intermediate learners. Udacity also offers a course for business leaders looking to understand and utilize Generative AI. Join Udacity today to gain in-demand technical skills and advance your career.',
+      wordLength3: 115,
     },
     {
       name: 'Edx',
-      slug: 'edx-8db5c850367211efb1e107a64ee89f73',
+      slug: 'edx-24203c12373b11ef9763ddb3e3cca647',
       image: '/images/letters_placeholder/default_E.png',
       category: [
         {
@@ -552,12 +552,123 @@ const data2 = {
       hasCert: false,
       url: 'https://www.edx.org',
       description:
-        '"Discover thousands of courses and programs offered by top universities and companies like Harvard, Google, and Amazon on edX. From free courses to full degrees, edX has options for every career moment. With over 260 world-class partners, you can set your own goals and edX will guide you on the path to success. Whether you want to sharpen your skills, become a leader, earn a degree, or switch careers, edX has job-relevant courses to help you achieve your goals. They also offer boot camps in technical fields like AI, cybersecurity, and coding, with options for full-time, part-time, and night/weekend classes. Start or advance your career with edX and build a professional portfolio to impress employers."',
-      wordLength3: 115,
+        'EdX offers a wide range of educational opportunities, from free courses to full degrees, in partnership with prestigious institutions like Harvard, Google, and Amazon. With over 260 world-class universities and companies, edX provides courses and programs to help you achieve your career goals. Whether you want to advance in your current field or switch to a new one, edX has job-relevant courses to help you sharpen your skills, become a leader, earn a degree, or launch your career. They also offer boot camps in technical fields like AI, cybersecurity, and coding, with options for full-time, part-time, and night/weekend classes. With edX, you can stay ahead of industry changes and achieve your career aspirations.',
+      wordLength3: 113,
+    },
+    {
+      name: 'Coursera',
+      slug: 'coursera-25534ce6373b11ef9763ddb3e3cca647',
+      image: '/images/letters_placeholder/default_C.png',
+      category: [
+        {
+          label: 'Cybersecurity',
+          value: 'cybersecurity',
+        },
+        {
+          label: 'Project Management',
+          value: 'project-management',
+        },
+        {
+          label: 'UX Design',
+          value: 'ux-design',
+        },
+      ],
+      techStack: [
+        {
+          label: 'Other',
+          value: 'other',
+        },
+      ],
+      type: [
+        {
+          label: 'Text-Based',
+          value: 'text-based',
+        },
+        {
+          label: 'Hands-On Practice',
+          value: 'hands-on-practice',
+        },
+        {
+          label: 'Project-Based',
+          value: 'project-based',
+        },
+        {
+          label: 'MOOC',
+          value: 'mooc',
+        },
+      ],
+      cost: 'Free',
+      hasCert: true,
+      url: 'https://www.coursera.org',
+      description:
+        "Coursera is a popular online platform that offers a wide range of courses, degrees, and certificates from top universities and companies like Google, IBM, and Microsoft. With over 7,000 programs to choose from, individuals can gain job-ready skills and advance their careers for a low monthly fee. Coursera also offers options for businesses, universities, and governments to collaborate and provide their employees or students with valuable education. Popular courses include project management, data analysis, digital marketing, IT, bookkeeping, cybersecurity, and more. The median salary for a project manager is $102,800, with a projected 10-year growth of 11.1%. Many individuals have found success in their careers after completing Coursera's programs,",
+      wordLength3: 109,
+    },
+    {
+      name: 'Learnpythonthehardway',
+      slug: 'learnpythonthehardway-26c2c160373b11ef9763ddb3e3cca647',
+      image: '/images/letters_placeholder/default_L.png',
+      category: [
+        {
+          label: 'Other',
+          value: 'other',
+        },
+      ],
+      techStack: [
+        {
+          label: 'Python',
+          value: 'python',
+        },
+      ],
+      type: [
+        {
+          label: 'Text-Based',
+          value: 'text-based',
+        },
+      ],
+      cost: 'Free/Paid',
+      hasCert: false,
+      url: 'https://learncodethehardway.org/',
+      description:
+        '"Learn Code the Hard Way" offers effective programming education for complete beginners. The courses have helped millions of people from all over the world, of all ages and skill levels. The author focuses on teaching those who know absolutely nothing about coding. The courses have received positive feedback and have given confidence to individuals who never thought they could learn to code.',
+      wordLength3: 62,
+    },
+    {
+      name: 'Mit',
+      slug: 'mit-26c2c161373b11ef9763ddb3e3cca647',
+      image: '/images/letters_placeholder/default_M.png',
+      category: [
+        {
+          label: 'Machine Learning',
+          value: 'machine-learning',
+        },
+        {
+          label: 'Operating Systems',
+          value: 'operating-systems',
+        },
+      ],
+      techStack: [
+        {
+          label: 'Other',
+          value: 'other',
+        },
+      ],
+      type: [
+        {
+          label: 'Other',
+          value: 'other',
+        },
+      ],
+      cost: 'Free/Paid',
+      hasCert: false,
+      url: 'https://missing.csail.mit.edu',
+      description:
+        'This web-scraped text is promoting a course called "The Missing Semester of Your CS Education". The course aims to teach students how to effectively use tools and software commonly used in the field of computer science, such as command-line interfaces, text editors, version control systems, and debugging and profiling tools. The course promises to make the experience of using these tools more efficient and seamless, allowing students to spend less time figuring out how to use them and more time solving complex problems. The course schedule includes topics such as shell scripting, data wrangling, and security.',
+      wordLength3: 96,
     },
     {
       name: 'Engineer4free',
-      slug: 'engineer4free-8f3cea82367211efb1e107a64ee89f73',
+      slug: 'engineer4free-28c297c4373b11ef9763ddb3e3cca647',
       image: '/images/letters_placeholder/default_E.png',
       category: [
         {
@@ -593,21 +704,17 @@ const data2 = {
       hasCert: false,
       url: 'https://www.engineer4free.com/',
       description:
-        'Engineer4Free is a free tutorial site that offers university-level engineering courses for anyone to learn. They cover a wide range of subjects including civil, mechanical, chemical, and software engineering. The site has received positive feedback for its clear and helpful explanations, making it a great resource for students studying for exams or looking to expand their knowledge. With hundreds of tutorials organized into different courses, Engineer4Free is the go-to source for free engineering education.',
-      wordLength3: 74,
+        'Engineer4Free is a free tutorial site that offers university-level engineering tutorials for subjects such as civil, mechanical, chemical, software, and more. The site has organized hundreds of tutorials into different courses, making it a valuable resource for students studying for exams or looking to expand their knowledge. Users have praised the site for its clear explanations and helpful videos.',
+      wordLength3: 59,
     },
     {
-      name: 'Mit',
-      slug: 'mit-9032808c367211efb1e107a64ee89f73',
+      name: 'Mooc',
+      slug: 'mooc-29abc688373b11ef9763ddb3e3cca647',
       image: '/images/letters_placeholder/default_M.png',
       category: [
         {
-          label: 'Machine Learning',
-          value: 'machine-learning',
-        },
-        {
-          label: 'Operating Systems',
-          value: 'operating-systems',
+          label: 'Artificial Intelligence',
+          value: 'artificial-intelligence',
         },
       ],
       techStack: [
@@ -618,49 +725,20 @@ const data2 = {
       ],
       type: [
         {
-          label: 'Other',
-          value: 'other',
+          label: 'MOOC',
+          value: 'mooc',
         },
       ],
-      cost: 'Free/Paid',
+      cost: 'Free',
       hasCert: false,
-      url: 'https://missing.csail.mit.edu',
+      url: 'https://www.mooc.fi/en/',
       description:
-        '"The Missing Semester of Your CS Education" is a course that aims to teach students the essential skills needed to efficiently use the tools and software commonly used in the field of computer science. These skills, such as mastering the command line, using text editors, and version control systems, are often not covered in traditional CS classes, leaving students to figure them out on their own. The course offers a comprehensive curriculum and schedule, with topics ranging from data wrangling to security. By mastering these tools, students can save time and solve complex problems more effectively.',
-      wordLength3: 96,
-    },
-    {
-      name: 'Learnpythonthehardway',
-      slug: 'learnpythonthehardway-916881e0367211efb1e107a64ee89f73',
-      image: '/images/letters_placeholder/default_L.png',
-      category: [
-        {
-          label: 'Other',
-          value: 'other',
-        },
-      ],
-      techStack: [
-        {
-          label: 'Python',
-          value: 'python',
-        },
-      ],
-      type: [
-        {
-          label: 'Text-Based',
-          value: 'text-based',
-        },
-      ],
-      cost: 'Free/Paid',
-      hasCert: false,
-      url: 'https://learncodethehardway.org/',
-      description:
-        '"Learn Code the Hard Way" is a highly effective programming education system designed for complete beginners. The courses have helped millions of people from all over the world, of all ages and skill levels, learn the basics of computer programming. The author focuses on "pre-beginners" who have no prior knowledge of coding. The courses have received positive feedback and have given people confidence in learning to code.',
-      wordLength3: 67,
+        'MOOC.fi is a website that offers high-quality and open courses for everyone, hosted by the University of Helsinki MOOC Center. These courses do not require any prior knowledge and are accessible to beginners. The courses cover a variety of topics, including programming basics and artificial intelligence. The best part is that these courses are completely free and can be accessed from anywhere. Teachers can also use these courses in their own classrooms, with the option to customize them to fit their needs. MOOC.fi offers a wide range of courses and study modules for anyone interested in learning.',
+      wordLength3: 97,
     },
     {
       name: 'Learnxinyminutes',
-      slug: 'learnxinyminutes-9255c87e367211efb1e107a64ee89f73',
+      slug: 'learnxinyminutes-2abfa724373b11ef9763ddb3e3cca647',
       image: '/images/letters_placeholder/default_L.png',
       category: [
         {
@@ -692,12 +770,224 @@ const data2 = {
       hasCert: false,
       url: 'https://learnxinyminutes.com',
       description:
-        'This website offers a quick and easy way to learn various programming languages. Users can select their preferred language and theme, and then take a whirlwind tour of the language. The website is community-driven and offers translations for multiple languages. Some of the languages available include Ada, C++, Java, and Python. The website also offers information on macros and different programming concepts.',
-      wordLength3: 62,
+        'Learn X in Y minutes is a community-driven website that offers a whirlwind tour of various programming languages. Users can select their preferred language and theme, and then browse through translations and examples of code. The website covers a wide range of languages, from Ada to CSS, and also includes information on macros and common programming concepts.',
+      wordLength3: 57,
+    },
+    {
+      name: 'Pythonprogramming',
+      slug: 'pythonprogramming-2abfa725373b11ef9763ddb3e3cca647',
+      image: '/images/letters_placeholder/default_P.png',
+      category: [
+        {
+          label: 'Machine Learning',
+          value: 'machine-learning',
+        },
+        {
+          label: 'Robotics',
+          value: 'robotics',
+        },
+        {
+          label: 'Data Analysis',
+          value: 'data-analysis',
+        },
+        {
+          label: 'Web Development',
+          value: 'web-development',
+        },
+        {
+          label: 'Game Development',
+          value: 'game-development',
+        },
+        {
+          label: 'Software Development',
+          value: 'software-development',
+        },
+      ],
+      techStack: [
+        {
+          label: 'Python',
+          value: 'python',
+        },
+        {
+          label: 'Go',
+          value: 'go',
+        },
+        {
+          label: 'Django',
+          value: 'django',
+        },
+        {
+          label: 'Flask',
+          value: 'flask',
+        },
+      ],
+      type: [
+        {
+          label: 'Video Courses',
+          value: 'video-courses',
+        },
+        {
+          label: 'Coding Game',
+          value: 'coding-game',
+        },
+      ],
+      cost: 'Free',
+      hasCert: false,
+      url: 'https://pythonprogramming.net',
+      description:
+        'This website offers a wide range of free Python programming tutorials for beginners to advanced users. Topics covered include machine learning, data analysis, quantum computer programming, game development, web development, bots and AI, robotics, and creating GUIs. The tutorials cover both text and video formats.',
+      wordLength3: 45,
+    },
+    {
+      name: 'Frontendmentor',
+      slug: 'frontendmentor-2c4ce0e8373b11ef9763ddb3e3cca647',
+      image: '/images/letters_placeholder/default_F.png',
+      category: [
+        {
+          label: 'Frontend Development',
+          value: 'frontend-development',
+        },
+      ],
+      techStack: [
+        {
+          label: 'Javascript',
+          value: 'javascript',
+        },
+        {
+          label: 'R',
+          value: 'r',
+        },
+        {
+          label: 'HTML/CSS',
+          value: 'html/css',
+        },
+      ],
+      type: [
+        {
+          label: 'Hands-On Practice',
+          value: 'hands-on-practice',
+        },
+        {
+          label: 'Project-Based',
+          value: 'project-based',
+        },
+        {
+          label: 'Coding Practice',
+          value: 'coding-practice',
+        },
+      ],
+      cost: 'Free/Paid',
+      hasCert: false,
+      url: 'https://www.frontendmentor.io',
+      description:
+        'Frontend Mentor is a platform that offers front-end coding challenges to help improve your skills. These challenges are based on real-life projects and provide hands-on experience with HTML, CSS, and JavaScript. The platform also provides professionally designed projects, allowing you to focus on the code and see your skills improve. With over 848,000 developers using Frontend Mentor, you can also connect with others and receive feedback on your projects. This platform is highly recommended by developers as it helps you level up your skills and build a portfolio to showcase your work. Frontend Mentor also offers a way to escape tutorial hell and put your knowledge to the test by solving real-world problems. With their help, you can build portfolio-worthy projects without having to worry about coming',
+      wordLength3: 127,
+    },
+    {
+      name: 'Sololearn',
+      slug: 'sololearn-2d81a08e373b11ef9763ddb3e3cca647',
+      image: '/images/letters_placeholder/default_S.png',
+      category: [
+        {
+          label: 'Sql',
+          value: 'sql',
+        },
+        {
+          label: 'Web Development',
+          value: 'web-development',
+        },
+      ],
+      techStack: [
+        {
+          label: 'Javascript',
+          value: 'javascript',
+        },
+        {
+          label: 'Python',
+          value: 'python',
+        },
+        {
+          label: 'Java',
+          value: 'java',
+        },
+        {
+          label: 'C++',
+          value: 'cpp',
+        },
+        {
+          label: 'C#',
+          value: 'c-sharp',
+        },
+        {
+          label: 'Go',
+          value: 'go',
+        },
+        {
+          label: 'Sql',
+          value: 'sql',
+        },
+        {
+          label: 'HTML/CSS',
+          value: 'html/css',
+        },
+      ],
+      type: [
+        {
+          label: 'Hands-On Practice',
+          value: 'hands-on-practice',
+        },
+        {
+          label: 'Interactive Content',
+          value: 'interactive-content',
+        },
+        {
+          label: 'Coding Practice',
+          value: 'coding-practice',
+        },
+      ],
+      cost: 'Free',
+      hasCert: true,
+      url: 'https://www.sololearn.com/en/',
+      description:
+        'Sololearn is a free online platform that offers interactive and hands-on courses for learning the latest technology. With courses on Generative AI, Web Development, Python, Java, and more, Sololearn caters to all levels of experience. Through bite-sized lessons, in-lesson quizzes, and the option to earn certificates, users can easily learn and validate their skills. Sololearn is accessible on both web and mobile, making it convenient to learn anytime, anywhere.',
+      wordLength3: 69,
+    },
+    {
+      name: 'Dribbble',
+      slug: 'dribbble-2e829e48373b11ef9763ddb3e3cca647',
+      image: '/images/letters_placeholder/default_D.png',
+      category: [
+        {
+          label: 'UI Design',
+          value: 'ui-design',
+        },
+        {
+          label: 'UX Design',
+          value: 'ux-design',
+        },
+      ],
+      techStack: [
+        {
+          label: 'Other',
+          value: 'other',
+        },
+      ],
+      type: [
+        {
+          label: 'Other',
+          value: 'other',
+        },
+      ],
+      cost: 'Free/Paid',
+      hasCert: false,
+      url: 'https://dribbble.com',
+      description:
+        'Dribbble is a community for graphic design with over 3 million creatives. It is a destination for design inspiration, feedback, community, and job opportunities. Users can discover and connect with top-rated designers and agencies from around the world. The platform features a diverse range of designers, including digital designers, brand designers, illustrators, product designers, and more. With a focus on mobile and web design, Dribbble is a valuable resource for anyone in the design industry.',
+      wordLength3: 75,
     },
     {
       name: 'Projectlearn',
-      slug: 'projectlearn-9255c87f367211efb1e107a64ee89f73',
+      slug: 'projectlearn-2f96fb6c373b11ef9763ddb3e3cca647',
       image: '/images/letters_placeholder/default_P.png',
       category: [
         {
@@ -769,25 +1059,17 @@ const data2 = {
       hasCert: false,
       url: 'https://projectlearn.io',
       description:
-        'ProjectLearn is a website that offers a project-based learning approach for various fields such as web development, mobile development, game development, and machine learning. It encourages learning by doing and provides tutorials for building projects in different categories. These categories include web development, mobile development, game development, and machine learning. The website also offers updates and contribution guides for those interested in learning and contributing to the platform.',
-      wordLength3: 68,
+        'ProjectLearn is a website that offers a project-based learning approach for various fields such as web development, mobile development, game development, and machine learning. It emphasizes the importance of learning by doing and provides tutorials and resources for users to build their own projects. The website also offers categories for different areas of development and allows users to contribute to the platform.',
+      wordLength3: 62,
     },
     {
-      name: 'Coursera',
-      slug: 'coursera-941e767e367211efb1e107a64ee89f73',
-      image: '/images/letters_placeholder/default_C.png',
+      name: 'Runestone',
+      slug: 'runestone-2f96fb6d373b11ef9763ddb3e3cca647',
+      image: '/images/letters_placeholder/default_R.png',
       category: [
         {
-          label: 'Cybersecurity',
-          value: 'cybersecurity',
-        },
-        {
-          label: 'Project Management',
-          value: 'project-management',
-        },
-        {
-          label: 'UX Design',
-          value: 'ux-design',
+          label: 'Other',
+          value: 'other',
         },
       ],
       techStack: [
@@ -802,28 +1084,181 @@ const data2 = {
           value: 'text-based',
         },
         {
-          label: 'Hands-On Practice',
-          value: 'hands-on-practice',
+          label: 'Interactive Content',
+          value: 'interactive-content',
         },
         {
-          label: 'Project-Based',
-          value: 'project-based',
+          label: 'Coding Practice',
+          value: 'coding-practice',
+        },
+      ],
+      cost: 'Free',
+      hasCert: false,
+      url: 'https://landing.runestone.academy',
+      description:
+        "Runestone Academy offers a wide range of free online textbooks for math and computer science. Their mission is to provide open-source content, tools, and strategies to STEM teachers in order to create engaging and effective learning experiences for their students. These textbooks are comprehensive and interactive, making it easy for students, teachers, and self-learners to master these subjects. With clear explanations, engaging examples, and interactive exercises, learning math and computer science has never been easier. Students have praised the convenience and user-friendly platform of Runestone Academy's textbooks. Start your learning journey today with Runestone Academy's free online textbooks.",
+      wordLength3: 98,
+    },
+    {
+      name: 'Ui.Dev',
+      slug: 'ui.dev-31b52b76373b11ef9763ddb3e3cca647',
+      image: '/images/letters_placeholder/default_U.png',
+      category: [
+        {
+          label: 'Other',
+          value: 'other',
+        },
+      ],
+      techStack: [
+        {
+          label: 'Javascript',
+          value: 'javascript',
         },
         {
-          label: 'MOOC',
-          value: 'mooc',
+          label: 'Typescript',
+          value: 'typescript',
+        },
+        {
+          label: 'React.js',
+          value: 'react.js',
+        },
+      ],
+      type: [
+        {
+          label: 'Bootcamps',
+          value: 'bootcamps',
+        },
+      ],
+      cost: 'Free/Paid',
+      hasCert: false,
+      url: 'https://ui.dev',
+      description:
+        'UI.dev is a website that helps JavaScript developers improve their skills and make more money while having fun. They offer courses and resources to make learning the JavaScript ecosystem easy and approachable. Many satisfied customers have praised their courses, including those from big companies like Apple, Netflix, and Microsoft. Join the community of developers and take your JavaScript skills to the next level with UI.dev.',
+      wordLength3: 65,
+    },
+    {
+      name: 'Codeschool',
+      slug: 'codeschool-3299409a373b11ef9763ddb3e3cca647',
+      image: '/images/letters_placeholder/default_C.png',
+      category: [
+        {
+          label: 'Other',
+          value: 'other',
+        },
+      ],
+      techStack: [
+        {
+          label: 'R',
+          value: 'r',
+        },
+      ],
+      type: [
+        {
+          label: 'Interactive Content',
+          value: 'interactive-content',
+        },
+      ],
+      cost: 'Free',
+      hasCert: false,
+      url: 'https://www.pluralsight.com/codeschool',
+      description:
+        "Pluralsight and Code School have merged, bringing Code School's interactive courses to the Pluralsight platform. Users can now access a wide range of code courses, assessments, and expert-led content on popular technologies. Existing Code School users can easily transfer their accounts to Pluralsight. The platform also offers a 10-day free trial and skill assessments to help users improve their skills and identify knowledge gaps.",
+      wordLength3: 64,
+    },
+    {
+      name: 'Phptherightway',
+      slug: 'phptherightway-33bf4410373b11ef9763ddb3e3cca647',
+      image: '/images/letters_placeholder/default_P.png',
+      category: [
+        {
+          label: 'Other',
+          value: 'other',
+        },
+      ],
+      techStack: [
+        {
+          label: 'Php',
+          value: 'php',
+        },
+      ],
+      type: [
+        {
+          label: 'Coding Practice',
+          value: 'coding-practice',
+        },
+      ],
+      cost: 'Free/Paid',
+      hasCert: false,
+      url: 'https://phptherightway.com/',
+      description:
+        'This text is a quick reference guide for PHP best practices and coding standards. It includes links to authoritative tutorials and aims to introduce new developers to important topics and offer fresh ideas to seasoned professionals. The website does not dictate which tools to use, but instead offers multiple options and explains their differences. It is a living document that will be continuously updated with more information and examples. The guide is also available in multiple translations.',
+      wordLength3: 77,
+    },
+    {
+      name: 'Harvard',
+      slug: 'harvard-33bf4411373b11ef9763ddb3e3cca647',
+      image: '/images/letters_placeholder/default_H.png',
+      category: [
+        {
+          label: 'Data Science',
+          value: 'data-science',
+        },
+      ],
+      techStack: [
+        {
+          label: 'Other',
+          value: 'other',
+        },
+      ],
+      type: [
+        {
+          label: 'Other',
+          value: 'other',
         },
       ],
       cost: 'Free',
       hasCert: true,
-      url: 'https://www.coursera.org',
+      url: 'https://pll.harvard.edu/',
       description:
-        'Coursera offers a wide range of online courses, degrees, and certificates from top industry leaders like Google, IBM, and Meta. These courses are designed to help individuals, businesses, universities, and governments develop new job skills and advance their careers. With unlimited access to over 7,000 programs, individuals can build job-ready skills and prepare for certifications like the PMP exam. Coursera also offers collaboration with 325+ universities and companies, allowing individuals to launch new careers in as little as 6 months in roles such as project manager, data analyst, digital marketer, IT specialist, bookkeeper, cybersecurity expert, front-end developer, and UX designer. The median salary for project managers is $102,800, with a projected',
-      wordLength3: 111,
+        'Harvard University offers a variety of professional and lifelong learning courses, both in-person and online. These courses cover a wide range of subjects, including literature, business, health, and more. Participants can earn certificates for professional development, college credit, or simply take a class for personal enrichment. Some featured courses include "Digital Health" which explores the challenges and opportunities of using technology in healthcare, "Managing Happiness" which teaches individuals how to take control of their own happiness, and "Strategy Execution for Public Leadership" which helps develop strategies for success in leadership roles. Harvard also offers courses in art and design, computer science, education, and other subjects.',
+      wordLength3: 105,
+    },
+    {
+      name: 'Codewithmosh',
+      slug: 'codewithmosh-35fb6452373b11ef9763ddb3e3cca647',
+      image: '/images/letters_placeholder/default_C.png',
+      category: [
+        {
+          label: 'Software Development',
+          value: 'software-development',
+        },
+      ],
+      techStack: [
+        {
+          label: 'React.js',
+          value: 'react.js',
+        },
+        {
+          label: 'Node.js',
+          value: 'node.js',
+        },
+      ],
+      type: [
+        {
+          label: 'Coding Practice',
+          value: 'coding-practice',
+        },
+      ],
+      cost: 'Free',
+      hasCert: false,
+      url: 'https://codewithmosh.com',
+      description:
+        'Code with Mosh is a comprehensive platform for coding courses that will help you become a highly sought-after software engineer. With over 20 years of experience and a track record of teaching over 10 million students, Mosh Hamedani is dedicated to helping you level up your skills, increase your earning potential, and build a brighter future. His courses are clear, concise, and free of technical jargon, making it easy for you to learn and succeed. With step-by-step lessons and a focus on the essentials, Code with Mosh is the perfect place to fast-track your coding journey.',
+      wordLength3: 96,
     },
     {
       name: 'Goalkicker',
-      slug: 'goalkicker-957b852a367211efb1e107a64ee89f73',
+      slug: 'goalkicker-3750db52373b11ef9763ddb3e3cca647',
       image: '/images/letters_placeholder/default_G.png',
       category: [
         {
@@ -891,133 +1326,23 @@ const data2 = {
       hasCert: false,
       url: 'https://goalkicker.com/',
       description:
-        'GoalKicker.com offers a wide range of free programming books on various topics such as Android development, C, C#, CSS, HTML5, iOS development, Java, JavaScript, PowerShell, PHP, Python, SQL Sever, and more. These books are designed for professionals and cover topics like .NET Framework, algorithms, Angular 2, AngularJS, Bash, C++, CSS, Entity Framework, Excel VBA, Git, Haskell, Hibernate, HTML5, iOS, Java, JavaScript, jQuery, Kotlin, LaTeX, Linux, MATLAB, Microsoft SQL Server, MongoDB, MySQL, Node.JS, Objective-C, and Oracle Database. These books are available for free and can be downloaded from the website.',
-      wordLength3: 89,
+        "GoalKicker.com is a website that offers a wide range of free programming books on various topics such as Android development, C, C#, CSS, HTML5, iOS development, Java, JavaScript, PowerShell, PHP, Python, SQL Sever, and more. These books are designed for professionals and cover topics like .NET Framework, algorithms, Angular 2, AngularJS, Bash, C++, CSS, Entity Framework, Excel VBA, Git, Haskell, Hibernate, HTML5, iOS, Java, JavaScript, jQuery, Kotlin, LaTeX, Linux, MATLAB, Microsoft SQL Server, MongoDB, MySQL, Node.JS, Objective-C, and Oracle Database. Whether you're a beginner or an experienced programmer, you can find valuable resources on Goal",
+      wordLength3: 95,
     },
     {
-      name: 'Pythonprogramming',
-      slug: 'pythonprogramming-96aaac00367211efb1e107a64ee89f73',
-      image: '/images/letters_placeholder/default_P.png',
+      name: 'Composingprograms',
+      slug: 'composingprograms-38ce9b22373b11ef9763ddb3e3cca647',
+      image: '/images/letters_placeholder/default_C.png',
       category: [
         {
-          label: 'Machine Learning',
-          value: 'machine-learning',
-        },
-        {
-          label: 'Robotics',
-          value: 'robotics',
-        },
-        {
-          label: 'Data Analysis',
-          value: 'data-analysis',
-        },
-        {
-          label: 'Web Development',
-          value: 'web-development',
-        },
-        {
-          label: 'Game Development',
-          value: 'game-development',
-        },
-        {
-          label: 'Software Development',
-          value: 'software-development',
+          label: 'Other',
+          value: 'other',
         },
       ],
       techStack: [
         {
           label: 'Python',
           value: 'python',
-        },
-        {
-          label: 'Go',
-          value: 'go',
-        },
-        {
-          label: 'Django',
-          value: 'django',
-        },
-        {
-          label: 'Flask',
-          value: 'flask',
-        },
-      ],
-      type: [
-        {
-          label: 'Video Courses',
-          value: 'video-courses',
-        },
-        {
-          label: 'Coding Game',
-          value: 'coding-game',
-        },
-      ],
-      cost: 'Free',
-      hasCert: false,
-      url: 'https://pythonprogramming.net',
-      description:
-        'This text is a collection of Python programming tutorials that cover a wide range of topics, from basic fundamentals to advanced concepts. The tutorials are available in both video and text format and are free to access. Topics covered include machine learning, data analysis, quantum computer programming, game development, web development, bots and AI, robotics, and creating GUIs. The tutorials also cover the use of various modules and frameworks such as Pandas, Matplotlib, Flask, Django, and Tkinter. Additionally, there is a section on Golang, a programming language known for its simplicity and ease of use.',
-      wordLength3: 95,
-    },
-    {
-      name: 'Ui.Dev',
-      slug: 'ui.dev-97ce4b78367211efb1e107a64ee89f73',
-      image: '/images/letters_placeholder/default_U.png',
-      category: [
-        {
-          label: 'Other',
-          value: 'other',
-        },
-      ],
-      techStack: [
-        {
-          label: 'Javascript',
-          value: 'javascript',
-        },
-        {
-          label: 'Typescript',
-          value: 'typescript',
-        },
-        {
-          label: 'React.js',
-          value: 'react.js',
-        },
-      ],
-      type: [
-        {
-          label: 'Other',
-          value: 'other',
-        },
-      ],
-      cost: 'Free/Paid',
-      hasCert: false,
-      url: 'https://ui.dev',
-      description:
-        'UI.dev is a website that helps JavaScript developers improve their skills and make more money while having fun. They offer courses on various topics such as TypeScript, React, and Advanced JavaScript, which have helped many developers land jobs at top companies like Apple, Netflix, and Amazon. The courses are designed to make learning the JavaScript ecosystem easy and enjoyable, and have received high praise from users. Join the community of successful developers and take your skills to the next level with UI.dev.',
-      wordLength3: 82,
-    },
-    {
-      name: 'Frontendmentor',
-      slug: 'frontendmentor-98e00d1c367211efb1e107a64ee89f73',
-      image: '/images/letters_placeholder/default_F.png',
-      category: [
-        {
-          label: 'Frontend Development',
-          value: 'frontend-development',
-        },
-      ],
-      techStack: [
-        {
-          label: 'Javascript',
-          value: 'javascript',
-        },
-        {
-          label: 'R',
-          value: 'r',
-        },
-        {
-          label: 'HTML/CSS',
-          value: 'html/css',
         },
       ],
       type: [
@@ -1029,113 +1354,18 @@ const data2 = {
           label: 'Project-Based',
           value: 'project-based',
         },
-        {
-          label: 'Coding Practice',
-          value: 'coding-practice',
-        },
-      ],
-      cost: 'Free/Paid',
-      hasCert: false,
-      url: 'https://www.frontendmentor.io',
-      description:
-        'Frontend Mentor is a platform that offers front-end coding challenges to help improve your skills. These challenges are based on real-life projects and provide hands-on experience in HTML, CSS, and JavaScript. The platform also provides professional designs, allowing you to focus on the coding aspect and see your skills improve. With over 848,000 developers using the platform, you can also connect with others and receive feedback on your projects. Frontend Mentor is highly recommended by web developers as it offers ready-made challenges to help level up your skills and add finished projects to your portfolio. It also helps you escape tutorial hell and provides opportunities to test your knowledge by solving real-world problems. Overall, Frontend Mentor is a valuable resource for developers looking to improve their skills',
-      wordLength3: 127,
-    },
-    {
-      name: 'Phptherightway',
-      slug: 'phptherightway-9a7bcca6367211efb1e107a64ee89f73',
-      image: '/images/letters_placeholder/default_P.png',
-      category: [
-        {
-          label: 'Other',
-          value: 'other',
-        },
-      ],
-      techStack: [
-        {
-          label: 'Php',
-          value: 'php',
-        },
-      ],
-      type: [
-        {
-          label: 'Coding Practice',
-          value: 'coding-practice',
-        },
-      ],
-      cost: 'Free/Paid',
-      hasCert: false,
-      url: 'https://phptherightway.com/',
-      description:
-        '"PHP: The Right Way is a comprehensive guide to PHP best practices, coding standards, and authoritative tutorials. It aims to help both new and experienced PHP developers by providing up-to-date information and fresh ideas. This living document is regularly updated and offers multiple options for tools and approaches. It is also available in multiple translations."',
-      wordLength3: 55,
-    },
-    {
-      name: 'Codewithmosh',
-      slug: 'codewithmosh-9b3ff522367211efb1e107a64ee89f73',
-      image: '/images/letters_placeholder/default_C.png',
-      category: [
-        {
-          label: 'Software Development',
-          value: 'software-development',
-        },
-      ],
-      techStack: [
-        {
-          label: 'React.js',
-          value: 'react.js',
-        },
-        {
-          label: 'Node.js',
-          value: 'node.js',
-        },
-      ],
-      type: [
-        {
-          label: 'Coding Practice',
-          value: 'coding-practice',
-        },
       ],
       cost: 'Free',
       hasCert: false,
-      url: 'https://codewithmosh.com',
+      url: 'https://www.composingprograms.com/',
       description:
-        'Code with Mosh is a comprehensive platform that offers all the coding courses you need to excel as a software engineer. With over 20 years of experience and a track record of teaching over 10 million students, Mosh Hamedani is dedicated to helping you level up your skills, increase your earning potential, and build a brighter future. His courses are clear, concise, and free of technical jargon, making it easy for anyone to learn. With step-by-step lessons and a focus on the essentials, Code with Mosh is the perfect place to fast-track your coding journey.',
-      wordLength3: 95,
+        'Composing Programs is a free online introduction to programming and computer science, focusing on methods for abstraction, programming paradigms, and managing complexity in large programs. It primarily uses the Python 3 programming language and includes programming projects and a tool for visualizing program execution. The text is divided into chapters covering topics such as building abstractions with functions and data, control, higher-order functions, and object-oriented programming. Instructors can also adapt the materials for their courses.',
+      wordLength3: 75,
     },
     {
-      name: 'Mooc',
-      slug: 'mooc-9b3ff523367211efb1e107a64ee89f73',
-      image: '/images/letters_placeholder/default_M.png',
-      category: [
-        {
-          label: 'Artificial Intelligence',
-          value: 'artificial-intelligence',
-        },
-      ],
-      techStack: [
-        {
-          label: 'Other',
-          value: 'other',
-        },
-      ],
-      type: [
-        {
-          label: 'MOOC',
-          value: 'mooc',
-        },
-      ],
-      cost: 'Free',
-      hasCert: false,
-      url: 'https://www.mooc.fi/en/',
-      description:
-        'MOOC.fi is a website that offers high-quality and open courses for everyone, hosted by the University of Helsinki MOOC Center. These courses do not require any prior knowledge and are perfect for beginners who want to learn programming basics or get familiar with artificial intelligence. The best part is that these courses are completely free and can be accessed from anywhere, making it convenient for learners. Teachers can also use these courses in their own classrooms, with the option to customize them according to their needs. MOOC.fi offers a variety of popular courses and study modules for both learners and teachers.',
-      wordLength3: 101,
-    },
-    {
-      name: 'Runestone',
-      slug: 'runestone-9d9171de367211efb1e107a64ee89f73',
-      image: '/images/letters_placeholder/default_R.png',
+      name: 'Learncpp',
+      slug: 'learncpp-39e1045a373b11ef9763ddb3e3cca647',
+      image: '/images/letters_placeholder/default_L.png',
       category: [
         {
           label: 'Other',
@@ -1143,195 +1373,27 @@ const data2 = {
         },
       ],
       techStack: [
-        {
-          label: 'Other',
-          value: 'other',
-        },
-      ],
-      type: [
-        {
-          label: 'Text-Based',
-          value: 'text-based',
-        },
-        {
-          label: 'Interactive Content',
-          value: 'interactive-content',
-        },
-        {
-          label: 'Coding Practice',
-          value: 'coding-practice',
-        },
-      ],
-      cost: 'Free',
-      hasCert: false,
-      url: 'https://landing.runestone.academy',
-      description:
-        'Runestone Academy offers free online textbooks for math and computer science. Their mission is to provide teachers with open-source content and tools to create engaging and effective learning experiences for students. These textbooks are comprehensive and interactive, making it easy for students, teachers, and self-learners to master these subjects. With clear explanations, engaging examples, and interactive exercises, learning math and computer science has never been easier. Students appreciate the convenience of having all the resources in one platform, making it superior to other platforms. Start your learning journey with Runestone Academy today.',
-      wordLength3: 92,
-    },
-    {
-      name: 'Harvard',
-      slug: 'harvard-9ea10aa8367211efb1e107a64ee89f73',
-      image: '/images/letters_placeholder/default_H.png',
-      category: [
-        {
-          label: 'Data Science',
-          value: 'data-science',
-        },
-      ],
-      techStack: [
-        {
-          label: 'Other',
-          value: 'other',
-        },
-      ],
-      type: [
-        {
-          label: 'Other',
-          value: 'other',
-        },
-      ],
-      cost: 'Free',
-      hasCert: true,
-      url: 'https://pll.harvard.edu/',
-      description:
-        'Harvard University offers a variety of professional and lifelong learning courses for individuals looking to advance their careers, pursue their passions, or simply learn for fun. These courses are available in-person, online, and in blended formats, covering a wide range of subjects such as art and design, business, computer science, data science, education, health and medicine, humanities, mathematics, programming, science, social sciences, and theology. Some courses offer certificates for professional development or college credit, while others are free to take. One featured course focuses on the challenges and opportunities of using digital technologies in healthcare, while another teaches strategies for success in public leadership. Registration deadlines vary, so interested individuals should check the website for more information.',
-      wordLength3: 117,
-    },
-    {
-      name: 'Sololearn',
-      slug: 'sololearn-a006b6e0367211efb1e107a64ee89f73',
-      image: '/images/letters_placeholder/default_S.png',
-      category: [
-        {
-          label: 'Sql',
-          value: 'sql',
-        },
-        {
-          label: 'Web Development',
-          value: 'web-development',
-        },
-      ],
-      techStack: [
-        {
-          label: 'Javascript',
-          value: 'javascript',
-        },
-        {
-          label: 'Python',
-          value: 'python',
-        },
-        {
-          label: 'Java',
-          value: 'java',
-        },
         {
           label: 'C++',
           value: 'cpp',
         },
-        {
-          label: 'C#',
-          value: 'c-sharp',
-        },
-        {
-          label: 'Go',
-          value: 'go',
-        },
-        {
-          label: 'Sql',
-          value: 'sql',
-        },
-        {
-          label: 'HTML/CSS',
-          value: 'html/css',
-        },
-      ],
-      type: [
-        {
-          label: 'Hands-On Practice',
-          value: 'hands-on-practice',
-        },
-        {
-          label: 'Interactive Content',
-          value: 'interactive-content',
-        },
-        {
-          label: 'Coding Practice',
-          value: 'coding-practice',
-        },
-      ],
-      cost: 'Free',
-      hasCert: true,
-      url: 'https://www.sololearn.com/en/',
-      description:
-        'Sololearn is an online platform where you can learn to code, whether you are a beginner or looking to advance your skills. They offer a variety of courses, including a new one on Generative AI. The courses are interactive and hands-on, making it easy to learn the latest technology. You can choose from different options, such as Google or self-paced courses, and there are courses for various programming languages like Python, Java, and C++. No matter your experience level, you can start writing real code within minutes and track your progress with quizzes. Upon completion, you can earn a certificate to showcase your skills on social media. Sololearn is accessible on the web or on-the-go, making it convenient to learn anytime, anywhere.',
-      wordLength3: 122,
-    },
-    {
-      name: 'Dribbble',
-      slug: 'dribbble-a16eb76c367211efb1e107a64ee89f73',
-      image: '/images/letters_placeholder/default_D.png',
-      category: [
-        {
-          label: 'UI Design',
-          value: 'ui-design',
-        },
-        {
-          label: 'UX Design',
-          value: 'ux-design',
-        },
-      ],
-      techStack: [
-        {
-          label: 'Other',
-          value: 'other',
-        },
       ],
       type: [
         {
           label: 'Other',
           value: 'other',
-        },
-      ],
-      cost: 'Free/Paid',
-      hasCert: false,
-      url: 'https://dribbble.com',
-      description:
-        "Discover the world's top designers and creative professionals on Dribbble, the community for graphic design. With over 3 million creatives, Dribbble is the go-to destination for design inspiration, feedback, community, and job opportunities. Connect with designers from around the world, including top-rated designers and agencies like Aurélien Salomon, Mercedes Bazan, Jesse Showalter, and more. Explore a variety of design specialties, from mobile and web design to illustration and animation. Join Dribbble to discover and connect with talented designers worldwide.",
-      wordLength3: 79,
-    },
-    {
-      name: 'Codeschool',
-      slug: 'codeschool-a2bcaa3e367211efb1e107a64ee89f73',
-      image: '/images/letters_placeholder/default_C.png',
-      category: [
-        {
-          label: 'Other',
-          value: 'other',
-        },
-      ],
-      techStack: [
-        {
-          label: 'R',
-          value: 'r',
-        },
-      ],
-      type: [
-        {
-          label: 'Interactive Content',
-          value: 'interactive-content',
         },
       ],
       cost: 'Free',
       hasCert: false,
-      url: 'https://www.pluralsight.com/codeschool',
+      url: 'https://www.learncpp.com',
       description:
-        'Pluralsight and Code School have joined forces to offer a comprehensive platform for learning coding skills. With interactive courses, assessments, and expert-led content, users can improve their skills in the most in-demand technologies. Existing Code School users can easily transition to the Pluralsight platform, and new users can start a free trial to access a variety of learning experiences. The platform also offers skill assessments to help users identify their strengths and weaknesses.',
-      wordLength3: 73,
+        'LearnCpp.com is a free website that offers tutorials on how to program in modern C++. The lessons cover everything from writing and compiling code to debugging programs. No prior programming experience is necessary, making it accessible for all levels. The site also provides best practices, tips, and insights to help you become an expert in C++. The tutorials are divided into chapters, starting with an introduction to programming languages and C++ development. The site also offers guidance on configuring your compiler and choosing a language standard. Overall, LearnCpp.com is a valuable resource for anyone looking to improve their C++ skills.',
+      wordLength3: 100,
     },
     {
       name: 'Exercism',
-      slug: 'exercism-a3d695ba367211efb1e107a64ee89f73',
+      slug: 'exercism-3afff792373b11ef9763ddb3e3cca647',
       image: '/images/letters_placeholder/default_E.png',
       category: [
         {
@@ -1391,103 +1453,12 @@ const data2 = {
       hasCert: false,
       url: 'https://exercism.org/',
       description:
-        'Exercism is a free online platform where you can learn and practice programming in over 50 languages. With the help of world-class mentors, you can improve your skills and fluency in languages like Python, JavaScript, Java, C++, and more. The platform offers fun coding exercises to help you understand programming concepts better. It is a community-funded, non-profit organization with over 6,215 coding exercises available. Whether you are a beginner or an experienced programmer, Exercism is a great resource to enhance your programming abilities.',
-      wordLength3: 83,
-    },
-    {
-      name: 'Upgrad',
-      slug: 'upgrad-a5207af8367211efb1e107a64ee89f73',
-      image: '/images/letters_placeholder/default_U.png',
-      category: [
-        {
-          label: 'Other',
-          value: 'other',
-        },
-      ],
-      techStack: [
-        {
-          label: 'Other',
-          value: 'other',
-        },
-      ],
-      type: [
-        {
-          label: 'Other',
-          value: 'other',
-        },
-      ],
-      cost: 'Free/Paid',
-      hasCert: false,
-      url: 'https://www.upgrad.com/my/',
-      description:
-        'upGrad offers a variety of online education programs and courses for professionals in Malaysia. These programs are designed by top global universities and allow students to learn from anywhere. They offer degrees such as Doctor of Business Administration, Doctor of Education, and Master of Business Administration. Some of the popular programs include Doctor of Business Administration in Emerging Technologies and Master of Education and Doctor of Education dual degree. upGrad also offers new programs, such as Doctor of Business Administration in Digital Leadership and Master of Education. These programs are available for different durations, ranging from 14 to 36 months.',
-      wordLength3: 100,
-    },
-    {
-      name: 'Learncpp',
-      slug: 'learncpp-a638dc5a367211efb1e107a64ee89f73',
-      image: '/images/letters_placeholder/default_L.png',
-      category: [
-        {
-          label: 'Other',
-          value: 'other',
-        },
-      ],
-      techStack: [
-        {
-          label: 'C++',
-          value: 'cpp',
-        },
-      ],
-      type: [
-        {
-          label: 'Other',
-          value: 'other',
-        },
-      ],
-      cost: 'Free',
-      hasCert: false,
-      url: 'https://www.learncpp.com',
-      description:
-        '"Learn C++ with our free tutorials on LearnCpp.com! This website offers step-by-step lessons on how to write, compile, and debug C++ programs. Whether you\'re a beginner or an experienced programmer, you\'ll benefit from our best practices, tips, and insights. The tutorials cover topics such as introduction to programming languages, C++ development, and configuring your compiler. With a bit of patience, you can become an expert in C++ with the help of LearnCpp.com."',
-      wordLength3: 72,
-    },
-    {
-      name: 'Composingprograms',
-      slug: 'composingprograms-a638dc5b367211efb1e107a64ee89f73',
-      image: '/images/letters_placeholder/default_C.png',
-      category: [
-        {
-          label: 'Other',
-          value: 'other',
-        },
-      ],
-      techStack: [
-        {
-          label: 'Python',
-          value: 'python',
-        },
-      ],
-      type: [
-        {
-          label: 'Hands-On Practice',
-          value: 'hands-on-practice',
-        },
-        {
-          label: 'Project-Based',
-          value: 'project-based',
-        },
-      ],
-      cost: 'Free',
-      hasCert: false,
-      url: 'https://www.composingprograms.com/',
-      description:
-        '"Composing Programs" is a free online course that teaches the fundamentals of programming and computer science. It focuses on abstraction, programming paradigms, and managing complexity using the Python 3 language. The course includes reading materials, programming projects, and a tool called On Python Tutor for visualizing program execution. Instructors can also adapt the materials for their own courses. The course is divided into three chapters, covering topics such as functions, data abstraction, and object-oriented programming.',
-      wordLength3: 75,
+        'Exercism is a free online platform that offers resources for learning and practicing programming in over 50 languages. It provides a unique combination of learning, practice, and mentoring to help users become proficient in various programming languages. The platform is community-funded and not-for-profit, with over 70 language tracks and 6,216 coding exercises available. Users can improve their programming skills through fun coding exercises that build their understanding of concepts. Some examples of exercises include determining allergies, solving chess puzzles, and solving the famous Zebra Puzzle.',
+      wordLength3: 85,
     },
     {
       name: 'Codegym',
-      slug: 'codegym-a812de68367211efb1e107a64ee89f73',
+      slug: 'codegym-3c05231a373b11ef9763ddb3e3cca647',
       image: '/images/letters_placeholder/default_C.png',
       category: [
         {
@@ -1519,49 +1490,12 @@ const data2 = {
       hasCert: false,
       url: 'https://codegym.cc',
       description:
-        'CodeGym is an online course designed for both beginners and experienced programmers to learn Java. It offers a comprehensive Java tutorial and 1200 practice tasks. The course is suitable for people of all ages, backgrounds, and levels of knowledge. It follows a fun and interactive approach to learning, similar to riding a bicycle. The course is designed like a game, where you can upgrade your skills and unlock new levels and achievements. The training program is personalized based on your preferences.',
-      wordLength3: 81,
-    },
-    {
-      name: 'Learncs',
-      slug: 'learncs-a90a326c367211efb1e107a64ee89f73',
-      image: '/images/letters_placeholder/default_L.png',
-      category: [
-        {
-          label: 'Other',
-          value: 'other',
-        },
-      ],
-      techStack: [
-        {
-          label: 'C#',
-          value: 'c-sharp',
-        },
-      ],
-      type: [
-        {
-          label: 'Interactive Content',
-          value: 'interactive-content',
-        },
-        {
-          label: 'Coding Practice',
-          value: 'coding-practice',
-        },
-        {
-          label: 'Coding Game',
-          value: 'coding-game',
-        },
-      ],
-      cost: 'Free',
-      hasCert: false,
-      url: 'https://www.learncs.org',
-      description:
-        '"Learn C# quickly and easily with learncs.org, a free interactive tutorial for all levels of programmers. Simply choose a chapter and follow the instructions to learn the basics, including user input, variables, conditionals, and more. This website is still under construction, so you can also contribute your own tutorials. Plus, check out their sponsor, Coding for Kids, for a fun and interactive way to teach coding to children. Use the code 2FRHUGWXF0 for a 50% discount. Start learning C# now!"',
-      wordLength3: 80,
+        'CodeGym is an online course designed for both beginners and experienced programmers to learn Java. With a Java tutorial and 1200 practice tasks, this course offers a fun and pressure-free way to learn coding at your own pace. It is suitable for people of all ages, backgrounds, and levels of knowledge. CodeGym is designed like a game, where you can upgrade your skills and unlock achievements as you progress through the course. The training program is personalized based on your preferences, making it an exciting and effective way to become a coding pro.',
+      wordLength3: 93,
     },
     {
       name: 'Teamtreehouse',
-      slug: 'teamtreehouse-aa258a5c367211efb1e107a64ee89f73',
+      slug: 'teamtreehouse-3d25d186373b11ef9763ddb3e3cca647',
       image: '/images/letters_placeholder/default_T.png',
       category: [
         {
@@ -1597,12 +1531,177 @@ const data2 = {
       hasCert: false,
       url: 'https://teamtreehouse.com',
       description:
-        'Treehouse is an online platform that offers expert-led video courses for coding, programming, and design. It is suitable for beginners, intermediate, and advanced learners. They also have a free community server and a 25% discount for their sponsor, Tower. Their latest course is on AI and they offer courses on AI, Data Science, Python, and React. Users can try it for free for 7 days and then pay $25 a month. They also offer Techdegree courses and plans for businesses. Treehouse provides instructions for entry-level tech jobs and allows users to test out of subjects they already know. They offer courses on in-demand topics for developers and designers to stay updated with their skills. Users can also segment their learning with Tracks.',
+        'Treehouse is an online platform that offers expert-led video courses for coding, programming, and design. It is suitable for beginners, intermediate, and advanced learners. They also have a free community server and a 25% discount for their sponsor, Tower. Their latest course, Intro to NLP, is available for free. Treehouse offers courses in AI, Data Science, Python, and React, and you can learn at your own pace. They also have a Techdegree program for those looking to get an entry-level job in tech. With their Compass feature, you can test out of subjects you already know. Treehouse covers in-demand topics for developers and designers, helping you stay up to date with your skills.',
+      wordLength3: 113,
+    },
+    {
+      name: 'Upgrad',
+      slug: 'upgrad-3eabf2f6373b11ef9763ddb3e3cca647',
+      image: '/images/letters_placeholder/default_U.png',
+      category: [
+        {
+          label: 'Other',
+          value: 'other',
+        },
+      ],
+      techStack: [
+        {
+          label: 'Other',
+          value: 'other',
+        },
+      ],
+      type: [
+        {
+          label: 'Other',
+          value: 'other',
+        },
+      ],
+      cost: 'Free/Paid',
+      hasCert: false,
+      url: 'https://www.upgrad.com/my/',
+      description:
+        'upGrad offers a variety of online education programs and courses for professionals in Malaysia. These programs are designed by top global universities and allow students to learn from anywhere. The courses offered include a Doctorate of Business Administration, Doctor of Education, and Master of Business Administration. There are also new launches, such as a Doctor of Business Administration in Digital Leadership and a Dual Master of Education and Doctor of Education program. These programs aim to help professionals unlock their potential and shape their future.',
+      wordLength3: 85,
+    },
+    {
+      name: 'Learncs',
+      slug: 'learncs-3f99e704373b11ef9763ddb3e3cca647',
+      image: '/images/letters_placeholder/default_L.png',
+      category: [
+        {
+          label: 'Other',
+          value: 'other',
+        },
+      ],
+      techStack: [
+        {
+          label: 'C#',
+          value: 'c-sharp',
+        },
+      ],
+      type: [
+        {
+          label: 'Interactive Content',
+          value: 'interactive-content',
+        },
+        {
+          label: 'Coding Practice',
+          value: 'coding-practice',
+        },
+        {
+          label: 'Coding Game',
+          value: 'coding-game',
+        },
+      ],
+      cost: 'Free',
+      hasCert: false,
+      url: 'https://www.learncs.org',
+      description:
+        'This website, learncs.org, offers a free interactive tutorial for learning the C# programming language quickly. It is suitable for both experienced programmers and beginners. The tutorial covers various topics such as basic syntax, user input, variables, conditionals, arrays, and more. The website is still under construction, and contributions are welcome. Additionally, there is an option for kids to learn coding through interactive games. Use the code 2FRHUGWXF0 to receive a 50% discount.',
+      wordLength3: 72,
+    },
+    {
+      name: 'Css-tricks',
+      slug: 'css-tricks-3f99e705373b11ef9763ddb3e3cca647',
+      image: '/images/letters_placeholder/default_C.png',
+      category: [
+        {
+          label: 'Other',
+          value: 'other',
+        },
+      ],
+      techStack: [
+        {
+          label: 'Javascript',
+          value: 'javascript',
+        },
+        {
+          label: 'HTML/CSS',
+          value: 'html/css',
+        },
+      ],
+      type: [
+        {
+          label: 'Text-Based',
+          value: 'text-based',
+        },
+      ],
+      cost: 'Free/Paid',
+      hasCert: false,
+      url: 'https://css-tricks.com',
+      description:
+        'CSS-Tricks is a website dedicated to helping people create their own websites. The site features articles on various topics, such as transitioning to auto height animation, CSS length units, and typewriter animation. It also includes snippets and almanacs on topics like view transitions, grainy gradients, and container size queries. The site is popular among front-end developers and is run by Chris Coyier.',
+      wordLength3: 62,
+    },
+    {
+      name: 'Ionicacademy',
+      slug: 'ionicacademy-4180036e373b11ef9763ddb3e3cca647',
+      image: '/images/letters_placeholder/default_I.png',
+      category: [
+        {
+          label: 'Sql',
+          value: 'sql',
+        },
+      ],
+      techStack: [
+        {
+          label: 'Other',
+          value: 'other',
+        },
+      ],
+      type: [
+        {
+          label: 'Video Courses',
+          value: 'video-courses',
+        },
+      ],
+      cost: 'Free/Paid',
+      hasCert: false,
+      url: 'https://ionicacademy.com/',
+      description:
+        '"Learn Ionic FAST is a comprehensive platform that offers step-by-step video courses and a private community for individuals looking to quickly learn the Ionic framework. With over 60 courses, 18 app templates, and 5000+ students, this platform is perfect for those looking to enhance their skills and build native mobile apps. The courses cover topics such as app structure, navigation, state management, and creating beautiful UIs with the Ionic Framework. Additionally, users can learn how to add native features like camera, push notifications, and SQLite storage to their web apps using Capacitor. The platform also helps users prepare their apps for iOS and Android and release them as native apps. With a 14-day money back guarantee, Learn Ionic FAST is the perfect',
       wordLength3: 122,
     },
     {
+      name: 'Futurelearn',
+      slug: 'futurelearn-431221ee373b11ef9763ddb3e3cca647',
+      image: '/images/letters_placeholder/default_F.png',
+      category: [
+        {
+          label: 'Other',
+          value: 'other',
+        },
+      ],
+      techStack: [
+        {
+          label: 'Javascript',
+          value: 'javascript',
+        },
+      ],
+      type: [
+        {
+          label: 'Video Courses',
+          value: 'video-courses',
+        },
+        {
+          label: 'MOOC',
+          value: 'mooc',
+        },
+        {
+          label: 'Coding Practice',
+          value: 'coding-practice',
+        },
+      ],
+      cost: 'Free/Paid',
+      hasCert: false,
+      url: 'https://www.futurelearn.com',
+      description:
+        'FutureLearn is an online learning platform that offers a wide range of courses and degrees from top universities and organizations. With over 1400 courses available, learners can choose from various subjects such as Business & Management, Healthcare & Medicine, Teaching, Tech & IT, Psychology & Mental Health, and Science, Engineering & Maths. The platform also offers upskilling courses, industry certifications, and high-flying degrees to help individuals achieve their goals. FutureLearn has received positive reviews from learners and is powered by leading experts from companies like Accenture, AWS, and Deakin University.',
+      wordLength3: 90,
+    },
+    {
       name: 'LearnDigital',
-      slug: 'learndigital-abb6491a367211efb1e107a64ee89f73',
+      slug: 'learndigital-4471efd8373b11ef9763ddb3e3cca647',
       image: '/images/letters_placeholder/default_L.png',
       category: [
         {
@@ -1638,42 +1737,42 @@ const data2 = {
       hasCert: true,
       url: 'https://grow.google/intl/uk/courses-and-tools/',
       description:
-        '"Discover over 80 online courses and digital training options offered by Google to help you learn new digital skills or grow your small business or career. With the use of cookies, Google enhances the quality of its services and provides personalized content and advertising. Filter courses by topic, type, duration, and location, including topics such as artificial intelligence, cloud computing, coding, and digital marketing. Choose from a variety of certificate options and access live events, 1-to-1 mentoring, guides, and articles. Start growing your career or business today with Google\'s online courses and tools."',
-      wordLength3: 93,
+        '"Explore over 80 online courses and digital training tools offered by Google to help you learn new digital skills or grow your small business or career. With a focus on personalization and enhancing the quality of its services, Grow with Google offers courses in topics such as artificial intelligence, cloud computing, coding and development, communication, data and analytics, design, digital marketing, digital wellbeing, diversity, and more. These courses range from 5 minutes to over 40 hours in duration and are available in various locations. Additionally, Grow with Google offers live events, 1-to-1 mentoring, guides, articles, and various certificates, including Google Career Certificates. Start growing your career or business today with Grow with Google."',
+      wordLength3: 113,
     },
     {
-      name: 'Ionicacademy',
-      slug: 'ionicacademy-acd66532367211efb1e107a64ee89f73',
+      name: 'Inside.Java',
+      slug: 'inside.java-45d0bf44373b11ef9763ddb3e3cca647',
       image: '/images/letters_placeholder/default_I.png',
       category: [
-        {
-          label: 'Sql',
-          value: 'sql',
-        },
-      ],
-      techStack: [
         {
           label: 'Other',
           value: 'other',
         },
       ],
+      techStack: [
+        {
+          label: 'Java',
+          value: 'java',
+        },
+      ],
       type: [
         {
-          label: 'Video Courses',
-          value: 'video-courses',
+          label: 'Coding Practice',
+          value: 'coding-practice',
         },
       ],
       cost: 'Free/Paid',
       hasCert: false,
-      url: 'https://ionicacademy.com/',
+      url: 'https://inside.java',
       description:
-        "\"Learn Ionic FAST with step-by-step video courses and join a private community today! Whether you're looking to advance your career or launch your own app, Simon Grimm offers over 60 courses, 18 app templates, and has taught over 5000 students. With a 14-day money back guarantee, you can become an Ionic expert in no time. Build on your existing web development skills and learn how to create native mobile apps with Ionic. You'll also learn how to add native features like camera and push notifications, and release your app for iOS and Android. Don't miss out on this opportunity to become an Ionic pro and join our community today!\"",
-      wordLength3: 109,
+        'Inside.java is a website that provides news and insights from members of the Java team at Oracle. It features articles, podcasts, and updates on various topics related to Java, such as performance, security, and new releases. The website also includes information on upcoming events and job opportunities. Recently, there have been updates on Leyden and Loom early-access builds, as well as discussions on addressing fragmentation in ZGC and changes to the default annotation processing policy in JDK 23. The website also covers topics related to Valhalla, Babylon, and the use of DOP v1.1.',
+      wordLength3: 93,
     },
     {
-      name: 'Css-tricks',
-      slug: 'css-tricks-ae19b0ca367211efb1e107a64ee89f73',
-      image: '/images/letters_placeholder/default_C.png',
+      name: 'Learnjavascript',
+      slug: 'learnjavascript-470853cc373b11ef9763ddb3e3cca647',
+      image: '/images/letters_placeholder/default_L.png',
       category: [
         {
           label: 'Other',
@@ -1685,27 +1784,31 @@ const data2 = {
           label: 'Javascript',
           value: 'javascript',
         },
-        {
-          label: 'HTML/CSS',
-          value: 'html/css',
-        },
       ],
       type: [
         {
-          label: 'Text-Based',
-          value: 'text-based',
+          label: 'Hands-On Practice',
+          value: 'hands-on-practice',
+        },
+        {
+          label: 'Project-Based',
+          value: 'project-based',
+        },
+        {
+          label: 'Interactive Content',
+          value: 'interactive-content',
         },
       ],
-      cost: 'Free/Paid',
+      cost: 'Paid',
       hasCert: false,
-      url: 'https://css-tricks.com',
+      url: 'https://learnjavascript.online',
       description:
-        'CSS-Tricks is a popular website that provides information and resources on creating websites. It covers topics such as CSS length units, view transitions, typewriter animation, and more. The website is powered by DigitalOcean and is run by Geoff Graham. It also features articles from other contributors, such as Chris Coyier and Dan Christofi. The website is a great resource for front-end developers looking to improve their skills and stay updated on the latest web design trends.',
-      wordLength3: 76,
+        'Learn JavaScript is an interactive online course that teaches modern JavaScript in an easy and practical way. With short lessons, challenges, and flashcards, you can learn at your own pace and improve your skills. The course uses real-world projects to ensure you are learning the best practices. It is suitable for beginners with basic programming experience and covers the fundamentals of JavaScript. You can try the first 77 lessons, challenges, and projects for free, and upgrade to a Pro account for access for 5 years. Start learning JavaScript today and stay up-to-date with the latest techniques.',
+      wordLength3: 96,
     },
     {
       name: 'Kodeco',
-      slug: 'kodeco-af2d7a00367211efb1e107a64ee89f73',
+      slug: 'kodeco-484986ac373b11ef9763ddb3e3cca647',
       image: '/images/letters_placeholder/default_K.png',
       category: [
         {
@@ -1749,12 +1852,12 @@ const data2 = {
       hasCert: false,
       url: 'https://www.kodeco.com/',
       description:
-        "Kodeco is an online platform that offers a wide range of video courses and books for learning iOS, Android, and Flutter development. With a large and high-quality catalog, Kodeco is the perfect place to elevate your development skills. Their courses are taught by world-class instructors and offer personalized learning experiences, including options for independent study or immersive learning cohorts. Kodeco also offers solutions for businesses looking to improve their team's development skills. Start for free and join a network of passionate learners to thrive in the ever-evolving world of mobile development. Please enable JavaScript to enjoy the best experience on Kodeco.",
-      wordLength3: 101,
+        'Kodeco is a platform that offers high-quality video courses and books for learning iOS, Swift, Android, Kotlin, Dart, and Flutter development. With a wide range of options, including independent study and immersive learning cohorts, Kodeco allows learners to choose the pathway that best fits their lifestyle and schedule. The platform also offers personal solutions for businesses, with content crafted by world-class instructors. By using Kodeco, individuals and dev teams can elevate their skills and stay ahead in the ever-evolving world of mobile development.',
+      wordLength3: 83,
     },
     {
       name: 'Brilliant',
-      slug: 'brilliant-b06cdf1e367211efb1e107a64ee89f73',
+      slug: 'brilliant-4968d9b6373b11ef9763ddb3e3cca647',
       image: '/images/letters_placeholder/default_B.png',
       category: [
         {
@@ -1794,12 +1897,12 @@ const data2 = {
       hasCert: false,
       url: 'https://brilliant.org/',
       description:
-        "Brilliant is an interactive learning platform that helps you build your quantitative skills in math, science, and computer science. With hands-on lessons, you can learn by doing and solve problems in a fun and effective way. Whether you're a beginner or looking to advance your skills, Brilliant offers bite-sized lessons that can be completed in just 15 minutes a day. The platform has over 10 million users and has received over 50,000 5-star reviews on the iOS App Store and Google Play. With visual and interactive lessons, learning complex concepts becomes intuitive and efficient. Brilliant is suitable for all ages, from 13 to 113, and offers tailored lessons and challenges to help you progress at your own pace. With a game-like",
-      wordLength3: 121,
+        'Brilliant is an interactive learning platform that helps users build quantitative skills in math, science, and computer science. With over 10 million users and 50,000 5-star reviews, Brilliant offers guided problem solving and bite-sized lessons that can be completed in just 15 minutes a day. The platform is suitable for beginners and professionals alike, and is designed for ages 13 to 113. With visual and interactive lessons, learning complex concepts becomes intuitive and efficient. Users can track their progress and stay motivated with game-like progress and well-paced content.',
+      wordLength3: 88,
     },
     {
       name: 'Javascript',
-      slug: 'javascript-b1d58734367211efb1e107a64ee89f73',
+      slug: 'javascript-4a8eed3a373b11ef9763ddb3e3cca647',
       image: '/images/letters_placeholder/default_J.png',
       category: [
         {
@@ -1835,115 +1938,12 @@ const data2 = {
       hasCert: false,
       url: 'https://javascript.info',
       description:
-        'This is a modern JavaScript tutorial that provides simple and detailed explanations, examples, and tasks for topics such as closures, document and events, and object-oriented programming. It is available in multiple languages and is open-source, allowing for translation and contributions from people around the world. The tutorial covers both the basics and advanced topics, with plans to continuously improve and add new content. It is divided into two parts, covering JavaScript as a programming language and working with a browser, with additional thematic articles available.',
+        'This web-scraped text is a description of the Modern JavaScript Tutorial, which offers simple and detailed explanations, examples, and tasks for learning JavaScript. It covers topics such as closures, document and events, and object-oriented programming. The tutorial is available in multiple languages and is open-source, with the option for readers to contribute translations. The tutorial is constantly being improved and feedback is welcomed. It is divided into two parts, covering the basics of JavaScript and working with a browser, with additional articles on specific topics.',
       wordLength3: 85,
     },
     {
-      name: 'Futurelearn',
-      slug: 'futurelearn-b2e1b6de367211efb1e107a64ee89f73',
-      image: '/images/letters_placeholder/default_F.png',
-      category: [
-        {
-          label: 'Other',
-          value: 'other',
-        },
-      ],
-      techStack: [
-        {
-          label: 'Javascript',
-          value: 'javascript',
-        },
-      ],
-      type: [
-        {
-          label: 'Video Courses',
-          value: 'video-courses',
-        },
-        {
-          label: 'MOOC',
-          value: 'mooc',
-        },
-        {
-          label: 'Coding Practice',
-          value: 'coding-practice',
-        },
-      ],
-      cost: 'Free/Paid',
-      hasCert: false,
-      url: 'https://www.futurelearn.com',
-      description:
-        'FutureLearn is an online platform that offers a wide range of courses and degrees from top universities and organizations. With over 1400 courses available, learners can choose from various subjects such as Business & Management, Healthcare & Medicine, Teaching, Tech & IT, Psychology & Mental Health, and Science, Engineering & Maths. The platform also offers upskilling courses, industry certifications, and high-flying degrees to help individuals achieve their goals. Leading experts from companies like Accenture, AWS, and Deakin University provide guidance and instruction for these courses. Users can access the platform with a subscription and can customize their cookie preferences. Overall, FutureLearn is a comprehensive and reputable source for online learning.',
-      wordLength3: 110,
-    },
-    {
-      name: 'Inside.Java',
-      slug: 'inside.java-b41b49ac367211efb1e107a64ee89f73',
-      image: '/images/letters_placeholder/default_I.png',
-      category: [
-        {
-          label: 'Other',
-          value: 'other',
-        },
-      ],
-      techStack: [
-        {
-          label: 'Java',
-          value: 'java',
-        },
-      ],
-      type: [
-        {
-          label: 'Coding Practice',
-          value: 'coding-practice',
-        },
-      ],
-      cost: 'Free/Paid',
-      hasCert: false,
-      url: 'https://inside.java',
-      description:
-        'Inside.java is a platform that provides news and insights from the Java team at Oracle. It includes various resources such as news articles, podcasts, and discussions on topics related to Java development. The platform also features updates on new releases and early-access builds, as well as discussions on performance, security, and other relevant issues. Users can also find information on job opportunities and updates on the latest developments in Java technology.',
-      wordLength3: 71,
-    },
-    {
-      name: 'Learnjavascript',
-      slug: 'learnjavascript-b511bb5c367211efb1e107a64ee89f73',
-      image: '/images/letters_placeholder/default_L.png',
-      category: [
-        {
-          label: 'Other',
-          value: 'other',
-        },
-      ],
-      techStack: [
-        {
-          label: 'Javascript',
-          value: 'javascript',
-        },
-      ],
-      type: [
-        {
-          label: 'Hands-On Practice',
-          value: 'hands-on-practice',
-        },
-        {
-          label: 'Project-Based',
-          value: 'project-based',
-        },
-        {
-          label: 'Interactive Content',
-          value: 'interactive-content',
-        },
-      ],
-      cost: 'Paid',
-      hasCert: false,
-      url: 'https://learnjavascript.online',
-      description:
-        '"Learn JavaScript is an interactive online course that teaches modern JavaScript (ES2015+) from scratch. It offers short lessons, challenges, and flashcards to help you learn and practice in an intuitive environment. The challenges are inspired by real-world projects, ensuring that you learn the best practices step by step. The first 77 lessons, challenges, projects, and flashcards are available for free, with the option to upgrade to a Pro account for 5 years with a one-time payment. This course is suitable for beginner developers with basic experience in any programming language. It covers the fundamentals of JavaScript and is considered the best way to learn JavaScript in 2024."',
-      wordLength3: 107,
-    },
-    {
       name: 'Codechef',
-      slug: 'codechef-b655db74367211efb1e107a64ee89f73',
+      slug: 'codechef-4bc5fd74373b11ef9763ddb3e3cca647',
       image: '/images/letters_placeholder/default_C.png',
       category: [
         {
@@ -1999,12 +1999,12 @@ const data2 = {
       hasCert: false,
       url: 'https://www.codechef.com/',
       description:
-        'CodeChef is a platform where you can learn and practice coding with free and beginner-friendly courses on Python, Java, C, C++, Data structures, Algorithms, and SQL. They offer a collection of 1000s of problems for you to solve and improve your coding skills. With courses in web development and the option to upgrade to Pro, you can start your coding journey today. Their courses are designed by experts and cater to beginners, with hands-on experience and practical learning. Join over 114.4k learners in learning Python and 77.6k learners in learning Java.',
-      wordLength3: 91,
+        'CodeChef is a website that offers free and beginner-friendly courses on coding in various languages such as Python, Java, C, C++, and more. They also provide courses on data structures, algorithms, and SQL. Users can practice their coding skills by solving a collection of thousands of problems. The website also offers courses on web development and the option to upgrade to a pro account. With expert-designed courses, users can start their coding journey and learn from scratch. The website has courses for beginners in Python, Java, and other languages, with hands-on experience and practical learning.',
+      wordLength3: 95,
     },
     {
       name: 'Learndatasci',
-      slug: 'learndatasci-b795ef7e367211efb1e107a64ee89f73',
+      slug: 'learndatasci-4ce4de32373b11ef9763ddb3e3cca647',
       image: '/images/letters_placeholder/default_L.png',
       category: [
         {
@@ -2052,12 +2052,73 @@ const data2 = {
       hasCert: false,
       url: 'https://www.learndatasci.com',
       description:
-        'LearnDataSci is a website that offers resources for learning data science, machine learning, and AI. It provides course and book reviews, tutorials, and projects to make these topics more accessible. The website also uses cookies to improve user experience and personalize content. Users can learn through courses on data science, machine learning, and Python, as well as access a glossary and solutions for common terms and problems. The website also offers a section for data science jobs and popular articles on topics such as web scraping and finance. Additionally, there is a new course on AI in healthcare that teaches data mining and machine learning.',
-      wordLength3: 105,
+        'LearnDataSci is a website that offers resources for learning about data science, machine learning, and AI. They provide course and book reviews, tutorials, and projects to make these topics more accessible. The website also uses cookies to improve usability and personalize the user experience. They offer courses on various topics such as data science, machine learning, Python, SQL, and Excel. The website also has a glossary section with definitions of key terms related to these fields. Additionally, they provide information on popular articles and tutorials, including a guide to web scraping and a course on Python for finance. They also offer a new course on AI in healthcare.',
+      wordLength3: 108,
+    },
+    {
+      name: 'Realpython',
+      slug: 'realpython-4e2d0b34373b11ef9763ddb3e3cca647',
+      image: '/images/letters_placeholder/default_R.png',
+      category: [
+        {
+          label: 'Databases',
+          value: 'databases',
+        },
+        {
+          label: 'Devops',
+          value: 'devops',
+        },
+      ],
+      techStack: [
+        {
+          label: 'Python',
+          value: 'python',
+        },
+        {
+          label: 'Django',
+          value: 'django',
+        },
+        {
+          label: 'Flask',
+          value: 'flask',
+        },
+      ],
+      type: [
+        {
+          label: 'Video Courses',
+          value: 'video-courses',
+        },
+        {
+          label: 'Text-Based',
+          value: 'text-based',
+        },
+        {
+          label: 'Hands-On Practice',
+          value: 'hands-on-practice',
+        },
+        {
+          label: 'Project-Based',
+          value: 'project-based',
+        },
+        {
+          label: 'Interactive Content',
+          value: 'interactive-content',
+        },
+        {
+          label: 'Coding Game',
+          value: 'coding-game',
+        },
+      ],
+      cost: 'Free',
+      hasCert: false,
+      url: 'https://realpython.com',
+      description:
+        'Real Python is a comprehensive online resource for learning Python. It offers tutorials, books, courses, code examples, articles, and more for developers of all skill levels. One of their tutorials focuses on using the Python mock object library to improve testing. They also offer a free email series called "Python Tricks" and guided learning paths for accelerated learning. The website covers a wide range of topics including API, best practices, career advice, databases, data science, data structures, data visualization, devops, Django, Docker, editors, Flask, front-end development, game development, GUI, machine learning, NumPy, projects, testing, tools, web development, and web scraping. Real Python also has a community chat and live Q&A calls with',
+      wordLength3: 112,
     },
     {
       name: 'Devopswithkubernetes',
-      slug: 'devopswithkubernetes-b8bd84d4367211efb1e107a64ee89f73',
+      slug: 'devopswithkubernetes-4fa5d6d0373b11ef9763ddb3e3cca647',
       image: '/images/letters_placeholder/default_D.png',
       category: [
         {
@@ -2085,12 +2146,12 @@ const data2 = {
       hasCert: true,
       url: 'https://devopswithkubernetes.com',
       description:
-        '"DevOps with Kubernetes" is a free online course offered by the University of Helsinki that teaches participants how to deploy, manage, and monitor software using Kubernetes. The course is an introductory level and covers topics such as microservice architecture, automatic scaling and deployment, and software management. Participants are required to have their own computers with admin/superuser privileges and can earn university credits by registering for the course. The course has been recently updated and the official start date is August 1st. Prior knowledge of containers is recommended but not mandatory.',
-      wordLength3: 90,
+        '"DevOps with Kubernetes is a free online course offered by the University of Helsinki. It teaches participants how to deploy, manage, and monitor software using Kubernetes. The course is an introduction to Kubernetes with K3s and GKE, and covers topics such as microservice architecture and automatic scaling and deployment. Participants are required to have their own computers with admin/superuser privileges. The course offers ECTS credits, but registration is not required for the certificate. It is recommended that participants have some familiarity with containers before starting the course."',
+      wordLength3: 87,
     },
     {
       name: 'Devopswithdocker',
-      slug: 'devopswithdocker-ba0665ae367211efb1e107a64ee89f73',
+      slug: 'devopswithdocker-4fa5d6d1373b11ef9763ddb3e3cca647',
       image: '/images/letters_placeholder/default_D.png',
       category: [
         {
@@ -2126,12 +2187,132 @@ const data2 = {
       hasCert: false,
       url: 'https://devopswithdocker.com',
       description:
-        'This course is an introduction to container technologies, specifically Docker and Docker Compose. It covers the basics of containers and how they can be used to package and deploy software applications. The course also explores the deployment of web services using Docker, including reverse proxies and databases. Please note that participants will need their own computer with admin/superuser privileges to follow along with the examples and complete exercises. Some prior knowledge of software development is recommended.',
-      wordLength3: 76,
+        'This course is an introduction to container technologies, specifically Docker and Docker Compose. Containers are a lightweight and portable way to package and deploy software applications. The course covers the deployment of various components of web services, such as reverse proxies and databases, using Docker. Please note that you will need your own computer with admin/superuser privileges to follow the examples and complete the exercises. Some prior knowledge of software development concepts is recommended.',
+      wordLength3: 74,
+    },
+    {
+      name: 'Kadenze',
+      slug: 'kadenze-51ba246c373b11ef9763ddb3e3cca647',
+      image: '/images/letters_placeholder/default_K.png',
+      category: [
+        {
+          label: 'Other',
+          value: 'other',
+        },
+      ],
+      techStack: [
+        {
+          label: 'Other',
+          value: 'other',
+        },
+      ],
+      type: [
+        {
+          label: 'Other',
+          value: 'other',
+        },
+      ],
+      cost: 'Free/Paid',
+      hasCert: false,
+      url: 'https://www.kadenze.com',
+      description:
+        'Kadenze is an online platform that offers creative courses from top universities, brands, and institutions in the fields of art and creative technology. They bring together educators, artists, and engineers to provide world-class education. You can register with your email, Google, Microsoft, or Clever account and gain access to a variety of courses. They also offer a student community and other features for a complete learning experience.',
+      wordLength3: 67,
+    },
+    {
+      name: 'Edabit',
+      slug: 'edabit-529d27da373b11ef9763ddb3e3cca647',
+      image: '/images/letters_placeholder/default_E.png',
+      category: [
+        {
+          label: 'Other',
+          value: 'other',
+        },
+      ],
+      techStack: [
+        {
+          label: 'Other',
+          value: 'other',
+        },
+      ],
+      type: [
+        {
+          label: 'Other',
+          value: 'other',
+        },
+      ],
+      cost: 'Free/Paid',
+      hasCert: false,
+      url: 'https://edabit.com',
+      description:
+        'Edabit is a website that offers a variety of coding challenges and exercises for users to improve their coding skills. The website provides a platform for users to practice and learn different programming languages through interactive and engaging challenges. With a wide range of difficulty levels, Edabit caters to both beginners and experienced coders. Whether you are looking to sharpen your coding skills or learn a new language, Edabit is the perfect place to challenge yourself and improve your coding abilities.',
+      wordLength3: 81,
+    },
+    {
+      name: 'Hackerrank',
+      slug: 'hackerrank-529d27db373b11ef9763ddb3e3cca647',
+      image: '/images/letters_placeholder/default_H.png',
+      category: [
+        {
+          label: 'Other',
+          value: 'other',
+        },
+      ],
+      techStack: [
+        {
+          label: 'Other',
+          value: 'other',
+        },
+      ],
+      type: [
+        {
+          label: 'Coding Practice',
+          value: 'coding-practice',
+        },
+      ],
+      cost: 'Free/Paid',
+      hasCert: false,
+      url: 'https://www.hackerrank.com',
+      description:
+        'HackerRank is a popular platform for coding tests and technical interviews used by over 3,000 companies and 40% of developers worldwide. They offer a variety of products and services to help companies hire the best developers and for candidates to improve their skills and find job opportunities. Their products include SkillUp and Engage, and they also provide coding practice and technical interview preparation tools. With a focus on showcasing skills and potential, HackerRank aims to revolutionize tech hiring and help developers succeed in their careers.',
+      wordLength3: 85,
+    },
+    {
+      name: 'Codewars',
+      slug: 'codewars-5408054a373b11ef9763ddb3e3cca647',
+      image: '/images/letters_placeholder/default_C.png',
+      category: [
+        {
+          label: 'Software Development',
+          value: 'software-development',
+        },
+        {
+          label: 'Software Development',
+          value: 'software-development',
+        },
+      ],
+      techStack: [
+        {
+          label: 'Other',
+          value: 'other',
+        },
+      ],
+      type: [
+        {
+          label: 'Coding Practice',
+          value: 'coding-practice',
+        },
+      ],
+      cost: 'Free/Paid',
+      hasCert: false,
+      url: 'https://www.codewars.com',
+      description:
+        'Codewars is a popular coding practice website that caters to all levels of programming experience. With over 3 million developers in its community, it offers a wide range of coding challenges in more than 55 programming languages. These challenges, called "kata", are designed to continuously push and improve your coding skills. You can also test your coding style and progress in real-time using test cases. As you complete more challenges, you earn ranks and honor within the community. Codewars is a collaborative platform where users can create and share their own challenges, making it a dynamic and engaging community for software developers.',
+      wordLength3: 102,
     },
     {
       name: 'Flatironschool',
-      slug: 'flatironschool-baff4188367211efb1e107a64ee89f73',
+      slug: 'flatironschool-55256396373b11ef9763ddb3e3cca647',
       image: '/images/letters_placeholder/default_F.png',
       category: [
         {
@@ -2207,263 +2388,12 @@ const data2 = {
       hasCert: false,
       url: 'https://flatironschool.com',
       description:
-        'Flatiron School is a coding bootcamp that offers on-campus and online courses in software engineering, data science, cybersecurity, and UX/UI product design. Since 2012, they have trained over 20,000 graduates and now offer courses in artificial intelligence. Students can learn skills such as building full-stack web applications, gathering and analyzing data, and cybersecurity techniques. Possible career paths include full stack developer, data analyst, cybersecurity engineer, and UX/UI designer.',
+        'Flatiron School is a coding bootcamp that offers on-campus and online courses in software engineering, data science, cybersecurity, and UI/UX product design. Since 2012, they have trained over 20,000 graduates and now offer courses in artificial intelligence. Students can learn skills such as full-stack web development, data analysis, cybersecurity, and design using AI tools. Possible career paths include full stack developer, data analyst, cybersecurity engineer, and UX/UI designer.',
       wordLength3: 68,
     },
     {
-      name: 'Kadenze',
-      slug: 'kadenze-baff4189367211efb1e107a64ee89f73',
-      image: '/images/letters_placeholder/default_K.png',
-      category: [
-        {
-          label: 'Other',
-          value: 'other',
-        },
-      ],
-      techStack: [
-        {
-          label: 'Other',
-          value: 'other',
-        },
-      ],
-      type: [
-        {
-          label: 'Other',
-          value: 'other',
-        },
-      ],
-      cost: 'Free/Paid',
-      hasCert: false,
-      url: 'https://www.kadenze.com',
-      description:
-        "Kadenze is an online platform that offers creative courses from top universities, bringing together educators, artists, and engineers to provide world-class education in art and creative technology. You can register with your email, Google, Microsoft, or Clever account and gain access to courses from leading universities, brands, and institutions. By signing up, you agree to Kadenze's terms and conditions. Already a member? Log in and discover your creative education today. Browse courses by category and enroll to become a student of the Kadenze community.",
-      wordLength3: 84,
-    },
-    {
-      name: 'Edabit',
-      slug: 'edabit-bd2eef62367211efb1e107a64ee89f73',
-      image: '/images/letters_placeholder/default_E.png',
-      category: [
-        {
-          label: 'Other',
-          value: 'other',
-        },
-      ],
-      techStack: [
-        {
-          label: 'Other',
-          value: 'other',
-        },
-      ],
-      type: [
-        {
-          label: 'Other',
-          value: 'other',
-        },
-      ],
-      cost: 'Free/Paid',
-      hasCert: false,
-      url: 'https://edabit.com',
-      description:
-        'Edabit is a website that offers various coding challenges and exercises for users to improve their coding skills.',
-      wordLength3: 18,
-    },
-    {
-      name: 'Appacademy',
-      slug: 'appacademy-bd2eef63367211efb1e107a64ee89f73',
-      image: '/images/letters_placeholder/default_A.png',
-      category: [
-        {
-          label: 'Web Development',
-          value: 'web-development',
-        },
-        {
-          label: 'Software Development',
-          value: 'software-development',
-        },
-      ],
-      techStack: [
-        {
-          label: 'Other',
-          value: 'other',
-        },
-      ],
-      type: [
-        {
-          label: 'Video Courses',
-          value: 'video-courses',
-        },
-        {
-          label: 'Hands-On Practice',
-          value: 'hands-on-practice',
-        },
-        {
-          label: 'Project-Based',
-          value: 'project-based',
-        },
-      ],
-      cost: 'Free',
-      hasCert: false,
-      url: 'https://open.appacademy.io',
-      description:
-        'App Academy Open is a free, online web development course designed to prepare individuals for a career as a software engineer. It offers access to their full-stack curriculum, which has successfully placed thousands of students in jobs. The course includes over 1,500 hours of readings, videos, projects, and other resources.',
-      wordLength3: 50,
-    },
-    {
-      name: 'Realpython',
-      slug: 'realpython-be59542c367211efb1e107a64ee89f73',
-      image: '/images/letters_placeholder/default_R.png',
-      category: [
-        {
-          label: 'Databases',
-          value: 'databases',
-        },
-        {
-          label: 'Devops',
-          value: 'devops',
-        },
-      ],
-      techStack: [
-        {
-          label: 'Python',
-          value: 'python',
-        },
-        {
-          label: 'Django',
-          value: 'django',
-        },
-        {
-          label: 'Flask',
-          value: 'flask',
-        },
-      ],
-      type: [
-        {
-          label: 'Video Courses',
-          value: 'video-courses',
-        },
-        {
-          label: 'Text-Based',
-          value: 'text-based',
-        },
-        {
-          label: 'Hands-On Practice',
-          value: 'hands-on-practice',
-        },
-        {
-          label: 'Project-Based',
-          value: 'project-based',
-        },
-        {
-          label: 'Interactive Content',
-          value: 'interactive-content',
-        },
-        {
-          label: 'Coding Game',
-          value: 'coding-game',
-        },
-      ],
-      cost: 'Free',
-      hasCert: false,
-      url: 'https://realpython.com',
-      description:
-        'Real Python is an online platform that offers tutorials, books, courses, and articles for developers of all skill levels to learn Python. They cover a wide range of topics such as testing, API, databases, data science, web development, and more. They also offer guided learning paths for accelerated learning and quizzes to evaluate your knowledge. Additionally, they have a community chat and live Q&A calls with experts. Sign up for their free email series, "Python Tricks," to receive valuable tips and tricks.',
-      wordLength3: 82,
-    },
-    {
-      name: 'Hackerrank',
-      slug: 'hackerrank-bf578614367211efb1e107a64ee89f73',
-      image: '/images/letters_placeholder/default_H.png',
-      category: [
-        {
-          label: 'Other',
-          value: 'other',
-        },
-      ],
-      techStack: [
-        {
-          label: 'Other',
-          value: 'other',
-        },
-      ],
-      type: [
-        {
-          label: 'Coding Practice',
-          value: 'coding-practice',
-        },
-      ],
-      cost: 'Free/Paid',
-      hasCert: false,
-      url: 'https://www.hackerrank.com',
-      description:
-        'HackerRank is a popular platform for hiring developers through coding tests and technical interviews. They offer two new products, SkillUp and Engage, and have released the 2024 Developer Skills Report. Over 40% of developers worldwide and 3,000 companies use HackerRank. The platform helps companies build strong tech teams and candidates improve their skills and find job opportunities. It offers coding practice, technical interview preparation, and access to a global community of developers.',
-      wordLength3: 72,
-    },
-    {
-      name: 'Stanford',
-      slug: 'stanford-c05a079e367211efb1e107a64ee89f73',
-      image: '/images/letters_placeholder/default_S.png',
-      category: [
-        {
-          label: 'Other',
-          value: 'other',
-        },
-      ],
-      techStack: [
-        {
-          label: 'Javascript',
-          value: 'javascript',
-        },
-      ],
-      type: [
-        {
-          label: 'Coding Practice',
-          value: 'coding-practice',
-        },
-      ],
-      cost: 'Free',
-      hasCert: false,
-      url: 'https://codeinplace.stanford.edu',
-      description:
-        '"Code in Place is a free introductory coding course offered by Stanford University. It focuses on a human-centered approach to learning and requires JavaScript to be enabled in order to run the course materials."',
-      wordLength3: 34,
-    },
-    {
-      name: 'Codewars',
-      slug: 'codewars-c05a079f367211efb1e107a64ee89f73',
-      image: '/images/letters_placeholder/default_C.png',
-      category: [
-        {
-          label: 'Software Development',
-          value: 'software-development',
-        },
-        {
-          label: 'Software Development',
-          value: 'software-development',
-        },
-      ],
-      techStack: [
-        {
-          label: 'Other',
-          value: 'other',
-        },
-      ],
-      type: [
-        {
-          label: 'Coding Practice',
-          value: 'coding-practice',
-        },
-      ],
-      cost: 'Free/Paid',
-      hasCert: false,
-      url: 'https://www.codewars.com',
-      description:
-        'Codewars is a coding practice website that helps developers of all levels improve their skills in over 55 programming languages. With a community of over 3 million developers, users can challenge themselves with small coding exercises called "kata" and receive instant feedback on their coding style. As they complete more challenges, they can earn ranks and improve their software development skills. Codewars also offers mentorship and a supportive community for users to learn and grow together.',
-      wordLength3: 76,
-    },
-    {
       name: 'Bigocheatsheet',
-      slug: 'bigocheatsheet-c1e7e7f2367211efb1e107a64ee89f73',
+      slug: 'bigocheatsheet-55256397373b11ef9763ddb3e3cca647',
       image: '/images/letters_placeholder/default_B.png',
       category: [
         {
@@ -2487,41 +2417,12 @@ const data2 = {
       hasCert: false,
       url: 'https://www.bigocheatsheet.com/',
       description:
-        'This webpage provides a Big-O cheat sheet for common algorithms used in Computer Science. It covers the space and time complexities and includes a chart for easy reference. The creator, Eric, has interviewed at various companies and noticed the lack of a comprehensive cheat sheet, so he created one to save others time. The cheat sheet includes complexities for operations and data structures such as arrays, and is organized by complexity level.',
-      wordLength3: 72,
-    },
-    {
-      name: 'Gwu',
-      slug: 'gwu-c2cb1022367211efb1e107a64ee89f73',
-      image: '/images/letters_placeholder/default_G.png',
-      category: [
-        {
-          label: 'Other',
-          value: 'other',
-        },
-      ],
-      techStack: [
-        {
-          label: 'Other',
-          value: 'other',
-        },
-      ],
-      type: [
-        {
-          label: 'Other',
-          value: 'other',
-        },
-      ],
-      cost: 'Free/Paid',
-      hasCert: false,
-      url: 'https://openedx.seas.gwu.edu/',
-      description:
-        'This text is a description of the GW Open edX platform. However, there is no information available about the platform at this time.',
-      wordLength3: 23,
+        'This webpage provides a Big-O algorithm complexity cheat sheet for common algorithms used in Computer Science. The cheat sheet includes the best, average, and worst case complexities for sorting algorithms. The creator of the cheat sheet, Eric, has interviewed at various companies and noticed the lack of a comprehensive cheat sheet, so he created one to save others time. The cheat sheet includes information on AngularJS to React automated migration, Big-O complexity chart, and common data structure operations. It also lists the time and space complexities for different data structures.',
+      wordLength3: 90,
     },
     {
       name: 'Pythonprinciples',
-      slug: 'pythonprinciples-c2cb1023367211efb1e107a64ee89f73',
+      slug: 'pythonprinciples-57150080373b11ef9763ddb3e3cca647',
       image: '/images/letters_placeholder/default_P.png',
       category: [
         {
@@ -2553,12 +2454,98 @@ const data2 = {
       hasCert: false,
       url: 'https://pythonprinciples.com',
       description:
-        'Python Principles is an online platform that helps you learn the basics of Python programming through clear explanations, practical exercises, and a helpful community. With over 100 coding exercises, you can become competent at Python and apply your skills immediately. The platform focuses on learning by doing, with practical lessons and challenges to help you master concepts. It also provides instant feedback on your code, similar to having an experienced programmer review it. This makes it the fastest way to learn Python effectively. Join now and start learning today!',
-      wordLength3: 89,
+        'Python Principles is an online platform that offers a comprehensive and effective way to learn Python programming. With a helpful community, example-based learning, and over 100 coding exercises, users can become competent in Python with clear explanations and practical exercises. The platform allows learners to test themselves with challenges and build skills with projects, making it easy to apply their skills in real-world scenarios. The program follows a "learn by doing" approach, where users learn concepts through practical lessons and then master them with practice and challenges. The platform also offers an automated system that analyzes code for correctness and provides instant feedback, making it the fastest way to learn Python.',
+      wordLength3: 111,
+    },
+    {
+      name: 'Gwu',
+      slug: 'gwu-589b18a4373b11ef9763ddb3e3cca647',
+      image: '/images/letters_placeholder/default_G.png',
+      category: [
+        {
+          label: 'Other',
+          value: 'other',
+        },
+      ],
+      techStack: [
+        {
+          label: 'Other',
+          value: 'other',
+        },
+      ],
+      type: [
+        {
+          label: 'Other',
+          value: 'other',
+        },
+      ],
+      cost: 'Free/Paid',
+      hasCert: false,
+      url: 'https://openedx.seas.gwu.edu/',
+      description: 'Description not available.',
+      wordLength3: 3,
+    },
+    {
+      name: 'Stanford',
+      slug: 'stanford-589b18a5373b11ef9763ddb3e3cca647',
+      image: '/images/letters_placeholder/default_S.png',
+      category: [
+        {
+          label: 'Other',
+          value: 'other',
+        },
+      ],
+      techStack: [
+        {
+          label: 'Javascript',
+          value: 'javascript',
+        },
+      ],
+      type: [
+        {
+          label: 'Coding Practice',
+          value: 'coding-practice',
+        },
+      ],
+      cost: 'Free',
+      hasCert: false,
+      url: 'https://codeinplace.stanford.edu',
+      description:
+        'Code in Place is a free introductory coding course offered by Stanford University. It is designed with a human-centered approach and requires JavaScript to be enabled in order to run the course.',
+      wordLength3: 32,
+    },
+    {
+      name: 'Techiedelight$',
+      slug: 'techiedelight$-589b18a6373b11ef9763ddb3e3cca647',
+      image: '/images/letters_placeholder/default_T.png',
+      category: [
+        {
+          label: 'Sql',
+          value: 'sql',
+        },
+      ],
+      techStack: [
+        {
+          label: 'Sql',
+          value: 'sql',
+        },
+      ],
+      type: [
+        {
+          label: 'Coding Practice',
+          value: 'coding-practice',
+        },
+      ],
+      cost: 'Free/Paid',
+      hasCert: false,
+      url: 'https://www.techiedelight.com',
+      description:
+        'Techie Delight is a platform that helps individuals prepare for technical interviews. It offers resources and practice problems to improve algorithmic skills and increase chances of success in interviews with top tech companies. The website also provides curated lists of top interview questions and allows users to customize their coding environment.',
+      wordLength3: 51,
     },
     {
       name: 'Codingdojo',
-      slug: 'codingdojo-c477e5b2367211efb1e107a64ee89f73',
+      slug: 'codingdojo-5a1f2864373b11ef9763ddb3e3cca647',
       image: '/images/letters_placeholder/default_C.png',
       category: [
         {
@@ -2594,41 +2581,53 @@ const data2 = {
       hasCert: false,
       url: 'https://algorithm.codingdojo.com',
       description:
-        "This text is a guide to learning programming algorithms through hands-on exercises, challenges, and tutorials. It guarantees no textbooks or lectures, making the learning process more exciting. The app teaches the building blocks of programming such as for loops, if/else statements, and array manipulation. Users can create an account using the same email used for their admissions application. The app also offers coding challenges, video walkthroughs, and assessments to test the user's understanding. It is suitable for both existing students and applicants.",
-      wordLength3: 82,
+        'This web-scraped text is a guide to learning programming algorithms through hands-on exercises, challenges, and tutorials. It guarantees a learning experience without textbooks or lectures. The Algorithm App teaches the building blocks of programming, such as for loops, if/else statements, and array manipulation. Users can create an account using the same email used for their admissions application. The app also offers coding challenges, video walkthroughs, and assessments to test and improve skills. It is a useful tool for beginners and experienced programmers alike.',
+      wordLength3: 83,
     },
     {
-      name: 'Techiedelight$',
-      slug: 'techiedelight$-c58b295a367211efb1e107a64ee89f73',
-      image: '/images/letters_placeholder/default_T.png',
+      name: 'Appacademy',
+      slug: 'appacademy-5b2b08f4373b11ef9763ddb3e3cca647',
+      image: '/images/letters_placeholder/default_A.png',
       category: [
         {
-          label: 'Sql',
-          value: 'sql',
+          label: 'Web Development',
+          value: 'web-development',
+        },
+        {
+          label: 'Software Development',
+          value: 'software-development',
         },
       ],
       techStack: [
         {
-          label: 'Sql',
-          value: 'sql',
+          label: 'Other',
+          value: 'other',
         },
       ],
       type: [
         {
-          label: 'Coding Practice',
-          value: 'coding-practice',
+          label: 'Video Courses',
+          value: 'video-courses',
+        },
+        {
+          label: 'Hands-On Practice',
+          value: 'hands-on-practice',
+        },
+        {
+          label: 'Project-Based',
+          value: 'project-based',
         },
       ],
-      cost: 'Free/Paid',
+      cost: 'Free',
       hasCert: false,
-      url: 'https://www.techiedelight.com',
+      url: 'https://open.appacademy.io',
       description:
-        'Techie Delight is a popular platform for preparing for technical interviews. It offers resources to help improve algorithmic skills and successfully pass coding interviews with top tech companies. Users can select from various categories and difficulty levels, and can also customize their editor theme and font size. The website also uses cookies.',
-      wordLength3: 52,
+        'App Academy Open is a free, online web development course designed to prepare individuals for a career as a software engineer. It offers access to the full-stack curriculum, which has successfully placed thousands of graduates in jobs. The course includes over 1,500 hours of readings, videos, projects, and other resources.',
+      wordLength3: 50,
     },
     {
       name: 'Coderbyte',
-      slug: 'coderbyte-c58b295b367211efb1e107a64ee89f73',
+      slug: 'coderbyte-5b2b08f5373b11ef9763ddb3e3cca647',
       image: '/images/letters_placeholder/default_C.png',
       category: [
         {
@@ -2660,45 +2659,12 @@ const data2 = {
       hasCert: false,
       url: 'https://coderbyte.com',
       description:
-        'Coderbyte is a platform that helps organizations evaluate candidates for technical assessments, interviews, and take-home projects. It is used by over 1 million developers to improve their coding skills and advance their careers. With unlimited candidates and admins on every plan, Coderbyte offers a quick, affordable, and accurate way to assess potential hires. It is the top choice for organizations looking to streamline their hiring process.',
-      wordLength3: 66,
-    },
-    {
-      name: 'Codingbat',
-      slug: 'codingbat-c76e6020367211efb1e107a64ee89f73',
-      image: '/images/letters_placeholder/default_C.png',
-      category: [
-        {
-          label: 'Other',
-          value: 'other',
-        },
-      ],
-      techStack: [
-        {
-          label: 'Java',
-          value: 'java',
-        },
-      ],
-      type: [
-        {
-          label: 'Video Courses',
-          value: 'video-courses',
-        },
-        {
-          label: 'Coding Practice',
-          value: 'coding-practice',
-        },
-      ],
-      cost: 'Free/Paid',
-      hasCert: false,
-      url: 'https://codingbat.com/java',
-      description:
-        'CodingBat Java is a website that offers code practice for Java programming. It includes warmup problems, string and array loops, boolean logic puzzles, and more. The website also has videos and solutions available for some of the problems. It covers a range of difficulty levels, from basic to harder problems, and even includes AP CS medium problems. There are also sections on recursion, maps, and functional programming. The website also provides examples and solutions for Java programming concepts such as strings, loops, and boolean logic.',
-      wordLength3: 85,
+        'Coderbyte is a platform that helps organizations evaluate candidates for technical assessments, interviews, and take-home projects. With over 1 million developers using the platform, it is the top choice for those looking to advance their careers. It offers unlimited candidates and admins on every plan, making it a quick, affordable, and accurate solution for evaluating candidates.',
+      wordLength3: 56,
     },
     {
       name: 'Cp-algorithms',
-      slug: 'cp-algorithms-c88aebc2367211efb1e107a64ee89f73',
+      slug: 'cp-algorithms-5cb11646373b11ef9763ddb3e3cca647',
       image: '/images/letters_placeholder/default_C.png',
       category: [
         {
@@ -2730,12 +2696,12 @@ const data2 = {
       hasCert: false,
       url: 'https://cp-algorithms.com/',
       description:
-        'This project aims to improve and expand upon the existing resource, http://e-maxx.ru/algo, which provides descriptions of algorithms and data structures commonly used in competitive programming. The project includes translating the articles and adding new ones to the collection. The updated and expanded articles can be found at https://cp-algorithms.com/. Recent updates include the addition of automatic RSS feeds, a change in repository name and location, and the ability to select and copy LaTeX source code within the articles.',
-      wordLength3: 77,
+        'This website, "Algorithms for Competitive Programming", aims to provide translations of algorithms and data structures from the popular resource http://e-maxx.ru/algo. The goal is to improve the existing knowledge by expanding and adding new articles. The compiled pages can be found at https://cp-algorithms.com/. Recent updates include automatic RSS feeds for new articles and the ability to select and copy LaTeX source code of formulas within the articles.',
+      wordLength3: 66,
     },
     {
       name: 'Devpost',
-      slug: 'devpost-c88aebc3367211efb1e107a64ee89f73',
+      slug: 'devpost-5d95ec1c373b11ef9763ddb3e3cca647',
       image: '/images/letters_placeholder/default_D.png',
       category: [
         {
@@ -2759,13 +2725,13 @@ const data2 = {
       hasCert: false,
       url: 'https://devpost.com',
       description:
-        'Devpost is a platform where individuals and organizations can participate in virtual and in-person hackathons. These hackathons allow participants to build products, improve their skills, learn new technologies, and potentially win prizes. It is a trusted platform used by top organizations around the world.',
+        'Devpost is a platform that hosts both virtual and in-person hackathons for developers and organizations to come together and build innovative products, practice skills, and learn new technologies. It is trusted by top organizations and offers opportunities to win prizes and expand your network.',
       wordLength3: 44,
     },
     {
-      name: 'Lintcode',
-      slug: 'lintcode-ca8c7ce2367211efb1e107a64ee89f73',
-      image: '/images/letters_placeholder/default_L.png',
+      name: 'Codingbat',
+      slug: 'codingbat-5d95ec1d373b11ef9763ddb3e3cca647',
+      image: '/images/letters_placeholder/default_C.png',
       category: [
         {
           label: 'Other',
@@ -2774,14 +2740,14 @@ const data2 = {
       ],
       techStack: [
         {
-          label: 'Other',
-          value: 'other',
+          label: 'Java',
+          value: 'java',
         },
       ],
       type: [
         {
-          label: 'Text-Based',
-          value: 'text-based',
+          label: 'Video Courses',
+          value: 'video-courses',
         },
         {
           label: 'Coding Practice',
@@ -2790,14 +2756,43 @@ const data2 = {
       ],
       cost: 'Free/Paid',
       hasCert: false,
-      url: 'https://www.lintcode.com/',
+      url: 'https://codingbat.com/java',
       description:
-        '"Introducing LintCode, the ultimate coding training system designed for efficient learning. With a wide range of interview problems from top companies like Google, Facebook, Linkedin, Amazon, and Microsoft, LintCode offers both Chinese and English versions for coders worldwide."',
-      wordLength3: 38,
+        'CodingBat is a website that offers Java coding practice problems for beginners and intermediate programmers. The problems are divided into different categories such as warmup, string, array, logic, recursion, and more. Each category has a set of problems with solutions available. The website also provides video tutorials and examples for Java concepts such as strings, loops, and boolean logic.',
+      wordLength3: 59,
+    },
+    {
+      name: 'Codeforces',
+      slug: 'codeforces-5f24e8a8373b11ef9763ddb3e3cca647',
+      image: '/images/letters_placeholder/default_C.png',
+      category: [
+        {
+          label: 'Other',
+          value: 'other',
+        },
+      ],
+      techStack: [
+        {
+          label: 'R',
+          value: 'r',
+        },
+      ],
+      type: [
+        {
+          label: 'Other',
+          value: 'other',
+        },
+      ],
+      cost: 'Paid',
+      hasCert: false,
+      url: 'https://codeforces.com/',
+      description:
+        'Codeforces is a programming community that hosts programming competitions and contests. It has a top catalog of problems and groups, and also offers an API and calendar for users. The website also features top rated users and contributors, as well as recent actions and announcements.',
+      wordLength3: 45,
     },
     {
       name: 'Hackerearth',
-      slug: 'hackerearth-ca8c7ce3367211efb1e107a64ee89f73',
+      slug: 'hackerearth-5f24e8a9373b11ef9763ddb3e3cca647',
       image: '/images/letters_placeholder/default_H.png',
       category: [
         {
@@ -2829,12 +2824,230 @@ const data2 = {
       hasCert: false,
       url: 'https://www.hackerearth.com:443/',
       description:
-        'HackerEarth is an online platform that helps over 10 million developers improve their coding skills through coding contests, data science competitions, and hackathons. It is trusted by over 1,000 companies to find and hire the best developers. With over 1000 skills and 400 roles available, HackerEarth offers a skill-first approach to hiring, allowing companies to assess and benchmark talent based on their coding abilities rather than just their work experience. Their assessment suite uses AI-powered test evaluation and skill benchmarking to eliminate human bias and make the hiring process more efficient. Additionally, HackerEarth offers a collaborative platform for coding interviews, providing data-rich insights and a built-in IDE for a better developer experience. They also offer learning and development opportunities tailored',
+        'HackerEarth is an online coding platform and developer assessment software that helps over 10 million developers improve their skills through coding contests, data science competitions, and hackathons. It is trusted by over 1,000 companies for recruiting the best developers. With over 1000 skills and 400 roles, HackerEarth offers a skill-first approach to hiring, allowing companies to assess and benchmark talent based on their coding abilities. Their assessment suite uses AI-powered test evaluation and skill benchmarking to reduce acquisition effort and screen the best tech talent for hiring. Additionally, HackerEarth offers a collaborative platform for coding interviews with data-rich insights, making unstructured interviews a thing of the past. They also provide learning and development opportunities tailored to individual growth.',
+      wordLength3: 118,
+    },
+    {
+      name: 'Flexboxdefense',
+      slug: 'flexboxdefense-614337a2373b11ef9763ddb3e3cca647',
+      image: '/images/letters_placeholder/default_F.png',
+      category: [
+        {
+          label: 'Other',
+          value: 'other',
+        },
+      ],
+      techStack: [
+        {
+          label: 'Other',
+          value: 'other',
+        },
+      ],
+      type: [
+        {
+          label: 'Other',
+          value: 'other',
+        },
+      ],
+      cost: 'Free/Paid',
+      hasCert: false,
+      url: 'http://www.flexboxdefense.com',
+      description:
+        'Flexbox Defense is a web-based game that teaches users how to use Flexbox, a CSS layout module, to create responsive and flexible web designs.',
+      wordLength3: 24,
+    },
+    {
+      name: 'Leonnoel',
+      slug: 'leonnoel-614337a3373b11ef9763ddb3e3cca647',
+      image: '/images/letters_placeholder/default_L.png',
+      category: [
+        {
+          label: 'Web Development',
+          value: 'web-development',
+        },
+        {
+          label: 'FullStack Development',
+          value: 'fullstack-development',
+        },
+        {
+          label: 'Software Development',
+          value: 'software-development',
+        },
+      ],
+      techStack: [
+        {
+          label: 'Assembly',
+          value: 'assembly',
+        },
+      ],
+      type: [
+        {
+          label: 'Coding Practice',
+          value: 'coding-practice',
+        },
+        {
+          label: 'Bootcamps',
+          value: 'bootcamps',
+        },
+      ],
+      cost: 'Free',
+      hasCert: false,
+      url: 'https://leonnoel.com',
+      description:
+        'Leon Noel is the Managing Director of Engineering at Resilient Coders and a Distinguished Faculty member at General Assembly. He is passionate about training underrepresented individuals in the tech industry for successful careers as software engineers. He offers free coding bootcamps for those affected by the pandemic and has also built a remote computer lab in Tanzania for the Maasai community.',
+      wordLength3: 61,
+    },
+    {
+      name: 'Lintcode',
+      slug: 'lintcode-6290af2c373b11ef9763ddb3e3cca647',
+      image: '/images/letters_placeholder/default_L.png',
+      category: [
+        {
+          label: 'Other',
+          value: 'other',
+        },
+      ],
+      techStack: [
+        {
+          label: 'Other',
+          value: 'other',
+        },
+      ],
+      type: [
+        {
+          label: 'Text-Based',
+          value: 'text-based',
+        },
+        {
+          label: 'Coding Practice',
+          value: 'coding-practice',
+        },
+      ],
+      cost: 'Free/Paid',
+      hasCert: false,
+      url: 'https://www.lintcode.com/',
+      description:
+        'LintCode 炼码 is a powerful coding training system that offers a more efficient learning experience. It has a wide range of interview problems from top companies such as Google, Facebook, Linkedin, Amazon, and Microsoft. The platform offers both Chinese and English versions for coders worldwide.',
+      wordLength3: 45,
+    },
+    {
+      name: 'Flexboxfroggy',
+      slug: 'flexboxfroggy-6350719a373b11ef9763ddb3e3cca647',
+      image: '/images/letters_placeholder/default_F.png',
+      category: [
+        {
+          label: 'Other',
+          value: 'other',
+        },
+      ],
+      techStack: [
+        {
+          label: 'HTML/CSS',
+          value: 'html/css',
+        },
+      ],
+      type: [
+        {
+          label: 'Coding Game',
+          value: 'coding-game',
+        },
+      ],
+      cost: 'Free/Paid',
+      hasCert: false,
+      url: 'https://flexboxfroggy.com',
+      description:
+        "Flexbox Froggy is a fun and interactive game designed to help users learn CSS flexbox. Created by Codepip, this game offers 10 levels to test your skills and knowledge. With multiple language options and a colorblind mode, Flexbox Froggy is accessible to all. If you're looking to learn CSS grid, check out their other game, Grid Garden.",
+      wordLength3: 57,
+    },
+    {
+      name: 'Codepip',
+      slug: 'codepip-6350719b373b11ef9763ddb3e3cca647',
+      image: '/images/letters_placeholder/default_C.png',
+      category: [
+        {
+          label: 'Web Development',
+          value: 'web-development',
+        },
+      ],
+      techStack: [
+        {
+          label: 'Javascript',
+          value: 'javascript',
+        },
+        {
+          label: 'HTML/CSS',
+          value: 'html/css',
+        },
+      ],
+      type: [
+        {
+          label: 'Hands-On Practice',
+          value: 'hands-on-practice',
+        },
+        {
+          label: 'Project-Based',
+          value: 'project-based',
+        },
+        {
+          label: 'Coding Practice',
+          value: 'coding-practice',
+        },
+        {
+          label: 'Coding Game',
+          value: 'coding-game',
+        },
+      ],
+      cost: 'Free',
+      hasCert: false,
+      url: 'https://codepip.com',
+      description:
+        'Codepip is a platform that offers a unique and fun way to learn coding - by playing games. With a free account, users can access a variety of web development games that cover the latest coding topics. These games also offer features such as checkpoints to save progress, achievements to track and share, and new releases to discover. Some of the featured games include Cascade CSS Pro, Code Crunchers JS Math Pro, Console Caper JS Console Pro, CSS Scoops CSS Selectors Pro, CSS Surgeon CSS Transform Pro, Disarray JS Arrays Pro, Flexbox Froggy CSS Flexbox Free, Flexbox Froggy Pro, and Grid Garden CSS Grid Free. With Codepip, users can gain an edge in their interviews or projects while having fun',
       wordLength3: 120,
     },
     {
+      name: 'Codecombat',
+      slug: 'codecombat-65aa998e373b11ef9763ddb3e3cca647',
+      image: '/images/letters_placeholder/default_C.png',
+      category: [
+        {
+          label: 'Other',
+          value: 'other',
+        },
+      ],
+      techStack: [
+        {
+          label: 'Javascript',
+          value: 'javascript',
+        },
+        {
+          label: 'Python',
+          value: 'python',
+        },
+        {
+          label: 'HTML/CSS',
+          value: 'html/css',
+        },
+      ],
+      type: [
+        {
+          label: 'Coding Practice',
+          value: 'coding-practice',
+        },
+        {
+          label: 'Coding Game',
+          value: 'coding-game',
+        },
+      ],
+      cost: 'Free/Paid',
+      hasCert: false,
+      url: 'https://codecombat.com',
+      description:
+        'CodeCombat is a website that offers coding games to help users learn Python, JavaScript, and HTML. Through solving puzzles and creating their own coding games and websites, users can improve their coding skills in a fun and interactive way.',
+      wordLength3: 39,
+    },
+    {
       name: 'Sql-ex',
-      slug: 'sql-ex-ccd59826367211efb1e107a64ee89f73',
+      slug: 'sql-ex-65aa998f373b11ef9763ddb3e3cca647',
       image: '/images/letters_placeholder/default_S.png',
       category: [
         {
@@ -2862,12 +3075,12 @@ const data2 = {
       hasCert: true,
       url: 'https://sql-ex.ru/',
       description:
-        'SQL Exercises is a website that offers a variety of exercises for beginners to practice their skills in SQL data operation. The site also offers 3 rating stages for testing and certification of specialists. The source is free and the certificate purchase is optional. Users must have cookies and Javascript enabled to use the site properly. The site also has various ratings, including top 100, "liberal" rating, and Olympic rating. Users can also view last-week results and ratings for specific exercises.',
-      wordLength3: 81,
+        'SQL Exercises is a free website that offers SQL exercises for beginners and advanced users. The site provides a variety of exercises with examples and a reference source for SQL syntax. Users can also participate in 3 rating stages to test their skills and receive certification. The site requires cookies and Javascript to be enabled for proper usage. Registration is available for those who wish to track their progress and compete in various ratings.',
+      wordLength3: 74,
     },
     {
       name: 'Spoj',
-      slug: 'spoj-ccd59827367211efb1e107a64ee89f73',
+      slug: 'spoj-672d5f94373b11ef9763ddb3e3cca647',
       image: '/images/letters_placeholder/default_S.png',
       category: [
         {
@@ -2923,296 +3136,24 @@ const data2 = {
       hasCert: false,
       url: 'https://www.spoj.com/',
       description:
-        'Sphere Online Judge (SPOJ) is an online platform for coding and algorithm practice. It has over 315,000 registered users and offers over 20,000 problems to solve in more than 60 programming languages. The problems are created by a community of expert problem setters and are available 24/7. Users can track their progress and compete with others to become better programmers.',
-      wordLength3: 60,
+        'SPOJ (Sphere Online Judge) is an online platform for practicing coding and building efficient algorithms. It has over 315,000 registered users and offers over 20,000 problems in over 60 programming languages. The problems are created by a community of expert problem setters and are available 24/7 for practice. Users can also submit their solutions and track their progress.',
+      wordLength3: 58,
     },
     {
-      name: 'Flexboxdefense',
-      slug: 'flexboxdefense-cef0e17e367211efb1e107a64ee89f73',
-      image: '/images/letters_placeholder/default_F.png',
-      category: [
-        {
-          label: 'Other',
-          value: 'other',
-        },
-      ],
-      techStack: [
-        {
-          label: 'Other',
-          value: 'other',
-        },
-      ],
-      type: [
-        {
-          label: 'Other',
-          value: 'other',
-        },
-      ],
-      cost: 'Free/Paid',
-      hasCert: false,
-      url: 'http://www.flexboxdefense.com',
-      description:
-        'This is a game called Flexbox Defense that does not have a description or any other information available.',
-      wordLength3: 18,
-    },
-    {
-      name: 'Codeabbey',
-      slug: 'codeabbey-cef0e17f367211efb1e107a64ee89f73',
+      name: 'Codesignal',
+      slug: 'codesignal-680f458a373b11ef9763ddb3e3cca647',
       image: '/images/letters_placeholder/default_C.png',
       category: [
         {
-          label: 'Other',
-          value: 'other',
+          label: 'Data Analysis',
+          value: 'data-analysis',
         },
       ],
       techStack: [
-        {
-          label: 'Other',
-          value: 'other',
-        },
-      ],
-      type: [
-        {
-          label: 'Other',
-          value: 'other',
-        },
-      ],
-      cost: 'Free',
-      hasCert: true,
-      url: 'https://www.codeabbey.com/',
-      description:
-        'CodeAbbey is a website that offers a collection of programming problems for beginners to practice and improve their coding skills. Users can register with a username and password to access the problems and have the chance to win free programming certificates. The website also features a demo to show how it works and the latest problems available. CodeAbbey is used by many universities and has a ranking system for top performers. Users can also participate in forums to discuss and solve problems together.',
-      wordLength3: 83,
-    },
-    {
-      name: 'Codeforces',
-      slug: 'codeforces-d0652128367211efb1e107a64ee89f73',
-      image: '/images/letters_placeholder/default_C.png',
-      category: [
-        {
-          label: 'Other',
-          value: 'other',
-        },
-      ],
-      techStack: [
-        {
-          label: 'R',
-          value: 'r',
-        },
-      ],
-      type: [
-        {
-          label: 'Other',
-          value: 'other',
-        },
-      ],
-      cost: 'Paid',
-      hasCert: false,
-      url: 'https://codeforces.com/',
-      description:
-        'Codeforces is a programming community that hosts competitions and contests. Users can register and participate in various coding challenges, and there is also a problemset and discussion forum available. The website also features a rating system and top contributors list. Users can also search for specific users and view recent actions.',
-      wordLength3: 51,
-    },
-    {
-      name: 'Flexboxfroggy',
-      slug: 'flexboxfroggy-d0652129367211efb1e107a64ee89f73',
-      image: '/images/letters_placeholder/default_F.png',
-      category: [
-        {
-          label: 'Other',
-          value: 'other',
-        },
-      ],
-      techStack: [
-        {
-          label: 'HTML/CSS',
-          value: 'html/css',
-        },
-      ],
-      type: [
-        {
-          label: 'Coding Game',
-          value: 'coding-game',
-        },
-      ],
-      cost: 'Free/Paid',
-      hasCert: false,
-      url: 'https://flexboxfroggy.com',
-      description:
-        'Flexbox Froggy is a fun and interactive game designed to help users learn CSS flexbox. Created by Codepip, the game offers 10 levels to test and improve your flexbox skills. Available in multiple languages and with a colorblind mode option, Flexbox Froggy is a great way to learn and practice CSS flexbox.',
-      wordLength3: 52,
-    },
-    {
-      name: 'Codepip',
-      slug: 'codepip-d210c46e367211efb1e107a64ee89f73',
-      image: '/images/letters_placeholder/default_C.png',
-      category: [
-        {
-          label: 'Web Development',
-          value: 'web-development',
-        },
-      ],
-      techStack: [
-        {
-          label: 'Javascript',
-          value: 'javascript',
-        },
-        {
-          label: 'HTML/CSS',
-          value: 'html/css',
-        },
-      ],
-      type: [
-        {
-          label: 'Hands-On Practice',
-          value: 'hands-on-practice',
-        },
-        {
-          label: 'Project-Based',
-          value: 'project-based',
-        },
-        {
-          label: 'Coding Practice',
-          value: 'coding-practice',
-        },
-        {
-          label: 'Coding Game',
-          value: 'coding-game',
-        },
-      ],
-      cost: 'Free',
-      hasCert: false,
-      url: 'https://codepip.com',
-      description:
-        'Codepip is a platform that offers web development games to help you learn how to code. By creating a free account, you can save your progress, track your achievements, and discover new games that teach the latest coding topics. Some of their featured games include Cascade CSS Pro, Code Crunchers JS Math Pro, Console Caper JS Console Pro, CSS Scoops CSS Selectors Pro, CSS Surgeon CSS Transform Pro, Disarray JS Arrays Pro, Flexbox Froggy CSS Flexbox Free, Flexbox Froggy Pro, and Grid Garden CSS Grid Free. With these games, you can gain an edge in your interviews or projects while having fun playing and learning.',
-      wordLength3: 105,
-    },
-    {
-      name: 'Codecombat',
-      slug: 'codecombat-d393d79a367211efb1e107a64ee89f73',
-      image: '/images/letters_placeholder/default_C.png',
-      category: [
-        {
-          label: 'Other',
-          value: 'other',
-        },
-      ],
-      techStack: [
-        {
-          label: 'Javascript',
-          value: 'javascript',
-        },
         {
           label: 'Python',
           value: 'python',
         },
-        {
-          label: 'HTML/CSS',
-          value: 'html/css',
-        },
-      ],
-      type: [
-        {
-          label: 'Coding Practice',
-          value: 'coding-practice',
-        },
-        {
-          label: 'Coding Game',
-          value: 'coding-game',
-        },
-      ],
-      cost: 'Free/Paid',
-      hasCert: false,
-      url: 'https://codecombat.com',
-      description:
-        'CodeCombat is a platform that offers coding games to help users learn Python, JavaScript, and HTML. Through solving puzzles and creating their own coding games and websites, users can improve their coding skills in a fun and interactive way.',
-      wordLength3: 39,
-    },
-    {
-      name: 'Leonnoel',
-      slug: 'leonnoel-d393d79b367211efb1e107a64ee89f73',
-      image: '/images/letters_placeholder/default_L.png',
-      category: [
-        {
-          label: 'Web Development',
-          value: 'web-development',
-        },
-        {
-          label: 'FullStack Development',
-          value: 'fullstack-development',
-        },
-        {
-          label: 'Software Development',
-          value: 'software-development',
-        },
-      ],
-      techStack: [
-        {
-          label: 'Assembly',
-          value: 'assembly',
-        },
-      ],
-      type: [
-        {
-          label: 'Coding Practice',
-          value: 'coding-practice',
-        },
-        {
-          label: 'Bootcamps',
-          value: 'bootcamps',
-        },
-      ],
-      cost: 'Free',
-      hasCert: false,
-      url: 'https://leonnoel.com',
-      description:
-        'Leon Noel is the Managing Director of Engineering at Resilient Coders and a Distinguished Faculty member at General Assembly. He is passionate about training individuals who are underrepresented in the tech industry for high growth careers as software engineers. He offers free full stack web development bootcamps for those affected by the pandemic and has also built a remote computer lab in Tanzania for the Maasai community.',
-      wordLength3: 67,
-    },
-    {
-      name: 'Mikkegoes',
-      slug: 'mikkegoes-d5160f20367211efb1e107a64ee89f73',
-      image: '/images/letters_placeholder/default_M.png',
-      category: [
-        {
-          label: 'Web Development',
-          value: 'web-development',
-        },
-      ],
-      techStack: [
-        {
-          label: 'Other',
-          value: 'other',
-        },
-      ],
-      type: [
-        {
-          label: 'Coding Practice',
-          value: 'coding-practice',
-        },
-      ],
-      cost: 'Free',
-      hasCert: false,
-      url: 'https://mikkegoes.com',
-      description:
-        '"Learn to Code for Free in 2024" is a comprehensive guide for beginners to teach themselves how to code. It includes 15 tips for learning how to code, as well as a free guide to help you get started. The guide is created by Mikke, a self-taught freelance web developer who has been teaching himself technical skills since 2016. The guide covers the basics of coding and in-demand skills for building a career in tech. Many readers have found success and financial flexibility by following Mikke\'s strategies. This guide is perfect for anyone interested in learning tech skills and wants to get started quickly and easily.',
-      wordLength3: 106,
-    },
-    {
-      name: 'Hackterms',
-      slug: 'hackterms-d65784cc367211efb1e107a64ee89f73',
-      image: '/images/letters_placeholder/default_H.png',
-      category: [
-        {
-          label: 'Other',
-          value: 'other',
-        },
-      ],
-      techStack: [
-        {
-          label: 'Other',
-          value: 'other',
-        },
       ],
       type: [
         {
@@ -3222,14 +3163,14 @@ const data2 = {
       ],
       cost: 'Free/Paid',
       hasCert: false,
-      url: 'https://www.hackterms.com',
+      url: 'https://codesignal.com',
       description:
-        'Hackterms is a crowdsourced dictionary of programming terms where users can learn about different coding tools, concepts, processes, and languages. Users can also request new definitions and will be notified when they are added. The website also allows users to report offensive or incorrect definitions.',
-      wordLength3: 45,
+        'CodeSignal is a platform that helps individuals and teams improve their technical skills and build exceptional engineering teams. With skills assessments and AI-powered learning tools, users can level up their skills and advance their careers. The platform also offers pre-screening evaluations for high-volume hiring and realistic coding environments for interviews. Additionally, CodeSignal provides personalized, practice-based technical learning to improve team performance.',
+      wordLength3: 61,
     },
     {
       name: 'Bit',
-      slug: 'bit-d65784cd367211efb1e107a64ee89f73',
+      slug: 'bit-680f458b373b11ef9763ddb3e3cca647',
       image: '/images/letters_placeholder/default_B.png',
       category: [
         {
@@ -3285,12 +3226,136 @@ const data2 = {
       hasCert: false,
       url: 'https://www.edx.org/xseries/harvardx-cs50-ap-computer-science-principles',
       description:
-        "This is a program offered by Harvard University called CS50 AP, which is an introduction to computer science and programming for high school students. It satisfies the College Board's AP CS Principles curriculum framework and covers topics such as algorithms, data structures, and web development. The program includes expert instruction, two high-quality courses, and the opportunity to engage with a community of learners. It takes approximately 5 months to complete and costs $466.20.",
-      wordLength3: 73,
+        "The CS50's AP® Computer Science Principles XSeries Program on edX is an introductory course offered by Harvard University for high school students. It covers the fundamentals of computer science and programming, including topics like algorithms, data structures, and web development. The program also offers instruction in various programming languages, such as C, Python, and JavaScript. Students will have the opportunity to engage with a community of learners and complete a final programming project. The program consists of two high-quality courses and can be completed at your own pace over a period of 5 months, with an estimated time commitment of 5-14 hours per week. The cost for the program is $466.20, with a pre-ed price of $518 USD.",
+      wordLength3: 118,
+    },
+    {
+      name: 'Codeabbey',
+      slug: 'codeabbey-6a3f170e373b11ef9763ddb3e3cca647',
+      image: '/images/letters_placeholder/default_C.png',
+      category: [
+        {
+          label: 'Other',
+          value: 'other',
+        },
+      ],
+      techStack: [
+        {
+          label: 'Other',
+          value: 'other',
+        },
+      ],
+      type: [
+        {
+          label: 'Other',
+          value: 'other',
+        },
+      ],
+      cost: 'Free',
+      hasCert: true,
+      url: 'https://www.codeabbey.com/',
+      description:
+        'CodeAbbey is a website that offers a collection of programming problems for beginners to practice and learn coding. Users can register with a username and password to win free programming certificates. The website also features a demo to show how it works. The latest problems include Special Digits, Expected Number of Random Moves, Unfortunate Bubble Sort, Socket Server, Smallest Message, MIDI Variable Length Numbers, and Tree Painting. CodeAbbey is used by many universities and also has a ranking system for top users. The website also has a forum where users can discuss and solve problems together.',
+      wordLength3: 96,
+    },
+    {
+      name: 'Trprt',
+      slug: 'trprt-6b4828f2373b11ef9763ddb3e3cca647',
+      image: '/images/letters_placeholder/default_T.png',
+      category: [
+        {
+          label: 'Other',
+          value: 'other',
+        },
+      ],
+      techStack: [
+        {
+          label: 'Python',
+          value: 'python',
+        },
+      ],
+      type: [
+        {
+          label: 'Coding Practice',
+          value: 'coding-practice',
+        },
+      ],
+      cost: 'Free/Paid',
+      hasCert: false,
+      url: 'https://www.trprt.io/',
+      description:
+        'This website offers a variety of Python practice problems and exercises for users to improve their coding skills.',
+      wordLength3: 18,
+    },
+    {
+      name: 'Checkio',
+      slug: 'checkio-6b4828f3373b11ef9763ddb3e3cca647',
+      image: '/images/letters_placeholder/default_C.png',
+      category: [
+        {
+          label: 'Other',
+          value: 'other',
+        },
+      ],
+      techStack: [
+        {
+          label: 'Python',
+          value: 'python',
+        },
+        {
+          label: 'Typescript',
+          value: 'typescript',
+        },
+      ],
+      type: [
+        {
+          label: 'Coding Practice',
+          value: 'coding-practice',
+        },
+        {
+          label: 'Coding Game',
+          value: 'coding-game',
+        },
+      ],
+      cost: 'Free/Paid',
+      hasCert: false,
+      url: 'https://checkio.org/',
+      description:
+        'CheckiO is a website that offers coding games and programming challenges for both beginner and advanced programmers. These games and challenges allow users to improve their coding skills using Python and TypeScript. The website is used by teachers as an extra tool for their courses, and also offers benefits for companies and partnerships. CheckiO is currently available in English, Russian, and Ukrainian, and can be followed on social media. The website is currently undergoing updates and will be back soon.',
+      wordLength3: 80,
+    },
+    {
+      name: 'Hackterms',
+      slug: 'hackterms-6c910166373b11ef9763ddb3e3cca647',
+      image: '/images/letters_placeholder/default_H.png',
+      category: [
+        {
+          label: 'Other',
+          value: 'other',
+        },
+      ],
+      techStack: [
+        {
+          label: 'Other',
+          value: 'other',
+        },
+      ],
+      type: [
+        {
+          label: 'Coding Practice',
+          value: 'coding-practice',
+        },
+      ],
+      cost: 'Free/Paid',
+      hasCert: false,
+      url: 'https://www.hackterms.com',
+      description:
+        'Hackterms is a crowdsourced dictionary of programming terms where users can learn about different coding tools, concepts, processes, and languages. Users can also request new definitions and receive email notifications when they are added. The website also allows users to browse through the most requested terms.',
+      wordLength3: 46,
     },
     {
       name: 'Rosalind',
-      slug: 'rosalind-d80a19b0367211efb1e107a64ee89f73',
+      slug: 'rosalind-6c910167373b11ef9763ddb3e3cca647',
       image: '/images/letters_placeholder/default_R.png',
       category: [
         {
@@ -3342,23 +3407,23 @@ const data2 = {
       hasCert: false,
       url: 'https://rosalind.info/problems/locations/',
       description:
-        "Rosalind is a platform that helps users learn bioinformatics and programming through problem solving. It offers courses, faculty support, and a variety of problems to solve. Users can choose from different levels and countries to compete in and earn badges and achievements. The platform requires JavaScript to be enabled in the user's browser. There are three main sections: Python Village for beginners, Textbook Track for those using the Bioinformatics Algorithms book, and Bioinformatics Stronghold for more advanced users. The Bioinformatics Armory provides ready-to-use software tools for analysis.",
-      wordLength3: 87,
+        'Rosalind is a platform that offers courses and problems for learning bioinformatics and programming. It requires JavaScript to be enabled in your browser. You can start with the Python Village if you are new to programming, or try the Bioinformatics Stronghold for more advanced challenges. The Bioinformatics Armory also provides ready-to-use software tools for analysis.',
+      wordLength3: 55,
     },
     {
-      name: 'Trprt',
-      slug: 'trprt-d80a19b1367211efb1e107a64ee89f73',
-      image: '/images/letters_placeholder/default_T.png',
+      name: 'Mikkegoes',
+      slug: 'mikkegoes-6e15edf8373b11ef9763ddb3e3cca647',
+      image: '/images/letters_placeholder/default_M.png',
       category: [
         {
-          label: 'Other',
-          value: 'other',
+          label: 'Web Development',
+          value: 'web-development',
         },
       ],
       techStack: [
         {
-          label: 'Python',
-          value: 'python',
+          label: 'Other',
+          value: 'other',
         },
       ],
       type: [
@@ -3367,16 +3432,45 @@ const data2 = {
           value: 'coding-practice',
         },
       ],
+      cost: 'Free',
+      hasCert: false,
+      url: 'https://mikkegoes.com',
+      description:
+        "Learn to code for free in 2024 with our comprehensive coding guide for beginners. This guide offers 15 tips for success in learning how to code, including a free guide to teach yourself coding from scratch. Written by a self-taught freelance web developer, this guide shares valuable resources and strategies for mastering technical skills. Perfect for those interested in starting a tech career, the guide covers beginner-level lessons and in-demand skills. Don't just take our word for it, see what our readers have to say about the benefits of learning tech skills. Start your coding journey now and achieve more freedom and financial flexibility.",
+      wordLength3: 104,
+    },
+    {
+      name: 'Regular-expressions',
+      slug: 'regular-expressions-6e15edf9373b11ef9763ddb3e3cca647',
+      image: '/images/letters_placeholder/default_R.png',
+      category: [
+        {
+          label: 'Other',
+          value: 'other',
+        },
+      ],
+      techStack: [
+        {
+          label: 'Express.js',
+          value: 'express.js',
+        },
+      ],
+      type: [
+        {
+          label: 'Text-Based',
+          value: 'text-based',
+        },
+      ],
       cost: 'Free/Paid',
       hasCert: false,
-      url: 'https://www.trprt.io/',
+      url: 'https://www.regular-expressions.info',
       description:
-        'This website offers a variety of Python practice problems and exercises for users to improve their coding skills.',
-      wordLength3: 18,
+        'Regular-Expressions.info is a comprehensive website that provides information on regular expressions, a powerful search pattern language. The site offers a quick start tutorial, tools and languages, examples, and a reference section. Users can also find book reviews and a printable PDF version of the content. Regular expressions are special text strings that can be used as wildcards to describe a pattern. The site explains how to use regular expressions and provides examples of their applications in various languages.',
+      wordLength3: 78,
     },
     {
       name: 'Topcoder',
-      slug: 'topcoder-d9cfefc2367211efb1e107a64ee89f73',
+      slug: 'topcoder-7004ed12373b11ef9763ddb3e3cca647',
       image: '/images/letters_placeholder/default_T.png',
       category: [
         {
@@ -3412,107 +3506,61 @@ const data2 = {
       hasCert: false,
       url: 'https://www.topcoder.com/',
       description:
-        "Topcoder is a platform that connects businesses with a global network of talented software developers, designers, data scientists, AI experts, and QA experts. With no contracts or commitments, businesses can launch their work to this network in just minutes and receive guaranteed solutions. In June 2024, there is a special offer of 20% off all work launched. Trusted by over 400 customers, Topcoder allows businesses to boost their team's capacity and skills quickly. They offer a live demo and have a global presence of 200+ AI practitioners who specialize in areas such as chatbots, automation, fraud detection, risk management, supply chain optimization, and predictive maintenance. Topcoder also has a team of data science experts who can analyze, predict,",
-      wordLength3: 118,
+        "Topcoder is a platform that connects businesses with a global network of talented software developers, designers, data scientists, AI experts, and QA experts. They offer guaranteed solutions with no contracts, no ramp-up time, and no risk. They are currently offering a 20% discount on all work launched in June 2024. With over 400 satisfied customers, Topcoder is a trusted source for boosting team capacity and skills. They specialize in AI innovation, data science, design, development, and QA. Their global network of 200+ AI practitioners helps bridge the gap between AI technology and real-world applications. Topcoder's data science experts can analyze, predict, optimize, and solve problems with your data. They have experience in areas such as data",
+      wordLength3: 116,
     },
     {
-      name: 'Checkio',
-      slug: 'checkio-db3d6dc6367211efb1e107a64ee89f73',
-      image: '/images/letters_placeholder/default_C.png',
+      name: 'Vladmihalcea',
+      slug: 'vladmihalcea-71769088373b11ef9763ddb3e3cca647',
+      image: '/images/letters_placeholder/default_V.png',
       category: [
         {
-          label: 'Other',
-          value: 'other',
+          label: 'Sql',
+          value: 'sql',
         },
       ],
       techStack: [
         {
-          label: 'Python',
-          value: 'python',
+          label: 'Java',
+          value: 'java',
         },
         {
-          label: 'Typescript',
-          value: 'typescript',
+          label: 'Sql',
+          value: 'sql',
+        },
+        {
+          label: 'Spring',
+          value: 'spring',
         },
       ],
       type: [
         {
-          label: 'Coding Practice',
-          value: 'coding-practice',
+          label: 'Video Courses',
+          value: 'video-courses',
         },
-        {
-          label: 'Coding Game',
-          value: 'coding-game',
-        },
-      ],
-      cost: 'Free/Paid',
-      hasCert: false,
-      url: 'https://checkio.org/',
-      description:
-        'CheckiO is a platform that offers coding games and programming challenges for both beginner and advanced programmers. These games and challenges are designed to help improve coding skills using Python and TypeScript. Many teachers around the world use CheckiO as a supplemental tool in their courses to give students the opportunity to practice their skills while learning new material. The platform also offers resources for companies and partnerships, and is available in English, Russian, and Ukrainian. CheckiO is currently working on new releases and updates, and users can sign up to be notified when they become available. Overall, CheckiO is a great resource for anyone looking to improve their coding skills in a fun and engaging way.',
-      wordLength3: 117,
-    },
-    {
-      name: 'Regular-expressions',
-      slug: 'regular-expressions-dc6f24a0367211efb1e107a64ee89f73',
-      image: '/images/letters_placeholder/default_R.png',
-      category: [
-        {
-          label: 'Other',
-          value: 'other',
-        },
-      ],
-      techStack: [
-        {
-          label: 'Express.js',
-          value: 'express.js',
-        },
-      ],
-      type: [
         {
           label: 'Text-Based',
           value: 'text-based',
         },
+        {
+          label: 'Hands-On Practice',
+          value: 'hands-on-practice',
+        },
+        {
+          label: 'Project-Based',
+          value: 'project-based',
+        },
       ],
-      cost: 'Free/Paid',
+      cost: 'Free',
       hasCert: false,
-      url: 'https://www.regular-expressions.info',
+      url: 'https://vladmihalcea.com',
       description:
-        'Regular-Expressions.info is a website that provides comprehensive information about regular expressions, a powerful search pattern language. The site offers a quick start tutorial, tools and languages, examples, reference materials, and book reviews. Regular expressions can be thought of as wildcards on steroids and can be used to find specific patterns in text. The site also offers a printable PDF and an RSS feed.',
-      wordLength3: 63,
-    },
-    {
-      name: 'Codesignal',
-      slug: 'codesignal-dd739066367211efb1e107a64ee89f73',
-      image: '/images/letters_placeholder/default_C.png',
-      category: [
-        {
-          label: 'Data Analysis',
-          value: 'data-analysis',
-        },
-      ],
-      techStack: [
-        {
-          label: 'Python',
-          value: 'python',
-        },
-      ],
-      type: [
-        {
-          label: 'Coding Practice',
-          value: 'coding-practice',
-        },
-      ],
-      cost: 'Free/Paid',
-      hasCert: false,
-      url: 'https://codesignal.com',
-      description:
-        'CodeSignal is a platform that helps individuals and teams in the tech industry improve their skills and build exceptional engineering teams. With their skills assessments and AI-powered learning tools, users can level up their skills and advance their careers. For teams, CodeSignal offers pre-screening evaluations and realistic coding interviews to find top talent. They also provide personalized technical learning to improve team performance.',
-      wordLength3: 63,
+        'Vlad Mihalcea is a Java Champion and author of the best-selling book, High-Performance Java Persistence. He is also the developer of the Hypersistence Optimizer and other open-source projects. Vlad has been sharing his expertise on Java, JPA, Hibernate, Spring, SQL, and database systems since 2013 through his book, video courses, training, and consulting services. He is also a frequent speaker at conferences.',
+      wordLength3: 62,
     },
     {
       name: 'Harvard',
-      slug: 'harvard-dd739067367211efb1e107a64ee89f73',
+      slug: 'harvard-7267c6f6373b11ef9763ddb3e3cca647',
       image: '/images/letters_placeholder/default_H.png',
       category: [
         {
@@ -3572,61 +3620,45 @@ const data2 = {
       hasCert: true,
       url: 'https://pll.harvard.edu/course/cs50-introduction-computer-science?delta=0',
       description:
-        'CS50: Introduction to Computer Science is a free online course offered by Harvard University. It provides an introduction to the intellectual enterprises of computer science and the art of programming. The course is 11 weeks long and requires a time commitment of 10-20 hours per week. It is self-paced and taught in English. The course covers topics such as programming, data structures, algorithms, SQL, Python, web development, CSS, and HTML. Students will gain a broad understanding of computer science and programming, as well as learn how to think algorithmically and solve programming problems efficiently. The course also offers the opportunity to engage with a community of learners and develop a final programming project.',
-      wordLength3: 113,
+        'CS50: Introduction to Computer Science is a free online course offered by Harvard University. This course provides an introduction to the intellectual enterprises of computer science and the art of programming. It is a self-paced course that runs for 11 weeks and requires a time commitment of 10-20 hours per week. The course covers topics such as data structures, algorithms, programming languages, web development, and more. Students will gain a broad understanding of computer science and programming, as well as the ability to think algorithmically and solve programming problems efficiently. The course also offers the opportunity to engage with a community of learners and develop a final programming project.',
+      wordLength3: 109,
     },
     {
-      name: 'Vladmihalcea',
-      slug: 'vladmihalcea-dff507a2367211efb1e107a64ee89f73',
-      image: '/images/letters_placeholder/default_V.png',
+      name: 'Kattis',
+      slug: 'kattis-73868bbc373b11ef9763ddb3e3cca647',
+      image: '/images/letters_placeholder/default_K.png',
       category: [
         {
-          label: 'Sql',
-          value: 'sql',
+          label: 'Other',
+          value: 'other',
         },
       ],
       techStack: [
         {
-          label: 'Java',
-          value: 'java',
-        },
-        {
-          label: 'Sql',
-          value: 'sql',
-        },
-        {
-          label: 'Spring',
-          value: 'spring',
+          label: 'Other',
+          value: 'other',
         },
       ],
       type: [
         {
-          label: 'Video Courses',
-          value: 'video-courses',
+          label: 'Interactive Content',
+          value: 'interactive-content',
         },
         {
-          label: 'Text-Based',
-          value: 'text-based',
-        },
-        {
-          label: 'Hands-On Practice',
-          value: 'hands-on-practice',
-        },
-        {
-          label: 'Project-Based',
-          value: 'project-based',
+          label: 'Coding Practice',
+          value: 'coding-practice',
         },
       ],
-      cost: 'Free',
+      cost: 'Free/Paid',
       hasCert: false,
-      url: 'https://vladmihalcea.com',
+      url: 'https://www.kattis.com/',
       description:
-        'Vlad Mihalcea is a Java Champion and author of the best-selling book, High-Performance Java Persistence. He is also the developer of the Hypersistence Optimizer and other open-source projects. Vlad has been sharing his expertise on Java, JPA, Hibernate, Spring, SQL, and database systems since 2013 through his book, video courses, and speaking engagements at conferences. He also offers training and consulting services for optimizing data access layers in enterprise applications.',
-      wordLength3: 70,
+        "Kattis is a platform that helps companies, problem solvers, and universities find and hire the best programmers. It uses coding challenges to screen and evaluate applicants' technical skills, saving time and allowing anyone to take the test. Kattis also offers a dashboard to track candidates' progress and automatically checks and scores their code. This allows companies to focus on interviews and finding the best candidates.",
+      wordLength3: 65,
     },
     {
       name: 'Codingame',
-      slug: 'codingame-dff507a3367211efb1e107a64ee89f73',
+      slug: 'codingame-73868bbd373b11ef9763ddb3e3cca647',
       image: '/images/letters_placeholder/default_C.png',
       category: [
         {
@@ -3662,45 +3694,12 @@ const data2 = {
       hasCert: false,
       url: 'https://www.codingame.com/start/',
       description:
-        'CodinGame is a free platform for developers to improve their coding skills through fun and challenging games and puzzles. With over 3 million users, you can play in over 25 languages and compete with others to level up your coding abilities. This platform is loved by developers and even recommended by a Google software developer. It only takes 15 minutes to start and you can play alone or with others.',
-      wordLength3: 70,
-    },
-    {
-      name: 'Kattis',
-      slug: 'kattis-e1b6bacc367211efb1e107a64ee89f73',
-      image: '/images/letters_placeholder/default_K.png',
-      category: [
-        {
-          label: 'Other',
-          value: 'other',
-        },
-      ],
-      techStack: [
-        {
-          label: 'Other',
-          value: 'other',
-        },
-      ],
-      type: [
-        {
-          label: 'Interactive Content',
-          value: 'interactive-content',
-        },
-        {
-          label: 'Coding Practice',
-          value: 'coding-practice',
-        },
-      ],
-      cost: 'Free/Paid',
-      hasCert: false,
-      url: 'https://www.kattis.com/',
-      description:
-        "Kattis is a platform that helps companies, problem solvers, and universities find and hire the best programmers. It uses coding challenges to screen and evaluate applicants' technical skills, saving time and allowing anyone to take the test. Kattis also offers a dashboard to track candidates' progress and automatically checks and scores their code. This allows companies to focus on interviews and finding the best candidates.",
-      wordLength3: 65,
+        "CodinGame is a free platform for developers to improve their coding skills through games, puzzles, and challenges. With over 3 million users, it offers a fun and engaging way to learn and practice coding in over 25 languages. Whether you're a beginner or an experienced programmer, CodinGame has something for everyone. Play alone or compete with others, and see your coding skills improve with each game. It's a great way to have fun while becoming a better coder.",
+      wordLength3: 78,
     },
     {
       name: 'Learn-c',
-      slug: 'learn-c-e1b6bacd367211efb1e107a64ee89f73',
+      slug: 'learn-c-757d58a6373b11ef9763ddb3e3cca647',
       image: '/images/letters_placeholder/default_L.png',
       category: [
         {
@@ -3728,12 +3727,41 @@ const data2 = {
       hasCert: false,
       url: 'https://www.learn-c.org',
       description:
-        '"Learn C is a free interactive tutorial website designed for anyone who wants to learn the C programming language quickly. It covers a wide range of topics, from basic concepts like variables and loops to more advanced topics like pointers and recursion. The website is still under construction, and contributions are welcome. It also offers exercises and has sponsors. The tutorial is suitable for both experienced programmers and beginners. Simply click on the desired chapter and follow the instructions to get started. Happy learning!"',
-      wordLength3: 84,
+        'This website, learn-c.org, offers a free interactive C tutorial for individuals who want to learn the C programming language quickly. It is suitable for both experienced programmers and beginners. The tutorial covers various topics such as variables, arrays, conditions, strings, loops, functions, pointers, and more. Users can contribute their own tutorials and exercises to the website. The website is still under construction, but users can start learning by clicking on the desired chapter. There is also a section for contributing tutorials. Overall, learn-c.org is a helpful resource for learning C programming.',
+      wordLength3: 91,
+    },
+    {
+      name: 'Collegecompendium',
+      slug: 'collegecompendium-76b02640373b11ef9763ddb3e3cca647',
+      image: '/images/letters_placeholder/default_C.png',
+      category: [
+        {
+          label: 'Other',
+          value: 'other',
+        },
+      ],
+      techStack: [
+        {
+          label: 'Javascript',
+          value: 'javascript',
+        },
+      ],
+      type: [
+        {
+          label: 'Other',
+          value: 'other',
+        },
+      ],
+      cost: 'Free',
+      hasCert: false,
+      url: 'https://collegecompendium.org',
+      description:
+        'The College Compendium is a collection of free and open source computer science resources from top colleges in the United States. It allows you to learn at your own pace and offers a curated selection of materials. Please enable JavaScript to access this app.',
+      wordLength3: 44,
     },
     {
       name: 'Berkeley',
-      slug: 'berkeley-e3b6707e367211efb1e107a64ee89f73',
+      slug: 'berkeley-76b02641373b11ef9763ddb3e3cca647',
       image: '/images/letters_placeholder/default_B.png',
       category: [
         {
@@ -3757,12 +3785,41 @@ const data2 = {
       hasCert: false,
       url: 'https://inst.eecs.berkeley.edu',
       description:
-        'This website is the home page for the EECS Instructional Support Group. It provides links to EECS course pages, information about EECS instructional labs and computing, and quick information for new users. The site also includes emergency and safety information for students using the labs, as well as information on connecting to the computers, disk and print quotas, and cardkey issues. It also has links to class pages for CS, EE, and EECS courses, and information on accessing the instructional computers. The site also provides information on computer and electronics labs, AV facilities, and software. It also includes resources for instructors, new users, and class accounts, as well as rules and policies for computer use. The site is managed by the Instructional Group and',
-      wordLength3: 124,
+        'This website is the home page for the EECS Instructional Support Group. It provides links to EECS course pages, information about EECS instructional labs and computing, and quick information for new users. The site also includes emergency and safety information for students using the labs, as well as information on connecting to the computers and managing quotas. It also has links to class pages offered under CS, EE, and EECS, and information on accessing the instructional computers. The site also includes information on computer and electronics labs, AV facilities, and software. There are also resources for instructors, new users, and class accounts. The site follows rules and policies for computer use and provides statistics on system usage. The Instructional Group and Electronics Group can be contacted at',
+      wordLength3: 127,
+    },
+    {
+      name: 'Cornell',
+      slug: 'cornell-78c9c68e373b11ef9763ddb3e3cca647',
+      image: '/images/letters_placeholder/default_C.png',
+      category: [
+        {
+          label: 'Machine Learning',
+          value: 'machine-learning',
+        },
+      ],
+      techStack: [
+        {
+          label: 'Other',
+          value: 'other',
+        },
+      ],
+      type: [
+        {
+          label: 'Other',
+          value: 'other',
+        },
+      ],
+      cost: 'Free/Paid',
+      hasCert: false,
+      url: 'http://www.cs.cornell.edu/courses/cs4780/2018fa/syllabus/',
+      description:
+        'This text contains the title "Syllabus | Machine Learning for Intelligent Systems" and the course code for a class on machine learning for intelligent systems. However, there is no further description or information provided.',
+      wordLength3: 34,
     },
     {
       name: 'Datasciencecourse',
-      slug: 'datasciencecourse-e539caf4367211efb1e107a64ee89f73',
+      slug: 'datasciencecourse-78c9c68f373b11ef9763ddb3e3cca647',
       image: '/images/letters_placeholder/default_D.png',
       category: [
         {
@@ -3802,12 +3859,107 @@ const data2 = {
       hasCert: false,
       url: 'http://www.datasciencecourse.org',
       description:
-        '"Practical Data Science" is a course that teaches the study and practice of extracting insights and knowledge from large amounts of data. It covers topics such as data collection and processing, data visualization, statistical model building using machine learning, and big data techniques. The course focuses on implementing and making use of these methods in real-world scenarios, making it ideal for both academia and industry professionals. It covers various methods such as relational, time series, graph and network models, free text analysis, and spatial geographic methods. Students will also learn about statistical and machine learning methods, including regression, classification, unsupervised learning, and anomaly detection. The course also covers visualizing and presenting data, particularly high-dimensional data, and applying these methods to big data',
-      wordLength3: 122,
+        'Practical Data Science is a course that teaches the study and practice of extracting insights and knowledge from large amounts of data. It covers topics such as data collection and processing, data visualization, statistical model building using machine learning, and big data techniques. The course focuses on the practical aspects of data science, with a strong emphasis on implementing and making use of the methods learned. It is a highly sought-after field in both academia and industry.',
+      wordLength3: 77,
+    },
+    {
+      name: 'Datastructur',
+      slug: 'datastructur-7a7b6208373b11ef9763ddb3e3cca647',
+      image: '/images/letters_placeholder/default_D.png',
+      category: [
+        {
+          label: 'Data Structures',
+          value: 'data-structures',
+        },
+      ],
+      techStack: [
+        {
+          label: 'Spring',
+          value: 'spring',
+        },
+      ],
+      type: [
+        {
+          label: 'Other',
+          value: 'other',
+        },
+      ],
+      cost: 'Free/Paid',
+      hasCert: false,
+      url: 'https://sp21.datastructur.es',
+      description:
+        'CS 61B Spring 2021 is a computer science course focused on data structures. The course is taught by instructor Josh Hug and includes live Q&A sessions on Mondays and Wednesdays, as well as a Zoom link for Fridays. The final exam is scheduled for Tuesday, May 11th and students taking the class pass/no pass do not need to take the exam if they have enough points to pass the class. The passing grade for undergraduate students is a C- which is equivalent to 6,000 points. Course evaluations are currently at 75.84% and students have until tonight to complete them for a chance to earn 32 extra credit points.',
+      wordLength3: 108,
+    },
+    {
+      name: 'Codility',
+      slug: 'codility-7b9fe956373b11ef9763ddb3e3cca647',
+      image: '/images/letters_placeholder/default_C.png',
+      category: [
+        {
+          label: 'Other',
+          value: 'other',
+        },
+      ],
+      techStack: [
+        {
+          label: 'Other',
+          value: 'other',
+        },
+      ],
+      type: [
+        {
+          label: 'Text-Based',
+          value: 'text-based',
+        },
+        {
+          label: 'Coding Practice',
+          value: 'coding-practice',
+        },
+      ],
+      cost: 'Free',
+      hasCert: false,
+      url: 'https://www.codility.com/',
+      description:
+        'Codility is a highly rated platform for coding tests and technical interviews. It offers skills-based talent management for an AI-driven world, allowing companies to make informed decisions for their teams. With a rigorous skills-based framework, Codility helps identify skill gaps, assess candidates, and build strong engineering teams. Their assessments are trusted by global enterprises and are designed by a team of industrial-organizational psychologists. The platform also offers an innovative Engineering Skills Model and a content library to embrace the skills revolution. With standardized workflows and data-driven evaluations, Codility helps companies hire and develop the best technical talent.',
+      wordLength3: 97,
+    },
+    {
+      name: 'Cs61a',
+      slug: 'cs61a-7cbe56a6373b11ef9763ddb3e3cca647',
+      image: '/images/letters_placeholder/default_C.png',
+      category: [
+        {
+          label: 'Other',
+          value: 'other',
+        },
+      ],
+      techStack: [
+        {
+          label: 'Other',
+          value: 'other',
+        },
+      ],
+      type: [
+        {
+          label: 'Hands-On Practice',
+          value: 'hands-on-practice',
+        },
+        {
+          label: 'Project-Based',
+          value: 'project-based',
+        },
+      ],
+      cost: 'Free/Paid',
+      hasCert: false,
+      url: 'https://cs61a.org',
+      description:
+        'CS 61A: Structure and Interpretation of Computer Programs is a course offered in Summer 2024. The instructors for this course are Laryn Qi, Charlotte Le, and Raymond Tan. The course includes assignments such as Hog and Lab projects, with specific due dates and opportunities for extra credit. Students are also able to switch sections until Friday, June 28. Office hours are available and attendance is required for in-person check-ins.',
+      wordLength3: 69,
     },
     {
       name: 'Cs50',
-      slug: 'cs50-e67c7ede367211efb1e107a64ee89f73',
+      slug: 'cs50-7db97482373b11ef9763ddb3e3cca647',
       image: '/images/letters_placeholder/default_C.png',
       category: [
         {
@@ -3843,41 +3995,12 @@ const data2 = {
       hasCert: false,
       url: 'https://cdn.cs50.net/',
       description:
-        'This text is a list of dates and file names related to CS50 CDN, including topics such as cybersecurity, games, and programming languages like Python and SQL. It also mentions media, mobile, and podcasting.',
-      wordLength3: 34,
-    },
-    {
-      name: 'Collegecompendium',
-      slug: 'collegecompendium-e67c7edf367211efb1e107a64ee89f73',
-      image: '/images/letters_placeholder/default_C.png',
-      category: [
-        {
-          label: 'Other',
-          value: 'other',
-        },
-      ],
-      techStack: [
-        {
-          label: 'Javascript',
-          value: 'javascript',
-        },
-      ],
-      type: [
-        {
-          label: 'Other',
-          value: 'other',
-        },
-      ],
-      cost: 'Free',
-      hasCert: false,
-      url: 'https://collegecompendium.org',
-      description:
-        '"College Compendium is a collection of free and open source computer science resources from top colleges in America. With this platform, you can learn at your own pace and access a variety of materials to enhance your computer science knowledge. Please enable JavaScript to use this app."',
-      wordLength3: 47,
+        'This website, CS50 CDN, provides access to various resources related to computer science and technology. These resources include files from 2007 to 2024, as well as information on topics such as artificial intelligence, cybersecurity, and programming languages like Python and SQL. The website also offers guides, games, and podcasts for learning and staying updated on these subjects.',
+      wordLength3: 57,
     },
     {
       name: 'Learnyouahaskell',
-      slug: 'learnyouahaskell-e7b54bc8367211efb1e107a64ee89f73',
+      slug: 'learnyouahaskell-7db97483373b11ef9763ddb3e3cca647',
       image: '/images/letters_placeholder/default_L.png',
       category: [
         {
@@ -3905,70 +4028,12 @@ const data2 = {
       hasCert: false,
       url: 'https://learnyouahaskell.com/',
       description:
-        '"Learn You a Haskell for Great Good!" is a guide for learning Haskell, a popular functional programming language. It is written in a fun and funky style and is aimed at people who have some programming experience but are new to functional programming. The guide is available for free online, but can also be purchased in print. The author can be contacted for additional support and is active on the #haskell community.',
-      wordLength3: 72,
-    },
-    {
-      name: 'Cornell',
-      slug: 'cornell-e7b54bc9367211efb1e107a64ee89f73',
-      image: '/images/letters_placeholder/default_C.png',
-      category: [
-        {
-          label: 'Machine Learning',
-          value: 'machine-learning',
-        },
-      ],
-      techStack: [
-        {
-          label: 'Other',
-          value: 'other',
-        },
-      ],
-      type: [
-        {
-          label: 'Other',
-          value: 'other',
-        },
-      ],
-      cost: 'Free/Paid',
-      hasCert: false,
-      url: 'http://www.cs.cornell.edu/courses/cs4780/2018fa/syllabus/',
-      description:
-        'This text is a syllabus for a course on Machine Learning for Intelligent Systems. The course is numbered CS4780/CS5780. There is no further description available.',
-      wordLength3: 25,
-    },
-    {
-      name: 'Datastructur',
-      slug: 'datastructur-e941f8ba367211efb1e107a64ee89f73',
-      image: '/images/letters_placeholder/default_D.png',
-      category: [
-        {
-          label: 'Data Structures',
-          value: 'data-structures',
-        },
-      ],
-      techStack: [
-        {
-          label: 'Spring',
-          value: 'spring',
-        },
-      ],
-      type: [
-        {
-          label: 'Other',
-          value: 'other',
-        },
-      ],
-      cost: 'Free/Paid',
-      hasCert: false,
-      url: 'https://sp21.datastructur.es',
-      description:
-        'This text is about the CS 61B course for Spring 2021, which focuses on data structures. The instructor is Josh Hug and there are live Q&A sessions on Mondays and Wednesdays, as well as a Zoom link for Fridays. The course has a final exam on Tuesday, May 11th and students can check their grades and whether they need to take the exam on the Beacon grade calculator. Students can also earn extra credit points by completing course evaluations.',
-      wordLength3: 79,
+        '"Learn You a Haskell for Great Good!" is a free guide for learning Haskell, a popular functional programming language. It is recommended for those who have some programming experience but have not yet tried functional programming. The guide is available to read online for free, but can also be purchased in print. The author can be contacted for questions or bonuses.',
+      wordLength3: 61,
     },
     {
       name: 'Imt-decal',
-      slug: 'imt-decal-ea4de214367211efb1e107a64ee89f73',
+      slug: 'imt-decal-7f61d0a4373b11ef9763ddb3e3cca647',
       image: '/images/letters_placeholder/default_I.png',
       category: [
         {
@@ -3991,13 +4056,41 @@ const data2 = {
       cost: 'Free/Paid',
       hasCert: false,
       url: 'http://imt-decal.org',
+      description: 'Description not available.',
+      wordLength3: 3,
+    },
+    {
+      name: 'Eecs70',
+      slug: 'eecs70-7f61d0a5373b11ef9763ddb3e3cca647',
+      image: '/images/letters_placeholder/default_E.png',
+      category: [
+        {
+          label: 'Discrete Mathematics',
+          value: 'discrete-mathematics',
+        },
+      ],
+      techStack: [
+        {
+          label: 'Other',
+          value: 'other',
+        },
+      ],
+      type: [
+        {
+          label: 'Video Courses',
+          value: 'video-courses',
+        },
+      ],
+      cost: 'Free/Paid',
+      hasCert: false,
+      url: 'https://www.eecs70.org',
       description:
-        'This text is about the IMT DeCal course being offered in the spring of 2019. However, there is no further information available about the course.',
-      wordLength3: 25,
+        'CS 70 is a course offered at UC Berkeley during the summer of 2024. It covers topics in discrete mathematics and probability theory, including logic, proofs, stable matching, cardinality, countability, graphs, modular arithmetic, and RSA. The course schedule is subject to change and includes lectures, discussions, and homework assignments.',
+      wordLength3: 49,
     },
     {
       name: 'Codeeval',
-      slug: 'codeeval-ea4de215367211efb1e107a64ee89f73',
+      slug: 'codeeval-7f61d0a6373b11ef9763ddb3e3cca647',
       image: '/images/letters_placeholder/default_C.png',
       category: [
         {
@@ -4025,42 +4118,13 @@ const data2 = {
       hasCert: false,
       url: 'https://www.hirevue.com/platform/assessment-software',
       description:
-        'Hirevue\'s assessment software is a comprehensive platform that offers game-based, interview-based, and coding assessments for candidates. This allows hiring teams to make faster and fairer decisions when hiring. The software also helps minimize bias and allows for data-driven and science-backed assessments. With the "Find My Fit" feature, candidates can easily identify which roles best match their potential, based on their work styles, interests, and personality. This helps candidates find more opportunities and allows organizations to confidently prioritize candidates.',
-      wordLength3: 78,
+        'Hirevue\'s assessment software is a comprehensive platform that offers game-based, interview-based, and coding assessments for candidates. This allows for faster and fairer hiring decisions to be made. The software also helps to minimize bias and allows for data-driven and science-backed assessments. With the introduction of "Find My Fit", candidates can easily identify which roles best match their potential, based on their work styles, interests, and personality. This helps to present candidates with more opportunities and allows for a more thorough assessment of their skills and competencies.',
+      wordLength3: 86,
     },
     {
-      name: 'Eecs70',
-      slug: 'eecs70-ebdfa8d8367211efb1e107a64ee89f73',
-      image: '/images/letters_placeholder/default_E.png',
-      category: [
-        {
-          label: 'Discrete Mathematics',
-          value: 'discrete-mathematics',
-        },
-      ],
-      techStack: [
-        {
-          label: 'Other',
-          value: 'other',
-        },
-      ],
-      type: [
-        {
-          label: 'Video Courses',
-          value: 'video-courses',
-        },
-      ],
-      cost: 'Free/Paid',
-      hasCert: false,
-      url: 'https://www.eecs70.org',
-      description:
-        'CS 70 Summer 2024 is a course offered at UC Berkeley that covers Discrete Mathematics and Probability Theory. The course is taught by professors Shahzar and Hongxun Wu and takes place during the summer of 2024. The lectures are held on Mondays, Tuesdays, Wednesdays, and Thursdays from 2:00pm to 3:29pm in Dwinelle 155. The course schedule is subject to change. The first week of the course covers topics such as course overview, logic, proofs, and stable matching. The second week covers cardinality, countability, and graphs. The third week covers modular arithmetic and RSA. There is no class on June 19th for the Juneteenth holiday',
-      wordLength3: 104,
-    },
-    {
-      name: 'Cs61a',
-      slug: 'cs61a-ed3b76c6367211efb1e107a64ee89f73',
-      image: '/images/letters_placeholder/default_C.png',
+      name: 'Washington',
+      slug: 'washington-819d0db6373b11ef9763ddb3e3cca647',
+      image: '/images/letters_placeholder/default_W.png',
       category: [
         {
           label: 'Other',
@@ -4075,24 +4139,82 @@ const data2 = {
       ],
       type: [
         {
-          label: 'Hands-On Practice',
-          value: 'hands-on-practice',
-        },
-        {
-          label: 'Project-Based',
-          value: 'project-based',
+          label: 'Other',
+          value: 'other',
         },
       ],
       cost: 'Free/Paid',
       hasCert: false,
-      url: 'https://cs61a.org',
+      url: 'https://courses.cs.washington.edu',
       description:
-        'CS 61A: Structure and Interpretation of Computer Programs is a course being offered in the summer of 2024. The course is taught by instructors Laryn Qi, Charlotte Le, and Raymond Tan. The course covers topics related to computer programming and the first project is due on July 2nd. There are also weekly labs and homework assignments that are due throughout the course. Students have the option to switch sections until June 28th. Office hours are available for students to attend for extra help. Regular section students must attend in-person for lab check-ins.',
-      wordLength3: 92,
+        'This is the root document of the course web service for University of Washington Computer Science & Engineering. It contains an index of courses and a section for frequently asked questions. For more information, please contact @cs.washington.edu.',
+      wordLength3: 37,
+    },
+    {
+      name: 'Google',
+      slug: 'google-82691780373b11ef9763ddb3e3cca647',
+      image: '/images/letters_placeholder/default_G.png',
+      category: [
+        {
+          label: 'Other',
+          value: 'other',
+        },
+      ],
+      techStack: [
+        {
+          label: 'R',
+          value: 'r',
+        },
+      ],
+      type: [
+        {
+          label: 'Coding Game',
+          value: 'coding-game',
+        },
+      ],
+      cost: 'Free/Paid',
+      hasCert: false,
+      url: 'https://www.google.com/chrome/',
+      description:
+        'Google Chrome is a fast and secure web browser that is built to be customizable. It is the official browser from Google and is available for download. It is designed to be fast, safe, and personalized for each user. It is compatible with various operating systems, including Windows 10, Windows 11, Windows XP/Vista, and macOS 10.15 or later. However, older versions of macOS (10.6 - 10.12) are no longer supported.',
+      wordLength3: 70,
+    },
+    {
+      name: 'Meetup',
+      slug: 'meetup-8378532a373b11ef9763ddb3e3cca647',
+      image: '/images/letters_placeholder/default_M.png',
+      category: [
+        {
+          label: 'Other',
+          value: 'other',
+        },
+      ],
+      techStack: [
+        {
+          label: 'Ruby',
+          value: 'ruby',
+        },
+      ],
+      type: [
+        {
+          label: 'Text-Based',
+          value: 'text-based',
+        },
+        {
+          label: 'Coding Game',
+          value: 'coding-game',
+        },
+      ],
+      cost: 'Free',
+      hasCert: false,
+      url: 'https://www.meetup.com/',
+      description:
+        "Meetup is a platform where you can find and join local events, groups, and activities that align with your interests. It's a great way to make new friends and connect with like-minded people in your area. From hiking and reading to networking and skill sharing, there are thousands of events happening every day for you to join. Some upcoming events near Seri Kembangan, MY include a Japanese Book Club, a no small talk brunch, a Make friends & BlaBla L.Exchange, and a Ruby Tuesdays KL event. There's also a Volleyball Beginners' Drill & Play event at Sri Hartamas Outdoor Court. Join Meetup and start exploring your interests with new friends today!",
+      wordLength3: 111,
     },
     {
       name: 'Depaul',
-      slug: 'depaul-ee849c2e367211efb1e107a64ee89f73',
+      slug: 'depaul-8378532b373b11ef9763ddb3e3cca647',
       image: '/images/letters_placeholder/default_D.png',
       category: [
         {
@@ -4120,148 +4242,12 @@ const data2 = {
       hasCert: false,
       url: 'https://www.cdm.depaul.edu/Pages/default.aspx',
       description:
-        "DePaul University's Jarvis College of Computing and Digital Media (CDM) is one of the largest and most comprehensive programs in the nation. They offer a wide range of undergraduate and graduate programs in fields such as Cinematic Arts, Computing, and Design. The college is known for its innovative approach and strong connections with industry. They have state-of-the-art facilities, including a 32,000 sq. ft. production facility and an 8,000 square-foot open space for innovation and collaboration. With inspiring teachers and a focus on the latest technology, CDM provides endless possibilities for students to explore and excel in their chosen field.",
-      wordLength3: 99,
-    },
-    {
-      name: 'Codility',
-      slug: 'codility-efb108d0367211efb1e107a64ee89f73',
-      image: '/images/letters_placeholder/default_C.png',
-      category: [
-        {
-          label: 'Other',
-          value: 'other',
-        },
-      ],
-      techStack: [
-        {
-          label: 'Other',
-          value: 'other',
-        },
-      ],
-      type: [
-        {
-          label: 'Text-Based',
-          value: 'text-based',
-        },
-        {
-          label: 'Coding Practice',
-          value: 'coding-practice',
-        },
-      ],
-      cost: 'Free',
-      hasCert: false,
-      url: 'https://www.codility.com/',
-      description:
-        'Codility is an online platform that offers coding tests and technical interviews for hiring developers. It uses a skills-based approach to assess candidates and help companies build strong engineering teams. Their team of industrial-organizational psychologists has infused the platform with rigorous assessment science to ensure fair and effective evaluations. With a focus on skills, Codility aims to empower global enterprises to make the best decisions for their teams in an AI-driven world.',
-      wordLength3: 72,
-    },
-    {
-      name: 'Inventwithpython',
-      slug: 'inventwithpython-f0c33b26367211efb1e107a64ee89f73',
-      image: '/images/letters_placeholder/default_I.png',
-      category: [
-        {
-          label: 'Software Development',
-          value: 'software-development',
-        },
-      ],
-      techStack: [
-        {
-          label: 'Javascript',
-          value: 'javascript',
-        },
-        {
-          label: 'Python',
-          value: 'python',
-        },
-      ],
-      type: [
-        {
-          label: 'Video Courses',
-          value: 'video-courses',
-        },
-        {
-          label: 'Text-Based',
-          value: 'text-based',
-        },
-        {
-          label: 'Coding Practice',
-          value: 'coding-practice',
-        },
-        {
-          label: 'Coding Game',
-          value: 'coding-game',
-        },
-      ],
-      cost: 'Free',
-      hasCert: false,
-      url: 'https://inventwithpython.com',
-      description:
-        'Invent with Python is a free online resource that teaches beginners how to code using the Python programming language. The creator, Al Sweigart, believes that learning to program can make you a smarter and more capable person, and that programming should be accessible to everyone. The website offers free books and exercises for beginners, as well as more advanced books for those looking to master coding. With a focus on removing intimidation and making coding enjoyable, Invent with Python is a great starting point for anyone interested in learning how to program.',
-      wordLength3: 92,
-    },
-    {
-      name: 'Contrastchecker',
-      slug: 'contrastchecker-f1f07342367211efb1e107a64ee89f73',
-      image: '/images/letters_placeholder/default_C.png',
-      category: [
-        {
-          label: 'Other',
-          value: 'other',
-        },
-      ],
-      techStack: [
-        {
-          label: 'Other',
-          value: 'other',
-        },
-      ],
-      type: [
-        {
-          label: 'Other',
-          value: 'other',
-        },
-      ],
-      cost: 'Free/Paid',
-      hasCert: false,
-      url: 'https://contrastchecker.com',
-      description:
-        'This tool, called WCAG Contrast Checker, allows users to check the contrast of their color designs for accessibility based on the Web Content Accessibility Guideline (WCAG). It was created by Acart Communications and Pande Hartana on September 27, 2017. Users can select colors for the foreground and background, either by inputting them or using an image, and see the contrast ratio. The tool also has options for grayscale, sharing, and resetting samples. It supports font sizes of 12px and 18px, and has options for AA and AAA contrast levels. Users can also save their history and generate a PDF report.',
-      wordLength3: 100,
-    },
-    {
-      name: 'Meetup',
-      slug: 'meetup-f3628990367211efb1e107a64ee89f73',
-      image: '/images/letters_placeholder/default_M.png',
-      category: [
-        {
-          label: 'Other',
-          value: 'other',
-        },
-      ],
-      techStack: [
-        {
-          label: 'Ruby',
-          value: 'ruby',
-        },
-      ],
-      type: [
-        {
-          label: 'Text-Based',
-          value: 'text-based',
-        },
-      ],
-      cost: 'Free',
-      hasCert: false,
-      url: 'https://www.meetup.com/',
-      description:
-        "Meetup is a platform where you can find local events, join groups, or even start your own. It's a great way to make new friends and connect with people who share your interests. From hiking and reading to networking and skill sharing, there are thousands of events happening every day. You can easily find events near you in Seri Kembangan, Malaysia, such as a Japanese book club, a no small talk brunch, a make friends and language exchange, or a book club in Bangsar. There's also a Ruby Tuesdays event in Kuala Lumpur. Join Meetup and discover new friendships through shared interests.",
-      wordLength3: 102,
+        "DePaul University's Jarvis College of Computing and Digital Media (CDM) is a leading program offering a wide range of undergraduate and graduate programs in fields such as cinematic arts, computing, and design. The CDM schools provide students with access to the latest technology and industry connections, allowing for endless possibilities and innovative approaches to learning. The Jarvis Student Center for Innovation and Collaboration is an 8,000 square-foot open space where students can collaborate and work on projects. With a focus on collaboration, critical thinking, and problem-solving, CDM prepares students for success in their chosen fields.",
+      wordLength3: 95,
     },
     {
       name: 'Whimsical',
-      slug: 'whimsical-f48c9392367211efb1e107a64ee89f73',
+      slug: 'whimsical-85d5a032373b11ef9763ddb3e3cca647',
       image: '/images/letters_placeholder/default_W.png',
       category: [
         {
@@ -4289,57 +4275,40 @@ const data2 = {
       hasCert: false,
       url: 'https://whimsical.com',
       description:
-        'Whimsical is a collaborative workspace designed for product teams to align and work together more efficiently. It offers a variety of tools such as docs, flowcharts, wireframes, and mind maps to help generate AI diagrams and access templates from product leaders. With Whimsical, teams can easily create a single source of truth for every project, brainstorm and organize ideas visually, and clarify user flows and processes. This platform is free to use and aims to improve clarity and shared understanding among team members.',
-      wordLength3: 83,
+        'Whimsical is a workspace designed for product teams to align and collaborate on their next build. It offers a variety of tools such as docs, flowcharts, wireframes, and mind maps to help generate AI diagrams and access templates from product leaders. With Whimsical, teams can easily create a single source of truth for every project, brainstorm and organize ideas visually, and clarify user flows and processes.',
+      wordLength3: 66,
     },
     {
-      name: 'Nipafx',
-      slug: 'nipafx-f5ac3d04367211efb1e107a64ee89f73',
-      image: '/images/letters_placeholder/default_N.png',
+      name: 'Adobe',
+      slug: 'adobe-86eb20aa373b11ef9763ddb3e3cca647',
+      image: '/images/letters_placeholder/default_A.png',
       category: [
         {
-          label: 'Documentation',
-          value: 'documentation',
+          label: 'Other',
+          value: 'other',
         },
       ],
       techStack: [
         {
-          label: 'Javascript',
-          value: 'javascript',
-        },
-        {
-          label: 'Java',
-          value: 'java',
+          label: 'Other',
+          value: 'other',
         },
       ],
       type: [
         {
-          label: 'Video Courses',
-          value: 'video-courses',
-        },
-        {
-          label: 'Text-Based',
-          value: 'text-based',
-        },
-        {
-          label: 'Hands-On Practice',
-          value: 'hands-on-practice',
-        },
-        {
-          label: 'Project-Based',
-          value: 'project-based',
+          label: 'Other',
+          value: 'other',
         },
       ],
       cost: 'Free/Paid',
       hasCert: false,
-      url: 'https://nipafx.dev',
-      description:
-        'Nipafx is a website created by Nicolai, a Java enthusiast, to help others improve their Java skills. The site offers a variety of channels and tags to filter through, as well as resources such as articles, videos, and events. With or without JavaScript, Nipafx is a great place to learn and share about Java.',
-      wordLength3: 54,
+      url: 'https://color.adobe.com',
+      description: 'Description not available.',
+      wordLength3: 3,
     },
     {
       name: 'Balsamiq',
-      slug: 'balsamiq-f6907172367211efb1e107a64ee89f73',
+      slug: 'balsamiq-86eb20ab373b11ef9763ddb3e3cca647',
       image: '/images/letters_placeholder/default_B.png',
       category: [
         {
@@ -4371,12 +4340,12 @@ const data2 = {
       hasCert: false,
       url: 'https://balsamiq.com',
       description:
-        'Balsamiq is a popular wireframing tool used by product managers, founders, developers, and UX teams worldwide. It allows users to quickly and clearly design, communicate, and share their ideas through low-fidelity mockups. With a user-friendly interface and integration options with other platforms, Balsamiq makes wireframing effortless and efficient. It is trusted by thousands of individuals and teams to clarify and improve ideas, test and refine concepts, collaborate and iterate easily, and communicate visions and outcomes.',
-      wordLength3: 75,
+        'Balsamiq is a popular low-fidelity wireframing tool used by product managers, founders, developers, and UX teams worldwide. It allows users to quickly and clearly design, communicate, and share their ideas. With a user-friendly interface and a variety of features, Balsamiq makes wireframing effortless and efficient. It is trusted by thousands of people and teams and is preferred for its simplicity and ease of use. Balsamiq is used to clarify and improve ideas, test and refine concepts, collaborate and iterate, and communicate visions and outcomes. It is a go-to tool for designing websites and apps, and offers a 30-day free trial for new users.',
+      wordLength3: 103,
     },
     {
       name: 'Colorhunt',
-      slug: 'colorhunt-f7a73f82367211efb1e107a64ee89f73',
+      slug: 'colorhunt-88e384ba373b11ef9763ddb3e3cca647',
       image: '/images/letters_placeholder/default_C.png',
       category: [
         {
@@ -4404,12 +4373,12 @@ const data2 = {
       hasCert: false,
       url: 'https://colorhunt.co',
       description:
-        'Color Hunt is a website that offers a variety of color palettes for designers and artists to use as inspiration for their projects. These palettes include a range of colors such as blue, teal, mint, green, and more. They also have collections for different themes like pastel, vintage, retro, neon, and more. Users can create their own collections and browse through popular, recent, and all-time palettes. Color Hunt is a great resource for finding color inspiration for any design or art project.',
-      wordLength3: 82,
+        'Color Hunt is a website that offers a wide selection of color palettes for designers and artists. These palettes are hand-picked and constantly updated, providing endless inspiration for design and art projects. The palettes cover a variety of themes, from nature and earth to vintage and neon. With options for all seasons and moods, Color Hunt is a go-to resource for color inspiration.',
+      wordLength3: 63,
     },
     {
       name: 'Eventbrite',
-      slug: 'eventbrite-f7a73f83367211efb1e107a64ee89f73',
+      slug: 'eventbrite-88e384bb373b11ef9763ddb3e3cca647',
       image: '/images/letters_placeholder/default_E.png',
       category: [
         {
@@ -4433,12 +4402,41 @@ const data2 = {
       hasCert: false,
       url: 'https://www.eventbrite.com',
       description:
-        'Eventbrite is a platform that helps you discover and purchase tickets for a variety of local events and activities. From concerts and workshops to yoga classes and charity events, you can find something for everyone. They also offer a wide range of events such as food and music festivals, making it easy to find your next unforgettable experience. Please note that you may need to upgrade your internet browser to access the website. You can browse events by category, including music, nightlife, performing and visual arts, holidays, dating, hobbies, business, and food and drink.',
-      wordLength3: 94,
+        'Eventbrite is a website that helps you find and purchase tickets to a variety of local events and activities. These include concerts, workshops, yoga classes, charity events, food and music festivals, and more. However, in order to use the website, you will need to upgrade your internet browser. You can browse events by category, such as music, nightlife, performing and visual arts, holidays, dating, hobbies, business, and food and drink.',
+      wordLength3: 70,
+    },
+    {
+      name: 'Contrastchecker',
+      slug: 'contrastchecker-8ac30b2a373b11ef9763ddb3e3cca647',
+      image: '/images/letters_placeholder/default_C.png',
+      category: [
+        {
+          label: 'Other',
+          value: 'other',
+        },
+      ],
+      techStack: [
+        {
+          label: 'Other',
+          value: 'other',
+        },
+      ],
+      type: [
+        {
+          label: 'Other',
+          value: 'other',
+        },
+      ],
+      cost: 'Free/Paid',
+      hasCert: false,
+      url: 'https://contrastchecker.com',
+      description:
+        'This web tool, called WCAG - Contrast Checker, allows users to check the contrast of their color design for accessibility based on the Web Content Accessibility Guideline (WCAG). Users can select foreground and background colors, get colors from an image, and see a grayscale version. The tool also provides options for sharing, resetting, and saving color samples. It calculates the contrast ratio and displays it in both AA and AAA standards. Users can also view their history and save a PDF of their results.',
+      wordLength3: 84,
     },
     {
       name: 'Reallyconfused',
-      slug: 'reallyconfused-f9caa9f2367211efb1e107a64ee89f73',
+      slug: 'reallyconfused-8ac30b2b373b11ef9763ddb3e3cca647',
       image: '/images/letters_placeholder/default_R.png',
       category: [
         {
@@ -4506,147 +4504,90 @@ const data2 = {
       hasCert: false,
       url: 'https://reallyconfused.co',
       description:
-        'ReallyConfused is a platform that helps individuals explore, create, and share learning roadmaps in the tech industry. It provides guidance on courses, books, projects, networking, and budgeting to break into the tech field through self-study. Users can also connect with mentors and access specific roadmaps for various tech roles such as web developer, Android developer, data analyst, and more. With ReallyConfused, users can create their own personalized roadmap and achieve their long-term goals in the tech industry.',
-      wordLength3: 77,
+        'ReallyConfused is a platform that allows users to explore, create, and share learning roadmaps in the tech industry. These roadmaps provide guidance on how to break into tech through self-study, including recommended courses, books, projects, networking strategies, and budgeting. Users can also connect with mentors to help them achieve their goals. The platform offers roadmaps for various tech roles, such as web developer, Android developer, data analyst, and product manager.',
+      wordLength3: 70,
     },
     {
-      name: 'Adobe',
-      slug: 'adobe-fad811fe367211efb1e107a64ee89f73',
-      image: '/images/letters_placeholder/default_A.png',
+      name: 'Inventwithpython',
+      slug: 'inventwithpython-8cbdd8ba373b11ef9763ddb3e3cca647',
+      image: '/images/letters_placeholder/default_I.png',
       category: [
         {
-          label: 'Other',
-          value: 'other',
+          label: 'Software Development',
+          value: 'software-development',
         },
       ],
       techStack: [
         {
-          label: 'Other',
-          value: 'other',
+          label: 'Javascript',
+          value: 'javascript',
+        },
+        {
+          label: 'Python',
+          value: 'python',
         },
       ],
       type: [
         {
-          label: 'Other',
-          value: 'other',
+          label: 'Video Courses',
+          value: 'video-courses',
         },
-      ],
-      cost: 'Free/Paid',
-      hasCert: false,
-      url: 'https://color.adobe.com',
-      description: 'Description not available.',
-      wordLength3: 3,
-    },
-    {
-      name: 'Lifetechpsych',
-      slug: 'lifetechpsych-fad811ff367211efb1e107a64ee89f73',
-      image: '/images/letters_placeholder/default_L.png',
-      category: [
-        {
-          label: 'Other',
-          value: 'other',
-        },
-      ],
-      techStack: [
-        {
-          label: 'Go',
-          value: 'go',
-        },
-      ],
-      type: [
         {
           label: 'Text-Based',
           value: 'text-based',
         },
         {
-          label: 'Hands-On Practice',
-          value: 'hands-on-practice',
-        },
-        {
-          label: 'Project-Based',
-          value: 'project-based',
-        },
-        {
           label: 'Coding Practice',
           value: 'coding-practice',
         },
-      ],
-      cost: 'Free',
-      hasCert: false,
-      url: 'https://lifetechpsych.com/',
-      description:
-        "LifeTechPsych is a learning hub that focuses on helping new and junior developers build their skills and land jobs. With tips from books, research, and over 10 years of coding experience, LifeTechPsych aims to save readers time and effort by providing valuable insights and resources. They offer a free dev cheatsheet and cover a range of topics, from transitioning from beginner to intermediate programmer to the best places to learn coding for free. They also share stories of self-taught web developers and provide guidance for absolute beginners. LifeTechPsych's goal is to support and guide individuals on their coding journey.",
-      wordLength3: 99,
-    },
-    {
-      name: 'Google',
-      slug: 'google-fc61a2f6367211efb1e107a64ee89f73',
-      image: '/images/letters_placeholder/default_G.png',
-      category: [
-        {
-          label: 'Other',
-          value: 'other',
-        },
-      ],
-      techStack: [
-        {
-          label: 'R',
-          value: 'r',
-        },
-      ],
-      type: [
         {
           label: 'Coding Game',
           value: 'coding-game',
         },
       ],
-      cost: 'Free/Paid',
+      cost: 'Free',
       hasCert: false,
-      url: 'https://www.google.com/chrome/',
+      url: 'https://inventwithpython.com',
       description:
-        'Google Chrome is a fast and secure web browser that is built to be customizable. It is the official browser from Google and can be downloaded for free. It is available for Windows 10, 11, and XP/Vista, as well as macOS 10.15 or later. However, older versions of macOS are no longer supported.',
-      wordLength3: 53,
+        'Invent with Python is a free online resource that teaches beginners how to code using the Python programming language. The website offers a variety of books, including "Automate the Boring Stuff with Python" and "Python Programming Exercises, Gently Explained," which are designed to make programming accessible and enjoyable for all. The author, Al Sweigart, believes that programming is a valuable skill that should be accessible to everyone, and offers his books for free. The website also offers a weekly mailing list for news and updates on new books.',
+      wordLength3: 88,
     },
     {
-      name: 'Interviewguide',
-      slug: 'interviewguide-fc61a2f7367211efb1e107a64ee89f73',
-      image: '/images/letters_placeholder/default_I.png',
+      name: 'Cmu',
+      slug: 'cmu-8dd821b0373b11ef9763ddb3e3cca647',
+      image: '/images/letters_placeholder/default_C.png',
       category: [
         {
-          label: 'Software Engineering',
-          value: 'software-engineering',
-        },
-        {
-          label: 'Software Development',
-          value: 'software-development',
-        },
-        {
-          label: 'Software Development',
-          value: 'software-development',
+          label: 'Machine Learning',
+          value: 'machine-learning',
         },
       ],
       techStack: [
         {
-          label: 'Express.js',
-          value: 'express.js',
+          label: 'Javascript',
+          value: 'javascript',
         },
       ],
       type: [
         {
-          label: 'Other',
-          value: 'other',
+          label: 'Coding Practice',
+          value: 'coding-practice',
+        },
+        {
+          label: 'Bootcamps',
+          value: 'bootcamps',
         },
       ],
-      cost: 'Free',
+      cost: 'Free/Paid',
       hasCert: false,
-      url: 'https://interviewguide.dev',
+      url: 'https://www.cs.cmu.edu/',
       description:
-        '"Welcome to InterviewGuide.dev, a free guide for software development interviews created by Nick, a senior software engineer at Microsoft with experience in over 100 interviews. This guide is meant to help both new and experienced software engineering candidates, with a focus on individual contributor roles rather than management positions. It is based on Nick\'s personal views and is not affiliated with any of his past or current employers. The guide is available for free on GitHub, and if you find it helpful, you can show your support by giving it a star. Happy interviewing!"',
-      wordLength3: 94,
+        'The Carnegie Mellon University School of Computer Science (CMU SCS) is a highly regarded program that offers faculty positions for qualified applicants. The school is known for training innovative individuals to solve real-world problems and improve society. They offer various programs and accept donations. In recent news, the school has launched a coding bootcamp, received recognition for their work in algorithm engineering, and built a satellite. They also have upcoming events, which can be found on their website.',
+      wordLength3: 78,
     },
     {
       name: 'Craftinginterpreters',
-      slug: 'craftinginterpreters-fe56299c367211efb1e107a64ee89f73',
+      slug: 'craftinginterpreters-8ed29faa373b11ef9763ddb3e3cca647',
       image: '/images/letters_placeholder/default_C.png',
       category: [
         {
@@ -4670,41 +4611,12 @@ const data2 = {
       hasCert: false,
       url: 'https://craftinginterpreters.com',
       description:
-        'Crafting Interpreters is a comprehensive guide for anyone interested in creating their own programming language. The book covers both high-level concepts and technical details, including parsing, semantics, bytecode representation, and garbage collection. With step-by-step instructions, readers will build a language with rich syntax, dynamic typing, lexical scope, and more. The book is available in print, ebook, and Kindle formats, making it accessible to all.',
-      wordLength3: 64,
-    },
-    {
-      name: 'Washington',
-      slug: 'washington-ff6706f8367211efb1e107a64ee89f73',
-      image: '/images/letters_placeholder/default_W.png',
-      category: [
-        {
-          label: 'Other',
-          value: 'other',
-        },
-      ],
-      techStack: [
-        {
-          label: 'Other',
-          value: 'other',
-        },
-      ],
-      type: [
-        {
-          label: 'Other',
-          value: 'other',
-        },
-      ],
-      cost: 'Free/Paid',
-      hasCert: false,
-      url: 'https://courses.cs.washington.edu',
-      description:
-        "This is the main webpage for the University of Washington's Computer Science & Engineering course web service. It contains an index of courses and a section for frequently asked questions. For more information, contact @cs.washington.edu.",
-      wordLength3: 35,
+        'This book, titled "Crafting Interpreters", is a comprehensive guide for those interested in creating their own programming language. It covers both high-level concepts and technical details, such as parsing and garbage collection. The book is available in multiple formats, including print and ebook, making it accessible to a wide audience.',
+      wordLength3: 50,
     },
     {
       name: 'Nostarch',
-      slug: 'nostarch-ff6706f9367211efb1e107a64ee89f73',
+      slug: 'nostarch-8ed29fab373b11ef9763ddb3e3cca647',
       image: '/images/letters_placeholder/default_N.png',
       category: [
         {
@@ -4744,31 +4656,31 @@ const data2 = {
       hasCert: false,
       url: 'https://nostarch.com',
       description:
-        'No Starch Press is a popular publisher that specializes in geek entertainment. They offer a variety of books on topics such as art and design, computing, hacking, and computer security. They also have books for kids, including LEGO® and manga. Customers can purchase both print and ebook versions of their books, and those who buy print books can access early chapters before the official release date. Some of their current bestsellers include "The Book of Batch Scripting," "R for the Rest of Us," "Computer Architecture," and "Windows Security Internals." They also have a book on machine learning.',
-      wordLength3: 97,
+        'No Starch Press is a popular publisher that specializes in geek entertainment. They offer a wide range of books on topics such as art and design, computing, hacking, hardware, and programming. They also offer early access to upcoming titles and a free ebook edition with every print book purchase. Some of their bestsellers include "The Book of Batch Scripting," "R for the Rest of Us," "Computer Architecture," and "Windows Security Internals." They also have a book on machine learning.',
+      wordLength3: 79,
     },
     {
-      name: 'Repl',
-      slug: 'repl-0166c6be367311efb1e107a64ee89f73',
-      image: '/images/letters_placeholder/default_R.png',
+      name: 'Interviewguide',
+      slug: 'interviewguide-90c8517e373b11ef9763ddb3e3cca647',
+      image: '/images/letters_placeholder/default_I.png',
       category: [
         {
-          label: 'Software Development',
-          value: 'software-development',
+          label: 'Software Engineering',
+          value: 'software-engineering',
         },
         {
           label: 'Software Development',
           value: 'software-development',
         },
         {
-          label: 'UI Design',
-          value: 'ui-design',
+          label: 'Software Development',
+          value: 'software-development',
         },
       ],
       techStack: [
         {
-          label: 'R',
-          value: 'r',
+          label: 'Express.js',
+          value: 'express.js',
         },
       ],
       type: [
@@ -4779,105 +4691,14 @@ const data2 = {
       ],
       cost: 'Free',
       hasCert: false,
-      url: 'https://replit.com/',
+      url: 'https://interviewguide.dev',
       description:
-        'Replit is a software development and deployment platform that uses AI to help users build, share, and ship software quickly. With Replit Guides, users can follow step-by-step instructions to create AI models, chatbots, and websites. The platform offers a single cloud workspace with built-in AI, allowing users to create and deploy websites, automations, internal tools, and more in any programming language without additional setup or tools. Replit is used by companies like SUPERAGENT.SH and Weights and Biases for rapid prototyping and collaboration on codebases. It also offers a free business demo and everything needed to build software in one place.',
-      wordLength3: 100,
-    },
-    {
-      name: 'Monogame',
-      slug: 'monogame-02c6218a367311efb1e107a64ee89f73',
-      image: '/images/letters_placeholder/default_M.png',
-      category: [
-        {
-          label: 'Other',
-          value: 'other',
-        },
-      ],
-      techStack: [
-        {
-          label: 'C#',
-          value: 'c-sharp',
-        },
-      ],
-      type: [
-        {
-          label: 'Coding Game',
-          value: 'coding-game',
-        },
-      ],
-      cost: 'Free',
-      hasCert: false,
-      url: 'https://monogame.net/',
-      description:
-        'MonoGame is a powerful framework that allows you to create cross-platform games. It supports multiple platforms such as desktop, mobile, and consoles like Playstation and Xbox. You can use your preferred editor, including Visual Studio, Visual Studio Code, and JetBrains Rider, to write game code in C# and other .NET languages. MonoGame is open-source, giving you the freedom to make changes and even port to new platforms.',
-      wordLength3: 67,
-    },
-    {
-      name: 'Pygame',
-      slug: 'pygame-03be7218367311efb1e107a64ee89f73',
-      image: '/images/letters_placeholder/default_P.png',
-      category: [
-        {
-          label: 'Other',
-          value: 'other',
-        },
-      ],
-      techStack: [
-        {
-          label: 'Python',
-          value: 'python',
-        },
-      ],
-      type: [
-        {
-          label: 'Coding Game',
-          value: 'coding-game',
-        },
-      ],
-      cost: 'Free/Paid',
-      hasCert: false,
-      url: 'https://www.pygame.org/news',
-      description:
-        'Pygame News: The latest version, pygame 2.6.0, was released on June 25, 2024. It can be installed with the command "python3 -m pip install -U pygame==2.6.0". Previous versions, including 2.5.2, 2.5.1, 2.5.0, and 2.4.0, are also available for download. Each version has its own release notes and any issues can be reported on the pygame GitHub page. Pygame also hosts hackathons and game jams, such as PyWeek and Ludum Dare.',
-      wordLength3: 70,
-    },
-    {
-      name: 'Cmu',
-      slug: 'cmu-0545c802367311efb1e107a64ee89f73',
-      image: '/images/letters_placeholder/default_C.png',
-      category: [
-        {
-          label: 'Machine Learning',
-          value: 'machine-learning',
-        },
-      ],
-      techStack: [
-        {
-          label: 'Javascript',
-          value: 'javascript',
-        },
-      ],
-      type: [
-        {
-          label: 'Coding Practice',
-          value: 'coding-practice',
-        },
-        {
-          label: 'Bootcamps',
-          value: 'bootcamps',
-        },
-      ],
-      cost: 'Free/Paid',
-      hasCert: false,
-      url: 'https://www.cs.cmu.edu/',
-      description:
-        'The CMU School of Computer Science at Carnegie Mellon University is a highly regarded program that trains students to become innovators and solve real-world problems. They are currently seeking qualified applicants for faculty positions and offer a variety of programs. Recent news includes the launch of a coding bootcamp, recognition for work in algorithm engineering, and a class building a satellite. The school also offers events, but Javascript is required to view the calendar.',
-      wordLength3: 74,
+        'This is a free guide for software development interviews created by Nick, a senior software engineer at Microsoft with experience in over 100 interviews. The guide is meant for both new and experienced software engineering candidates and focuses on individual contributor roles rather than engineering management. It is a personal opinionated guide and is not affiliated with any current or past employers. The guide is available for free on GitHub and any support by starring the repository is appreciated.',
+      wordLength3: 79,
     },
     {
       name: 'Phaser',
-      slug: 'phaser-06712de8367311efb1e107a64ee89f73',
+      slug: 'phaser-90c8517f373b11ef9763ddb3e3cca647',
       image: '/images/letters_placeholder/default_P.png',
       category: [
         {
@@ -4909,12 +4730,12 @@ const data2 = {
       hasCert: false,
       url: 'https://phaser.io/',
       description:
-        'Phaser is a free and open source game framework for creating HTML5 games on both desktop and mobile devices. It offers a fast and fun way to develop games using Canvas and WebGL technology. With Phaser Editor, developers can visually create games by dragging and dropping game objects, adjusting animations and physics, and adding special effects. The framework also provides resources such as tutorials, a book, and a community forum for support. It has been used by developers of all skill levels for over a decade to create games for the web.',
-      wordLength3: 92,
+        'Phaser is a popular open source HTML5 game framework that allows developers of all skill levels to create fun and fast games for both desktop and mobile devices. With features such as drag and drop game creation, animation customization, and physics body adjustments, Phaser makes game development easier and faster for both artists and developers. It also offers a variety of resources, including a game development book, tutorials, and a community forum.',
+      wordLength3: 72,
     },
     {
       name: 'Slack',
-      slug: 'slack-07b73af8367311efb1e107a64ee89f73',
+      slug: 'slack-92b42288373b11ef9763ddb3e3cca647',
       image: '/images/letters_placeholder/default_S.png',
       category: [
         {
@@ -4938,8 +4759,144 @@ const data2 = {
       hasCert: false,
       url: 'https://slack.com/',
       description:
-        'Slack is a productivity platform that allows teams to communicate and collaborate more efficiently than email. It offers features such as organizing tools in one place, automating routine tasks, and flexible communication options like chat, audio and video clips, and live huddles. The platform also includes channels for organized team communication and can be used by teams of any size, from small businesses to large enterprises. 85% of users report positive experiences with Slack.',
-      wordLength3: 74,
+        "Slack is a productivity platform that offers a faster, more organized, and secure way to communicate with your team compared to email. It allows you to work flexibly and efficiently by bringing all your tools and favorite apps into one place. With the power of generative AI, you can automate routine tasks and simplify your workflow. Slack also offers flexible communication options such as chat, audio and video calls, and live huddles. The platform's channels feature allows for easy collaboration across departments, offices, time zones, and even other companies. It is trusted by teams of all sizes, including some of the world's biggest companies.",
+      wordLength3: 104,
+    },
+    {
+      name: 'Monogame',
+      slug: 'monogame-93e86b46373b11ef9763ddb3e3cca647',
+      image: '/images/letters_placeholder/default_M.png',
+      category: [
+        {
+          label: 'Other',
+          value: 'other',
+        },
+      ],
+      techStack: [
+        {
+          label: 'C#',
+          value: 'c-sharp',
+        },
+      ],
+      type: [
+        {
+          label: 'Coding Game',
+          value: 'coding-game',
+        },
+      ],
+      cost: 'Free',
+      hasCert: false,
+      url: 'https://monogame.net/',
+      description:
+        'MonoGame is a powerful framework that allows you to create cross-platform games. It supports multiple platforms, including desktop, mobile, and consoles. With MonoGame, you can write modern and reliable game code using your preferred editor, such as Visual Studio or JetBrains Rider. It is also open-source, giving you the ability to make changes and even port to new platforms.',
+      wordLength3: 59,
+    },
+    {
+      name: 'Repl',
+      slug: 'repl-94c9382e373b11ef9763ddb3e3cca647',
+      image: '/images/letters_placeholder/default_R.png',
+      category: [
+        {
+          label: 'Software Development',
+          value: 'software-development',
+        },
+        {
+          label: 'Software Development',
+          value: 'software-development',
+        },
+        {
+          label: 'UI Design',
+          value: 'ui-design',
+        },
+      ],
+      techStack: [
+        {
+          label: 'R',
+          value: 'r',
+        },
+      ],
+      type: [
+        {
+          label: 'Other',
+          value: 'other',
+        },
+      ],
+      cost: 'Free',
+      hasCert: false,
+      url: 'https://replit.com/',
+      description:
+        'Description: Replit is an AI-powered software development and deployment platform that allows users to build, share, and ship software quickly and for free. It offers step-by-step guides for using AI models, building chatbots, and launching websites. Users can create and deploy websites, automations, internal tools, and data pipes in any programming language without the need for extra tools. Replit also offers a single cloud workspace with built-in AI. It has been used by companies such as SUPERAGENT.SH and Weights and Biases for prototyping and collaboration on codebases.',
+      wordLength3: 87,
+    },
+    {
+      name: 'Lifetechpsych',
+      slug: 'lifetechpsych-95f27576373b11ef9763ddb3e3cca647',
+      image: '/images/letters_placeholder/default_L.png',
+      category: [
+        {
+          label: 'Other',
+          value: 'other',
+        },
+      ],
+      techStack: [
+        {
+          label: 'Go',
+          value: 'go',
+        },
+      ],
+      type: [
+        {
+          label: 'Text-Based',
+          value: 'text-based',
+        },
+        {
+          label: 'Hands-On Practice',
+          value: 'hands-on-practice',
+        },
+        {
+          label: 'Project-Based',
+          value: 'project-based',
+        },
+        {
+          label: 'Coding Practice',
+          value: 'coding-practice',
+        },
+      ],
+      cost: 'Free',
+      hasCert: false,
+      url: 'https://lifetechpsych.com/',
+      description:
+        'LifeTechPsych is a learning hub that focuses on helping new and junior developers build mastery and land jobs. They provide tips from books, research, and over 10 years of coding experience. Their philosophy is to save time and avoid trial and error by reading for just 10 minutes. They also offer a free dev cheatsheet. Their latest notes cover topics such as going from beginner to intermediate programmer, choosing between freeCodeCamp and The Odin Project, and the importance of math in coding. They also share personal experiences and advice, such as what they wish they knew about programming after 11 years and how long it takes to learn c++. They provide a list of the best places to learn coding for free and a productivity guide to help developers get',
+      wordLength3: 130,
+    },
+    {
+      name: 'Pygame',
+      slug: 'pygame-9759e778373b11ef9763ddb3e3cca647',
+      image: '/images/letters_placeholder/default_P.png',
+      category: [
+        {
+          label: 'Other',
+          value: 'other',
+        },
+      ],
+      techStack: [
+        {
+          label: 'Python',
+          value: 'python',
+        },
+      ],
+      type: [
+        {
+          label: 'Coding Game',
+          value: 'coding-game',
+        },
+      ],
+      cost: 'Free/Paid',
+      hasCert: false,
+      url: 'https://www.pygame.org/news',
+      description:
+        'Pygame is a popular Python library used for creating games. The latest version, pygame 2.6.0, was released on June 25, 2024. It includes bug fixes and improvements. Previous versions, such as pygame 2.5.2 and 2.5.1, also had bug fixes and new features. Pygame 2.4.0, released on May 6, 2023, was used in various game jams. To stay updated, you can install the latest version using pip and read the release notes for more information. If you encounter any issues, you can report them on the pygame GitHub page.',
+      wordLength3: 88,
     },
   ],
 };
