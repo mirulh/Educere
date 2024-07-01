@@ -202,7 +202,7 @@ export default function ContentScreen() {
               <div className="contentCategory mt-3 mb-5">
                 {content.category.map((c, index) => (
                   <Link key={index} to={`/search?category=${c.value}`}>
-                    <Badge pill className="me-2">
+                    <Badge bg="success" pill className="me-2">
                       {c.label}
                     </Badge>
                   </Link>
@@ -226,7 +226,7 @@ export default function ContentScreen() {
                   <div className="mb-5">
                     {content.type.map((t, index) => (
                       <Link key={index} to={`/search?type=${t.value}`}>
-                        <Badge bg="success" pill className="me-2">
+                        <Badge bg="primary" pill className="me-2">
                           {t.label}
                         </Badge>
                       </Link>
