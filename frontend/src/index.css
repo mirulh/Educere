@@ -686,11 +686,13 @@ input[type='radio'] {
 /*  */
 
 .box-footer {
+  padding: 1rem;
   min-height: 5vh;
   font-size: 1rem;
-  display: flex;
+  /* display: flex; */
   justify-content: center;
-  align-items: flex-end;
+  text-align: center;
+  /* align-items: flex-end; */
 }
 
 .empty-box {

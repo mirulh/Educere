@@ -110,6 +110,18 @@ function App() {
       </main>
       <footer>
         <div className="box-footer">
+          <div>
+            A{' '}
+            <a
+              href="https://mirulh.github.io/portfolio-mirulh/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="link-info"
+            >
+              mirulh
+            </a>{' '}
+            production
+          </div>
           <div>All rights reserved</div>
         </div>
       </footer>
