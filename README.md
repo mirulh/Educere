@@ -54,7 +54,7 @@ User can filter contents by 5 filter options Subjects, Technologies, Types, Cost
 
 User can view more details of a content in the content page
 
-![Alt text](pics/ContentsPage.png)
+![Alt text](pics/ContentPage.png)
 
 ### 3. Save/Bookmark Page
 
