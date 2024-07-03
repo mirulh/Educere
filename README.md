@@ -46,12 +46,24 @@ The user can search contents by name or filter options
 
 2.
 
-![Alt text](pics/Filter1.png)
-
-![Alt text](pics/Filter2.png)
+![Alt text](pics/Filters.png)
 
 ![Alt text](pics/SavedPage.png)
 
 ![Alt text](pics/ContentPage.png)
 
 ![Alt text](pics/SubmissionPage.png)
+
+![Alt text](pics/Dashboard1.png)
+
+![Alt text](pics/Dashboard2.png)
+
+![Alt text](pics/Dashboard3.png)
+
+![Alt text](pics/UsersPage.png)
+
+![Alt text](pics/SignupPage.png)
+
+![Alt text](pics/SigninPage.png)
+
+![Alt text](pics/ProfilePage.png)
