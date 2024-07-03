@@ -48,7 +48,7 @@ The user can search contents by name or filter options
 
 ![Alt text](pics/Filters.png)
 
-![Alt text](pics/SavedPage.png)
+![Alt text](pics/SavePage.png)
 
 ![Alt text](pics/ContentPage.png)
 
