@@ -60,6 +60,10 @@ The user can search contents by name or filter options
 
 ![Alt text](pics/Dashboard3.png)
 
+![Alt text](pics/ContentsPage.png)
+
+![Alt text](pics/SubmissionPage.png)
+
 ![Alt text](pics/UsersPage.png)
 
 ![Alt text](pics/SignupPage.png)
