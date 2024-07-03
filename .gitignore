@@ -13,7 +13,7 @@ dist
 dist-ssr
 *.local
 backup_urls.js
-Data_Contents.js
+# Data_Contents.js
 
 # Editor directories and files
 .vscode/*

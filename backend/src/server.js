@@ -2,12 +2,13 @@ import express from 'express';
 import data from '../Data_Users.js';
 import dotenv from 'dotenv';
 import mongoose from 'mongoose';
-import seedRouter from '../routes/seedRoutes.js';
 import userRouter from '../routes/userRoutes.js';
 import contentRouter from '../routes/contentRoutes.js';
 import uploadRouter from '../routes/uploadRoutes.js';
 import submissionRouter from '../routes/submissionRoutes.js';
 import dashboardRouter from '../routes/dashboardRoutes.js';
+import seedRouter from '../routes/seedRoutes.js';
+import seedRouter2 from '../routes/seedRoutes2.js';
 
 // !IMPORTANT for structuring JSON on POST API calls. DON'T leave it out!!
 const app = express();
@@ -60,3 +61,5 @@ app.listen(port, () => {
 // test seed data to the mongoDB database
 
 app.use('/api/seed', seedRouter);
+
+app.use('/api/seed2', seedRouter2);

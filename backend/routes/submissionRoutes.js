@@ -35,7 +35,7 @@ submissionRouter.post(
   })
 );
 
-const PAGE_SIZE_SUBMISSION = 100;
+const PAGE_SIZE_SUBMISSION = 10;
 
 submissionRouter.get(
   '/admin',
