@@ -10,14 +10,14 @@ Educere web application system is a repository of 100+ educational resources of 
 
 2. Add the database path inside .env file
 
-### Setup the project in by installing dependencies
+### Setup the project by installing dependencies
 
 3. Clone/download the project in your local environment
 
-4. Navigate to the frontend directory
+4. Navigate to the frontend directory and
    run `npm install` to install all frontend dependencies
 
-5. Navigate to the backend directory
+5. Navigate to the backend directory and
    run `npm install` to install all backend dependencies
 
 ### Start the project
@@ -40,6 +40,18 @@ Educere web application system is a repository of 100+ educational resources of 
 
 1. Search and Filter Interface
 
-The user would be able to search learning contents by name or filter options
+The user can search contents by name or filter options
 
-![Alt text](pics/ProfilePage.png)
+![Alt text](pics/SearchPage.png)
+
+2.
+
+![Alt text](pics/Filter1.png)
+
+![Alt text](pics/Filter2.png)
+
+![Alt text](pics/SavedPage.png)
+
+![Alt text](pics/ContentPage.png)
+
+![Alt text](pics/SubmissionPage.png)
