@@ -1,6 +1,6 @@
 # Educere
 
-Educere web application system is a repository of 100+ educational resources of CS and IT-based to help users in finding the perfect materials that suits their needs in a streamline way
+Educere web application system is a repository of 100+ educational resources of CS and IT-based to help users in finding the perfect materials that suits their needs in a streamline way. The contents are generated from Educere Scrapper Python script (see the other project [here](https://github.com/mirulh/Educere_Scrapper)).
 
 ## How to install
 
