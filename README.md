@@ -66,7 +66,7 @@ User can view all saves in the saved page
 
 ### 4. Submission Page
 
-User can contribute to expand the website's content repository by submitting URL to a learning resource. All submissions will be viewed and approved/rejected by Admin before being add to the website as content
+User can contribute to the website's content repository by submitting URLs to learning resources. All submissions will be reviewed and approved or rejected by the Admin before being added to the website as content
 
 ![Alt text](interfaces/SubmissionPage.png)
 
