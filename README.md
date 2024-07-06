@@ -64,25 +64,31 @@ User can view all saves in the saved page
 
 ![Alt text](interfaces/SavePage.png)
 
-### 4. Content Dashboard
+### 4. Submission Page
+
+User can contribute to expand the website's content repository by submitting URL to a learning resource. All submissions will be viewed and approved/rejected by Admin before being add to the website as content
+
+![Alt text](interfaces/SubmissionPage.png)
+
+### 5. Content Dashboard
 
 Admin can manage contents in the content dashboard. Action features include create/add content, edit content, and delete content
 
 ![Alt text](interfaces/ContentDashboard.png)
 
-### 5. Submission Dashboard
+### 6. Submission Dashboard
 
 Admin can manage user submission in the submission dashboard. Actions features include approve and reject button to accept or delete user's submission
 
-![Alt text](interfaces/SubmissionPage.png)
+![Alt text](interfaces/SubmissionDashboard.png)
 
-### 6. Content Dashboard
+### 7. User Dashboard
 
 Admin can manage user's in the user dashboard. Actions include edit and delete user
 
 ![Alt text](interfaces/UsersPage.png)
 
-### 7. Summary Dashboard
+### 8. Summary Dashboard
 
 This page contain the summaries of all contents. It shows the total numbers of contents, users, and admin available in the system. Additionally, admin can view the percentages of content's filter in pie chart
 
@@ -92,25 +98,25 @@ This page contain the summaries of all contents. It shows the total numbers of c
 
 ![Alt text](interfaces/Dashboard3.png)
 
-### 8. Submission Page
+### 9. Submission Page
 
 User can contribute in expanding the website's contents by sharing a learning resource link and get admin's approval
 
 ![Alt text](interfaces/SubmissionPage.png)
 
-### 9. Content Dashboard
+### 10. Content Dashboard
 
 Signup page
 
 ![Alt text](interfaces/SignupPage.png)
 
-### 10. Content Dashboard
+### 11. Content Dashboard
 
 Signin page
 
 ![Alt text](interfaces/SigninPage.png)
 
-### 11. Content Dashboard
+### 12. Content Dashboard
 
 User profile page
 
