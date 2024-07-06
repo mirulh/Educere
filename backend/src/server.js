@@ -28,7 +28,7 @@ dotenv.config();
 mongoose
   .connect(process.env.MONGODB_URI)
   .then(() => {
-    console.log('connected to Educere db');
+    console.log('connected to EducereDB');
   })
   .catch((err) => {
     console.log(err.message);
