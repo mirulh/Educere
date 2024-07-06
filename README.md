@@ -6,6 +6,8 @@ Educere web application system is a repository of 100+ educational resources of 
 
 ### Setup the MongoDB database
 
+/
+
 1. Setup MongoDB database locally or using Atlas
 
 2. Add the database path inside .env file
