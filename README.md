@@ -44,74 +44,74 @@ Educere web application system is a repository of 100+ educational resources of 
 
 User can search contents by name or filter options at the side
 
-![Alt text](pics/SearchPage.png)
+![Alt text](interfaces/SearchPage.png)
 
 ### 2. Filter Options
 
 User can filter contents by 5 filter options Subjects, Technologies, Types, Costs, and Average Reviews
 
-![Alt text](pics/Filters.png)
+![Alt text](interfaces/Filters.png)
 
 ### 3. Content Page
 
 User can view more details of a content in the content page
 
-![Alt text](pics/ContentPage.png)
+![Alt text](interfaces/ContentPage.png)
 
 ### 3. Save/Bookmark Page
 
 User can view all saves in the saved page
 
-![Alt text](pics/SavePage.png)
+![Alt text](interfaces/SavePage.png)
 
 ### 4. Content Dashboard
 
 Admin can manage contents in the content dashboard. Action features include create/add content, edit content, and delete content
 
-![Alt text](pics/ContentDashboard.png)
+![Alt text](interfaces/ContentDashboard.png)
 
 ### 5. Submission Dashboard
 
 Admin can manage user submission in the submission dashboard. Actions features include approve and reject button to accept or delete user's submission
 
-![Alt text](pics/SubmissionPage.png)
+![Alt text](interfaces/SubmissionPage.png)
 
 ### 6. Content Dashboard
 
 Admin can manage user's in the user dashboard. Actions include edit and delete user
 
-![Alt text](pics/UsersPage.png)
+![Alt text](interfaces/UsersPage.png)
 
 ### 7. Summary Dashboard
 
 This page contain the summaries of all contents. It shows the total numbers of contents, users, and admin available in the system. Additionally, admin can view the percentages of content's filter in pie chart
 
-![Alt text](pics/Dashboard1.png)
+![Alt text](interfaces/Dashboard1.png)
 
-![Alt text](pics/Dashboard2.png)
+![Alt text](interfaces/Dashboard2.png)
 
-![Alt text](pics/Dashboard3.png)
+![Alt text](interfaces/Dashboard3.png)
 
 ### 8. Submission Page
 
 User can contribute in expanding the website's contents by sharing a learning resource link and get admin's approval
 
-![Alt text](pics/SubmissionPage.png)
+![Alt text](interfaces/SubmissionPage.png)
 
 ### 9. Content Dashboard
 
 Signup page
 
-![Alt text](pics/SignupPage.png)
+![Alt text](interfaces/SignupPage.png)
 
 ### 10. Content Dashboard
 
 Signin page
 
-![Alt text](pics/SigninPage.png)
+![Alt text](interfaces/SigninPage.png)
 
 ### 11. Content Dashboard
 
 User profile page
 
-![Alt text](pics/ProfilePage.png)
+![Alt text](interfaces/ProfilePage.png)
