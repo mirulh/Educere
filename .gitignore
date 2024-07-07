@@ -13,7 +13,7 @@ dist
 dist-ssr
 *.local
 backup_urls.js
-backend/Data_Contents.js
+Data_Contents.js
 Data_Submissions.js
 Data_Users.js
 seedRoutes.js

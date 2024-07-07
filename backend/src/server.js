@@ -7,6 +7,7 @@ import contentRouter from '../routes/contentRoutes.js';
 import uploadRouter from '../routes/uploadRoutes.js';
 import submissionRouter from '../routes/submissionRoutes.js';
 import dashboardRouter from '../routes/dashboardRoutes.js';
+import path from 'path';
 import seedRouter from '../routes/seedRoutes.js';
 import seedRouter2 from '../routes/seedRoutes2.js';
 
@@ -60,6 +61,13 @@ app.listen(port, () => {
 
 // test seed data to the mongoDB database
 
-app.use('/api/seed', seedRouter);
+// app.use('/api/seed', seedRouter);
+// app.use('/api/seed2', seedRouter2);
 
-app.use('/api/seed2', seedRouter2);
+// middleware for hosting
+const __dirname = path.resolve();
+app.use(express.static(path.join(__dirname, '/frontend/dist')));
+
+app.get('*', (req, res) =>
+  res.sendFile(path.join(__dirname, '/fronted/dist/index.html'))
+);

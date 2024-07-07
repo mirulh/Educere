@@ -1,0 +1,13 @@
+{
+  "name": "educere",
+  "version": "1.0.0",
+  "description": "Educere web application system is a repository of 100+ educational resources of CS and IT-based to help users in finding the perfect materials that suits their needs in a streamline way. The contents are generated from Educere Scrapper Python script (see the other project [here](https://github.com/mirulh/Educere_Scrapper)).",
+  "main": "backup_urls.js",
+  "scripts": {
+    "build": "cd backend && npm install && cd ../frontend && npm install && npm run build",
+    "start": "node backend/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
