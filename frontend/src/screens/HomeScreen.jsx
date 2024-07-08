@@ -113,7 +113,7 @@ export default function HomeScreen() {
           <Col md={3} className="subjectCard">
             <h4 className="verticalTitle">Subject Areas</h4>
             <div className="cardContainer">
-              <img className="cardNavImage" src="/images/splash2.png" alt="" />
+              <img className="cardNavImage" src="/images/splash3.png" alt="" />
               <div className="cardTags">
                 {categories.map((c, index) => (
                   <Link key={index} to={`/search?category=${c.value}`}>
@@ -128,7 +128,7 @@ export default function HomeScreen() {
           <Col md={3} className="techCard">
             <h4 className="verticalTitle">Technologies</h4>
             <div className="cardContainer">
-              <img className="cardNavImage" src="/images/splash3.png" alt="" />
+              <img className="cardNavImage" src="/images/splash2.png" alt="" />
               <div className="cardTags">
                 {techStacks.map((ts, index) => (
                   <Link key={index} to={`/search?techStack=${ts.value}`}>
