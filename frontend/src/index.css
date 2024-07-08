@@ -454,7 +454,6 @@ select:hover {
   max-height: 65rem;
   max-width: 85rem;
   overflow: scroll;
-  color: #540909;
 }
 
 /* HomeScreen */
@@ -490,10 +489,6 @@ select:hover {
 }
 
 /* SubmissionScreen */
-
-.submissionContainer {
-  max-width: 1300px;
-}
 
 .selectWidth {
   width: 150px;

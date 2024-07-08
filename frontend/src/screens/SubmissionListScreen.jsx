@@ -154,7 +154,7 @@ export default function SubmissionListScreen() {
       <Helmet>
         <title>Submissions</title>
       </Helmet>
-      <Container className="submissionContainer">
+      <Container>
         <h1 className="mt-5 mb-5">Submission List</h1>
         {loadingDelete && <LoadingBox></LoadingBox>}
         {loading ? (
@@ -162,7 +162,7 @@ export default function SubmissionListScreen() {
         ) : error ? (
           <MessageBox variant="danger">{error}</MessageBox>
         ) : (
-          <>
+          <div className="tableContent">
             <Table striped bordered hover>
               <thead>
                 <tr className="text-center">
@@ -251,21 +251,21 @@ export default function SubmissionListScreen() {
                 ))}
               </tbody>
             </Table>
-            <div className="mb-5">
-              {[...Array(pages).keys()].map((x) => (
-                <Link
-                  key={x + 1}
-                  className={
-                    x + 1 === Number(page) ? 'btn text-border border' : 'btn'
-                  }
-                  to={`/admin/submissions?page=${x + 1}`}
-                >
-                  {x + 1}
-                </Link>
-              ))}
-            </div>
-          </>
+          </div>
         )}
+        <div className="mb-5">
+          {[...Array(pages).keys()].map((x) => (
+            <Link
+              key={x + 1}
+              className={
+                x + 1 === Number(page) ? 'btn text-border border' : 'btn'
+              }
+              to={`/admin/submissions?page=${x + 1}`}
+            >
+              {x + 1}
+            </Link>
+          ))}
+        </div>
       </Container>
     </div>
   );
