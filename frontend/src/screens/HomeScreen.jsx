@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useReducer } from 'react';
+import React, { useContext, useEffect, useReducer, useState } from 'react';
 import Container from 'react-bootstrap/Container';
 import { Helmet } from 'react-helmet-async';
 import Button from 'react-bootstrap/Button';
@@ -12,6 +12,7 @@ import MessageBox from '../components/MessageBox';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Content from '../components/Content';
+import { getError } from '../../utils_frontend';
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -53,18 +54,22 @@ export default function HomeScreen() {
     fetchSaves();
   }, [contextDispatch, userInfo]);
 
+  const [categories, setCategories] = useState([]);
+  const [types, setTypes] = useState([]);
+  const [techStacks, setTechStacks] = useState([]);
+
   useEffect(() => {
-    const fetchData = async () => {
-      dispatch({ type: 'FETCH_REQUEST' });
+    const fetchCategories = async () => {
       try {
-        const { data } = await axios.get('/api/contents');
-        dispatch({ type: 'FETCH_SUCCESS', payload: data });
-        console.log(data);
+        const { data } = await axios.get(`/api/contents/filters`);
+        setCategories(data.categories);
+        setTypes(data.types);
+        setTechStacks(data.techStacks);
       } catch (err) {
-        dispatch({ type: 'FETCH_FAIL', payload: err.message });
+        toast.error(getError(err));
       }
     };
-    fetchData();
+    fetchCategories();
   }, []);
 
   return (
@@ -75,7 +80,7 @@ export default function HomeScreen() {
       </Helmet>
       <div className="box-banner bannerContainer">
         <div className="bannerContent">
-          <img src="/images/logo.png" />
+          <img className="bannerImage" src="/images/logo.png" />
           <div className="bannerTextButton">
             <h1>Discover The Right Learning Resources For you</h1>
             <Link to="/search">
@@ -87,30 +92,90 @@ export default function HomeScreen() {
         </div>
       </div>
 
-      <Container className="w-75 bufferHeight">
-        {loading ? (
-          <LoadingBox></LoadingBox>
-        ) : error ? (
-          <MessageBox></MessageBox>
-        ) : (
-          <Row>
-            {contents.map((content) => (
-              <Col
-                key={content._id}
-                sm={12}
-                md={6}
-                lg={4}
-                xl={3}
-                className="mb-2"
-              >
-                {' '}
-                <Content content={content}></Content>
-              </Col>
-            ))}
-          </Row>
-        )}
+      <Container>
+        <Row className="splashContainer">
+          <Col md={7} className="splashDetailsContainer">
+            <h1 className="splashTitle">Empowering Your Tech Journey</h1>
+            <div className="splashDescription">
+              Discover, Review, Contribute. Streamline your learning journey in
+              Computer Science and Information Technology with our curated
+              resources.{' '}
+            </div>
+          </Col>
+          <Col md={5} className="splashImageContainer">
+            <img
+              className="splashImage"
+              src="../public/images/splash.png"
+              alt=""
+            />
+          </Col>
+        </Row>
+
+        <Row className="cardFilters">
+          <h4 className="text-light">Navigate by Tags</h4>
+
+          <Col md={3} className="subjectCard">
+            <h4 className="verticalTitle">Subject Areas</h4>
+            <div className="cardContainer">
+              <img
+                className="cardNavImage"
+                src="../public/images/splash2.png"
+                alt=""
+              />
+              <div className="cardTags">
+                {categories.map((c, index) => (
+                  <Link key={index} to={`/search?category=${c.value}`}>
+                    <Badge bg="success" text="dark" pill className="me-2">
+                      {c.label}
+                    </Badge>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </Col>
+          <Col md={3} className="techCard">
+            <h4 className="verticalTitle">Technologies</h4>
+            <div className="cardContainer">
+              <img
+                className="cardNavImage"
+                src="../public/images/splash3.png"
+                alt=""
+              />
+              <div className="cardTags">
+                {techStacks.map((ts, index) => (
+                  <Link key={index} to={`/search?techStack=${ts.value}`}>
+                    <Badge bg="warning" text="dark" pill className="me-2">
+                      {ts.label}
+                    </Badge>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </Col>
+          <Col md={3} className="typeCard">
+            <h4 className="verticalTitle">Content Types</h4>
+            <div className="cardContainer">
+              <img
+                className="cardNavImage"
+                src="../public/images/splash4.png"
+                alt=""
+              />
+              <div className="cardTags">
+                {types.map((t, index) => (
+                  <Link key={index} to={`/search?type=${t.value}`}>
+                    <Badge bg="primary" text="dark" pill className="me-2">
+                      {t.label}
+                    </Badge>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </Col>
+        </Row>
       </Container>
+
       <div className="box-banner submission-align">
+        <h4>Help us Expand?</h4>
         <Link to="/submit-content">
           <Button className="submission-button">Submit New Content</Button>
         </Link>

@@ -218,7 +218,7 @@ export default function SearchScreen() {
       </Helmet>
       <div className="box-banner bannerContainer">
         <div className="bannerContent">
-          <img src="/images/logo.png" />
+          <img className="bannerImage" src="/images/logo.png" />
           <div className="bannerTextButton">
             <h1>Help us Expand by Contributing?</h1>
             <Link to="/submit-content">
