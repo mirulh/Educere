@@ -117,7 +117,7 @@ export default function UserListScreen() {
         ) : error ? (
           <MessageBox variant="danger">{error}</MessageBox>
         ) : (
-          <>
+          <div className="tableContent">
             <Table striped bordered hover>
               <thead>
                 <tr>
@@ -158,21 +158,21 @@ export default function UserListScreen() {
                 ))}
               </tbody>
             </Table>
-            <div className="mb-5">
-              {[...Array(pages).keys()].map((x) => (
-                <Link
-                  className={
-                    x + 1 === Number(page) ? 'btn text-bold border' : 'btn'
-                  }
-                  to={`/admin/users?page=${x + 1}`}
-                  key={x + 1}
-                >
-                  {x + 1}
-                </Link>
-              ))}
-            </div>
-          </>
+          </div>
         )}
+        <div className="mb-5">
+          {[...Array(pages).keys()].map((x) => (
+            <Link
+              className={
+                x + 1 === Number(page) ? 'btn text-bold border' : 'btn'
+              }
+              to={`/admin/users?page=${x + 1}`}
+              key={x + 1}
+            >
+              {x + 1}
+            </Link>
+          ))}
+        </div>
       </Container>
     </div>
   );
