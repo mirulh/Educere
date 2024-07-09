@@ -238,9 +238,11 @@ export default function ContentScreen() {
                   <div className="mb-3">
                     <span>
                       Certification: &nbsp;
-                      <Badge bg="secondary">
-                        {content.hasCert == true ? 'Yes' : 'No'}
-                      </Badge>{' '}
+                      <Link to={`/search?hasCert=${content.hasCert}`}>
+                        <Badge bg="secondary">
+                          {content.hasCert == true ? 'Yes' : 'No'}
+                        </Badge>{' '}
+                      </Link>
                     </span>
                   </div>
                   <div>

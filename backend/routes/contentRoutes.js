@@ -24,6 +24,7 @@ contentRouter.get(
     const category = query.category || '';
     const techStack = query.techStack || '';
     const cost = query.cost || '';
+    const hasCert = query.hasCert || '';
     const type = query.type || '';
     const rating = query.rating || '';
     const order = query.order || '';
@@ -64,6 +65,9 @@ contentRouter.get(
     // cost
     const costFilter = cost && cost !== 'all' ? { cost } : {};
 
+    // hasCert
+    const certFilter = hasCert && hasCert !== 'all' ? { hasCert } : {};
+
     // rating
     const ratingFilter =
       rating && rating !== 'all'
@@ -91,6 +95,7 @@ contentRouter.get(
       ...categoryFilter,
       ...techStackFilter,
       ...costFilter,
+      ...certFilter,
       ...typeFilter,
       ...ratingFilter,
     })
@@ -106,6 +111,7 @@ contentRouter.get(
       ...categoryFilter,
       ...techStackFilter,
       ...costFilter,
+      ...certFilter,
       ...typeFilter,
       ...ratingFilter,
     });

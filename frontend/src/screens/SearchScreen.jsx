@@ -72,6 +72,7 @@ export default function SearchScreen() {
   const category = searchParams.get('category') || 'all';
   const techStack = searchParams.get('techStack') || 'all';
   const cost = searchParams.get('cost') || 'all';
+  const hasCert = searchParams.get('hasCert') || 'all';
   const type = searchParams.get('type') || 'all';
   const rating = searchParams.get('rating') || 'all';
   const order = searchParams.get('order') || 'newest';
@@ -90,7 +91,7 @@ export default function SearchScreen() {
     const fetchData = async () => {
       try {
         const { data } = await axios.get(
-          `/api/contents/search?searchTerm=${searchTerm}&category=${category}&techStack=${techStack}&cost=${cost}&type=${type}&rating=${rating}&order=${order}&page=${page}`
+          `/api/contents/search?searchTerm=${searchTerm}&category=${category}&techStack=${techStack}&cost=${cost}&hasCert=${hasCert}&type=${type}&rating=${rating}&order=${order}&page=${page}`
         );
         dispatch({ type: 'FETCH_SUCCESS', payload: data });
         // console.log('skipVal: ', data.skipValue);
@@ -102,7 +103,17 @@ export default function SearchScreen() {
       }
     };
     fetchData();
-  }, [category, cost, order, page, searchTerm, rating, type, techStack]);
+  }, [
+    category,
+    cost,
+    hasCert,
+    order,
+    page,
+    searchTerm,
+    rating,
+    type,
+    techStack,
+  ]);
 
   // console.log('Contents', contents);
   // console.log('Page | Pages | countContents');
@@ -133,12 +144,13 @@ export default function SearchScreen() {
     const filterCategory = filter.category || category;
     const filterTechStack = filter.techStack || techStack;
     const filterCost = filter.cost || cost;
+    const filterCert = filter.hasCert || hasCert;
     const filterType = filter.type || type;
     const filterRating = filter.rating || rating;
     const filterOrder = filter.order || order;
     const filterPage = filter.page || page;
 
-    return `/search?searchTerm=${filterSearchTerm}&category=${filterCategory}&techStack=${filterTechStack}&cost=${filterCost}&type=${filterType}&rating=${filterRating}&order=${filterOrder}&page=${filterPage}`;
+    return `/search?searchTerm=${filterSearchTerm}&category=${filterCategory}&techStack=${filterTechStack}&cost=${filterCost}&hasCert=${filterCert}&type=${filterType}&rating=${filterRating}&order=${filterOrder}&page=${filterPage}`;
   };
 
   const resetSearch = () => {
@@ -301,6 +313,8 @@ export default function SearchScreen() {
                         {category !== 'all' && ' | ' + category}
                         {techStack !== 'all' && ' | ' + techStack}
                         {cost !== 'all' && ' | ' + cost}
+                        {hasCert !== 'all' &&
+                          ' | ' + 'Provide Certification: ' + hasCert}
                         {type !== 'all' && ' | ' + type}
                         {rating !== 'all' && ' | Rating ' + rating + ' & up'}
                         {/* Button Condition */}
@@ -308,6 +322,7 @@ export default function SearchScreen() {
                         category !== 'all' ||
                         techStack !== 'all' ||
                         cost !== 'all' ||
+                        hasCert !== 'all' ||
                         type !== 'all' ||
                         rating !== 'all' ? (
                           <Button
