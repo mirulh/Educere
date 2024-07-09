@@ -110,7 +110,7 @@ export default function HomeScreen() {
         <Row className="cardFilters">
           <h4 className="text-light">Navigate by Tags</h4>
 
-          <Col md={3} className="subjectCard">
+          <Col xl={3} lg={5} md={12} sm={12} className="subjectCard">
             <h4 className="verticalTitle">Subject Areas</h4>
             <div className="cardContainer">
               <img className="cardNavImage" src="/images/splash3.png" alt="" />
@@ -125,7 +125,7 @@ export default function HomeScreen() {
               </div>
             </div>
           </Col>
-          <Col md={3} className="techCard">
+          <Col xl={3} lg={5} md={12} sm={12} className="techCard">
             <h4 className="verticalTitle">Technologies</h4>
             <div className="cardContainer">
               <img className="cardNavImage" src="/images/splash2.png" alt="" />
@@ -140,7 +140,7 @@ export default function HomeScreen() {
               </div>
             </div>
           </Col>
-          <Col md={3} className="typeCard">
+          <Col xl={3} lg={5} md={12} sm={12} className="typeCard">
             <h4 className="verticalTitle">Content Types</h4>
             <div className="cardContainer">
               <img className="cardNavImage" src="/images/splash4.png" alt="" />

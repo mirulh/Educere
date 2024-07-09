@@ -303,8 +303,8 @@ When you set an element's height using vh, you're specifying a percentage of the
   body::before {
     content: 'XXL';
   }
-}
- */
+} */
+
 /* SearchScreen */
 
 .box-content {
@@ -523,7 +523,7 @@ select:hover {
 .splashImageContainer {
   padding: 2rem;
   /* border: 1px solid red; */
-  display: flex;
+  /* display: flex; */
   flex-wrap: wrap;
   justify-content: center;
 }
@@ -566,8 +566,8 @@ select:hover {
   width: 20rem;
   max-width: 100%;
   height: auto;
-  align-items: center;
   padding: 1rem;
+  align-self: center;
 }
 
 .cardTags {
