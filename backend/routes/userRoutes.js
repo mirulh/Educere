@@ -13,7 +13,7 @@ import jwt from 'jsonwebtoken';
 
 const userRouter = express.Router();
 
-const PAGE_SIZE_USER = 2;
+const PAGE_SIZE_USER = 10;
 
 userRouter.get(
   '/admin',
