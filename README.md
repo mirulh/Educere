@@ -104,20 +104,14 @@ User can contribute in expanding the website's contents by sharing a learning re
 
 ![Alt text](interfaces/SubmissionPage.png)
 
-### 10. Content Dashboard
-
-Signup page
+### 10. Signup Page
 
 ![Alt text](interfaces/SignupPage.png)
 
-### 11. Content Dashboard
-
-Signin page
+### 11. Signin Page
 
 ![Alt text](interfaces/SigninPage.png)
 
-### 12. Content Dashboard
-
-User profile page
+### 12. User Profile Page
 
 ![Alt text](interfaces/ProfilePage.png)
