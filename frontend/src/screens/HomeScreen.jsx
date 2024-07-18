@@ -94,7 +94,7 @@ export default function HomeScreen() {
 
       <Container>
         <Row className="splashContainer">
-          <Col md={7} className="splashDetailsContainer">
+          <Col md={6} lg={7} className="splashDetailsContainer">
             <h1 className="splashTitle">Empowering Your Tech Journey</h1>
             <div className="splashDescription">
               Discover, Review, Contribute. Streamline your learning journey in
@@ -102,7 +102,7 @@ export default function HomeScreen() {
               resources.{' '}
             </div>
           </Col>
-          <Col md={5} className="splashImageContainer">
+          <Col md={6} lg={5} className="splashImageContainer">
             <img className="splashImage" src="/images/splash.png" alt="" />
           </Col>
         </Row>

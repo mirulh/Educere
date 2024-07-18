@@ -67,13 +67,13 @@ export default function SavedScreen() {
                 {saves.map((save, index) => (
                   <ListGroup.Item key={save._id} className="pt-3">
                     <Row>
-                      <Col md={1} className="mb-3">
+                      <Col md={1} lg={1} className="mb-3">
                         <Badge bg="dark">{index + 1}</Badge>
                       </Col>
-                      <Col md={5}>
+                      <Col md={5} lg={5}>
                         <Link to={`/content/${save.slug}`}>{save.name}</Link>
                       </Col>
-                      <Col md={5}>
+                      <Col md={4} lg={4}>
                         Visit website &nbsp;
                         <a
                           href={save.url}
@@ -83,7 +83,7 @@ export default function SavedScreen() {
                           <i className="fa-solid fa-arrow-up-right-from-square"></i>
                         </a>
                       </Col>
-                      <Col md={1} className="text-end">
+                      <Col md={2} lg={1} className="text-end">
                         <Button
                           onClick={() => removeFromSave(save)}
                           variant="light"
