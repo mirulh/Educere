@@ -150,6 +150,11 @@ export default function SearchScreen() {
     const filterOrder = filter.order || order;
     const filterPage = filter.page || page;
 
+    window.scrollTo({
+      top: 100,
+      left: 100,
+      behavior: 'auto',
+    });
     return `/search?searchTerm=${filterSearchTerm}&category=${filterCategory}&techStack=${filterTechStack}&cost=${filterCost}&hasCert=${filterCert}&type=${filterType}&rating=${filterRating}&order=${filterOrder}&page=${filterPage}`;
   };
 

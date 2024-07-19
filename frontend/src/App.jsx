@@ -10,6 +10,7 @@ import { useContext } from 'react';
 import { Store } from './Store';
 import SearchBox from './components/SearchBox';
 import Badge from 'react-bootstrap/Badge';
+import ScrollToTop from './ScrollToTop';
 
 function App() {
   const navigate = useNavigate();
@@ -104,6 +105,7 @@ function App() {
           {/* <div className="box-cover">Banner here</div> */}
           <Container fluid className="topContainer mt-0">
             <Outlet />
+            <ScrollToTop />
           </Container>
           {/* <div className="box-cover mb-5">submission</div> */}
         </div>

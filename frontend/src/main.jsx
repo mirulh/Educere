@@ -32,6 +32,7 @@ import SavedScreen from './screens/SavedScreen.jsx';
 import DashboardScreen from './screens/DashboardScreen.jsx';
 import ForgetPasswordScreen from './screens/ForgetPasswordScreen.jsx';
 import ResetPasswordScreen from './screens/ResetPasswordScreen.jsx';
+import ScrollToTop from './ScrollToTop.jsx';
 
 // axios.defaults.baseURL = 'http://localhost:5000';
 

@@ -105,6 +105,11 @@ export default function ContentScreen() {
       }
     };
     fetchData();
+    window.scrollTo({
+      top: 100,
+      left: 100,
+      behavior: 'auto',
+    });
   }, [slug]);
 
   const submitHandler = async (e) => {
