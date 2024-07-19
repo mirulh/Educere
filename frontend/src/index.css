@@ -265,7 +265,7 @@ When you set an element's height using vh, you're specifying a percentage of the
 /* HomeScreen */
 
 /* 575px and below */
-body::before {
+/* body::before {
   content: 'XS';
   color: red;
   font-size: 2rem;
@@ -281,7 +281,7 @@ body::before {
   }
 }
 
-@media (min-width: 768px) and (max-width: 992px) {
+@media (min-width: 768px) {
   body::before {
     content: 'MD';
   }
@@ -303,7 +303,7 @@ body::before {
   body::before {
     content: 'XXL';
   }
-}
+} */
 
 /* SearchScreen */
 
