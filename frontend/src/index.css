@@ -265,7 +265,7 @@ When you set an element's height using vh, you're specifying a percentage of the
 /* HomeScreen */
 
 /* 575px and below */
-/* body::before {
+body::before {
   content: 'XS';
   color: red;
   font-size: 2rem;
@@ -281,7 +281,7 @@ When you set an element's height using vh, you're specifying a percentage of the
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 768px) and (max-width: 992px) {
   body::before {
     content: 'MD';
   }
@@ -303,7 +303,7 @@ When you set an element's height using vh, you're specifying a percentage of the
   body::before {
     content: 'XXL';
   }
-} */
+}
 
 /* SearchScreen */
 
@@ -495,7 +495,7 @@ select:hover {
   background: linear-gradient(
     135deg,
     rgba(255, 255, 255, 0.05) 10.93%,
-    rgba(255, 255, 255, 0) 90%
+    rgba(255, 255, 255, 0.04) 90%
   );
   border-radius: 15px;
   margin: 2rem 1rem;
@@ -584,7 +584,7 @@ select:hover {
   background: linear-gradient(
     135deg,
     rgba(255, 255, 255, 0.05) 10.93%,
-    rgba(255, 255, 255, 0) 90%
+    rgba(255, 255, 255, 0.04) 90%
   );
   border-radius: 15px;
   height: 32rem;
@@ -597,7 +597,7 @@ select:hover {
   background: linear-gradient(
     135deg,
     rgba(255, 255, 255, 0.05) 10.93%,
-    rgba(255, 255, 255, 0) 90%
+    rgba(255, 255, 255, 0.04) 90%
   );
   border-radius: 15px;
   height: 32rem;
@@ -610,7 +610,7 @@ select:hover {
   background: linear-gradient(
     135deg,
     rgba(255, 255, 255, 0.05) 10.93%,
-    rgba(255, 255, 255, 0) 90%
+    rgba(255, 255, 255, 0.04) 90%
   );
   border-radius: 15px;
   height: 32rem;
@@ -828,4 +828,14 @@ input[type='radio'] {
 .empty-box {
   background-color: #0c0c0e;
   height: 5rem;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .splashDetailsContainer > .splashDescription {
+    width: 62vw;
+    margin-top: 6rem;
+  }
+  .splashImageContainer > .splashImage {
+    /* margin-top: 7rem; */
+  }
 }
