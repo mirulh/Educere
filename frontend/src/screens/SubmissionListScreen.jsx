@@ -74,7 +74,7 @@ export default function SubmissionListScreen() {
           }
         );
         dispatch({ type: 'FETCH_SUCCESS', payload: data });
-        console.log(data);
+        //console.log(data);
       } catch (err) {
         dispatch({ type: 'FETCH_FAIL', payload: getError(err) });
         // toast.error(getError(err));

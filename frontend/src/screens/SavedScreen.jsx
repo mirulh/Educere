@@ -23,8 +23,8 @@ export default function SavedScreen() {
     userSaves: { numSaves, saves },
   } = state;
 
-  console.log(numSaves);
-  console.log(saves);
+  //console.log(numSaves);
+  //console.log(saves);
 
   const removeFromSave = async (save) => {
     try {

@@ -77,7 +77,7 @@ export function CollapsibleRating({
     onRatingChange(selectedValue);
   };
 
-  console.log('rating', rating);
+  //console.log('rating', rating);
 
   return (
     <div className="dropdownFilter">

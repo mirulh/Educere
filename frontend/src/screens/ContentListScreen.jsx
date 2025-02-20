@@ -116,7 +116,7 @@ export default function ContentListScreen() {
         const { data } = await axios.delete(`/api/contents/${content._id}`, {
           headers: { Authorization: `Bearer ${userInfo.token}` },
         });
-        // console.log(data.message);
+        console.log(data.message);
         toast.success('content deleted successfully');
         dispatch({ type: 'DELETE_SUCCESS' });
       } catch (err) {
@@ -147,7 +147,7 @@ export default function ContentListScreen() {
     }
   };
 
-  console.log('contents', contents);
+  //console.log('contents', contents);
 
   return (
     <div>

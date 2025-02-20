@@ -13,7 +13,7 @@ export default function CollapsibleTechStack({
     onTechStackChange(selectedValue);
   };
 
-  console.log('techStack: ', techStack);
+  //console.log('techStack: ', techStack);
 
   return (
     <div className="dropdownFilter mb-3">

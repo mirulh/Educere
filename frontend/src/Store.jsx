@@ -33,7 +33,7 @@ export function StoreProvider(prop) {
 
   const value = { state, dispatch };
 
-  console.log('Current State', JSON.stringify(value, null, 2));
+  //console.log('Current State', JSON.stringify(value, null, 2));
 
   return <Store.Provider value={value}>{prop.children}</Store.Provider>;
 }

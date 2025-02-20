@@ -131,7 +131,7 @@ export default function SearchScreen() {
         setCosts(data.costs);
         setTypes(data.types);
         setTechStacks(data.techStacks);
-        console.log('filters: ', data.techStacks);
+        // console.log('filters: ', data.techStacks);
       } catch (err) {
         toast.error(getError(err));
       }
@@ -171,7 +171,7 @@ export default function SearchScreen() {
     setCollapsedCategory(!collapsedCategory);
   };
   const handleCategoryChange = (selectedValue) => {
-    console.log('Received category:', selectedValue);
+    //console.log('Received category:', selectedValue);
     navigate(getFilterUrl({ category: selectedValue }));
   };
 
@@ -182,7 +182,7 @@ export default function SearchScreen() {
     setCollapsedTechStack(!collapsedTechStack);
   };
   const handleTechStackChange = (selectedValue) => {
-    console.log('Received TechStack:', selectedValue);
+    //console.log('Received TechStack:', selectedValue);
     navigate(getFilterUrl({ techStack: selectedValue }));
   };
 
@@ -193,7 +193,7 @@ export default function SearchScreen() {
     setCollapsedType(!collapsedType);
   };
   const handleTypeChange = (selectedValue) => {
-    console.log('Received type:', selectedValue);
+    //console.log('Received type:', selectedValue);
     navigate(getFilterUrl({ type: selectedValue }));
   };
 
@@ -204,7 +204,7 @@ export default function SearchScreen() {
     setCollapsedCost(!collapsedCost);
   };
   const handleCostChange = (selectedValue) => {
-    console.log('Received cost:', selectedValue);
+    //console.log('Received cost:', selectedValue);
     navigate(getFilterUrl({ cost: selectedValue }));
   };
 
@@ -215,7 +215,7 @@ export default function SearchScreen() {
     setCollapsedRating(!collapsedRating);
   };
   const handleRatingChange = (selectedValue) => {
-    console.log('Received rating:', selectedValue);
+    //console.log('Received rating:', selectedValue);
     navigate(getFilterUrl({ rating: selectedValue }));
   };
 

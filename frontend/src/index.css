@@ -264,15 +264,16 @@ When you set an element's height using vh, you're specifying a percentage of the
 
 /* HomeScreen */
 
-/* 575px and below */
-/* body::before {
-  content: 'XS';
-  color: red;
-  font-size: 2rem;
-  font-weight: bold;
-  position: fixed;
-  right: 0;
-  top: 50px;
+/* @media (min-width: 576px) {
+  body::before {
+    content: 'XS';
+    color: red;
+    font-size: 2rem;
+    font-weight: bold;
+    position: fixed;
+    right: 0;
+    top: 50px;
+  }
 }
 
 @media (min-width: 576px) {

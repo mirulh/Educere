@@ -29,7 +29,7 @@ export default function SigninScreen() {
         email,
         password,
       });
-      console.log('Signed In', JSON.stringify(data, null, 2));
+      //console.log('Signed In', JSON.stringify(data, null, 2));
       contextDispatch({ type: 'USER_SIGNIN', payload: data });
       localStorage.setItem('userInfo', JSON.stringify(data));
       navigate('/');

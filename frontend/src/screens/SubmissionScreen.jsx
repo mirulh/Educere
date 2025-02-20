@@ -78,7 +78,7 @@ export default function SubmissionScreen() {
     }
   }, [successCreate]);
 
-  console.log('success create', successCreate);
+  //console.log('success create', successCreate);
 
   const submitHandler = async (e) => {
     e.preventDefault();
@@ -120,8 +120,8 @@ export default function SubmissionScreen() {
   // For react-select categories and types
   const animatedComponents = makeAnimated();
 
-  console.log('category here', category);
-  console.log('rating', rating);
+  //console.log('category here', category);
+  //console.log('rating', rating);
   return (
     <div>
       <Helmet>Submit a new content</Helmet>

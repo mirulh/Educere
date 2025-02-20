@@ -45,7 +45,7 @@ export default function Content(prop) {
       });
       localStorage.setItem('userSaves', JSON.stringify(data));
     } catch (err) {
-      console.log('save fail');
+      //console.log('save fail');
       toast.error(getError(err));
     }
   };

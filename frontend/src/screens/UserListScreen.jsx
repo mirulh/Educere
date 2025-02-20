@@ -84,10 +84,10 @@ export default function UserListScreen() {
   }, [userInfo, successDelete, page]);
 
   const deleteHandler = async (user) => {
-    console.log(
+    /* console.log(
       'Delete This User',
       JSON.stringify(user._id + '|' + user.name, null, 2)
-    );
+    ); */
     if (window.confirm('Are you sure to delete?')) {
       try {
         dispatch({ type: 'DELETE_REQUEST' });

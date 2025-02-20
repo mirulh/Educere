@@ -13,7 +13,7 @@ export default function CollapsibleType({
     onTypeChange(selectedValue);
   };
 
-  console.log('type: ', type);
+  //console.log('type: ', type);
 
   return (
     <div className="dropdownFilter mb-3">

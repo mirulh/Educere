@@ -35,7 +35,7 @@ export default function SignupScreen() {
         email,
         password,
       });
-      console.log('Signed Up', JSON.stringify(data, null, 2));
+      //console.log('Signed Up', JSON.stringify(data, null, 2));
       contextDispatch({ type: 'USER_SIGNIN', payload: data });
       localStorage.setItem('userInfo', JSON.stringify(data));
       navigate(redirect || '/');

@@ -81,7 +81,7 @@ export default function ContentScreen() {
       });
       localStorage.setItem('userSaves', JSON.stringify(data));
     } catch (err) {
-      console.log('save fail');
+      //console.log('save fail');
       toast.error(getError(err));
     }
   };
@@ -133,7 +133,7 @@ export default function ContentScreen() {
       content.numReviews = data.numReview;
       content.rating = data.rating;
       dispatch({ type: 'REFRESH_CONTENT', payload: content });
-      console.log(content);
+      //console.log(content);
       // content.reviews.unshift(data.review);
     } catch (err) {
       toast.error(getError(err));

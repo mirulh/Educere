@@ -13,7 +13,7 @@ export default function CollapsibleCategory({
     onCategoryChange(selectedValue);
   };
 
-  console.log('category: ', category);
+  //console.log('category: ', category);
 
   return (
     <div className="dropdownFilter mb-3">

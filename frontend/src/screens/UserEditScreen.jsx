@@ -58,7 +58,7 @@ export default function UserEditScreen() {
         setEmail(data.email);
         setIsAdmin(data.isAdmin);
         dispatch({ type: 'FETCH_SUCCESS' });
-        console.log('User fetch by ID', data);
+        //console.log('User fetch by ID', data);
       } catch (err) {
         dispatch({ type: 'FETCH_FAIL', payload: getError(err) });
       }
@@ -82,7 +82,7 @@ export default function UserEditScreen() {
           headers: { Authorization: `Bearer ${userInfo.token}` },
         }
       );
-      console.log('Updated User', data.user);
+      //console.log('Updated User', data.user);
       dispatch({
         type: 'UPDATE_SUCCESS',
       });

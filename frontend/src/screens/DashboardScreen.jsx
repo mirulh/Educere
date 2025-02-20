@@ -39,7 +39,7 @@ export default function DashboardScreen() {
         const { data } = await axios.get('/api/dashboard/summary', {
           headers: { Authorization: `Bearer ${userInfo.token}` },
         });
-        console.log('this is data', data);
+        //console.log('this is data', data);
         dispatch({ type: 'FETCH_SUCCESS', payload: data });
       } catch (err) {
         dispatch({

@@ -113,7 +113,7 @@ export default function SubmissionEditScreen() {
     fetchData();
   }, [submissionId, userInfo]);
 
-  console.log('current submission', submission);
+  //console.log('current submission', submission);
 
   const uploadFileHandler = async (e) => {
     const image = e.target.files[0];
