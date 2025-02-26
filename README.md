@@ -1,4 +1,10 @@
-# Educere
+# Project Overview
+
+This is the phase 1 of Educere web application system which involved building the web application itself using MERN stack architecture (Mongo, Express, React, Node) following the requirement specification. One of the features of Educere is to enable users to contribute in expanding the application content catalog by submission.
+
+![Alt text](interfaces/implementation1.png)
+
+## Educere Web Application
 
 Educere web application system is a repository of 100+ educational resources of CS and IT-based to help users in finding the perfect materials that suits their needs in a streamline way. The contents are generated from Educere Scrapper Python script (see the other project [here](https://github.com/mirulh/Educere_Scrapper)).
 
@@ -102,20 +108,14 @@ User can contribute in expanding the website's contents by sharing a learning re
 
 ![Alt text](interfaces/SubmissionPage.png)
 
-### 10. Content Dashboard
-
-Signup page
+### 10. Signup Page
 
 ![Alt text](interfaces/SignupPage.png)
 
-### 11. Content Dashboard
-
-Signin page
+### 11. Signin Page
 
 ![Alt text](interfaces/SigninPage.png)
 
-### 12. Content Dashboard
-
-User profile page
+### 12. User Profile Page
 
 ![Alt text](interfaces/ProfilePage.png)
