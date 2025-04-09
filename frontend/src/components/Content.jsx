@@ -50,6 +50,8 @@ export default function Content(prop) {
     }
   };
 
+  console.log('hi dad')
+
   return (
     <div className="homeBackground">
       <Card className="mb-4 contentCard">

@@ -72,6 +72,12 @@ export default function HomeScreen() {
     fetchCategories();
   }, []);
 
+  let ws;
+  const proto = window.location.protocol === 'https:' ? 'wss' : 'ws';
+  ws = new WebSocket(`${proto}://${window.location.host}`);
+  ws.onmessage = (event) => {console.log(event.data)};
+  console.log('hi mom')
+
   return (
     // <div style={{ backgroundColor: '#0c0c0e' }}>
     <div className="homeBackground">
@@ -82,7 +88,7 @@ export default function HomeScreen() {
         <div className="bannerContent">
           <img className="bannerImage" src="/images/logo.png" />
           <div className="bannerTextButton">
-            <h1>Discover The Right Learning Resources For you</h1>
+            <h1>Discover The Right Learning Resources For You Today</h1>
             <Link to="/search">
               <Button variant="secondary" className="bannerButton">
                 Discover New Resources
