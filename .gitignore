@@ -19,6 +19,9 @@ Data_Users.js
 seedRoutes.js
 seedRoutes2.js
 
+# else
+Dockerfile
+github.sh
 
 # Editor directories and files
 .vscode/*
