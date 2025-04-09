@@ -26,4 +26,4 @@ jobs:
           cd /var/www/Educere
           git pull origin main
           npm run build
-      EOF
+        EOF
