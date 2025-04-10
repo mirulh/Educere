@@ -3,37 +3,27 @@ name: Deploy to DigitalOcean
 on:
   push:
     branches:
-      - main  # Trigger the deployment when code is pushed to the 'main' branch
+      - main
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
+    - name: Checkout code
+      uses: actions/checkout@v3
 
-      - name: Set up SSH
-        run: |
-          mkdir -p ~/.ssh
-          echo "${{ secrets.SSH_PRIVATE_KEY_ACTION_KEY }}" > ~/.ssh/id_rsa  # Add private key to file
-          chmod 600 ~/.ssh/id_rsa
-          ssh-agent bash -c 'ssh-add ~/.ssh/id_rsa; ssh-keyscan -H ${HOST_EDUCERE##*@} >> ~/.ssh/known_hosts'
+    - name: Set up SSH
+      run: |
+        mkdir -p ~/.ssh
+        echo "${{ secrets.SSH_PRIVATE_KEY_ACTION_KEY }}" > ~/.ssh/id_rsa
+        chmod 600 ~/.ssh/id_rsa
+        ssh-keyscan -H ${{ secrets.HOST_EDUCERE }} >> ~/.ssh/known_hosts
 
-      - name: Deploy via SSH
-        run: |
-          ssh ${{ secrets.USERNAME_EDUCERE }}@${{ secrets.HOST_EDUCERE }} << 'EOF'
-            cd /var/www/Educere  # Navigate to the application directory
-            git pull origin main  # Pull the latest code from the main branch
-            npm run build
-
-            # # Atomic deployment of static files (e.g., dist folder)
-            # mv dist dist_new  # Rename the current dist folder
-            # mv dist_current dist_old || true  # Rename the current live folder (backup)
-            # mv dist_new dist_current  # Make the new dist folder live
-            # rm -rf dist_old  # Remove the backup folder
-
-            # # Optionally restart the Docker container or Nginx
-            # docker restart your_container_name || true  # Restart container if needed
-            # sudo nginx -s reload  # Reload Nginx if necessary
-          EOF
+    - name: Deploy via SSH
+      run: |
+        ssh ${{ secrets.USERNAME_EDUCERE }}@${{ secrets.HOST_EDUCERE }} << 'EOF'
+          cd /var/www/Educere
+          git pull origin main
+          npm run build
+        EOF
