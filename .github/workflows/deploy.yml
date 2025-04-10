@@ -23,7 +23,7 @@ jobs:
     - name: Deploy via SSH
       run: |
         ssh ${{ secrets.USERNAME_EDUCERE }}@${{ secrets.HOST_EDUCERE }} << 'EOF'
-          cd /path/to/your/app
+          cd /var/www/Educere
           git pull origin main
           npm run build
         EOF
