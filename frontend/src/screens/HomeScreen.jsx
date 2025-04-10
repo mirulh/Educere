@@ -88,7 +88,7 @@ export default function HomeScreen() {
         <div className="bannerContent">
           <img className="bannerImage" src="/images/logo.png" />
           <div className="bannerTextButton">
-            <h1>Discover The Right Learning Resources For You Today</h1>
+            <h1>Discover The Right Learning Resources For You</h1>
             <Link to="/search">
               <Button variant="secondary" className="bannerButton">
                 Discover New Resources
