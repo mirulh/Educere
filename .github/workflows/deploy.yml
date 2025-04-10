@@ -11,21 +11,21 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3  # Checkout the code from the repo
+        uses: actions/checkout@v3
 
       - name: Set up SSH
         run: |
           mkdir -p ~/.ssh
           echo "${{ secrets.SSH_PRIVATE_KEY_ACTION_KEY }}" > ~/.ssh/id_rsa  # Add private key to file
-          chmod 600 ~/.ssh/id_rsa  # Secure the private key file by setting permissions
+          chmod 600 ~/.ssh/id_rsa
           ssh-agent bash -c 'ssh-add ~/.ssh/id_rsa; ssh-keyscan -H ${HOST_EDUCERE##*@} >> ~/.ssh/known_hosts'
 
       - name: Deploy via SSH
         run: |
-          ssh ${{ secrets.HOST_EDUCERE }} << 'EOF'
+          ssh ${{ secrets.USERNAME_EDUCERE }}@${{ secrets.HOST_EDUCERE }} << 'EOF'
             cd /var/www/Educere  # Navigate to the application directory
             git pull origin main  # Pull the latest code from the main branch
-            npm run build  # Build the application
+            npm run build
 
             # # Atomic deployment of static files (e.g., dist folder)
             # mv dist dist_new  # Rename the current dist folder
